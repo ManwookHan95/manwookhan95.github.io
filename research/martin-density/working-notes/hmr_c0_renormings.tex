@@ -1,0 +1,192 @@
+% PREPRINT B: Han--Martin--Rodriguez-Vidanes, "Norm attaining operators on renormings of c_0" (user's coauthored preprint).
+% Introduction abbreviated; all mathematical sections kept verbatim.
+\documentclass[10pt]{amsart}
+\usepackage{amssymb,amsmath,amsthm,mathtools,bm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\K}{\mathcal K}
+\newcommand{\Fin}{\mathcal{F}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\id}[1]{\mathrm{id}_{#1}}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Read}{\mathcal{R}}
+\newcommand{\sRead}{\widetilde{\mathcal{R}}}
+\newcommand{\X}{\mathfrak{X}}
+\newcommand{\NA}{\operatorname{NA}}
+\newcommand{\Lin}{\mathcal{L}}
+\newcommand{\tn}[1]{|\!|\!|#1|\!|\!|}
+\newcommand{\sgn}{\operatorname{sign}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\spn}{\operatorname{span}}
+\title{Norm attaining operators on renormings of $c_0$}
+\author{M. Han, M. Mart\'in, D. L. Rodr\'iguez-Vidanes}
+\begin{document}
+\begin{abstract}
+We study norm-attaining operators on Read's renorming $\Read$ of $c_0$, its smooth renorming $\sRead$, and the space constructed by Mart\'{\i}n $\X$. For every Banach space $F$ and every $Z\in\{\Read, \sRead\}$, we prove that norm-attaining finite-rank operators are dense in $\K(Z,F)$. Consequently, $\NA(Z,F)$ is dense in $\Lin(Z,F)$ whenever $F$ is reflexive. We also show that density of the set of norm-attaining operators for all finite-dimensional ranges is preserved under the smooth renorming construction of Debs, Godefroy and Saint-Raymond. Extending a second-order criterion of Kadets, L\'opez-P\'erez, Mart\'in and Werner from rank two to arbitrary finite rank, we also show that, for every $k\geq2$, this smooth renorming preserves both the existence and the non-existence of norm-attaining operators of rank $k$ into $\ell_2^k$. Finally, for every Banach space $F$ and every positive integer $k\le\dim F$, we construct an operator of rank $k$ in $\NA(\X,F)$, answering a question of Mart\'in. We further prove that every nonempty finite-block truncation of Mart\'in's norm, including each single-block norm, has algebraically trivial norm-attaining functionals and a strictly convex bidual.
+\end{abstract}
+\maketitle
+
+\section{Introduction (abbreviated)}
+All Banach spaces are real. Whether every finite-dimensional Banach space has Lindenstrauss property B is open (Johnson--Wolfe Question 6; even for the Euclidean plane). If $\NA(Z,\R)$ contains a dense linear subspace of $Z^*$ then norm-attaining finite-rank operators are dense among finite-rank operators (Lemma~\ref{lem:densesubspace}). Mart\'in's space $\X$ has $\NA(\X,\R)\cap E$ contained in two lines for every 2-dimensional $E\subset \X^*$. For Mart\'in's space, density remains open.
+
+\section{Notation and the domain spaces}\label{sec:prelim}
+For a norm $r$ on $Z$, $B_r$, $S_r$ and $r^*$ denote the closed unit ball, the unit sphere and the dual norm of $(Z,r)$, and for $T\in\Lin(Z,F)$, $\|T\|_r$ is the operator norm with respect to $r$, $\|T\|_{r\to\rho}$ when the range norm $\rho$ must be indicated. For $T\in\Lin(Z,F)$,
+$d_r(T)=\inf\{\|T-A\|_r: A\in\NA((Z,r),F)\}$ and $d_r^\Fin(T)$ similarly with finite rank $A$. $P_M$ is the canonical projection from $c_0$ onto the first $M$ coordinates.
+
+\subsection{Read's space}
+(R1)--(R4): $p_{\Read}(x)=\|x\|_\infty+\sum_{n=1}^{\infty}r_n|v_n(x)|$ with $v_n\in c_{00}$, $\|v_n\|_1=1$, $\supp v_n\subset\{1,\ldots,a_n\}$, $\sum r_n\le 2$.
+$q_N(x)=\|x\|_\infty+\sum_{n\le N}r_n|v_n(x)|$, $s_N(x)=\sum_{n>N}r_n|v_n(x)|$, $\eta_N=\sum_{n>N}r_n$.
+\begin{lemma}\label{lem:trunc}
+(a) $p_\Read=q_N+s_N$, $s_N\le\eta_Nq_N$, $\eta_N\to0$. (b) $P_M$ is $q_N$-contractive for every $M\ge a_N$.
+\end{lemma}
+
+\subsection{Smooth Read spaces}
+\begin{lemma}\label{lem:smoothing}
+Let $(X,q)$ be a Banach space, $G$ a Hilbert space, $U:G\to(X,q)$ compact with dense range. Then
+$B_p=B_q+U(B_G)$ defines an equivalent smooth norm $p$ on $X$ with
+$p^*(f)=q^*(f)+\|U^*f\|_G$, and $\NA((X,p),\R)=\NA((X,q),\R)$.
+\end{lemma}
+
+\subsection{Mart\'in's space $\X$}\label{subsec:space}
+Let $(e_{n,m})_{n,m}$ be the canonical basis of $\ell_1(\N\times\N)$.
+\begin{enumerate}
+\item[(M1)] $X=c_0$ is endowed with an equivalent smooth norm $\tn{\cdot}$ such that $\NA((X,\tn{\cdot}),\R)=\NA(c_0,\R)$, and $Y$ is a separable operator range, norm dense in $(X,\tn{\cdot})^*$, with $\NA((X,\tn{\cdot}),\R)\cap Y=\{0\}$.
+\item[(M2)] $T:\ell_1(\N\times\N)\to Y\subseteq (X,\tn{\cdot})^*$ is a norm-one injective operator such that, writing $v^*_{n,m}:=T(e_{n,m})$, for every $m\in\N$ the set $\{v^*_{n,m}/\tn{v^*_{n,m}}^*:\ n\in\N\}$ is norm dense in $S_Y$, hence in $S_{(X,\tn{\cdot})^*}$ [Mar, Lemma~B].
+\item[(M3)] $\Phi_m(n):=2^{-m}2^{-n}\tn{v^*_{n,m}}^*$. $|\cdot|_m$ is the equivalent norm on $\ell_1$ given by [Mar, Lemma~A] for the sequence $\Phi_m$.
+\item[(M4)] $R_m:(X,\tn{\cdot})\to(\ell_1,|\cdot|_m)$, $[R_m(x)](n)=\frac{m}{2^m}\frac{1}{2^n}v^*_{n,m}(x)$. $R_m$ is injective and $|R_m(x)|_m\le\|R_m(x)\|_1\le \frac{m}{2^m}\tn{x}$.
+\item[(M5)] $W:=\big(\bigoplus_{m}(\ell_1,|\cdot|_m)\big)_{\ell_1}$, $R(x):=(R_m(x))_{m}$, $\|Rx\|_W=\sum_m|R_m x|_m\le 2\tn{x}$, $R$ injective. $W^*=\big(\bigoplus_{m}(\ell_\infty,|\cdot|_m^*)\big)_{\ell_\infty}$.
+\item[(M6)] $R^*(W^*)\subseteq Y$: $R^*w=T\left(\sum_{m,n}w_m(n)\frac{m}{2^{m+n}}e_{n,m}\right)$.
+\item[(M7)] $p(x):=\tn{x}+\|Rx\|_W$, $\X:=(X,p)$. $\X$ is smooth. If $x\in S_\X$, $f\in S_{\X^*}$, $f(x)=1$, then $f=f_0+R^*w$ with $f_0\in S_{(X,\tn{\cdot})^*}$, $w\in W^*$, $f_0(x)=\tn{x}$, $w(Rx)=\|Rx\|_W$, $|w_m|_m^*=1$, $w_m(R_mx)=|R_mx|_m$.
+\end{enumerate}
+
+\section{Operators on Read's space}\label{sec:additive}
+Throughout, $(Z,q)$, $F$ Banach, $s$ a $q$-continuous seminorm, $p=q+s$.
+\begin{lemma}[Lift]\label{lem:lift}
+Let $S\in\Lin((Z,q),F)\setminus\{0\}$ attain its norm at $z_0\in S_q$, and $h\in Z^*$ with $|h|\le s$, $h(z_0)=s(z_0)$. Then $A:=S+h\otimes Sz_0$ attains its norm at $z_0/p(z_0)$, $\|A\|_p=\|S\|_q$, $\ran A=\ran S$, $\rank(A-S)\le1$. If $s\le\eta q$ then $\|A-S\|_q\le\eta\|S\|_q$.
+\end{lemma}
+\begin{proof}
+$\|Az\|\le\|Sz\|+|h(z)|\|Sz_0\|\le\|S\|_q(q(z)+s(z))$; $Az_0=p(z_0)Sz_0$. $A=S\circ(\id{Z}+h\otimes z_0)$ with invertible second factor.
+\end{proof}
+\begin{theorem}[Permanence]\label{thm:permanence}
+Suppose, for each $\eta>0$, $p=q_\eta+s_\eta$ with $q_\eta$ a norm, $s_\eta$ a seminorm, $s_\eta\le\eta q_\eta$. (a) If $\lim_{\eta\to0}d_{q_\eta}(T)=0$ for every $T$, then $\NA((Z,p),F)$ is dense. (b) Same for finite rank / compact.
+\end{theorem}
+\begin{proof} $d_p(T)\le\eta(1+\eta)\|T\|_p+(1+\eta)d_{q_\eta}(T)$ via Lemma~\ref{lem:lift}.\end{proof}
+\begin{lemma}\label{lem:projections}
+If $P_M$ is $q$-contractive for arbitrarily large $M$, then $\overline{\NA((c_0,q),F)\cap\Fin}=\K((c_0,q),F)$. Also $\|T-TP_M\|_q\to0$ for compact $T$.
+\end{lemma}
+\begin{lemma}\label{lem:densesubspace}
+If $D\subseteq\NA(Z,\R)$ is a linear subspace of $Z^*$, then every finite-rank $S$ with $S^*(F^*)\subset D$ attains its norm; if $D$ is dense, such operators are dense in $\Fin(Z,F)$.
+\end{lemma}
+\begin{theorem}\label{thm:read-finite-density}
+$\overline{\NA(\Read,F)\cap\Fin(\Read,F)}=\K(\Read,F)$ for every $F$.
+\end{theorem}
+
+\section{Density on smooth Read spaces (primal transfer theorem)}\label{sec:smooth}
+Let $(X,q)$ Banach, $G$ Hilbert, $U:G\to(X,q)$ compact with dense range, $p$ given by $B_p=B_q+U(B_G)$.
+\begin{lemma}\label{lem:nearball}
+$G$ Hilbert, $L\in\Lin(G)$, $\phi\in S_G$, $L^*\phi\ne0$, $\psi=L^*\phi/\|L^*\phi\|$. If $\lambda\ge\|L\|^2/\|L^*\phi\|$, then $L(B_G)\subseteq L\psi+\lambda(B_G-\phi)$.
+\end{lemma}
+\begin{lemma}\label{lem:recenter}
+$S\in\Lin(Z,E)$, $z_0\in B_Z$, $a\in S_E$, $\xi\in S_{E^*}$, $\xi(a)=1$, $\lambda>0$, $S(B_Z)\subseteq Sz_0+\lambda(B_E-a)$ and $\xi(Sz_0)>0$. Then $A=S+\frac{S^*\xi}{\xi(Sz_0)}\otimes(\lambda a-Sz_0)$ satisfies $\|A\|=\lambda=\|Az_0\|$.
+\end{lemma}
+\begin{theorem}[Transfer]\label{thm:transfer}
+If $\NA((X,q),F)$ is dense in $\Lin((X,q),F)$ for every finite-dimensional $F$, then the same holds for $p$.
+\end{theorem}
+\begin{proof}[Proof sketch, verbatim structure]
+Normalize $\|T\|_p=1$, $E=\ran T$, $C=TU$ (surjective onto $E$). $1=\|T\|_p=\max_{f\in S_{E^*}}\{q^*(T^*f)+\|C^*f\|\}>\|C\|$.
+$D=\{v\in E: v+C(B_G)\subseteq B_E\}=\{v: f(v)+\|C^*f\|\le1\ \forall f\in S_{E^*}\}$ is the unit ball of a norm $p_D$ on $E$, and $\|T\|_{q\to p_D}=1$.
+Approximate $T$ by $S_n\in\NA((X,q),(E,p_D))$, $\|S_n\|_{q\to p_D}=1$, attaining at $x_n$, $v_n=S_nx_n\in\partial D$, contact $\xi_n$ with $\xi_n(v_n)+\|C^*\xi_n\|=1$, $\phi_n=C^*\xi_n/\|C^*\xi_n\|$, $a_n=v_n+C\phi_n\in S_E$.
+$C_n=S_nU$, $L_n=\id{G}+J(C_n-C)$ with $CJ=\id{E}$, so $CL_n=C_n$, $L_n\to\id{G}$. Lemma~\ref{lem:nearball} and convexity of $D$ give $S_n(B_p)\subseteq S_nz_n+\lambda_n(B_E-a_n)$, $z_n=x_n+U\psi_n$, and Lemma~\ref{lem:recenter} gives a norm-attaining $A_n$ with $\|A_n-S_n\|\to0$.
+\end{proof}
+
+\section{Norm-attaining operators onto $\ell_2^k$}\label{sec:rank-k}
+$\vartheta(f,g):=\inf\{(1-f(x)^2)/\|g(x)\|_2^2:\ x\in B_X,\ g(x)\neq0\}$.
+\begin{proposition}\label{prop:quadratic-characterization}
+$\NA^{(k)}(X,\ell_2^k)\neq\varnothing$ iff there are $f\in S_{X^*}\cap\NA(X,\R)$ and $g\in(X^*)^{k-1}$ with $f,g_1,\dots,g_{k-1}$ independent and $\vartheta(f,g)>0$.
+\end{proposition}
+$\Gamma(f,g):=\sup_{t\ne0}\frac{p^*(f+\sum_jt_jg_j)^2-1}{\|t\|_2^2}$.
+\begin{proposition}\label{prop:theta-dual}
+$\vartheta(f,g)=1/\Gamma(f,g)$. ($\|T_\lambda\|\le1$ iff $\Gamma\le\lambda^{-2}$ where $T_\lambda=(f,\lambda g)$.)
+\end{proposition}
+For a seminorm $r$ on $X^*$: $\Delta_r(f,g;t):=r(f+tg)+r(f-tg)-2r(f)$, $\mathcal{Q}_r(f):=\{g:\Delta_r(f,g;t)=O(t^2)\}$.
+\begin{proposition}\label{prop:quadratic-directions}
+$\mathcal{Q}_{p^*}(f)$ is a vector subspace containing $\R f$; existence of $g$ with $\vartheta(f,g)>0$ (independent, $k-1$ rows) iff $\dim\mathcal{Q}_{p^*}(f)\ge k$.
+\end{proposition}
+\begin{corollary}\label{cor:dgs-rank-k}
+For the DGS smoothing, $\NA^{(k)}((X,p),\ell_2^k)\neq\varnothing$ iff $\NA^{(k)}((X,q),\ell_2^k)\neq\varnothing$; indeed $\mathcal Q_{p^*}(f)=\mathcal Q_{q^*}(f)$ for all $f\ne0$.
+\end{corollary}
+\begin{proposition}[One-ray elimination]\label{prop:one-ray-elimination}
+For separable $(X,q)$ and $f_0\in S\cap\NA$, there is $B_p=B_q+\varepsilon S(B_{\ell_2})$ with $\overline{S(\ell_2)}=\ker f_0$, $p^*=q^*+\varepsilon\|S^*\cdot\|$, $\NA(p)=\NA(q)$, $\mathcal Q_{p^*}(f)=\mathcal Q_{q^*}(f)$ for $f\notin\R f_0$ and $=\R f_0$ for $f\in\R f_0$.
+\end{proposition}
+
+\section{Mart\'in's space}\label{sec:martin}
+\begin{theorem}\label{thm:finite-short}
+For every Banach space $F$ and every $k\le\dim F$, $\NA(\X,F)$ contains an operator of rank $k$ (lift of $\sum_{j\le k}e_j\otimes u_j$).
+\end{theorem}
+\begin{proposition}[Absolute lifting]\label{prop:absolute-lifting}
+For an absolute normalized norm $\nu$ on $\R^2$ and $p_\nu=\nu(q,s)$, rank-two NA operators for $q$ lift to $p_\nu$ (under a norming-functional condition).
+\end{proposition}
+\begin{proposition}\label{prop:density-bad-coordinates}
+If $\NA(X,\R)$ contains a norm-dense linear subspace with $\dim\ge2$, then $\mathcal H(X)=\{f\in S\cap\NA: \exists g\notin\R f,\ \vartheta(f,g)>0\}$ is dense in $S_{X^*}$. In particular for the base $E=(c_0,\tn{\cdot})$.
+\end{proposition}
+\begin{proposition}\label{prop:no-simultaneous-preservation}
+If $\mathcal A\subseteq S_{X^*}$ is dense and $C\supseteq B_X$ closed absolutely convex with $\sup_C|f|=1$ for all $f\in\mathcal A$, then $C=B_X$.
+\end{proposition}
+
+\subsection{Finite-block norms}\label{subsec:finite-blocks}
+$q=\tn{\cdot}$; for nonempty finite $J$: $p_J(x)=q(x)+\sum_{m\in J}|R_mx|_m$, $p_N=p_{\{1,\dots,N\}}$.
+For positive $\Phi\in\ell_1$, $D_\Phi:\ell_2\to\ell_1$ diagonal; $B_{|\cdot|_\Phi}=B_{\ell_1}+D_\Phi(B_{\ell_2})$, $|w|_\Phi^*=\|w\|_\infty+\|D_\Phi^*w\|_2$.
+\begin{lemma}[Block threshold]\label{lem:block-threshold}
+If $z\in\ell_1\setminus\{0\}$, $w\in\ell_\infty\setminus\{0\}$, $w(z)=|w|_\Phi^*|z|_\Phi$, $M=\|w\|_\infty$, $C=\|D_\Phi^*w\|_2$, then $C>0$ and $|z(n)|>|z|_\Phi\frac{M}{C}\Phi(n)^2\Rightarrow w(n)=M\sgn z(n)$.
+\end{lemma}
+\begin{proof}
+$\frac{z}{|z|_\Phi}=a+\frac{D_\Phi D_\Phi^*w}{C}$, $a\in B_{\ell_1}$, $w(a)=M$.
+\end{proof}
+$u_{n,m}=v^*_{n,m}/q^*(v^*_{n,m})$; $R_m$ compact; $(R_m^{**}x^{**})(n)=m\Phi_m(n)x^{**}(u_{n,m})$; $R_m^{**}$ injective. Every tail of $(u_{n,m})_n$ is dense in $S_{(X,q)^*}$. If $u_{n_j,m}\to v$ and $w\ne0$ supports $R_m^{**}x^{**}$ with $x^{**}(v)\ne0$, then eventually
+\begin{equation}\label{eq:block-sign}
+ w(n_j)=\|w\|_\infty\sgn x^{**}(v).
+\end{equation}
+\begin{theorem}\label{thm:finite-blocks}
+For nonempty finite $J$: (a) for every 2-dim $E\subset(c_0,p_J)^*$, $E\cap\NA$ is contained in two lines; (b) $(c_0,p_J)^{**}$ is strictly convex, $p_J^{**}=q^{**}+\sum_{m\in J}|R_m^{**}\cdot|_m$.
+\end{theorem}
+\begin{proof}[Key points]
+Each nonzero NA $f$: $f=f_0+\sum_{m\in J}R_m^*w_{f,m}$, $f_0\in c_{00}$, $q^*(f_0)=|w_{f,m}|_m^*=p_J^*(f)$, uniquely. Three NA lines $f,g,f+g$ give $M_h=M_f+M_g$ and $M_h=|M_f-M_g|$ via \eqref{eq:block-sign}. Strict convexity of $x^{**}\mapsto|R_m^{**}x^{**}|_m$ via \eqref{eq:block-sign}.
+\end{proof}
+\begin{remark}
+$\NA((c_0,p_J),\R)\cap c_{00}=\{0\}$.
+\end{remark}
+
+\subsection{The density problem}
+\begin{proposition}\label{prop:lineable}
+$\mathcal M_F=Y\otimes F$ satisfies $\mathcal M_F\cap\NA(\X,F)=\{0\}$ and $\overline{\mathcal M_F}=\K(\X,F)$.
+\end{proposition}
+\begin{remark}\label{rem:martin-tail}
+To prove density of $\NA(\X,F)$ it suffices that $d_{p_N}(T)\to0$ as $N\to\infty$ for every $T$ ($s_N=\sum_{m>N}|R_m\cdot|_m\le\eta_N\tn{\cdot}$, $\eta_N=(N+2)/2^N$). In particular it suffices that $\NA((c_0,p_N),F)$ is dense for arbitrarily large $N$.
+\end{remark}
+\begin{proposition}[Base-lift gap]\label{prop:base-lift-gap}
+Assume $B_q=B_{c_0}+U(B_H)$. Let $r=p$ or $p_J$, $s=r-q$, $h_x=L^*J_V(Lx)$, and $\mathscr A_r$ the one-step lifts $S+h_{x_0}\otimes Sx_0$ of $S\in\NA((c_0,q),\ell_2^2)$. There is a rank-two $T_0\in\NA((c_0,r),\ell_2^2)$ with $\dist_r(T_0,\mathscr A_r)>0$. ($T_0=(f,\rho g)$ with $g=cR_m^*e_k$.)
+\end{proposition}
+\begin{problem}\label{prob:blocks}
+Is $\NA((c_0,p_N),\ell_2^2)$ dense in $\Lin((c_0,p_N),\ell_2^2)$ for every positive integer $N$?
+\end{problem}
+A positive answer for an unbounded sequence of $N$ eliminates $\X$ as a counterexample to property B for $\ell_2^2$; a negative answer for one $N$ gives a counterexample to that property.
+
+\appendix
+\section{Lifts from the original DGS base}
+$q$ canonical. $\mathcal Q_{q^*}(a)=\spn\{e_j^*:j\in\supp a\}$ for $a\in c_{00}\setminus\{0\}$.
+\begin{lemma}[Base support stability]\label{lem:base-support-stability}
+Let $f\in S\cap\NA((c_0,r),\R)$, $x\in S_r$, $f(x)=1$, $f=f_0+h_x$, $z=\frac{x}{q(x)}-U\frac{U^*f_0}{\|U^*f_0\|}$, $I_x=\{j:|z(j)|=1\}$. Then $z\in S_{c_0}$, $I_x$ finite. If $f_n\to f$ are NA with base components $f_{0,n}$ and $g_n\to g$ with $\supp g_n\subseteq\supp f_{0,n}$, then $\supp g\subseteq I_x$.
+\end{lemma}
+\begin{proof}
+Strict convexity of $r^{**}$ gives $x_n\to x$ weak-star; compactness of $L$ gives $h_{x_n}\to h_x$ in norm; $z_n\to z$ coordinatewise; off $I_x$, $|z_n(j)|<1$ eventually forces $f_{0,n}(j)=0$.
+\end{proof}
+\end{document}

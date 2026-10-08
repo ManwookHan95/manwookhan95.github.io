@@ -1,0 +1,3 @@
+delta=1.0 groups=2 band J=4 lam=[1.  1.  0.5 0.5] R(room)=1.0081 R(opt)=0.9990
+delta=2.0 groups=2 band J=4 lam=[1.  1.  0.5 0.5] R(room)=0.9987 R(opt)=0.9987
+delta=2.0 groups=3 band J=6 lam=[1.   1.   0.5  0.5  0.25 0.25] R(room)=0.9987 R(opt)=0.9987

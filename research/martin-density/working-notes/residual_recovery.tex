@@ -1,0 +1,542 @@
+% PREPRINT A (user's latest research note): "Residual recovery and unbounded component lifts for Martin norms"
+% Notation: [Recovery] and [Check] are companion notes NOT available to us.
+% [Check, Theorem 3.1] = "finite local-certificate theorem", stated in Section 1 below.
+\documentclass[10pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\newcommand{\NA}{\operatorname{NA}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\sgn}{\operatorname{sign}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Cset}{\mathcal C}
+\newcommand{\Mset}{\mathcal M}
+\title{Residual recovery and unbounded component lifts\\for Mart\'in norms}
+\begin{document}
+\begin{abstract}
+For canonical Mart\'in norms, mate fibers are norm compact at every
+normalized functional and depend upper semicontinuously on that
+functional. A residual set of non-norm-attaining first rows therefore
+admits recovery of every contractive completion into each finite
+dimensional Hilbert space. This does not establish density in the
+whole operator space. We also recover weighted directions with
+unbounded block coefficients. Some resulting non-norm-attaining
+operators have no admissible decomposition with bounded first
+difference quotients, despite belonging to the closure of
+norm-attaining operators. Thus bounded quadratic lifts cannot be
+the universal mechanism behind a positive density theorem.
+\end{abstract}
+
+\section{Setting and preceding results}
+All spaces are real. We use the canonical base on $X=c_0$,
+\[
+ B_q=B_{c_0}+U(B_H),\qquad
+ q^*(a)=\|a\|_1+\|U^*a\|_H,
+\]
+where $U:H\to c_0$ is compact with dense range. Thus
+$\NA(q)=c_{00}$. In the Mart\'in construction \cite{Martin},
+$T:\ell_1(\N\times\N)\to X^*$ is injective of norm one,
+with range in $Y$ and $Y\cap c_{00}=\{0\}$. Write
+\[
+ u_{k,m}=\frac{Te_{k,m}}{q^*(Te_{k,m})},\quad
+ \Phi_m(k)=2^{-m-k}q^*(Te_{k,m}),\quad
+ (R_mx)(k)=m\Phi_m(k)u_{k,m}(x).
+\]
+Every tail of $(u_{k,m})_k$ is norm dense in $S_{q^*}$.
+The space $V_m=(\ell_1,|\cdot|_m)$ has dual norm
+$N_m(w)=\|w\|_\infty+\|D_mw\|_2$, where $D_m$ is diagonal
+with entries $\Phi_m(k)$. For a nonempty finite block set $I$
+or $I=\N$, set
+\[
+ V=(\bigoplus_{m\in I}V_m)_{\ell_1},\qquad
+ Lx=(R_mx)_m,\qquad p(x)=q(x)+\|Lx\|_V.
+\]
+The bounds $\|R_m\|\leq m2^{-m}$ make $L$ compact and give
+$B_{p^*}=B_{q^*}+K$ with $K=L^*(B_{V^*})$ norm compact.
+Also $p^{**}(\xi)=q^{**}(\xi)+\|L^{**}\xi\|_V$.
+
+By \cite{Recovery}, $p^{**}$ is strictly convex and every
+$f\in S_{p^*}$ has a unique normer $\xi\in S_{p^{**}}$ and
+the forced decomposition
+\[
+ f=a+L^*w=a+\sum_mR_m^*w_m,\qquad
+ q^*(a)=1,\quad a(\xi)=q^{**}(\xi),\quad
+ w_m=J_{|\cdot|_m}(R_m^{**}\xi).
+\]
+Here $J_r$ is the norm-one support map for a smooth norm $r$.
+For $f\in S_{p^*}$ define
+\[
+ \Cset(f)=\{g:p^*(f+tg)\leq\sqrt{1+t^2}\ (t\in\R)\},
+ \qquad \Mset_f=\bigcup_{n\geq1}n\Cset(f).
+\]
+The gauge $\gamma_f$ of $\Cset(f)$ satisfies
+$\gamma_f(g)^2=\Gamma(f,g):=
+\sup_{t\ne0}(p^*(f+tg)^2-1)/t^2$.
+The mate inequality is equivalent to contractivity of $(f,g)$;
+if $f$ attains its norm, so does $(f,g)$ \cite{KLMW}.
+
+We use the finite local-certificate theorem of \cite{Check}:
+if a contractive target has second row
+$R_m^*(\omega-dw_m)$, with $\omega$ finitely supported strictly
+below the peak of $w_m$ and
+$d=\langle D_mw_m,D_m\omega\rangle/\|D_mw_m\|_2$, it is
+recoverable whenever its block quadratic coefficient is at most
+one. Recovery means membership in
+$\overline{\NA((X,p),\ell_2^2)}$.
+
+\section{Global compactness and residual recovery}
+
+Retain the canonical norm $p=q+\|L\cdot\|_V$, with
+$q^*(a)=\|a\|_1+\|U^*a\|_H$ and $U,L$ compact.
+The graph representation gives
+\[
+ B_{p^*}=B_{q^*}+K,\qquad K=L^*(B_{V^*}),
+ \qquad p^{**}(\xi)=q^{**}(\xi)+\|L^{**}\xi\|_V.
+\]
+The set $K$ is norm compact. In this section scalar norm
+attainment is not required for compactness of the mate fibres.
+
+\begin{theorem}[Global compactness]
+\label{thm:gcr-global-compact}
+If $f_n\to f$ in $S_{p^*}$ and $g_n\in\Cset(f_n)$, then
+$(g_n)$ has a norm-convergent subsequence, and every such limit
+belongs to $\Cset(f)$. Consequently every $\Cset(f)$ is norm
+compact, and the correspondence $f\mapsto\Cset(f)$ is upper
+semicontinuous in norm.
+\end{theorem}
+\begin{proof}
+The vectors $g_n$ are bounded in $\ell_1$. Pass to a weak-star
+convergent subsequence $g_n\to g$. The mate inequalities pass
+to the limit, so $g\in\Cset(f)$. Choose a normer
+$\xi\in S_{p^{**}}$ of $f$ and put $q_0=q^{**}(\xi)>0$.
+Then $g(\xi)=0$ and $\|L^{**}\xi\|_V=1-q_0$.
+
+Let $D=\limsup_n\|g_n-g\|_1$, and pass to a subsequence
+realizing this limit. Fix $t>0$ and set $s=\sqrt{1+t^2}$.
+The dual-ball formula supplies
+\[
+ f_n+tg_n=a_n+k_n,\qquad q^*(a_n)\le s,
+ \qquad k_n\in sK.
+\]
+After a further subsequence, $k_n\to k$ in norm and
+$a_n\to a=f+tg-k$ weak-star. This extraction preserves $D$.
+Evaluation at $\xi$ gives
+\[
+ q^*(a)\ge\frac{a(\xi)}{q_0}
+ \ge\frac{1-s(1-q_0)}{q_0}.
+\]
+Compactness of $U$ gives $U^*a_n\to U^*a$ in norm.
+For bounded coordinatewise-convergent sequences in $\ell_1$,
+\[
+ \|a_n\|_1-\|a_n-a\|_1\longrightarrow\|a\|_1;
+\]
+this follows by first restricting to finitely many coordinates
+and then making the tail of $a$ small. Hence
+\[
+ tD=\limsup_n\|a_n-a\|_1
+ =\limsup_n\big(q^*(a_n)-q^*(a)\big)
+ \le\frac{\sqrt{1+t^2}-1}{q_0}.
+\]
+As $t>0$ was arbitrary, $D=0$. Thus the weak-star subsequence
+converges in norm. Compactness of each fibre follows by taking
+$f_n=f$. If upper semicontinuity failed, a sequence
+$g_n\in\Cset(f_n)$ staying a fixed positive distance from
+$\Cset(f)$ would contradict the proved subsequence property.
+\end{proof}
+
+\begin{corollary}\label{cor:gcr-meagre-domain}
+For every $f\in S_{p^*}$ and every bidual normer $\xi$ of $f$,
+$\mathcal M_f$ is a proper, meagre, $K_\sigma$ linear subspace
+of $\ker\xi=\{g\in X^*:g(\xi)=0\}$.
+\end{corollary}
+\begin{proof}
+We have $\mathcal M_f=\bigcup_{n\ge1}n\Cset(f)\subseteq\ker\xi$.
+Each set in this union is compact and therefore has empty
+interior in the infinite-dimensional Banach space $\ker\xi$.
+Apply Baire's theorem.
+\end{proof}
+
+\begin{corollary}[Lineability without spaceability]
+\label{cor:gcr-no-spaceability}
+For every $f\in S_{p^*}$, neither $\mathcal M_f$ nor
+$\R f+\mathcal M_f$ contains an infinite-dimensional
+norm-closed subspace of $X^*$. The gauge $\gamma_f$ makes
+$\mathcal M_f$ a Banach space whose inclusion into $X^*$
+is compact. At the good scalar norm-attaining supports,
+$\mathcal M_f$ is a dense linear subspace of $\ker\xi$
+but is not spaceable.
+\end{corollary}
+\begin{proof}
+Both spaces are countable unions of norm-compact sets;
+for the second, use the sets $[-n,n]f+n\Cset(f)$.
+An infinite-dimensional norm-closed subspace contained in
+either would contradict Baire's theorem. Completeness of
+the gauge follows from $p^*(g)\le\gamma_f(g)$ and norm
+closedness of the gauge balls: an ambient limit of a
+gauge-Cauchy sequence is also its gauge limit. Its unit
+ball is $\Cset(f)$, so the inclusion is compact.
+Density at good scalar supports is the off-peak approximation
+result of \cite[Proposition~2.1]{Check}.
+\end{proof}
+
+For $d\ge1$, define the joint mate fibre
+\[
+ \Cset_d(f)=\left\{(g_1,\ldots,g_d):
+       f(y)^2+\sum_{j=1}^d g_j(y)^2\le p(y)^2
+       \text{ for every }y\in X\right\}.
+\]
+Thus $\Cset_1(f)=\Cset(f)$. We use any fixed product norm
+on $(X^*)^d$ and its associated Hausdorff distance.
+
+\begin{theorem}[Residual uniform recovery]
+\label{thm:gcr-residual-recovery}
+There is a dense $G_\delta$ set $\Omega\subseteq S_{p^*}$
+such that, for every $f\in\Omega$ and every finite $d$,
+$\Cset_d$ is Hausdorff continuous at $f$.
+In particular, for any sequence
+$f_n\in S_{p^*}\cap\NA(p)$ converging to $f$,
+\[
+ \sup_{G\in\Cset_d(f)}
+       \operatorname{dist}(G,\Cset_d(f_n))\longrightarrow0.
+\]
+Every operator $(f,g_1,\ldots,g_d)$ with
+$(g_1,\ldots,g_d)\in\Cset_d(f)$ is consequently a norm
+limit of norm-attaining operators into $\ell_2^{d+1}$.
+\end{theorem}
+\begin{proof}
+The set $\Cset_d(f)$ is a closed subset of $\Cset(f)^d$.
+Applying Theorem~\ref{thm:gcr-global-compact} to each row shows
+that $\Cset_d$ is compact-valued and upper semicontinuous.
+Choose a countable dense set $(z_j)$ in $(X^*)^d$.
+Each function
+\[
+ f\longmapsto\operatorname{dist}(z_j,\Cset_d(f))
+\]
+is finite and lower semicontinuous. By Baire's theorem, all
+these functions are continuous on a common dense $G_\delta$
+set $\Omega_d$. At a point $f\in\Omega_d$, density of the
+$z_j$ gives lower semicontinuity of the fibre: every fixed
+$G\in\Cset_d(f)$ is approximated by vectors in nearby fibres.
+A finite net of the compact set $\Cset_d(f)$ makes this
+approximation uniform over $G$. Together with upper
+semicontinuity, this is Hausdorff continuity.
+
+Take $\Omega=\bigcap_{d\ge1}\Omega_d$. Scalar norm-attaining
+supports are norm dense by Bishop--Phelps. For $f_n\to f$ as
+in the statement and fixed $G\in\Cset_d(f)$, choose
+$G_n\in\Cset_d(f_n)$ with $G_n\to G$.
+The operator $(f_n,G_n)$ is contractive and has norm one.
+At a positive normer of $f_n$, all rows of $G_n$ vanish by
+the defining inequality. Hence $(f_n,G_n)$ attains its norm.
+\end{proof}
+
+\begin{proposition}[Nontrivial fibres on the residual set]
+\label{prop:gcr-nonvacuity}
+The set $\Omega$ in Theorem~\ref{thm:gcr-residual-recovery}
+contains a dense $G_\delta$ subset $\Omega_0$ consisting of
+scalar non-norm-attainers whose mate fibres have
+infinite-dimensional linear span.
+\end{proposition}
+\begin{proof}
+For $n\ge1$, put $E_n=\operatorname{span}\{e_1^*,\ldots,e_n^*\}$
+and
+\[
+ F_n=\big[(S_{q^*}\cap E_n)+K\big]\cap S_{p^*}.
+\]
+Each $F_n$ is norm compact and therefore nowhere dense in
+the infinite-dimensional sphere $S_{p^*}$. A support whose
+forced base component belongs to $c_{00}$ lies in
+$\bigcup_nF_n$. Thus
+$\Omega_0=\Omega\setminus\bigcup_nF_n$ is a dense $G_\delta$,
+and the forced base component $a$ of every $f\in\Omega_0$
+has infinite support. Such $f$ cannot attain its norm,
+because scalar norm attainment forces $a\in c_{00}$.
+
+Let $\xi$ be the bidual normer of such an $f$.
+The finitely supported vectors $b$ satisfying
+\[
+ \supp b\subseteq\supp a,\qquad b(\xi)=0
+\]
+form an infinite-dimensional linear space. For each such $b$,
+the function $t\mapsto q^*(a+tb)$ is $C^2$ near zero:
+only finitely many nonzero coordinates of $a$ vary, and
+$U^*a\ne0$. Its first derivative is
+$b(\xi)/q^{**}(\xi)=0$. The local quadratic bound and the
+elementary bound away from zero therefore give a finite
+$C_b>0$ such that
+\[
+ q^*(a+tb/C_b)\le\sqrt{1+t^2}\qquad(t\in\R).
+\]
+Keeping all block supports fixed shows that
+$b/C_b\in\Cset(f)$. Hence the linear span of $\Cset(f)$
+contains the above infinite-dimensional space.
+Scaling any finite collection of independent such vectors
+by a sufficiently large common constant gives an independent
+tuple in $\Cset_d(f)$.
+\end{proof}
+
+For example, if $f\in\Omega_0$, $G\in\Cset_d(f)$ has
+independent rows and $0<\rho<1$, then $(f,\rho G)$ is a
+non-norm-attaining operator of rank $d+1$ covered by
+Theorem~\ref{thm:gcr-residual-recovery}. Its only adjoint
+norm-maximizing directions are $\pm e_1$, so norm attainment
+would imply that $f$ attains.
+
+Residual recovery does not establish density of all
+norm-attaining operators. Upper semicontinuity allows a
+fibre at an exceptional support to contain mates that cannot
+be approximated from neighbouring fibres. Recovery at those
+exceptional supports remains to be proved.
+
+\section{Recovery without bounded component derivatives}
+
+Fix a block $m$, write $R=R_m$, $D=D_m$, and let
+$f=a+\sum_lR_l^*w_l\in S_{p^*}$ be the forced decomposition.
+Put $w=w_m$, $M=\|w\|_\infty$, $C=\|Dw\|_2$, and
+$\lambda_k=m\Phi_m(k)$. Suppose $S\subset\mathbb N$ satisfies
+$|w(k)|\le M/2$ for $k\in S$. For a real sequence $\omega$
+supported on $S$, assume
+\begin{equation}\label{eq:weighted-direction}
+ \sum_k\lambda_k\omega(k)^2<\infty.
+\end{equation}
+The sequence $\omega$ need not be bounded. Nevertheless,
+$D\omega\in\ell_2$ and the series
+$R^*\omega:=\sum_k m\Phi_m(k)\omega(k)u_{k,m}$ converges
+absolutely in $X^*$. Define
+\[
+ d=\frac{\langle Dw,D\omega\rangle}{C},\qquad
+ g=R^*\omega-dR^*w,\qquad
+ H=\frac{\|D\omega\|_2^2-d^2}{C}\ge0.
+\]
+
+\begin{theorem}[Weighted directions]\label{thm:weighted-recovery}
+The direction $g$ has finite mate gauge at $f$, and
+\[
+ \limsup_{t\to0}\frac{p^*(f+tg)^2-1}{t^2}\le H.
+\]
+If $(f,g)$ is contractive and $H\le1$, then
+$(f,g)\in\overline{\NA((X,p),\ell_2^2)}$.
+Consequently some nonzero scalar multiple of every such $g$
+has this recovery property.
+\end{theorem}
+\begin{proof}
+Let $\omega_J=P_J\omega$, $d_J=\langle Dw,D\omega_J\rangle/C$,
+$g_J=R^*\omega_J-d_JR^*w$, and
+$H_J=(\|D\omega_J\|_2^2-d_J^2)/C$. We have $g_J\to g$
+in norm and $H_J\to H$. It suffices first to establish the
+following estimate, uniformly in $J$, with $J=\infty$ allowed:
+\begin{equation}\label{eq:uniform-weighted-expansion}
+ p^*(f+tg_J)\le1+\tfrac12H_Jt^2+o(t^2).
+\end{equation}
+
+Put $\delta=M/8$ and retain only those coordinates of $\omega_J$
+for which $|t\omega(k)|\le\delta$; denote the resulting bounded
+sequence by $\omega_{J,t}$. In the dual graph decomposition use
+\[
+ a+tR^*(\omega_J-\omega_{J,t}),\qquad
+ (1-d_Jt)w+t\omega_{J,t}
+\]
+as the base and $m$th block, keeping all other blocks fixed.
+These components sum exactly to $f+tg_J$. The base component
+has norm at most
+\[
+ 1+|t|\sum_{|\omega(k)|>\delta/|t|}\lambda_k|\omega(k)|
+ \le1+\frac{t^2}{\delta}
+       \sum_{|\omega(k)|>\delta/|t|}\lambda_k\omega(k)^2
+ =1+o(t^2),
+\]
+uniformly in $J$.
+
+The numbers $d_J$ are uniformly bounded. For all sufficiently
+small $|t|$, the sup norm of the block component is exactly
+$(1-d_Jt)M$: the changed coordinates start below $M/2$ and
+their perturbations are at most $M/8$. A peak coordinate is
+unchanged. The vectors $D\omega_{J,t}$ are uniformly bounded,
+and
+\[
+ \sup_J\|D(\omega_J-\omega_{J,t})\|_2\longrightarrow0.
+\]
+Moreover, with $d_{J,t}=\langle Dw,D\omega_{J,t}\rangle/C$,
+\[
+ |t|\,|d_J-d_{J,t}|
+ \le\frac{Mt^2}{C\delta}
+       \sum_{|\omega(k)|>\delta/|t|}\Phi_m(k)^2\omega(k)^2
+ =o(t^2)
+\]
+uniformly in $J$. Taylor expansion of the Hilbert norm at
+$Dw\ne0$ now gives
+\[
+ N_m((1-d_Jt)w+t\omega_{J,t})
+ =1+\tfrac12H_Jt^2+o(t^2)
+\]
+uniformly in $J$. Since $H_J\ge0$, the dual graph formula
+proves \eqref{eq:uniform-weighted-expansion}. The case
+$J=\infty$ gives the local assertion. The triangle inequality
+away from zero gives a finite full mate gauge.
+
+Suppose next that $(f,g)$ is contractive and $H\le1$, and fix
+$0<\rho<1$. The uniform estimate and $H_J\to H$ provide one
+neighborhood of zero on which
+$p^*(f+\rho t g_J)\le\sqrt{1+t^2}$ for every sufficiently
+large $J$. Outside that neighborhood, norm convergence to
+$\rho g$ and the strict margin between
+$\sqrt{1+t^2}$ and $\sqrt{1+\rho^2t^2}$ give the same
+inequality for large $J$. Thus $(f,\rho g_J)$ is contractive.
+Its finite off-peak certificate has base curvature zero and
+block curvature $\rho^2H_J<1$. The local-certificate recovery
+theorem of \cite[Theorem~3.1]{Check} therefore applies. Passing first to $J\to\infty$ and
+then to $\rho\uparrow1$ proves the claim. Finally, scaling $g$
+by a sufficiently small positive constant makes both its full
+mate gauge and its coefficient $H$ at most one.
+\end{proof}
+
+\begin{proposition}[Failure of bounded first-order lifting]
+\label{prop:no-bounded-lift}
+Suppose $a\in c_{00}$ and $\omega$ satisfying
+\eqref{eq:weighted-direction} is unbounded and also satisfies
+$\sum_k2^{-k}|\omega(k)|<\infty$. Then $g$ has no
+representation
+\[
+ g=b+\sum_lR_l^*v_l,
+ \qquad \supp b\subseteq\supp a,\qquad
+ (v_l)_l\in V^*.
+\]
+In particular, no dual graph decomposition of $f+tg$ can have
+two-sided norm derivatives at zero as a map into
+$X^*\times V^*$, with its component norms bounded by
+$1+O(t^2)$. Hence bounded quadratic component lifts do
+not exist for every mate.
+\end{proposition}
+\begin{proof}
+The convergent coefficient series defining $g$ belongs to $Y$.
+Indeed, its coefficient at $(k,m)$ in the injective map $T$ is
+$m2^{-m-k}(\omega(k)-dw(k))$, and these coefficients are
+summable by the additional coefficient hypothesis.
+Both $g$ and $L^*v$ then belong to $Y$, so the proposed finite
+support vector $b$ lies in $Y\cap c_{00}=\{0\}$. Injectivity
+of $T$ forces $v_m=\omega-dw$ and $v_l=0$ for $l\ne m$,
+contrary to $v\in V^*$.
+
+For the final assertion, differentiate the exact decomposition.
+The two-sided base norm bound forces
+$\supp b\subseteq\supp a$: the sum of its two directional
+derivatives is $2\sum_{k\notin\supp a}|b(k)|$. The preceding
+contradiction applies.
+\end{proof}
+
+\begin{proposition}[Unavoidable derivative blow-up]
+\label{prop:lift-blowup}
+Retain the hypotheses of Proposition~\ref{prop:no-bounded-lift},
+and suppose that $g$ is a mate and that the normalized base
+contact has cube representative $z$ satisfying
+$\|z|_{F^c}\|_\infty<1$, where $F=\supp a$.
+For every choice of admissible decompositions
+\[
+ f+tg=A(t)+L^*W(t),\qquad
+ q^*(A(t)),\ \|W(t)\|_{V^*}\le\sqrt{1+t^2},
+\]
+we have $\|W(t)-w\|_{V^*}/|t|\to\infty$ as $t\to0$.
+Here $w=(w_l)_l$ is the forced block component of $f$.
+\end{proposition}
+\begin{proof}
+Otherwise choose $t_j\to0$, of one sign, with bounded block
+difference quotients. Passing to a weak-star convergent
+subsequence gives $(W(t_j)-w)/t_j\to v$ weak-star.
+Compactness of $L^*$ gives convergence of their images in norm,
+so the base quotients converge in norm to $b=g-L^*v$.
+It is enough to treat $t_j>0$; for the other sign replace
+$g$ by $-g$.
+
+Evaluation at the bidual normer $\xi$ shows
+$b(\xi)\le0$ and $v_l(R_l^{**}\xi)\le0$ for every $l$.
+Their absolutely convergent sum is $g(\xi)=0$, so each is
+zero. In particular, the upper directional derivative of
+$q^*$ at $a$ along $b$ is nonpositive, while $b(\xi)=0$.
+Subtracting evaluation at the normalized base contact from
+the explicit directional derivative of
+$q^*(a)=\|a\|_1+\|U^*a\|_H$ gives
+\[
+ \sum_{k\notin F}(|b(k)|-z(k)b(k))\le0.
+\]
+The uniform margin of $z$ forces $b|_{F^c}=0$.
+This contradicts Proposition~\ref{prop:no-bounded-lift}.
+\end{proof}
+
+\begin{remark}[Non-attaining examples]
+The construction applies at non-attaining supports as well.
+Fix $a\in c_{00}$, $q^*(a)=1$, set $F=\supp a$, and consider
+the open part of the bidual base face
+\[
+ \left\{z+U\frac{U^*a}{\|U^*a\|_H}:
+ z|_F=\sgn a,\quad\|z|_{F^c}\|_\infty<1\right\}.
+\]
+This is a Baire space in the norm topology of the corresponding
+affine $\ell_\infty$ space. For each $N$, the subset where
+$|w(k)|<M/2$ for some $k\geq N$ is open and dense.
+For density, at a given point $y$ choose $j\notin F$ and
+$u\in S_{q^*}$ with $u(y)=0$ and $u(e_j)\ne0$. One may normalize
+$e_j^*-y(j)a$. Choose $k_l\to\infty$ with $u_{k_l,m}\to u$ and set
+\[
+ y_l=y-\frac{u_{k_l,m}(y)}{u_{k_l,m}(e_j)}e_j.
+\]
+Then $y_l\to y$ within the open face, and $u_{k_l,m}(y_l)=0$,
+so the selected block support coordinate is zero.
+Openness follows from continuity of the finite weighted support
+data. Intersecting these open dense sets gives a residual subset
+with infinitely many half-peak indices. This subset contains points
+outside $c_0$, since the intersection of $c_0$ with the affine space
+is closed and has empty interior. Choose such a point and
+normalize it in $p^{**}$. Its support $f$ is not norm-attaining,
+by strict convexity of $p^{**}$, and it has infinitely many
+indices $k_j$ with $|w(k_j)|<M/2$.
+
+Set $\omega(k_j)=j$ and zero elsewhere. Since $k_j\ge j$,
+both \eqref{eq:weighted-direction} and summability of the
+$T$-coefficients hold. A sufficiently small nonzero multiple
+$g_0$ of the resulting $g$ is a mate with coefficient at most
+one. Theorem~\ref{thm:weighted-recovery} recovers $(f,g_0)$,
+whereas Proposition~\ref{prop:no-bounded-lift} excludes every
+bounded first-order component lift. For $0<\rho<1$,
+$(f,\rho g_0)$ itself is non-norm-attaining: the strict damping
+forces equality in the original contraction only when the
+second coordinate is zero and $f$ attains its norm. Thus there
+are non-norm-attaining operators in the closure of norm-attainers
+which are inaccessible to any bounded quadratic-lift argument.
+Proposition~\ref{prop:lift-blowup} also shows that every admissible
+decomposition of these damped targets has unbounded first
+difference quotients.
+\end{remark}
+
+\section{Consequences for the remaining density problem}
+The residual recovery theorem concerns the first-row sphere.
+It is not a statement that recoverable operators form a residual
+subset of the whole operator space. In particular, a compact
+upper semicontinuous correspondence may have additional fiber
+directions at discontinuity points; density of continuity points
+does not imply density of their graph in the full graph.
+
+The weighted construction supplies a separate improvement.
+Bounded component derivatives are not necessary even for
+recoverable non-norm-attaining targets. The relevant replacement
+is a truncation whose discarded pullback costs $o(t^2)$ uniformly
+over the finite approximants. Proving such a representation for
+arbitrary mates, or recovering the additional fibers at all
+discontinuity supports by another method, remains open here.
+Neither compactness nor the derivative blow-up proved above is
+a counterexample to operator density.
+
+\begin{thebibliography}{9}
+\bibitem{KLMW}
+V.~Kadets, G.~L\'opez, M.~Mart\'in and D.~Werner,
+\emph{Norm attaining operators of finite rank}, arXiv:1905.08272.
+\bibitem{Martin}
+M.~Mart\'in,
+\emph{A Banach space whose set of norm-attaining functionals is
+algebraically trivial}, J. Funct. Anal. \textbf{288} (2025), 110815.
+\bibitem{Recovery}
+\emph{Recovery of mates on Mart\'in norms and generic second-order
+curvature}, accompanying research note, October 8, 2026. [NOT AVAILABLE]
+\bibitem{Check}
+\emph{Checking the positive density route for Mart\'in norms},
+accompanying research note, October 8, 2026. [NOT AVAILABLE]
+\end{thebibliography}
+\end{document}
