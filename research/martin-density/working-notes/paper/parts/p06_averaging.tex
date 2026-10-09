@@ -1,0 +1,203 @@
+\section{Averaging over scales}\label{sec:averaging}
+
+\subsection{The averaging theorem}
+
+\begin{theorem}[Weighted averaging]\label{thm:averaging}
+Let $g\in\Cset(f)$ and $\rho\in(0,1)$.  Let $c_1,\dots,c_n$ be finite
+certificates at $f$ and $\mu_1,\dots,\mu_n\ge0$ weights with
+$\sum_i\mu_i=1$; put $r_i:=r(c_i)$ and $e_i:=p^*(g-g_{c_i})$.  Let
+$s_0\in(0,\min(1,\sqrt{1-\rho^2})]$ and $\eta_0,\kappa_0\ge0$ satisfy
+$\rho^2(1+\eta_0)(1+\kappa_0)\le(1+\rho^2)/2$, and assume
+\begin{enumerate}
+\item[(i)] $H(c_i)\le1+\eta_0$ and $\kappa(c_i)\min(r_i,s_0)\le\kappa_0$
+for all $i$;
+\item[(ii)] $\sum_{i:\,r_i<\rho s}\mu_ie_i\le(1-\rho^2)s/(12\rho)$ for every
+$s\in(0,s_0]$;
+\item[(iii)] $\sum_i\mu_ie_i\le(1-\rho^2)s_0/(3\rho)$.
+\end{enumerate}
+Then $c:=\sum_i\mu_ic_i$ satisfies $\rho g_c\in\Cert(f)$, and
+$p^*(\rho g_c-\rho g)\le\rho\sum_i\mu_ie_i$.  Consequently, if for every
+$\rho<1$ and $\varepsilon>0$ such families exist with
+$\sum_i\mu_ie_i\le\varepsilon$, then $g\in\cl\Cert(f)$.
+\end{theorem}
+
+\begin{proof}
+By linearity $g_c=\sum_i\mu_ig_{c_i}$, and by convexity of $p^*$,
+$p^*(f+s\rho g_c)\le\sum_i\mu_ip^*(f+s\rho g_{c_i})$ for real $s$.  We
+use two bounds for each $i$.  (A) If $\rho|s|\le r_i$ and $|s|\le s_0$,
+Proposition~\ref{prop:expansion} and (i) give
+$p^*(f+s\rho g_{c_i})\le1+\frac{\rho^2s^2}2(1+\eta_0)(1+\kappa_0)\le
+1+\frac{s^2}4(1+\rho^2)$, since $\kappa(c_i)\rho|s|\le\kappa(c_i)
+\min(r_i,s_0)$.  (B) Always, since $g\in\Cset(f)$,
+$p^*(f+s\rho g_{c_i})\le p^*(f+s\rho g)+\rho|s|e_i\le s(\rho s)+\rho|s|e_i$.
+
+\emph{Case $|s|\le s_0$.}  Use (A) for $r_i\ge\rho|s|$ and (B) otherwise.
+By (ii),
+\[
+ p^*(f+s\rho g_c)\le\max\Big(1+\frac{s^2}4(1+\rho^2),\,s(\rho s)\Big)
+ +\frac{(1-\rho^2)s^2}{12}.
+\]
+Now $1+\frac{s^2}4(1+\rho^2)+\frac{(1-\rho^2)s^2}{12}=1+\frac{s^2}{6}
+(2+\rho^2)=1+\frac{s^2}2-\frac{(1-\rho^2)s^2}6\le1+\frac{s^2}2-\frac{s^4}8
+\le s(s)$ because $s^2\le1-\rho^2$; and $s(\rho s)+(1-\rho^2)s^2/12\le s(s)$
+by Lemma~\ref{lem:slack}(a).
+
+\emph{Case $|s|\ge s_0$.}  Use (B) for every $i$ and (iii):
+$p^*(f+s\rho g_c)\le s(\rho s)+(1-\rho^2)s_0|s|/3\le s(s)$, because
+$\min(s^2,|s|)\ge s_0|s|$.
+
+Thus $\rho g_c\in\Cset(f)$.  By convexity of $H$,
+$H(\rho c)\le\rho^2\max_iH(c_i)\le\rho^2(1+\eta_0)\le1$, so $\rho
+g_c\in\Cert(f)$.  The distance estimate is the triangle inequality.
+\end{proof}
+
+The mechanism is that at each scale $s$ only the certificates that are too
+fine for $s$ contribute an error, of order $s$ each, and these errors are
+summable against the weights.
+
+\begin{corollary}[Ladder form]\label{cor:ladder}
+Let $g\in\Cset(f)$.  Suppose there are $c_0>0$, $\kappa_1,K<\infty$, $t_*>0$
+and a function $\eta(t)\to0$ $(t\to0^+)$ such that for every $t\in(0,t_*]$
+there is a finite certificate $c_t$ at $f$ with
+\[
+ H(c_t)\le1+\eta(t),\quad r(c_t)\ge c_0t,\quad \kappa(c_t)\le\kappa_1,\quad
+ p^*(g-g_{c_t})\le Kt.
+\]
+Then $g\in\cl\Cert(f)$; hence $g$ is recovered along every sequence
+$f_n\to f$ \textup{(}Corollary~\ref{cor:lsc}\textup{)}.  It suffices that
+the hypotheses hold along a geometric sequence of scales $t_1 2^{1-i}$.
+\end{corollary}
+
+\begin{proof}
+Fix $\rho<1$; choose $\eta_0,\kappa_0>0$ with
+$\rho^2(1+\eta_0)(1+\kappa_0)\le(1+\rho^2)/2$, then
+$s_0\in(0,\min(1,\sqrt{1-\rho^2})]$ with $\kappa_1s_0\le\kappa_0$, an integer
+$n\ge24\rho^2K/(c_0(1-\rho^2))$, and $t_1\in(0,t_*]$ with $\eta(t)\le\eta_0$
+for $t\le t_1$ and $2\rho Kt_1/n\le(1-\rho^2)s_0/3$.  Put $t_i:=t_12^{1-i}$,
+$c_i:=c_{t_i}$ and $\mu_i:=1/n$ ($i\le n$).  Condition (i) holds.  For (ii),
+$r_i<\rho s$ implies $c_0t_i<\rho s$, and the $t_i$ with this property sum
+to less than $2\rho s/c_0$, so the left side of (ii) is at most
+$(K/n)(2\rho s/c_0)\le(1-\rho^2)s/(12\rho)$.  For (iii),
+$\sum_i\mu_iKt_i\le2Kt_1/n$.  Theorem~\ref{thm:averaging} gives $\rho
+g_{c}\in\Cert(f)$ within $2\rho Kt_1/n$ of $\rho g$; let $t_1\to0$ and then
+$\rho\to1$.
+\end{proof}
+
+\begin{corollary}[Decomposition form]\label{cor:decomposition}
+Let $g\in\Cset(f)$.  Suppose that for every small $t>0$ there are a finite
+certificate $c_t=(b_t,\omega_t)$ with $r(c_t)\ge c_0t$ and
+$\kappa(c_t)\le\kappa_1$, and $e_t:=g-g_{c_t}$ with $p^*(e_t)\le Kt$, such
+that for $\tau=t$ or for $\tau=-t$ the decomposition
+\[
+ f+\tau g=(a+\tau b_t+\tau e_t)+\sum_mR_m^*\big((1-d_{t,m}\tau)w_m+\tau
+ \omega_{t,m}\big)
+\]
+has all component norms at most $s(\tau)+o(\tau^2)$.  Assume moreover that
+$t^2/C_m\to0$ uniformly over the active blocks of $c_t$ \textup{(}this is
+automatic if $I$ is finite\textup{)}.  Then $H(c_t)\le1+o(1)$, and
+Corollary~\ref{cor:ladder} gives $g\in\cl\Cert(f)$.
+\end{corollary}
+
+\begin{proof}
+\emph{Blocks.}  Since $\kappa(c_t)\le\kappa_1$, $|d_{t,m}|\le
+\kappa_1C_m/(2M_m)$, so $Y=C_m+d_{t,m}\tau M_m=C_m(1+O(t))$ and
+$1-d_{t,m}\tau>0$ for small $t$.  Put $X:=|\tau|\|h_\perp\|$.
+Lemma~\ref{lem:block}(b) gives $\sqrt{Y^2+X^2}-Y\le\delta:=s(\tau)-1+o(\tau^2)$,
+hence $X^2\le\delta(2Y+\delta)$ and
+\[
+ H_m(\omega_{t,m})=\frac{\|h_\perp\|^2}{C_m}\le\frac\delta{\tau^2}
+ \Big(\frac{2Y}{C_m}+\frac\delta{C_m}\Big)=1+o(1)+O(\tau^2/C_m).
+\]
+\emph{Base.}  $B:=b_t+e_t$ satisfies $B(\zh)=0$, because $g(\xi)=0$ and
+$g_{c_t}(\xi)=0$ (Lemma~\ref{lem:algebra}).  Also $\|U^*b_t\|\le
+\kappa_1\nu/2$ and $\|e_t\|_1\le q^*(e_t)\le(1+\|L\|)p^*(e_t)\le(1+\|L\|)Kt$.
+Lemma~\ref{lem:base}(a) gives $h(B)\le1+o(1)$, and since $\sqrt h$ is a
+seminorm and $h(e_t)\le\|U\|^2\|e_t\|_1^2/\nu=O(t^2)$, also $h(b_t)\le
+1+o(1)$.
+\end{proof}
+
+\begin{remark}\label{rem:G2}
+For $I=\N$ the extra hypothesis in Corollary~\ref{cor:decomposition} cannot
+simply be dropped: $C_m\le\|\Phi_m\|_2\le2^{-m}$, and a block with
+$C_m\ll\tau^2$ can remain admissible at scale $\tau$ with
+$\|h_\perp\|\approx\tau/2+C_m/\tau$, i.e.\ with $H_m\approx\tau^2/(4C_m)\gg1$.
+Corollary~\ref{cor:ladder} itself has no such restriction.
+\end{remark}
+
+\subsection{Weighted directions}
+For a block $m$, a function $\omega:\N\to\R$ vanishing on $P_m$ and
+$\sigma>0$, put
+\[
+ E_m(\sigma;\omega):=\{k\in Q_m:\sigma|\omega(k)|>\gap_m(k)/2\},\qquad
+ T_m(\sigma;\omega):=\sum_{k\in E_m(\sigma;\omega)}\lambda_{k,m}|\omega(k)|.
+\]
+
+\begin{lemma}[Box tails]\label{lem:boxtails}
+$T_m(\sigma;\omega)=o(\sigma)$ as $\sigma\to0$ in each of the following cases:
+\textup{(a)} $\sum_k\lambda_{k,m}\omega(k)^2/\gap_m(k)<\infty$;
+\textup{(b)} $\omega$ is bounded and $|\omega(k)|\le K\sqrt{\gap_m(k)}$
+whenever $\gap_m(k)\le\gamma_0$, for some $K,\gamma_0>0$;
+\textup{(c)} $\gap_m\ge M_m/2$ on $\supp\omega$ and
+$\sum_k\lambda_{k,m}\omega(k)^2<\infty$ \textup{(}the weighted directions
+of \cite[Theorem~3.1]{PrA}\textup{)}.
+\end{lemma}
+
+\begin{proof}
+(a) On $E_m(\sigma)$, $\lambda_k|\omega(k)|<2\sigma\lambda_k\omega(k)^2/
+\gap(k)$, and the sets $E_m(\sigma)$ decrease to $\emptyset$ as
+$\sigma\downarrow0$; use dominated convergence.  (b) If
+$\sigma\|\omega\|_\infty<\gamma_0/2$, then $k\in E_m(\sigma)$ forces
+$\gap(k)\le\gamma_0$, hence $\gap(k)<2\sigma K\sqrt{\gap(k)}$, i.e.\
+$\gap(k)<4K^2\sigma^2$ and $|\omega(k)|<2K^2\sigma$; so $T_m(\sigma)\le
+2K^2\sigma\sum_{\gap(k)<4K^2\sigma^2}\lambda_k=o(\sigma)$.  (c) is a case
+of (a).
+\end{proof}
+
+\begin{theorem}[Weighted directions]\label{thm:weighted}
+Let $b\in\ell_1$ with $\supp b\subseteq F$, $b(\zh)=0$ and
+$\sum_{j\in F,\,|b_j|>|a_j|/(2t)}|b_j|=O(t)$ \textup{(}e.g.\
+$\sum_{j\in F}b_j^2/|a_j|<\infty$\textup{)}.  For finitely many blocks $m$
+let $\omega_m:\N\to\R$ vanish on $P_m$, with
+$\sum_k\lambda_{k,m}|\omega_m(k)|<\infty$ and $T_m(\sigma;\omega_m)=O(\sigma)$.
+Put $d_m:=\ip{D_mw_m}{D_m\omega_m}/C_m$,
+$g:=b+\sum_mR_m^*(\omega_m-d_mw_m)$ and $H:=\max(h(b),\max_mH_m(\omega_m))$.
+If $g\in\Cset(f)$ and $H\le1$, then $g\in\cl\Cert(f)$; in particular $g$
+is recovered along every sequence $f_n\to f$.
+\end{theorem}
+
+\begin{proof}
+Since $\Phi_m\le\lambda_{\cdot,m}$, $D_m\omega_m\in\ell_1\subseteq\ell_2$.
+For small $t>0$ choose $J_t\to\infty$ so large that the tails of $b$ and of
+$\lambda_{\cdot,m}\omega_m$ beyond $J_t$ have $\ell_1$-norm at most $t$, and
+put
+\begin{gather*}
+ G_t:=F\cap[1,J_t]\cap\{|b_j|\le|a_j|/(2t)\},\qquad
+ b_t:=b1_{G_t}-\varkappa_ta,\qquad \varkappa_t:=(b1_{G_t})(\zh),\\
+ \omega_{m,t}:=\omega_m1_{\{k\le J_t\}\setminus E_m(t;\omega_m)}.
+\end{gather*}
+Then $c_t:=(b_t,(\omega_{m,t}))$ is a finite certificate.  Since
+$|\varkappa_t|=|(b1_{G_t^c})(\zh)|\le q^*(b1_{F\setminus
+G_t})\le(1+\|U\|)\|b1_{F\setminus G_t}\|_1=O(t)$, we get
+$\|b_t/a\|_\infty\le1/(2t)+O(t)$, so the base part of $r(c_t)$ is at least
+$t$ for small $t$; the block coordinates kept satisfy
+$t|\omega_{m,t}(k)|\le\gap_m(k)/2$, and the remaining terms of the radius
+are bounded below (the $d_{m,t}$ and $\|U^*b_t\|$ are bounded).  Hence
+$r(c_t)\ge t$ and $\kappa(c_t)$ is bounded.  The remainder is
+\[
+ g-g_{c_t}=(b-b_t)+\sum_mR_m^*\big((\omega_m-\omega_{m,t})-(d_m-d_{m,t})w_m
+ \big),
+\]
+with $\|b-b_t\|_1\le\|b1_{F\setminus G_t}\|_1+|\varkappa_t|=O(t)$,
+$\sum_k\lambda_{k,m}|\omega_m-\omega_{m,t}|(k)\le T_m(t;\omega_m)+t=O(t)$ and
+$|d_m-d_{m,t}|\le\|D_m(\omega_m-\omega_{m,t})\|_2=O(t)$.  So
+$p^*(g-g_{c_t})\le Kt$.  Finally $b_t\to b$ in $\ell_1$ and
+$D_m\omega_{m,t}\to D_m\omega_m$ in $\ell_2$, so $H(c_t)\to H\le1$.
+Corollary~\ref{cor:ladder} applies.
+\end{proof}
+
+By Lemma~\ref{lem:boxtails}(c), Theorem~\ref{thm:weighted} contains
+\cite[Theorem~3.1]{PrA} (and removes its dependence on \cite{Check});
+near-peak supports are allowed as long as the box tails are $O(\sigma)$.
+In particular the non-attaining examples of \cite[Section~3]{PrA}, which
+admit no bounded first-order lift, are recovered along every sequence.
+

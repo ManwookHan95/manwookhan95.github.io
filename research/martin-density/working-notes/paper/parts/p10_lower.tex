@@ -1,0 +1,202 @@
+\subsection{The sharp second-order coefficient at tame supports}
+
+\begin{lemma}[Exact local block formula]\label{lem:localformula}
+Fix a block and drop $m$; recall $\sum_k\Phi(k)^2<1$.  Let $y\in\ell_1$, let
+$P\ne\emptyset$ be a set of indices with complement $Q$, and
+$s\in\{\pm1\}^P$.  Put $S:=\sum_{k\in P}s_ky_k$,
+$Y:=(\sum_{k\in Q}y_k^2/\Phi(k)^2)^{1/2}$ and $F_2:=\sum_{k\in P}\Phi(k)^2\in
+(0,1)$, and assume $0<S$, $Y<\infty$ and $Y\le S$.  Define
+\[
+ \Lambda(S,Y):=\frac{S-\sqrt{F_2}\sqrt{S^2-(1-F_2)Y^2}}{1-F_2},\qquad
+ \lambda:=\Lambda(S,Y),\qquad \rho_0:=(S/\lambda-1)/F_2 .
+\]
+Then $\lambda>0$ and
+\begin{equation}\label{eq:overshootformula}
+ |y|\le\lambda+2\sum_{k\in P}\big(\lambda\rho_0\Phi(k)^2-s_ky_k\big)_+ .
+\end{equation}
+Moreover, if $\zeta\ne0$ with norming functional $w$, and $(P,s)$ are its
+peak set and signs, then with $c_Q:=\|D(w1_Q)\|_2^2$:
+$S_P(\zeta)=|\zeta|(1+F_2M/C)$, $Y_Q(\zeta)=|\zeta|\sqrt{c_Q}/C<S_P(\zeta)$,
+$\Lambda(S_P(\zeta),Y_Q(\zeta))=|\zeta|$, $\lambda\rho_0=|\zeta|M/C$, and at
+this point
+\[
+ \partial_S\Lambda=M,\qquad \partial_Y\Lambda=CY/|\zeta|,\qquad
+ \partial_S^2\Lambda=\frac{\sqrt{F_2}\,Y^2}{(S^2-(1-F_2)Y^2)^{3/2}}
+ =\frac{C\,c_Q}{|\zeta|F_2}.
+\]
+\end{lemma}
+
+\begin{proof}
+$\Delta:=S^2-(1-F_2)Y^2\ge F_2S^2>0$; $\lambda$ is the smaller root of
+$(1-F_2)l^2-2Sl+(S^2+F_2Y^2)=0$, i.e.\ of $(S-l)^2+F_2Y^2=F_2l^2$, and
+$\lambda>0$ because $\sqrt{F_2\Delta}<S$.  The root equation reads
+$\rho_0^2F_2+Y^2/\lambda^2=1$.  Define $h\in\ell_2$ by
+$h_k:=\rho_0\Phi(k)s_k$ ($k\in P$), $h_k:=y_k/(\lambda\Phi(k))$ ($k\in Q$);
+then $\|h\|_2=1$, and $\alpha:=y/\lambda-Dh$ vanishes on $Q$, with
+$\|\alpha\|_1=\sum_Ps_k\alpha_k+2\sum_P(-s_k\alpha_k)_+=S/\lambda-\rho_0F_2
++\frac2\lambda\sum_P(\lambda\rho_0\Phi(k)^2-s_ky_k)_+$, and
+$S/\lambda-\rho_0F_2=1$.  Hence $y=\lambda\alpha+\lambda Dh\in\lambda
+\|\alpha\|_1(B_{\ell_1}+D(B_{\ell_2}))$, which is \eqref{eq:overshootformula}.
+
+At $\zeta$, Lemma~\ref{lem:threshold} gives $s_k\zeta_k=|\zeta|(|\alpha_k|+
+\Phi(k)^2M/C)$ on $P$ and $\zeta_k=|\zeta|\Phi(k)^2w_k/C$ on $Q$, whence
+the formulas for $S$ and $Y$; $Y<S$ because $\sqrt{c_Q}\le C$ and $F_2M>0$.
+Using $C^2=M^2F_2+c_Q$ one checks that $l=|\zeta|$ satisfies
+$(S-l)^2+F_2Y^2=F_2l^2$; since $|\zeta|(1-F_2)<S$, it is the smaller root.
+Then $\rho_0=M/C$, and from the root equation
+$\sqrt{F_2\Delta}=S-(1-F_2)\lambda=\lambda F_2(1+\rho_0)$, i.e.\
+$\sqrt\Delta=|\zeta|\sqrt{F_2}/C$.  Differentiating,
+$\partial_S\Lambda=(1-\sqrt{F_2}S/\sqrt\Delta)/(1-F_2)=(1-C-F_2M)/(1-F_2)=M$,
+$\partial_Y\Lambda=\sqrt{F_2}Y/\sqrt\Delta=CY/|\zeta|$, and
+$\partial^2_S\Lambda=\sqrt{F_2}(S^2-\Delta)/((1-F_2)\Delta^{3/2})=
+\sqrt{F_2}Y^2/\Delta^{3/2}=Cc_Q/(|\zeta|F_2)$.
+\end{proof}
+
+\begin{proposition}[Lower bound]\label{prop:lowerbound}
+Let $I$ be finite and let $f\in S_{p^*}$ satisfy: $a\in c_{00}$, $K$ is
+finite, every $Q_m$ is finite, there are no degenerate peaks, and
+\textup{(MS)} holds at $\xi$.  Then for every balanced finite certificate
+$g\in S(f)$,
+\[
+ \liminf_{t\to0}\frac{p^*(f+tg)-1}{t^2}\ge\frac{\Gamma_w(g)}2 .
+\]
+In particular $\Gamma_w(g)\le1$ for every $g\in\Cset(f)\cap S(f)$.
+\end{proposition}
+
+\begin{proof}
+Write $g=b+\sum_mR_m^*v_m$, $v_m=\omega_m-d_mw_m$.  For $\chi,\chi_2\in X$
+put $\eta_t:=\xi+t\chi+t^2\chi_2$.  Since $g(\xi)=0$ and
+$p^{**}(\eta_t)=f(\eta_t)+\Delta(\eta_t)$ with $f(\eta_t)=1+O(t)$,
+\begin{equation}\label{eq:testratio}
+ p^*(f+tg)\ge\frac{(f+tg)(\eta_t)}{p^{**}(\eta_t)}
+ =1+t^2g(\chi)-\Delta(\eta_t)+O(t^3)
+ \quad\text{whenever }\Delta(\eta_t)=O(t^2).
+\end{equation}
+By Lemma~\ref{lem:excess},
+$\Delta(\eta_t)=E_q(t\chi+t^2\chi_2)+\sum_mE_m(t\delta_{1,m}+t^2\delta_{2,m})$
+with $\delta_{i,m}:=R_m\chi_i$.
+
+\emph{Base test.}  Let $E_F:=\spn\{U^*e_j^*:j\in F\}\ni e$ and fix
+$k_\perp\in E_F$ with $\ip{k_\perp}e=0$.  Put
+$\kappa_2:=\nu\|k_\perp\|^2/(2q_0)$, $\kappa_2':=-\kappa_2\|a\|_1/\nu$, and
+let $k_{2\perp}\in E_F$ solve $\ip{k_{2\perp}}{U^*e_j^*}=-\kappa_2z_j-
+\kappa'_2(Ue)_j$ for $j\in F$ (the Gram matrix of the independent vectors
+$U^*e_j^*$ is invertible); then $\ip{k_{2\perp}}{e}=(-\kappa_2\|a\|_1-
+\kappa'_2\nu)/\nu=0$.  Put $k_2:=\kappa'_2e+k_{2\perp}$, so that
+$(Uk_2)_j=-\kappa_2z_j$ on $F$.  Let $\chi:=Uk_\perp+\chi_c$ with
+$\chi_c\in c_{00}(J)$ to be chosen, and $\chi_2:=(Uk_2)1_{\N\setminus F}$.
+With $\mathbf h:=q_0e+tk_\perp+t^2k_2$ and $Z:=\eta_t-U\mathbf h=q_0z+t
+\chi_c-t^2(Uk_2)1_F$ we have $|Z_j|=q_0+t^2\kappa_2$ on $F$ and $|Z_j|\le
+q_0$ off $F$ for small $t$ ($\chi_c$ moves finitely many free
+coordinates), while
+$\|\mathbf h\|=q_0+t^2(\kappa'_2+\|k_\perp\|^2/(2q_0))+O(t^3)=q_0+t^2\kappa_2
+(1-\|a\|_1)/\nu+O(t^3)=q_0+t^2\kappa_2+O(t^3)$, using $\|a\|_1+\nu=1$.
+Since $B_{q^{**}}=B_{\ell_\infty}+U(B_H)$, $q^{**}(\eta_t)\le q_0+t^2\kappa_2
++O(t^3)$; and $a(\chi)=\ip{U^*a}{k_\perp}=0=a(\chi_2)$.  Hence
+$E_q(t\chi+t^2\chi_2)\le t^2\nu\|k_\perp\|^2/(2q_0)+O(t^3)$, and
+$b(\chi)=\ip{U^*b}{k_\perp}$.
+
+\emph{Block test.}  Fix $m$ and drop it.  Apply \eqref{eq:overshootformula}
+to $y:=\zeta+t\delta_1+t^2\delta_2$ with the peak set and signs of $\zeta$.
+As $Q$ is finite, $G(y):=\Lambda(S_P(y),Y_Q(y))$ is a smooth function of the
+finitely many numbers $(S_P(y),(y_k)_{k\in Q})$ near those of $\zeta$
+($\Lambda$ depends smoothly on $(S,Y^2)$).  By Lemma~\ref{lem:localformula}
+its differential at $\zeta$ is $\delta\mapsto MS_P(\delta)+\sum_{k\in
+Q}w_k\delta_k=w(\delta)$, so
+$G(y)=|\zeta|+w(t\delta_1+t^2\delta_2)+\frac{t^2}2\mathcal H(\delta_1)+
+O(t^3)$, where $\mathcal H$ is the Hessian of $G$ at $\zeta$.  The overshoot:
+$\lambda(y)\rho_0(y)=|\zeta|M/C+O(t)$ and, by \eqref{eq:margin},
+$s_ky_k=\lambda_k\mu_k+|\zeta|\Phi(k)^2M/C+ts_k\delta_{1,k}+t^2s_k
+\delta_{2,k}$ on $P$, with $|\delta_{i,k}|\le\lambda_kq(\chi_i)$; so each
+overshoot term is at most $\lambda_k(|t|B-\mu_k)_+$ for a constant $B$,
+and their sum is $o(t^2)$ by (MS), all peaks being non-degenerate.  Hence
+$E_m(t\delta_1+t^2\delta_2)\le\frac{t^2}2\mathcal H_m(\delta_{1,m})+o(t^2)$.
+
+\emph{Decoupling.}  $\mathcal H_m(\delta)$ and $v_m(\delta)$ depend only on
+$\sigma_1:=S_{P_m}(\delta)$ and $\delta|_{Q_m}$.  Since $F\cup K$ is finite,
+Lemma~\ref{lem:rigidity}(b) (with $P'_m=P_m$, which is cofinite) allows us to
+choose $\chi_c\in c_{00}(J)$ so that, for the fixed $k_\perp$, the finitely
+many numbers $u_{k,m}(\chi)$ ($k\in Q_m$) and $\pi_m(\chi)=S_{P_m}(R_m\chi)$
+take arbitrary prescribed values.  By \eqref{eq:testratio},
+\[
+ \liminf_{t\to0}\frac{p^*(f+tg)-1}{t^2}\ge\frac12\Big[\sup_{k_\perp}
+ \Big(2\ip{U^*b}{k_\perp}-\frac{\nu}{q_0}\|k_\perp\|^2\Big)+\sum_m
+ \sup_{\delta}\big(2v_m(\delta)-\mathcal H_m(\delta)\big)\Big].
+\]
+\emph{Base supremum.}  $U^*b\in E_F$; the maximizer is
+$k_\perp=(q_0/\nu)P^\perp U^*b\in E_F\cap e^\perp$, with value
+$(q_0/\nu)\|P^\perp U^*b\|^2=q_0H_b$.
+
+\emph{Block suprema.}  Drop $m$.  Suppose first $c_Q>0$, so $Y>0$.  Write
+$\zeta':=D^{-1}\delta_Q$, $\hat h:=D^{-1}\zeta_Q/Y=D w_Q/\sqrt{c_Q}$,
+$\sigma_2:=\ip{\hat h}{\zeta'}$, $\zeta'_\perp:=\zeta'-\sigma_2\hat h$ and
+$r:=Y\sigma_1-S\sigma_2$.  Since $\Lambda$ is $1$-homogeneous, its Hessian
+is $(\partial_S^2\Lambda/Y^2)(Y,-S)^{\otimes2}$, and
+$Y_Q(\zeta+\delta)=Y+\sigma_2+\|\zeta'_\perp\|^2/(2Y)+O(\|\delta\|^3)$;
+with Lemma~\ref{lem:localformula},
+$\mathcal H(\delta)=(C/|\zeta|)\|\zeta'_\perp\|^2+(\partial_S^2\Lambda/Y^2)
+r^2$.  Next, with $\tilde\omega:=(\omega-dw)1_Q$,
+$v(\delta)=\ip{D\tilde\omega}{\zeta'_\perp}+\big(\ip{D\tilde\omega}{\hat h}
+\sigma_2-dM\sigma_1\big)$.  The linear form in brackets vanishes at
+$(\sigma_1,\sigma_2)=(S,Y)$, since there it equals $v(\zeta)=\omega(\zeta)
+-d|\zeta|=0$ ($\omega(\zeta)=|\zeta|d$ because $\zeta=|\zeta|D^2w/C$ on $Q$);
+hence it equals $-(dM/Y)r$.  As $\zeta'_\perp\in\hat h^\perp$ and $r$ are
+independent variables,
+\begin{align*}
+ \sup_\delta(2v-\mathcal H)&=\frac{|\zeta|}C\|P_{\hat h^\perp}D\tilde\omega
+ \|^2+\frac{d^2M^2}{\partial_S^2\Lambda}
+ =\frac{|\zeta|}C\Big(\|D\omega\|^2-\frac{d^2C^2}{c_Q}\Big)+
+ \frac{d^2M^2|\zeta|F_2}{Cc_Q}\\
+ &=\frac{|\zeta|}C(\|D\omega\|^2-d^2),
+\end{align*}
+where we used $\ip{D\omega}{Dw}=dC$, $\|P_{\hat h^\perp}D\tilde\omega\|^2=
+\|D\omega\|^2-d^2C^2/c_Q$ (a direct computation) and $C^2=c_Q+M^2F_2$.  This
+is $\sigma_mH_m$.  If $c_Q=0$, then $w_Q=0$, $d=0$, $\Lambda(S,\cdot)$
+depends on $Y^2$ with $\partial\Lambda/\partial(Y^2)=C/(2|\zeta|)$ at
+$\zeta$, $\mathcal H(\delta)=(C/|\zeta|)\|D^{-1}\delta_Q\|^2$,
+$v(\delta)=\ip{D\omega}{D^{-1}\delta_Q}$, and the supremum is
+$(|\zeta|/C)\|D\omega\|^2=\sigma_mH_m$ directly.
+
+Summing, $\liminf_{t\to0}(p^*(f+tg)-1)/t^2\ge\frac12(q_0H_b+\sum_m\sigma_m
+H_m)=\Gamma_w(g)/2$.  If $g\in\Cset(f)$, then $(p^*(f+tg)-1)/t^2\le
+(s(t)-1)/t^2\to\frac12$.
+\end{proof}
+
+\begin{theorem}[Tame supports are recoverable]\label{thm:tame}
+Let $I$ be finite and let $f\in S_{p^*}$ have a C-tame normer without
+degenerate peaks, i.e.\ $a\in c_{00}$, $K$ finite, every $Q_m$ finite,
+$Dg_m=\emptyset$ and \textup{(MS)}.  Then
+$\Cset(f)\subseteq\Li_N\Cset(f'_N)$ for the canonical truncations
+$f'_N$ of $f$.  In particular $f\in\Rec$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:tamefibre}, every $g\in\Cset(f)$ is a balanced finite
+certificate; by Proposition~\ref{prop:lowerbound}, $\Gamma_w(g)\le1$; by
+Theorem~\ref{thm:transfer}, $\rho g\in\Li_N\Cset(f'_N)$ for every $\rho<1$,
+and the lower limit is closed.  Corollary~\ref{cor:finite} gives $f\in\Rec$.
+\end{proof}
+
+\begin{remark}[On the hypotheses]\label{rem:kinks}
+(a) The finiteness of $K$ enters Theorem~\ref{thm:tame} twice: in Step~1 of
+Theorem~\ref{thm:tamefibre} and in the decoupling step of
+Proposition~\ref{prop:lowerbound}, both of which need the set $J$ of free
+coordinates to be cofinite so that Lemma~\ref{lem:rigidity}(b) applies.
+Lemma B does not exclude elements of $\spn\{u_{k,m},\pi_m\}\subseteq Y$
+supported in $F\cup K$ when $K$ is infinite, and then the lower bound may
+fail: in a finite-dimensional analogue in which every off-support
+coordinate is a contact, the exact second-order coefficient of a pure block
+certificate is at most $0.296$ on both sides while $\Gamma_w=0.485$
+(re-splitting through the contacts is free at first order for one sign of
+$t$).  Whether a finite certificate with $\Gamma_2\le1<\Gamma_w$ exists at a
+support with infinitely many contacts in Mart\'in's space is \emph{open};
+Theorem~\ref{thm:transfer} would not recover it.  (b) Earlier formulations
+assumed $K=\emptyset$; Step~3 of Theorem~\ref{thm:tamefibre} removes this.
+(c) The existence of tame non-attaining supports for a \emph{given}
+admissible $T$ is not known in general (they form a meagre set in the
+bidual face, by the residuality of half-peaks in \cite[Section~3]{PrA}).
+For the operator $T$ of Section~\ref{sec:resonance} the canonical
+truncations of the special first row are C-tame norm-attaining points
+(Proposition~\ref{prop:nonrecovery}).
+\end{remark}
+

@@ -1,0 +1,119 @@
+\section{The lower-limit theorem}\label{sec:lowerlimit}
+
+\begin{theorem}[Global compactness {\cite[Theorem~2.1]{PrA}}]\label{thm:compact}
+If $f_n\to f$ in $S_{p^*}$ and $g_n\in\Cset(f_n)$, then $(g_n)$ has a norm
+convergent subsequence and every limit of such a subsequence lies in
+$\Cset(f)$.  Consequently every $\Cset(f)$ is norm compact, $f\mapsto\Cset(f)$
+is upper semicontinuous, and $\Cset(f)\cup\bigcup_n\Cset(f_n)$ is norm
+compact.
+\end{theorem}
+
+\begin{proof}
+$p^*(g_n)\le1$; pass to a weak$^*$ convergent subsequence $g_n\to g$.
+Weak$^*$ lower semicontinuity of $p^*$ gives $g\in\Cset(f)$.  Let
+$\Delta:=\limsup_n\|g_n-g\|_1$, realized along a further subsequence.  Fix
+$t>0$ and write $f_n+tg_n=A_n+L^*W_n$ with $q^*(A_n),\|W_n\|\le s(t)$
+(Lemma~\ref{lem:dualball}).  Passing to a subsequence, $L^*W_n\to k$ in
+norm, $W_n\to W$ weak$^*$, and $A_n\to A:=f+tg-k$ weak$^*$.  Since
+$k(\xi)=W(L^{**}\xi)\le s(t)(1-q_0)$ we get $A(\xi)\ge1-s(t)(1-q_0)$ and
+$q^*(A)\ge A(\xi)/q_0$.  Moreover $U^*A_n\to U^*A$ in norm, and for
+bounded coordinatewise convergent sequences in $\ell_1$ one has
+$\|A_n\|_1-\|A_n-A\|_1\to\|A\|_1$.  Since
+$t(g_n-g)=(A_n-A)+(L^*W_n-k)-(f_n-f)$,
+\[
+ t\Delta=\limsup_n\|A_n-A\|_1=\limsup_n(q^*(A_n)-q^*(A))
+ \le s(t)-\frac{1-s(t)(1-q_0)}{q_0}=\frac{s(t)-1}{q_0}.
+\]
+Letting $t\to0$ gives $\Delta=0$.  The remaining assertions follow
+(for the union, a sequence either has infinitely many terms in one compact
+fibre or a subsequence to which the first part applies).
+\end{proof}
+
+\begin{theorem}[Lower-limit theorem]\label{thm:lowerlimit}
+Let $f_n\to f$ in $S_{p^*}$ \textup{(}not necessarily norm
+attaining\textup{)} and $\rho\in[0,1]$.  The following are equivalent:
+\begin{enumerate}
+\item[(i)] $\rho\,\Cset(f)\subseteq\Li_n\Cset(f_n)$;
+\item[(ii)] $\liminf_n\tilde r_{f_n}(x)\ge\rho\,\tilde r_f(x)$ for every
+$x\in X$;
+\item[(iii)] \textup{(ii)} holds for all $x$ in a dense subset of $X$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i)$\Rightarrow$(ii): choose $g\in\Cset(f)$ with $g(x)=\tilde r_f(x)$
+(Proposition~\ref{prop:primal}) and $g_n\in\Cset(f_n)$ with $g_n\to\rho
+g$; then $\tilde r_{f_n}(x)\ge g_n(x)\to\rho\tilde r_f(x)$.
+(ii)$\Leftrightarrow$(iii): each $\tilde r_h$ is a seminorm bounded by $p$,
+so $|\tilde r_h(x)-\tilde r_h(y)|\le p(x-y)$ uniformly in $h$.
+(ii)$\Rightarrow$(i): suppose $g\in\rho\Cset(f)$ and
+$\dist(g,\Cset(f_{n_j}))\ge\delta>0$.  All $\Cset(f_{n_j})$ lie in the
+compact set of Theorem~\ref{thm:compact}; by Blaschke's selection theorem
+we may assume $\Cset(f_{n_j})\to A$ in the Hausdorff metric.  Then $A$ is
+compact and convex and $\dist(g,A)\ge\delta$.  For $x\in X$ the support
+functions satisfy $|h_C(x)-h_{C'}(x)|\le d_H(C,C')\|x\|_\infty$, so
+$h_A(x)=\lim_j\tilde r_{f_{n_j}}(x)\ge\rho\tilde r_f(x)\ge g(x)$.  As $A$
+is weak$^*$ compact and convex, $g\notin A$ would give $x\in c_0$ with
+$g(x)>h_A(x)$.  Contradiction.
+\end{proof}
+
+\begin{corollary}[Finite, diagonal and mate versions]\label{cor:finite}
+For $f\in S_{p^*}$ the following are equivalent:
+\begin{enumerate}
+\item[(a)] there are $f_n\in\NA\cap S_{p^*}$ with $f_n\to f$ and
+$\Cset(f)\subseteq\Li_n\Cset(f_n)$;
+\item[(b)] for every $\varepsilon>0$, $\rho<1$ and $x_1,\dots,x_k\in X$ there
+is $f'\in\NA\cap S_{p^*}$ with $p^*(f'-f)<\varepsilon$ and
+$\tilde r_{f'}(x_i)\ge\rho\tilde r_f(x_i)-\varepsilon$ for $i\le k$;
+\item[(c)] for every $\varepsilon>0$, $\rho<1$ and $g_1,\dots,g_k\in\Cset(f)$
+there is $f'\in\NA\cap S_{p^*}$ with $p^*(f'-f)<\varepsilon$ and
+$\dist(\rho g_i,\Cset(f'))<\varepsilon$ for $i\le k$;
+\item[(d)] as \textup{(c)}, uniformly:
+$\sup_{g\in\Cset(f)}\dist(\rho g,\Cset(f'))<\varepsilon$.
+\end{enumerate}
+If they hold, then $f\in\Rec$.
+\end{corollary}
+
+\begin{proof}
+(a)$\Rightarrow$(d): $\dist(g,\Cset(f_n))\to0$ for each $g$, uniformly on
+the compact set $\Cset(f)$ (finite nets and $1$-Lipschitz dependence on
+$g$); and $\dist(\rho g,\Cset(f_n))\le\rho\dist(g,\Cset(f_n))$ because
+$\Cset(f_n)$ is convex and contains $0$.  (d)$\Rightarrow$(c) is trivial.
+(c)$\Rightarrow$(b): pick $g_i\in\Cset(f)$ with $g_i(x_i)=\tilde r_f(x_i)$
+and apply (c) with $\varepsilon/\max(1,\max_i\|x_i\|)$.
+(b)$\Rightarrow$(a): let $(x_i)$ be dense in $X$; for each $n$ apply (b)
+with $\varepsilon=1/n$, $\rho=1-1/n$ and $x_1,\dots,x_n$ to obtain $f_n$.
+Then $\liminf_n\tilde r_{f_n}(x_i)\ge\tilde r_f(x_i)$ for every $i$, and
+Theorem~\ref{thm:lowerlimit} with $\rho=1$ gives (a).  The
+last claim is Lemma~\ref{lem:pair}.
+\end{proof}
+
+\begin{theorem}[Transitivity]\label{thm:transitivity}
+$\NA\cap S_{p^*}\subseteq\Rec$.  Let $f\in S_{p^*}$ and suppose that for
+every $\rho<1$ there is a sequence $f^\rho_n\in\Rec$ with $f_n^\rho\to f$
+and $\liminf_n\tilde r_{f_n^\rho}(x)\ge\rho\,\tilde r_f(x)$ on a dense set
+of $x\in X$.  Then $f\in\Rec$.
+\end{theorem}
+
+\begin{proof}
+The first claim is Proposition~\ref{prop:reduction}(d).  By
+Theorem~\ref{thm:lowerlimit}, $\rho\Cset(f)\subseteq\Li_n\Cset(f^\rho_n)$.
+Given $g\in\Cset(f)$ choose $g_n\in\Cset(f_n^\rho)$ with $g_n\to\rho g$;
+each $(f_n^\rho,g_n)$ lies in $\cl\NA$, hence so does $(f,\rho g)$; let
+$\rho\to1$.
+\end{proof}
+
+\begin{remark}[Several rows and the residual set]\label{rem:joint}
+For $d\ge1$ let
+$\Cset_d(f):=\{(g_1,\dots,g_d):f(y)^2+\sum_ig_i(y)^2\le p(y)^2\ (y\in X)\}$;
+equivalently $p^*(f+\sum_it_ig_i)\le s(|t|)$ for $t\in\R^d$.
+Theorem~\ref{thm:compact}, Theorem~\ref{thm:lowerlimit},
+Corollary~\ref{cor:finite} and Theorem~\ref{thm:transitivity} hold verbatim
+for $\Cset_d$ (support functions on $X^d$, separation by $(c_0)^d$), with
+$\ell_2^{d+1}$ in place of $\ell_2^2$.  By \cite[Theorem~2.2]{PrA} there
+is a dense $G_\delta$ set $\Omega\subseteq S_{p^*}$ at which every $\Cset_d$
+is Hausdorff continuous; in particular $\Omega\subseteq\Rec$.  This does not
+decide density: Hausdorff continuity may fail on a meagre set of first
+rows, and the remaining sections study what can be recovered there.
+\end{remark}
+

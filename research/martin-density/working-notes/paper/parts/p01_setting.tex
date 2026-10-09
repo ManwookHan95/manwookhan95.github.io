@@ -1,0 +1,251 @@
+\section{Setting and standing facts}\label{sec:setting}
+
+All spaces are real.  We write $s(t):=\sqrt{1+t^2}$ throughout.
+
+\subsection{The base, the blocks and Mart\'in's lemmas}
+We use the canonical base on $X=c_0$, as in the accompanying note
+\cite{PrA}: $H$ is a Hilbert space, $U:H\to c_0$ is compact with dense
+range, and
+\[
+ B_q=B_{c_0}+U(B_H),\qquad q^*(a)=\|a\|_1+\|U^*a\|_H\quad(a\in\ell_1=X^*).
+\]
+Since $U$ has dense range, $U^*$ is injective; it is compact, so
+$\|U^*e_j^*\|_H\to0$.  The bidual ball is $B_{q^{**}}=B_{\ell_\infty}+U(B_H)$
+(the sum of a weak$^*$-compact set and a norm compact set is weak$^*$
+compact, contains $B_q$, and is contained in its weak$^*$ closure).  The
+norm $q$ is a smoothing of the supremum norm in the sense of
+Debs, Godefroy and Saint-Raymond \cite{DGS}.
+
+Mart\'in's construction \cite{Martin} rests on two lemmas, which we recall
+in the form stated there.
+
+\begin{remark}[Mart\'in's Lemma A]\label{rem:lemmaA}
+Let $\Phi$ be a sequence of positive numbers with $\|\Phi\|_1<1$ and let
+$D_\Phi:\ell_2\to\ell_1$ be the diagonal operator with entries $\Phi(n)$.
+The norm $|\cdot|_\Phi$ on $\ell_1$ with unit ball
+$B_{\ell_1}+D_\Phi(B_{\ell_2})$ satisfies:
+(a) $|f|_\Phi^*=\|f\|_\infty+\|D_\Phi f\|_2$ for $f\in\ell_\infty$;
+(b) $|f|^*_\Phi\geq\|f\|_\infty\geq(1-\|\Phi\|_1)|f|^*_\Phi$;
+(c) $|x|_\Phi\leq\|x\|_1\leq(1+\|\Phi\|_1)|x|_\Phi$;
+(d) the dual norm is strictly convex, so $|\cdot|_\Phi$ is smooth;
+(e) if $|f|^*_\Phi=1$, $\ip{f}{x}=|x|_\Phi$ and $|x(n)|>\Phi(n)|x|_\Phi$,
+then $f(n)=\sgn(x(n))\|f\|_\infty$.
+\end{remark}
+
+\begin{remark}[Mart\'in's Lemma B and the choice of $T$]\label{rem:lemmaB}
+Lemma B of \cite{Martin} reads: \emph{Let $Y$ be a separable operator
+range.  Then there is a norm-one injective operator
+$T:\ell_1(\N\times\N)\to Y$ such that for every $m$ the set
+$\{T(e_{n,m})/\|T(e_{n,m})\|:n\in\N\}$ is dense in $S_Y$.}
+Its proof takes a bijection $\sigma:\N\times\N\to\N$, a sequence
+$(w'_n)$ in $S_Y$ such that every point of $S_Y$ is an accumulation point
+of $(w'_n)$, and repeats the proof of \cite[Proposition~2.8]{KLMW20} with
+the sequence $w_{\sigma(n,m)}=w'_n$.  Two features matter below.  First,
+the sequence $(w'_n)$ is \emph{arbitrary} subject to the accumulation
+property, so ``Mart\'in's space'' is a family of spaces indexed by the
+admissible choices of $T$.  Second, every block $m$ follows the same
+sequence $(w'_n)$, so that near duplicates $Te_{n,m}/\|Te_{n,m}\|\approx
+Te_{n,m'}/\|Te_{n,m'}\|$ across blocks are built into the construction (up
+to the perturbations produced in \cite{KLMW20}).  No other property of $T$
+is used in \cite{Martin}, and no other property will be used here unless
+it is stated explicitly.
+\end{remark}
+
+\begin{definition}[Admissible operators]\label{def:admissible}
+An operator $T:\ell_1(\N\times\N)\to X^*=\ell_1$ is \emph{admissible} if
+\begin{enumerate}
+\item[(T-a)] $q^*(Te_{n,m})\le1$ for all $(n,m)$, with equality for some
+$(n,m)$;
+\item[(T-b)] $T$ is injective;
+\item[(T-c)] $Y:=T(\ell_1(\N\times\N))$ satisfies $Y\cap c_{00}=\{0\}$;
+\item[(T-d)] for every $m$, the set $\{u_{n,m}:n\in\N\}$, where
+$u_{n,m}:=Te_{n,m}/q^*(Te_{n,m})$, is norm dense in $S_{q^*}$.
+\end{enumerate}
+\end{definition}
+
+Since $\NA((X,q),\R)=c_{00}$ (Proposition~\ref{prop:smooth}(c) below),
+(T-c) is the condition $Y\cap\NA(q)=\{0\}$ of \cite{Martin}.  As $S_{q^*}$
+has no isolated points, (T-d) implies that every tail
+$\{u_{n,m}:n\geq n_0\}$ is dense in $S_{q^*}$.
+
+\subsection{The norm $p$}
+Fix an admissible $T$.  For $m\in\N$ put
+\begin{gather*}
+ \Phi_m(k):=2^{-m-k}q^*(Te_{k,m})\le 2^{-m-k},\qquad
+ \lambda_{k,m}:=m\Phi_m(k),\\
+ (R_mx)(k):=\lambda_{k,m}u_{k,m}(x)\qquad(x\in X).
+\end{gather*}
+Let $D_m$ be the diagonal operator with entries $\Phi_m(k)$, let
+$|\cdot|_m$ be the norm of Remark~\ref{rem:lemmaA} for $\Phi=\Phi_m$ on
+$V_m=\ell_1$, and $N_m(w):=|w|_m^*=\|w\|_\infty+\|D_mw\|_2$.  For a nonempty
+set $I\subseteq\N$ of \emph{blocks} put
+\begin{gather*}
+ V:=\Big(\bigoplus_{m\in I}V_m\Big)_{\ell_1},\qquad
+ V^*=\Big(\bigoplus_{m\in I}(\ell_\infty,N_m)\Big)_{\ell_\infty},\\
+ Lx:=(R_mx)_{m\in I},\qquad p(x):=q(x)+\|Lx\|_V .
+\end{gather*}
+For $I=\N$ this is Mart\'in's norm (with the canonical base); for
+$I=\{1,\dots,N\}$ we obtain the finite-block norms $p_N$ of \cite{PrB}.
+Since $|(R_mx)(k)|\le m2^{-m-k}q(x)$, $\|R_m\|\leq m2^{-m}$; each $R_m$ is a
+norm limit of finite-rank operators, hence compact, and $L$ is compact.
+For $w\in V^*$,
+\begin{equation}\label{eq:Lstar}
+ L^*w=\sum_mR_m^*w_m=T\Big(\sum_{m\in I}\sum_k m2^{-m-k}w_m(k)\,e_{k,m}\Big)\in Y,
+\end{equation}
+an absolutely convergent series; in particular $L^*$ is injective on
+$V^*$.  For $\theta\in X^{**}=\ell_\infty$,
+$(R_m^{**}\theta)(k)=\lambda_{k,m}\theta(u_{k,m})$, so
+$R_m^{**}(X^{**})\subseteq\ell_1$.
+
+\begin{remark}[Finite and infinite block sets]\label{rem:blocks}
+By the remark on Mart\'in tails in \cite{PrB}, if the set
+$\NA((c_0,p_N),F)$ is dense in $\mathcal L((c_0,p_N),F)$ for arbitrarily
+large $N$, then
+$\NA((c_0,p),F)$ is dense for Mart\'in's $p$ ($I=\N$): one has
+$p=p_N+s_N$ with $s_N\le\eta_N\,q\le\eta_Np_N$, $\eta_N\to0$, and the
+lift lemma of \cite{PrB} applies.  Hence finite block sets suffice for the
+density problem.  Sections~\ref{sec:setting}--\ref{sec:averaging} are
+valid for every nonempty $I$ (certificates involve finitely many blocks);
+the one place where $I=\N$ needs an extra hypothesis is
+Corollary~\ref{cor:decomposition}.  Sections~\ref{sec:second}
+and~\ref{sec:resonance} assume that $I$ is finite.
+\end{remark}
+
+\subsection{Elementary structure}
+
+\begin{lemma}[Dual ball]\label{lem:dualball}
+$B_{p^*}=B_{q^*}+L^*(B_{V^*})$, and for every $h\in X^*$
+\[
+ p^*(h)=\min\{\max(q^*(A),\|W\|_{V^*}):\ A+L^*W=h\},
+\]
+the minimum being attained.  Moreover $p^{**}(\theta)=q^{**}(\theta)+
+\|L^{**}\theta\|_V$ for $\theta\in X^{**}$, and $L^{**}(X^{**})\subseteq V$.
+\end{lemma}
+
+\begin{proof}
+If $q^*(A)\le1$ and $\|W\|\le1$ then $(A+L^*W)(x)\le q(x)+\|Lx\|=p(x)$.
+The set $B_{q^*}+L^*(B_{V^*})$ is convex and weak$^*$ compact ($L^*$ is
+weak$^*$-continuous), and its support function on $X$ is
+$q(x)+\|Lx\|_V=p(x)$, which is also the support function of $B_{p^*}$; two
+weak$^*$-closed convex sets with the same support function on $X$
+coincide.  The formula for $p^*$ follows by homogeneity and compactness.
+Taking suprema over $B_{p^*}$ gives the bidual formula; $L^{**}$ maps into
+$V$ because $L$ is compact.
+\end{proof}
+
+\begin{lemma}[Block threshold {\cite[Lemma~5.6]{PrB}}]\label{lem:threshold}
+Fix a block and drop the index $m$.  Let $\zeta\in\ell_1\setminus\{0\}$ and
+$w=J(\zeta)$ its norming functional ($N(w)=1$, $w(\zeta)=|\zeta|$).  Put
+$M=\|w\|_\infty$, $C=\|Dw\|_2$ and $P=\{k:|w(k)|=M\}$.  Then $M>0$, $C>0$,
+$M+C=1$, and
+\[
+ \zeta/|\zeta|=\alpha+D^2w/C,\qquad \|\alpha\|_1=1,\quad
+ \supp\alpha\subseteq P,\quad \sgn\alpha(k)=\sgn w(k)\ (k\in\supp\alpha).
+\]
+In particular $P\ne\emptyset$; off $P$ one has
+$w(k)=C\zeta(k)/(\Phi(k)^2|\zeta|)$, and $|\zeta(k)|>|\zeta|\Phi(k)^2M/C$
+implies $k\in P$ and $w(k)=M\sgn\zeta(k)$.
+\end{lemma}
+
+\begin{proof}
+$w\neq0$ and $D$ is injective, so $M,C>0$.  The ball
+$B_{\ell_1}+D(B_{\ell_2})$ is closed ($D$ is compact), so
+$\zeta/|\zeta|=\alpha+D\beta$ with $\|\alpha\|_1,\|\beta\|_2\le1$.  Then
+$1=\ip{w}{\alpha}+\ip{Dw}{\beta}\le M\|\alpha\|_1+C\|\beta\|_2\le M+C=1$,
+so $\ip{w}{\alpha}=M=M\|\alpha\|_1$ and $\beta=Dw/C$; the first equality
+forces $\|\alpha\|_1=1$ and $\alpha$ to live on $P$ with the signs of $w$.
+The remaining claims follow by reading the identity coordinatewise.
+\end{proof}
+
+For a block vector $\zeta=R_m^{**}\theta$ the condition of the last
+sentence reads $|\theta(u_{k,m})|>\vartheta_m\Phi_m(k)$ with the
+\emph{threshold constant} $\vartheta_m:=|\zeta|_mM_m/(mC_m)$.  For $k\in P$
+we define the \emph{margin}
+$\mu_{k,m}:=|\theta(u_{k,m})|-\vartheta_m\Phi_m(k)\ge0$; reading
+Lemma~\ref{lem:threshold} at $k\in P$ gives the identity
+\begin{equation}\label{eq:margin}
+ |\zeta|_m|\alpha_m(k)|=\lambda_{k,m}\mu_{k,m}\qquad(k\in P_m).
+\end{equation}
+Peaks with $\alpha_m(k)=0$ (equivalently $\mu_{k,m}=0$) are called
+\emph{degenerate}.  We write $Q_m:=\N\setminus P_m$ (strict non-peaks) and
+$\gap_m(k):=M_m-|w_m(k)|$.
+
+\begin{lemma}[Rigidity and independence]\label{lem:rigidity}
+\textup{(a)} If $b_++L^*W_+=b_-+L^*W_-$ with $b_+-b_-\in c_{00}$ and
+$W_\pm\in V^*$, then $b_+=b_-$ and $W_+=W_-$.
+\textup{(b)} Let $J\subseteq\N$ be cofinite, $I$ finite, and for each
+$m\in I$ let $\Lambda_m\subseteq\N$ be finite and $P_m'\subseteq\N$ be
+infinite, $s\in\{\pm1\}^{P'_m}$.  Put
+$\pi_m:=\sum_{k\in P'_m}s_k\lambda_{k,m}u_{k,m}$.  Then the restrictions to
+$c_{00}(J)$ of the functionals $u_{k,m}$ \textup{(}$k\in\Lambda_m$,
+$m\in I$\textup{)} and $\pi_m$ \textup{(}$m\in I$\textup{)} are linearly
+independent; consequently $\nu\mapsto(u_{k,m}(\nu),\pi_m(\nu))$ maps
+$c_{00}(J)$ onto the corresponding finite-dimensional space.
+\end{lemma}
+
+\begin{proof}
+(a) $b_+-b_-=L^*(W_--W_+)\in Y\cap c_{00}=\{0\}$, and $L^*$ is injective.
+(b) A vanishing combination
+$\sum c_{k,m}u_{k,m}+\sum_md_m\pi_m$ on $c_{00}(J)$ is an element of $Y$
+supported in the finite set $\N\setminus J$, hence zero by (T-c).  By
+(T-b) its coefficient at every $e_{k,m}$ vanishes: at the infinitely many
+$k\in P'_m\setminus\Lambda_m$ this coefficient is $d_ms_km2^{-m-k}$, so
+$d_m=0$, and then $c_{k,m}=0$.
+\end{proof}
+
+\begin{proposition}[Strict convexity and forced decomposition]\label{prop:forced}
+\textup{(a)} Each $R_m^{**}$ is injective, and $p^{**}$ is strictly convex.
+
+\textup{(b)} Every $f\in S_{p^*}$ has a unique normer $\xi\in S_{p^{**}}$.
+Put $q_0:=q^{**}(\xi)$.  Then $0<q_0<1$, $\|L^{**}\xi\|_V=1-q_0$, every
+$R_m^{**}\xi\ne0$, and there is exactly one decomposition $f=a+L^*w$ with
+$q^*(a)\le1$ and $\|w\|_{V^*}\le1$; it satisfies
+\[
+ q^*(a)=1,\quad a(\xi)=q_0,\quad w_m=J_m(R_m^{**}\xi),\quad N_m(w_m)=1
+ \quad(m\in I).
+\]
+\textup{(c)} Put $\nu:=\|U^*a\|_H>0$ and $e:=U^*a/\nu$.  Then
+$\zh:=\xi/q_0=z+Ue$ with $z\in B_{\ell_\infty}$ and $z_j=\sgn a_j$ on
+$F:=\supp a$; and $a(\zh)=1$, $b(\zh)=b(z)+\ip{U^*b}{e}$ for
+$b\in\ell_1$.
+\end{proposition}
+
+\begin{proof}
+(a) If $\theta(u_{k,m})=0$ for all $k$, then $\theta$ vanishes on a dense
+subset of $S_{q^*}$, so $\theta=0$.  Let
+$p^{**}(\xi)=p^{**}(\eta)=p^{**}((\xi+\eta)/2)=1$.  Since $q^{**}$ and each
+$|R_m^{**}\cdot|_m$ are seminorms whose sum is $p^{**}$
+(Lemma~\ref{lem:dualball}), we get
+$|R_m^{**}(\xi+\eta)|_m=|R_m^{**}\xi|_m+|R_m^{**}\eta|_m$ for every $m$.
+Fix $m$; $\zeta_1=R_m^{**}\xi$ and $\zeta_2=R_m^{**}\eta$ are nonzero, and a
+norming functional $w$ of $\zeta_1+\zeta_2$ norms both.  If $\xi,\eta$ were
+not positively proportional there would be $v\in S_{q^*}$ with
+$\xi(v)>0>\eta(v)$ (use surjectivity of $v\mapsto(\xi(v),\eta(v))$ if they
+are independent).  Choose $n_j\to\infty$ with $u_{n_j,m}\to v$.  Since
+$\Phi_m(n_j)\to0$, Lemma~\ref{lem:threshold} applied to $\zeta_1$ and to
+$\zeta_2$ gives $w(n_j)=\|w\|_\infty$ and $w(n_j)=-\|w\|_\infty$ for large
+$j$, which is absurd.  Hence $\eta=\lambda\xi$ with $\lambda>0$, and
+$\lambda=1$.
+
+(b) The normers of $f$ form a convex subset of $S_{p^{**}}$, hence a point.
+For any decomposition $f=a+L^*w$ with $q^*(a),\|w\|\le1$,
+$1=f(\xi)=a(\xi)+w(L^{**}\xi)\le q^{**}(\xi)+\|L^{**}\xi\|=1$, so
+$a(\xi)=q_0$ and $w_m(R_m^{**}\xi)=|R_m^{**}\xi|_m$ for each $m$.  As
+$R_m^{**}\xi\ne0$ and $|\cdot|_m$ is smooth, $w_m=J_m(R_m^{**}\xi)$ is
+determined, hence so is $a=f-L^*w$.  Finally $q_0>0$ because $q^{**}$ is a norm and
+$\xi\ne0$, $q_0<1$ because $L^{**}\xi\ne0$, and
+$q_0=a(\xi)\le q^*(a)q_0$ gives $q^*(a)=1$.
+
+(c) $\xi/q_0\in B_{q^{**}}=B_{\ell_\infty}+U(B_H)$, so $\xi/q_0=z+Uh$ with
+$\|z\|_\infty,\|h\|\le1$; then $1=a(z)+\ip{U^*a}{h}\le\|a\|_1+\|U^*a\|=1$
+forces $a(z)=\|a\|_1$ and $h=e$.
+\end{proof}
+
+Throughout, the \emph{forced data} of $f\in S_{p^*}$ are
+$(\xi,q_0,a,w,F,z,\zh,e,\nu)$ and, for each block,
+$\zeta_m:=R_m^{**}\xi$, $\sigma_m:=|\zeta_m|_m$, $M_m$, $C_m$, $P_m$,
+$\alpha_m$, $Q_m$, $\gap_m$, $\vartheta_m$, $\mu_{k,m}$.  Note
+$q_0+\sum_m\sigma_m=1$.  The set $K:=\{j\notin F:|z_j|=1\}$ is the set of
+\emph{contacts} (kinks) and $J:=\N\setminus(F\cup K)$ the set of
+\emph{free coordinates}; the \emph{room} of $j\in J$ is $1-|z_j|>0$.
+

@@ -112,3 +112,25 @@ OPEN CORE after Round 2 (all referees agree; nothing points to a counterexample 
       adjacent scales; "far rigidity" (nearly collinear far tails inside detector groups) is compatible with Lemma B
       (N2 SKETCH), so Lemma B alone does not force conversion capacity;
  (O4) several active blocks without (S)/(TC); infinite block sets.
+
+## ADDENDUM 3 (Round 3, refereed): r3/S3_*, r3/R3_*, r3/G3_*
+- S3 (refereed correct, with the referee's Lemma F1 repair of |C'-C| = O(s_1)): first-order rebalancing through transfer
+  peaks replaces all steering; Theorem A (weighted kappa_w), Theorem B (exact one-sided second-order coefficient at (BT)
+  points, any contact set, Fenchel duality), Theorem D (engineering with window masses + far truncation only; Delta d_m < 0
+  blocks need the scrambling condition (SC_m)), Cor D1 (F finite, Delta d_m >= 0, kappa_w <= 1 two-piece mates are in Ls(f),
+  no conditions on Q_m, K or T), Cor D2 (every (BT) point is in R; P1's example: every mate recovered).
+- R3 (refereed): no counterexample; Theorem EC (rate-free generic carriers: o(1) window moves make generic tail coordinates
+  exact zero-weight strict non-peaks carrying any finite-dimensional family of O(scale) errors); E's rigid design is NOT
+  shown recovered (referee: a rho-independent Hilbert/room capacity requirement remains); joint certificates on disjoint
+  zero-weight non-peaks pool Hilbert capacity.
+- G3 (refereed correct; one constant fix in 5.3: kappa_0 = (sqrt(1+eta_0/2)-1)/2): a DESIGNED admissible T ("signature-ladder
+  design", SLD: private signatures delta_l h_l on disjoint infinite coordinate sets S_l, coarse-to-fine allowed targets,
+  super-fast weights creating long windows of scales). Theorem B: for the SLD T and every N, every f in R_0 := {F = supp a
+  finite, (SR) signature room: ||h_l 1_{S_l ∩ J_gamma}|| >= vartheta^l ||h_l|| for all l, J_gamma = {j ∉ F : |z_j| <= 1-gamma}}
+  is recoverable (every mate). R_0 contains all NA points and all base-tame f. Theorem C: for the SLD T, density of
+  NA((c_0,p_N), l_2^2) <=> LEMMA Z: every (f, rho g) (g ∈ C(f), rho < 1) is a norm limit of contractive (f', g') with
+  f' ∈ R_0 and g' ∈ C(f') (f' need not be NA). Remaining difficulty: "signature-resonant" f (base one-sided resources
+  swallow signature sets; e.g. |z_j| = 1 on large parts of the S_l, possibly K cofinite) and infinite F.
+  Referee's suggested route: lower |z| on FAR parts of the swallowed signature sets (pinning constant delta' tiny), so that
+  at scales well above it f' copies f's mate structure and the windows of f' lie below it (scale decoupling as in P2A); the
+  transition band handled by the rho-slack plus Round-2/S3 engineering of the finitely many unpinned carriers (G3 6.3(d)).

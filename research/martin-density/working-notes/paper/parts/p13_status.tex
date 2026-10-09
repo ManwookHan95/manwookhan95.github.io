@@ -1,0 +1,148 @@
+\section{Engineered approximants}\label{sec:engineered}
+
+Proposition~\ref{prop:approximants} shows that the coordinates of the base
+contact of a norm-attaining approximant outside a finite window are free.
+This section will treat recovery of resonant mates, such as the switching
+mates of Theorem~\ref{thm:defect}, along norm-attaining approximants that are
+engineered with this freedom, rather than along the canonical truncations.
+
+% PLACEHOLDER-ENGINEERED
+
+\section{Status of the density problem}\label{sec:status}
+
+\subsection{What is proved}
+Let $T$ be an arbitrary admissible operator.  Density of
+$\NA((c_0,p),\ell_2^2)$ is equivalent to $\Rec=S_{p^*}$
+(Proposition~\ref{prop:reduction}), and by \cite[Remark martin-tail]{PrB} it
+suffices to prove $\Rec=S_{p_N^*}$ for arbitrarily large $N$.  A first row
+$f$ belongs to $\Rec$ under each of the following sufficient conditions:
+\begin{enumerate}
+\item[(S1)] $f$ attains its norm (Proposition~\ref{prop:reduction}(d));
+\item[(S2)] $f$ belongs to the residual set $\Omega$ of Hausdorff continuity
+points of the fibres \cite[Theorem~2.2]{PrA};
+\item[(S3)] $\Cset(f)=\cl\Cert^{\rm sh}(f)$; then every mate is recovered
+along every sequence $f_n\to f$ (Theorem~\ref{thm:shifted}); more generally
+$\Cset(f)=\mathcal K(f)$ when $a\in c_{00}$ (Proposition~\ref{prop:intrinsic});
+\item[(S4)] $I$ is finite and the normer of $f$ is C-tame without
+degenerate peaks (Theorem~\ref{thm:tame});
+\item[(S5)] $f$ is a limit of points of $\Rec$ along which the support
+functions $\tilde r$ are asymptotically at least those of $f$
+(Theorem~\ref{thm:transitivity}).
+\end{enumerate}
+For an individual mate $g\in\Cset(f)$, $(f,g)\in\cl\NA$ whenever $g$ lies
+in $\cl\Cert^{\rm sh}(f)$; this covers finite and shifted certificates
+(Theorems~\ref{thm:transport}, \ref{thm:shifted}), weighted directions with
+$O(\sigma)$ box tails (Theorem~\ref{thm:weighted}), locally split mates and
+split-contractive operators (Theorem~\ref{thm:locsplit},
+Corollary~\ref{cor:splitcontractive}), every mate that is a certificate of
+radius $\gtrsim t$ up to an $O(t)$ remainder at all small scales
+(Corollary~\ref{cor:ladder}), and carrier mates with non-summable gaps
+(Theorem~\ref{thm:carriers}).  When $a\in c_{00}$, also every balanced
+finite certificate with $\Gamma_w\le1$ is recovered
+(Theorem~\ref{thm:transfer}).  The analogous statements for
+$\ell_2^{d+1}$ hold for joint certificates (Theorem~\ref{thm:joint}).
+
+On the negative side, the intrinsic programme cannot succeed in general:
+for some admissible $T$ there is a non-attaining $f$ at which the defect
+$\Cset(f)\setminus\mathcal K(f)$ is infinite dimensional
+(Theorem~\ref{thm:defect}), and its elements are not recovered along the
+canonical truncations (Proposition~\ref{prop:nonrecovery}).  At every point
+where $a\in c_{00}$ and $K$ is finite (in particular at every norm-attaining
+point), exact resonances do not exist (Proposition~\ref{prop:exact}).  None
+of this is a counterexample to density: a counterexample would produce a
+two-dimensional Hilbert space without Lindenstrauss' property B, answering
+Question~6 of Johnson and Wolfe \cite{JW} negatively.
+
+\subsection{What remains}
+By Lemma~\ref{lem:pair} and Corollary~\ref{cor:lsc}(c), the density problem
+for $p_N$ is equivalent to the following statement, in which only the defect
+matters.
+
+\begin{problem}\label{prob:main}
+Let $N\ge1$, let $T$ be admissible, and let $f\in S_{p_N^*}$.  Is it true
+that for every $g\in\Def(f)$ and every $\rho<1$ there are norm-attaining
+$f_n\to f$ with $\rho g\in\Li_n\Cset(f_n)$?  Equivalently, is every pair
+$(f,\rho g)$ with $g\in\Cset(f)\setminus\cl\Cert^{\rm sh}(f)$ a limit of
+norm-attaining operators into $\ell_2^2$?
+\end{problem}
+
+A positive answer for arbitrarily large $N$ gives density for Mart\'in's
+norm (Remark~\ref{rem:blocks}); a negative answer for one $N$ and one
+admissible $T$ gives a two-dimensional range without property B.  By
+Proposition~\ref{prop:nonrecovery}, the approximants in
+Problem~\ref{prob:main} must in general depend on the mate and cannot be
+the canonical truncations.  The following more specific questions are open.
+
+\begin{problem}[Resonant mates]\label{prob:resonant}
+Recover the switching mates of Theorem~\ref{thm:defect} along engineered
+norm-attaining approximants; more generally, prove a recovery theorem for
+mates whose admissible decompositions are, on each side of $t=0$, a
+certificate plus an exact-resonance part plus $O(t)$.  The case of two-piece
+mates whose block carriers have different first-order coefficients on the
+two sides ($d_-<d_+$) is not covered by any known argument.
+\end{problem}
+
+\begin{problem}[Second-order defect]\label{prob:secondorder}
+Is there $f$ with $a\in c_{00}$ and a balanced finite certificate
+$g\in\Cset(f)\cap S(f)$ with $\Gamma_w(g)>1$?  By
+Proposition~\ref{prop:lowerbound} such an $f$ must have degenerate peaks,
+infinitely many strict non-peaks, failure of (MS), or infinitely many
+contacts; in the last case a finite-dimensional analogue suggests that the
+second-order coefficient can drop below $\Gamma_w$ (Remark~\ref{rem:kinks}).
+\end{problem}
+
+\begin{problem}[Approximate resonances]\label{prob:approx}
+Do switching mates carried, on both sides of $t=0$, by near-threshold
+strict non-peaks with summable gaps or by weak peaks belong to
+$\cl\Cert(f)$?  There is no linear obstruction for them
+(Remark~\ref{rem:summablegaps}); a proof of non-membership would require a
+sequence $f_n\to f$ with $g\notin\Li_n\Cset(f_n)$.
+\end{problem}
+
+\begin{problem}[Universality of the defect]\label{prob:universal}
+Does \emph{every} admissible $T$ (in particular every $T$ produced by the
+proof of Mart\'in's Lemma~B) admit a first row with nonempty defect?  The
+linear obstruction requires a first row with few strict non-peaks, which an
+adversarial $T$ may prevent.
+\end{problem}
+
+Finally we note a gap between necessary and sufficient conditions in the
+reduction itself: density into $\ell_2^{d+1}$ implies that tuples in
+$\Cset_d(f)/\sqrt d$ are recovered along a common sequence, but we do not
+know whether density into $\ell_2^2$ alone forces the existence, for each
+$f$, of one norm-attaining sequence along which the whole fibre $\Cset(f)$ is
+recovered (condition (a) of Corollary~\ref{cor:finite}); only the
+sufficiency of that condition is used.
+
+\begin{thebibliography}{99}
+\bibitem{DGS}
+G.~Debs, G.~Godefroy and J.~Saint Raymond,
+\emph{Topological properties of the set of norm-attaining linear
+functionals}, Canad. J. Math. \textbf{47} (1995), 318--329.
+\bibitem{JW}
+W.~B.~Johnson and J.~Wolfe, \emph{Norm attaining operators},
+Studia Math. \textbf{65} (1979), 7--19.
+\bibitem{KLMW}
+V.~Kadets, G.~L\'opez, M.~Mart\'in and D.~Werner,
+\emph{Norm attaining operators of finite rank}, arXiv:1905.08272.
+\bibitem{KLMW20}
+V.~Kadets, G.~L\'opez, M.~Mart\'in and D.~Werner,
+\emph{Equivalent norms with an extremely nonlineable set of norm attaining
+functionals}, J. Inst. Math. Jussieu \textbf{19} (2020), 259--279.
+\bibitem{Martin}
+M.~Mart\'in,
+\emph{A Banach space whose set of norm-attaining functionals is
+algebraically trivial}, J. Funct. Anal. \textbf{288} (2025), 110815.
+\bibitem{PrA}
+\emph{Residual recovery and unbounded component lifts for Mart\'in norms},
+accompanying research note (Preprint A), October 2026.
+\bibitem{PrB}
+M.~Han, M.~Mart\'in and D.~L.~Rodr\'iguez-Vidanes,
+\emph{Norm attaining operators on renormings of $c_0$}, accompanying
+preprint (Preprint B).
+\bibitem{Check}
+\emph{Checking the positive density route for Mart\'in norms},
+accompanying research note, October 2026 (cited in \cite{PrA}; its local
+certificate theorem is re-proved here as Corollary~\ref{cor:check}).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,194 @@
+\subsection{Transfer peaks and the mass-weighted coefficient}
+In this subsection $\eta=\xi$.  The \emph{canonical truncations} of $f$
+are defined when $a\in c_{00}$: let $z^N_j:=z_j$ for $j\in F\cup[1,N]$ and
+$z^N_j:=0$ otherwise, $\tilde x_N:=z^N+Ue\in c_0$, $x'_N:=\tilde
+x_N/p(\tilde x_N)$ and $f'_N:=\nabla p(x'_N)$.  By
+Proposition~\ref{prop:smooth}(c), $q(\tilde x_N)=1$, $\nabla q(\tilde
+x_N)=a$ and $f'_N=a+\sum_mR_m^*w'_{m,N}$ with $w'_{m,N}=J_m(R_mx'_N)$; by
+Proposition~\ref{prop:approximants}, $f'_N\to f$.  We write
+$c_N:=q(x'_N)\to q_0$, and $M'_{m,N},C'_{m,N},\sigma'_{m,N},\dots$ for the
+data at $x'_N$; they converge to those at $\xi$
+(Proposition~\ref{prop:continuity}).
+
+\begin{theorem}[Transfer peaks]\label{thm:transfer}
+Let $f\in S_{p^*}$ with $a\in c_{00}$, and let
+$g=b+\sum_mR_m^*(\omega_m-d_mw_m)\in S(f)$ be a balanced finite certificate
+such that $(f,g)$ is contractive and $\Gamma_w(g)\le1$.  Then for every
+$\rho\in(0,1)$ there are $g'_N\in\Cset(f'_N)$, $N$ large, with
+$g'_N\to\rho g$.  In particular $(f,\rho g)\in\cl\NA((c_0,p),\ell_2^2)$, and
+all such mates are recovered simultaneously along the canonical truncations,
+which do not depend on $g$.
+\end{theorem}
+
+\begin{proof}
+Fix $\rho\in(0,1)$ and $\eta\in(0,\frac12]$ with $\rho^2(\Gamma_w(g)+4\eta)\le\rho$, and
+put $L:=\Gamma_w(g)/2+\eta$.  Let $\gamma_0:=\frac12\min_m\min_{k\in\supp
+\omega_m}\gap_m(k)>0$.
+
+\emph{Step 1: the transported natural certificate.}  Put
+$b'_N:=b-(b(x'_N)/c_N)a$, $d'_{m,N}:=\ip{D_mw'_{m,N}}{D_m\omega_m}/C'_{m,N}$,
+$v'_{m,N}:=\omega_m-d'_{m,N}w'_{m,N}$ and
+$g'_N:=b'_N+\sum_mR_m^*v'_{m,N}$.  Since $b(x'_N)\to b(\xi)=0$,
+$d'_{m,N}\to d_m$ and $R_m^*w'_{m,N}\to R_m^*w_m$, we have $g'_N\to g$.  For
+$N$ large every $k\in\supp\omega_m$ has $M'_{m,N}-|w'_{m,N}(k)|\ge\gamma_0$.
+\emph{Base:} $b'_N$ is supported in the finite set $F$, where
+$z^N=\sgn a$.  The computation in the proof of Lemma~\ref{lem:base}, with
+$\zh$ replaced by $\tilde x_N=z^N+Ue$, gives
+$q^*(a+tb'_N)=1+t\,b'_N(\tilde x_N)+\nu\Psi(tU^*b'_N/\nu)$ as long as no
+coordinate of $a+tb'_N$ changes sign on $F$; and
+$b'_N(\tilde x_N)=b'_N(x'_N)/c_N=0$.  Since $P^\perp U^*b'_N=P^\perp U^*b$
+and $b'_N\to b$, the bounds for $\Psi$ give
+$q^*(a+tb'_N)\le1+\frac{t^2}2H_b\theta(t)$, where here and below
+$\theta(t)\to1$ as $t\to0$, uniformly in large $N$.
+\emph{Blocks:} Lemma~\ref{lem:block}(c),(d) at $x'_N$ give
+$\|w'_{m,N}+tv'_{m,N}\|_\infty\le(1-td'_{m,N})M'_{m,N}$ and
+$\|D_m(w'_{m,N}+tv'_{m,N})\|\le C'_{m,N}+td'_{m,N}M'_{m,N}+\frac{t^2}2
+H'_{m,N}C'_{m,N}\theta(t)$, with $H'_{m,N}:=(\|D_m\omega_m\|^2-d'^2_{m,N})/
+C'_{m,N}\to H_m$.
+
+\emph{Step 2: transfer peaks at $\xi$.}  Fix $m$ and put
+$\varsigma_m:=\sgn(H_m/2-L)\in\{-1,0,1\}$; if $\varsigma_m=0$ set
+$\tau_m:=0$ and skip this step.  Choose $\gamma_m\in(\max_{k\in\supp\omega_m}
+|w_m(k)|,M_m)$ with $|w_m(k)|\ne\gamma_m$ for all $k$, let
+$\Lambda_m:=\{k\notin\supp\omega_m:|w_m(k)|\ge\gamma_m\}\supseteq P_m$,
+$y^0_m:=\sgn(w_m)1_{\Lambda_m}$, $\hat\pi_m:=R_m^*y^0_m$ and
+$\tau_{*,m}:=(\hat\pi_m(\xi)/q_0)a-\hat\pi_m$, so $\tau_{*,m}(\xi)=0$.  For
+$\delta_0\in(0,1]$ let $T_m:=\varsigma_m\tau_{*,m}+\delta_0(q^*(\tau_{*,m})+1)
+a$ and $\ell_m:=q^*(T_m)$; then $T_m(\xi)=\delta_0(q^*(\tau_{*,m})+1)q_0>0$.
+For $\delta_1\in(0,T_m(\xi)/(2\ell_mq_0))$ choose, by density of the tails
+of $(u_{k,m})_k$, an index $k_*=k_{*,m}\notin\supp\omega_m$ with
+$q^*(u_{k_*,m}-T_m/\ell_m)\le\delta_1$, so large that $\ell_m\Phi_m(k_*)
+M_m/(mC_m)\le\frac12$ and $\vartheta_m\Phi_m(k_*)<T_m(\xi)/(2\ell_m)$.  Then
+$u_{k_*,m}(\xi)\ge T_m(\xi)/\ell_m-\delta_1q_0\ge T_m(\xi)/(2\ell_m)>
+\vartheta_m\Phi_m(k_*)$, so $k_*$ is a non-degenerate peak with
+$w_m(k_*)=M_m$ and margin $\mu_*>0$.  Put
+\begin{gather*}
+ y_m:=y^0_m+\varsigma_m\frac{\ell_m}{\lambda_{k_*,m}}e_{k_*},\qquad
+ R_m^*y_m=\hat\pi_m+\varsigma_m\ell_mu_{k_*,m},\\
+ e_{\infty,m}:=R_m^*y_m-\frac{(R_m^*y_m)(\xi)}{q_0}a .
+\end{gather*}
+Since $R_m^*y_m=(\text{multiple of }a)+\varsigma_m(\ell_mu_{k_*,m}-T_m)$, we get
+$e_{\infty,m}=\varsigma_m\big[(\ell_mu_{k_*,m}-T_m)-\frac{(\ell_mu_{k_*,m}-
+T_m)(\xi)}{q_0}a\big]$ and $q^*(e_{\infty,m})\le2\ell_m\delta_1$.  Also
+$\ell_m\mu_*\le\ell_mu_{k_*,m}(\xi)\le T_m(\xi)+\ell_m\delta_1q_0$.  Hence the
+\emph{inefficiency} $\epsilon_{1,m}:=\ell_m\mu_*/q_0+q^*(e_{\infty,m})\le
+\delta_0(q^*(\tau_{*,m})+1)+3\ell_m\delta_1$ can be made as small as we
+wish by choosing first $\delta_0$ and then $\delta_1$ (note $\ell_m\le
+(1+\delta_0)(q^*(\tau_{*,m})+1)$).  Put
+$e_{y,m}:=1+\ip{D_my_m}{D_mw_m}/C_m$.  As $y^0_mw_m\ge0$ and
+$\ell_m\Phi_m(k_*)M_m/(mC_m)\le\frac12$, we have $e_{y,m}\ge\frac12$.
+Finally let $\tau_m:=(H_m/2-L)/e_{y,m}$, whose sign is $\varsigma_m$, and
+note $|\tau_m|\le H_m+2$ independently of $\delta_0,\delta_1,k_*$.  We
+choose $\delta_0,\delta_1$ so that $\sum_m(H_m+2)\epsilon_{1,m}\le\eta/2$.
+
+\emph{Step 3: the limiting levels.}  Put
+$\Lambda_b:=H_b/2+\sum_m\big(\tau_m\sigma_me_{y,m}/q_0+|\tau_m|
+\epsilon_{1,m}\big)$ and $\Lambda_m:=H_m/2-\tau_me_{y,m}=L$.  Using
+$\sum_m\sigma_m=1-q_0$,
+\[
+ q_0\Lambda_b=\frac{\Gamma_w}2-L(1-q_0)+q_0\sum_m|\tau_m|\epsilon_{1,m},
+ \quad\text{so}\quad
+ \Lambda_b=L-\frac\eta{q_0}+\sum_m|\tau_m|\epsilon_{1,m}\le L .
+\]
+
+\emph{Step 4: transport of the transfer data.}  For $N$ large let
+$\Lambda_{m,N}:=\{k\notin\supp\omega_m:|w'_{m,N}(k)|\ge\gamma_m\}$ and
+$y_{m,N}:=\sgn(w'_{m,N})1_{\Lambda_{m,N}}+\varsigma_m(\ell_m/\lambda_{k_*,m})
+e_{k_*}$.  For large $N$, $k_*$ is a peak of $w'_{m,N}$ of sign $+1$ with
+margin $\mu'_{*,N}\to\mu_*$, and the peak set of $w'_{m,N}$ is contained
+in $\Lambda_{m,N}$.  Since $w'_{m,N}\to w_m$ coordinatewise and
+$|w_m(k)|\ne\gamma_m$, $y_{m,N}\to y_m$ coordinatewise and boundedly; hence
+$R_m^*y_{m,N}\to R_m^*y_m$ in $\ell_1$ and $D_my_{m,N}\to D_my_m$ in
+$\ell_2$.  Put $\beta_{m,N}:=((R_m^*y_{m,N})(x'_N)/c_N)a$,
+$e_{m,N}:=R_m^*y_{m,N}-\beta_{m,N}\to e_{\infty,m}$, and
+$e_{y,m,N}:=1+\ip{D_my_{m,N}}{D_mw'_{m,N}}/C'_{m,N}\to e_{y,m}$.  Writing
+$R_mx'_N=\sigma'_{m,N}(\alpha'+D_m^2w'_{m,N}/C'_{m,N})$
+(Lemma~\ref{lem:threshold}) and using \eqref{eq:margin} at $k_*$, one obtains
+the bookkeeping identity
+\begin{equation}\label{eq:bookkeeping}
+ y_{m,N}(R_mx'_N)=\sigma'_{m,N}e_{y,m,N}+\varsigma_m\ell_m\mu'_{*,N}.
+\end{equation}
+Indeed $\ip{\sgn(w')1_{\Lambda_{m,N}}}{\alpha'}=1$, and
+\[
+ \frac{\ell_m}{\lambda_{k_*}}(R_mx'_N)(k_*)=\ell_mu_{k_*}(x'_N)=
+ \ell_m\mu'_{*,N}+\frac{\ell_m}{\lambda_{k_*}}\,\frac{\sigma'\Phi(k_*)^2M'}{C'},
+\]
+the last term being the contribution of $e_{k_*}$ to
+$\sigma'\ip{D y_{m,N}}{Dw'}/C'$.
+
+\emph{Step 5: the decomposition.}  For $t\in\R$ put
+$\varepsilon_m:=\tau_m\rho^2t^2$ and
+\[
+ A(t):=a+t\rho b'_N+\sum_m\varepsilon_mR_m^*y_{m,N},\qquad
+ W_m(t):=w'_{m,N}+t\rho v'_{m,N}-\varepsilon_my_{m,N},
+\]
+so that $A(t)+\sum_mR_m^*W_m(t)=f'_N+t\rho g'_N$.
+\emph{Base.}  By \eqref{eq:bookkeeping},
+$A(t)=(1+E)a+t\rho b'_N+\sum_m\varepsilon_me_{m,N}$ with
+$E:=\rho^2t^2\sum_m\big(\tau_m\sigma'_{m,N}e_{y,m,N}+|\tau_m|\ell_m
+\mu'_{*,N}\big)/c_N$.  By homogeneity and Step~1,
+\[
+ q^*(A(t))\le1+E+\frac{\rho^2t^2}{2(1+E)}H_b\theta(t)
+ +\rho^2t^2\sum_m|\tau_m|q^*(e_{m,N})
+ =1+\rho^2t^2\big(\Lambda_b+o(1)\big),
+\]
+where $o(1)\to0$ as $t\to0$ and $N\to\infty$.
+\emph{Blocks, sup norm.}  For $|t|$ small and $N$ large,
+$\|W_m(t)\|_\infty\le(1-t\rho d'_{m,N})M'_{m,N}-\varepsilon_m$: on
+$\Lambda_{m,N}\setminus\{k_*\}$ the coordinates are
+$(1-t\rho d')w'(k)-\varepsilon_m\sgn w'(k)$, whose moduli are at most this
+bound; at $k_*$ the value is $(1-t\rho d')M'-\varepsilon_m(1+\varsigma_m
+\ell_m/\lambda_{k_*})$, which lies between $\pm((1-t\rho
+d')M'-\varepsilon_m)$ once $|\varepsilon_m|\ell_m/\lambda_{k_*}\le M'$ (here
+$\varsigma_m\varepsilon_m\ge0$ is used); on $\supp\omega_m$ the moduli are at
+most $(1-t\rho d')(M'-\gamma_0)+\rho|t|\|\omega_m\|_\infty$; elsewhere at
+most $(1-t\rho d')\gamma_m$; both are below the bound for small $|t|$ and
+large $N$ because $M'_{m,N}\to M_m>\gamma_m$.
+\emph{Blocks, Hilbert part.}  With $h_0:=D_m(w'+t\rho v')$, inequality
+\eqref{eq:hilbertineq} gives
+$\|h_0-\varepsilon_mD_my_{m,N}\|\le\|h_0\|-\varepsilon_m\ip{h_0/\|h_0\|}{D_m
+y_{m,N}}+O(t^4)$, and $\ip{h_0/\|h_0\|}{D_my_{m,N}}=
+\ip{D_mw'}{D_my_{m,N}}/C'+O(|t|)$ uniformly in $N$.  Together with Step~1,
+\[
+ N_m(W_m(t))\le1+\rho^2t^2\Big(\frac{H'_{m,N}\theta(t)}2-\tau_me_{y,m,N}
+ \Big)+O(|t|^3)=1+\rho^2t^2(L+o(1)).
+\]
+By Lemma~\ref{lem:dualball} and Step~3, there are $t_4>0$ and $N_4$ with
+$p^*(f'_N+t\rho g'_N)\le1+\rho^2t^2(L+\eta)\le1+\frac{t^2}2\rho^2
+(\Gamma_w+4\eta)\le1+\rho t^2/2\le s(t)$ for $|t|\le t_5:=\min(t_4,
+2\sqrt{1-\rho},1)$ and $N\ge N_4$.
+
+\emph{Step 6: large $t$.}  Since $(f,g)$ is contractive,
+$p^*(f'_N+t\rho g'_N)\le s(\rho t)+\varepsilon_N+\rho|t|\eta_N$ with
+$\varepsilon_N:=p^*(f'_N-f)\to0$ and $\eta_N:=p^*(g'_N-g)\to0$; by
+Lemma~\ref{lem:slack}(a) this is at most $s(t)$ for $|t|\ge t_5$ and $N$
+large.  Hence $\rho g'_N\in\Cset(f'_N)$ and $\rho g'_N\to\rho g$.
+\end{proof}
+
+\begin{remark}\label{rem:transfer}
+(a) If $\Gamma_{\max}(g)\le1$, no transfer peaks are needed ($\tau_m=0$);
+this is the natural-certificate case, and together with
+Corollary~\ref{cor:check} it re-proves the local-certificate theorem of
+\cite{Check}.  (b) The transfer peak is the genuinely infinite-dimensional
+ingredient: lowering a block's sup norm requires lowering every near-peak
+coordinate, and the image $\hat\pi_m$ of such a uniform lowering is a fixed
+vector of $Y$ which the base cannot absorb; density of the tails of
+$(u_{k,m})_k$ provides a robust deep peak whose functional converts it into
+a multiple of $a$ with arbitrarily small inefficiency.  In finite-dimensional
+models of the construction this mechanism is absent and the second-order
+coefficient can be strictly larger than $\Gamma_w$.  (c) The same estimates
+performed at $\xi$ instead of $x'_N$ show that
+$\limsup_{t\to0}(p^*(f+tg)^2-1)/t^2\le\Gamma_w(g)$ for every balanced finite
+certificate when $a\in c_{00}$; we do not use this.
+\end{remark}
+
+\begin{remark}[$\Gamma_w$ and shifts]\label{rem:gammaw}
+For every shifted certificate $c=(b,\omega,\theta)$ at $f$ one has
+$H^{\rm sh}(c)\ge\Gamma_w(g_c)$.  Indeed, if $\Lambda:=H^{\rm sh}(c)$, then
+$2\theta_m\le\Lambda-H_m$ for every $m$, and
+$\Lambda\ge h(b)-2\sum_m\theta_m\sigma_m/q_0\ge h(b)-\sum_m(\Lambda-H_m)
+\sigma_m/q_0$; multiplying by $q_0$ and using $q_0+\sum_m\sigma_m=1$ gives
+$\Lambda\ge\Gamma_w$.  Thus Theorem~\ref{thm:transfer} covers every
+balanced shifted certificate whose direction lies in $S(f)$.
+\end{remark}
+

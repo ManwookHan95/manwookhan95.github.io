@@ -1,0 +1,143 @@
+\subsection{Non-recovery along canonical truncations}
+The defect of Theorem~\ref{thm:defect} is defined relative to the known
+intrinsic classes; a priori its elements could still be recovered along
+every sequence.  For the canonical truncations this is not the case.
+
+\begin{proposition}[Non-recovery]\label{prop:nonrecovery}
+Let $T$, $I$ and $f$ be as in Theorem~\ref{thm:defect}, and let
+$f_n:=\nabla p(x^{(n)})$, $x^{(n)}=z^{(n)}+Ue$, be the canonical truncations
+of $f$.  Then:
+\begin{enumerate}
+\item[(a)] $f_n\in\NA\cap S_{p^*}$ and $f_n\to f$;
+\item[(b)] for large $n$ the normer $x'_n:=x^{(n)}/p(x^{(n)})$ of $f_n$ is
+C-tame, with $Q_{n,1}=\{2\}$, $Q_{n,m}=\emptyset$ for $m\ne1$, and no
+degenerate peaks;
+\item[(c)] $\Cset(f_n)\subseteq\R y^{(n)}$, where
+$y^{(n)}:=\lambda_0u_{2,1}-(\Phi_1(2)^2w^{(n)}_1(2)/C^{(n)}_1)R_1^*w^{(n)}_1
+\to\lambda_0u_{2,1}$;
+\item[(d)] $\Li_n\Cset(f_n)\subseteq\R u_{2,1}$.  In particular, for
+$\emptyset\ne K_1\ne K'$ and $\rho\in(0,1]$, $\rho g_{K_1}\notin
+\Li_n\Cset(f_n)$: the mates $g_{K_1}$ are not recovered along the canonical
+truncations.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) $z^{(n)}\in c_{00}$, $\|z^{(n)}\|_\infty\le1$ and $z^{(n)}_1=1=\sgn a_1$,
+so $\nabla q(x^{(n)})=a$ and $f_n\in\NA\cap S_{p^*}$ by
+Proposition~\ref{prop:smooth}(c); $z^{(n)}\to z$ coordinatewise, and
+Proposition~\ref{prop:approximants} gives $f_n\to f$.
+
+(b) Let $c'_n:=q(x'_n)=1/p(x^{(n)})\to q_0>0$.  Since $|u_{k,m}(x^{(n)})|
+\le q(x^{(n)})=1$, $\sigma'_{n,m}\le c'_nm2^{-m}$.  Exactly as in the proof
+of Lemma~\ref{lem:firstrow}, using (P2) and (P3) at $x^{(n)}\in X_0$: $1$ is a
+peak of every block, $\vartheta'_{n,m}\Phi_m(k)\le c'_n\pi_{k,m}$, and every
+$(k,m)\ne(2,1)$ is a peak with margin $\mu'_{k,m}\ge c'_n\rho_{l(k,m)}$ if
+$(k,m)$ is non-exceptional with $k\ge2$, and $\mu'_{k,m}\ge c'_n/4$
+otherwise.  As $\rho_{l(k,m)}=(2\Phi_m(k)/c_{l(1,m)})^{1/2}\ge(2\Phi_m(k))^{1/2}$
+and $\Phi_m(k+1)\le\Phi_m(k)/2$, for $s<c'_n/4$ we get
+$\sum_{\mu'_{k,m}<s}\Phi_m(k)\le\sum_{\Phi_m(k)<s^2/(2c'^2_n)}\Phi_m(k)\le
+s^2/c'^2_n=o(s)$: (MS) holds.  Next,
+$u_{2,1}(x^{(n)})=u_{2,1}(\zh)-\sum_{j\in K',j>n}u_{2,1}(j)\to0$, while
+$\vartheta'_{n,1}\Phi_1(2)\to\vartheta_1\Phi_1(2)>0$
+(Proposition~\ref{prop:continuity}); so for large $n$,
+$|u_{2,1}(x'_n)|<\vartheta'_{n,1}\Phi_1(2)$ and $(2,1)$ is a strict
+non-peak.  Finally $a\in c_{00}$ and the contact set of $x'_n$ is
+$K'\cap[1,n]$, which is finite.
+
+(c) By Theorem~\ref{thm:tamefibre} at $\eta=x'_n$,
+$\Cset(f_n)\subseteq S(f_n)=(\ell_1(\{1\})\cap(x'_n)^\perp)+\R y^{(n)}=\R
+y^{(n)}$, since $x'_n(1)\ne0$.  By Proposition~\ref{prop:continuity},
+$w^{(n)}_1(2)\to w_1(2)=0$ and $C^{(n)}_1\to C_1>0$, so $y^{(n)}\to
+\lambda_0u_{2,1}$.
+
+(d) If $\gamma_ny^{(n)}\to g$, then $(\gamma_n)$ is bounded because
+$\|y^{(n)}\|\to\lambda_0\|u_{2,1}\|>0$; along a subsequence $\gamma_n\to\gamma$
+and $g=\gamma\lambda_0u_{2,1}$.  The last claim follows from
+Theorem~\ref{thm:defect}.
+\end{proof}
+
+Thus, for this $T$, the mates recovered along \emph{every} sequence are
+contained in the certificate line $\R u_{2,1}$: universal recovery fails, and
+a recovery of the switching mates must use norm-attaining approximants whose
+certificate spans grow, for instance by putting base mass on the contact
+windows (Section~\ref{sec:engineered}).  By Remark~\ref{rem:tameNA}, along
+any sequence of norm-attaining approximants with C-tame normers, recovery is
+a linear-algebra design problem: $\Li_n\Cset(f_n)\subseteq\Li_nS(f_n)$.
+
+\subsection{Exact resonances}
+
+\begin{proposition}[Exact resonances need infinite one-sided sets]\label{prop:exact}
+Let $f\in S_{p^*}$, $\Omega\in V^*$ with $D:=L^*\Omega\ne0$, and suppose that
+for a sequence $s_n\to0^+$,
+\[
+ q^*(a+s_nD)\le s(2s_n)\quad\text{and}\quad N_m(w_m-s_n\Omega_m)\le s(2s_n)
+ \quad(m\in I).
+\]
+Then $\sum_{j\notin F}(|D_j|-z_jD_j)=0$: off $F$, $D$ is supported in the
+contact set $K$ with $z_jD_j=|D_j|$.  Since $D\in Y\setminus\{0\}$ is not
+finitely supported, $F\cup K$ is infinite.  In particular there are no such
+transfers when $a\in c_{00}$ and $K$ is finite \textup{(}e.g.\ at every
+norm-attaining $f$\textup{)}.
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:base} (dropping nonnegative terms),
+$q^*(a+sD)\ge1+sD(\zh)+s\sum_{j\notin F}(|D_j|-z_jD_j)$ for $s>0$, and
+$N_m(w_m-s\Omega_m)\ge\ip{w_m-s\Omega_m}{\zeta_m}/\sigma_m=1-s\ip{\Omega_m}
+{\zeta_m}/\sigma_m$.  With $s=s_n$, multiply the first inequality by $q_0$
+and the $m$-th by $\sigma_m$ and add: since $q_0D(\zh)=D(\xi)=\ip{\Omega}
+{L^{**}\xi}=\sum_m\ip{\Omega_m}{\zeta_m}$ and $q_0+\sum_m\sigma_m=1$,
+\[
+ q_0s_n\sum_{j\notin F}(|D_j|-z_jD_j)\le s(2s_n)-1\le2s_n^2 .
+\]
+Divide by $s_n$ and let $n\to\infty$.  Each term $|D_j|-z_jD_j$ is
+nonnegative and vanishes only if $D_j=0$ or $|z_j|=1$ with $z_jD_j=|D_j|$.
+\end{proof}
+
+\begin{corollary}[Two-sided linear decompositions]\label{cor:twosided}
+Let $g\in\Cset(f)$ and suppose there are $\tau>0$ and
+$(B_\pm,\Omega_\pm)\in\ell_1\times V^*$ with $g=B_\pm+L^*\Omega_\pm$,
+$\max(q^*(a+tB_+),\|w+t\Omega_+\|)\le s(t)$ for $0\le t\le\tau$ and
+$\max(q^*(a+tB_-),\|w+t\Omega_-\|)\le s(t)$ for $-\tau\le t\le0$.  If
+$F\cup K$ is finite, then $B_+=B_-$, $\Omega_+=\Omega_-$, and
+$g\in\cl\Cert(f)$.
+\end{corollary}
+
+\begin{proof}
+For $0<t\le\tau$ average the decompositions of $f+tg$ and $f-tg$:
+$f=(a+\frac t2D)+L^*(w-\frac t2\Omega_D)$ with $D:=B_+-B_-$,
+$\Omega_D:=\Omega_--\Omega_+$, $L^*\Omega_D=D$, and both component norms are
+at most $s(t)$ by convexity.  If $D\ne0$, Proposition~\ref{prop:exact} with
+$s_n=t_n/2$ contradicts the finiteness of $F\cup K$.  Hence $D=0$, and
+$\Omega_+=\Omega_-$ by injectivity of $L^*$.  The common decomposition makes
+$g$ locally split, and Theorem~\ref{thm:locsplit} applies.
+\end{proof}
+
+\begin{remark}[Resonance types; the sign rule]\label{rem:resonancetypes}
+The transfer in the proof of Corollary~\ref{cor:twosided} exists for every
+mate and every pair of admissible decompositions at scales $\pm t$; on the
+contacts, for instance, the cheaply used parts of $B_+$ and of $B_-$ have
+opposite signs, so they add up in $D=B_+-B_-$.  (A general ``matching at
+scale'' statement for all one-sided resources is only available as a
+sketch and is not used.)  A mate outside $\mathcal
+K(f)$ therefore needs \emph{resonances}: cheap transfers with large
+one-sided mass at arbitrarily small scales.  Proposition~\ref{prop:exact}
+shows that exact (scale-free) resonances require infinitely many contacts
+(or near-flip coordinates of $F$ when $a\notin c_{00}$);
+Theorem~\ref{thm:defect} realizes one.  Approximate resonances run through
+one-sided block carriers: weak peaks and near-threshold strict non-peaks
+at depth comparable to the scale.  For these we only record an elementary
+fact: if $u_{k,m}(\xi)\ne0$, then $\sgn w_m(k)=\sgn u_{k,m}(\xi)$ (on $P_m$
+by Lemma~\ref{lem:threshold}, off $P_m$ because $w_m(k)=C_m\zeta_m(k)/
+(\Phi_m(k)^2\sigma_m)$).  Consequently a one-sided usage of $(k,m)$ pushes in
+the direction $-\sgn u_{k,m}(\xi)$, and two near-threshold carriers whose
+vectors differ by $o(\Phi)$ in the $\xi$-direction (for instance Mart\'in's
+cross-block near duplicates with small perturbations) serve the same side
+of $t=0$ and cannot switch with each other.  This is a heuristic guide; no
+classification of approximate resonances is proved here.  When the gaps of
+the carriers are not summable, Theorem~\ref{thm:carriers} puts the
+corresponding mates in $\cl\Cert(f)$; the summable case and the weak-peak
+case are open (Remark~\ref{rem:summablegaps}).
+\end{remark}
+

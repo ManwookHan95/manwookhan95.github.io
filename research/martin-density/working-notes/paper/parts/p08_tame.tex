@@ -1,0 +1,209 @@
+\section{Second-order rebalancing and tame supports}\label{sec:second}
+
+In this section the block set $I$ is finite.  Let $f\in S_{p^*}$ have a
+normer $\eta\in S_{p^{**}}$; either $\eta=\xi$ is the bidual normer of an
+arbitrary $f$, or $\eta=x'\in S_p$ when $f=f'$ attains its norm.  We use the
+forced data of Section~\ref{sec:setting} at $\eta$, writing
+$c_\eta:=q^{**}(\eta)$ (so $c_\eta=q_0$ when $\eta=\xi$),
+$\zh:=\eta/c_\eta=z+Ue$, $\zeta_m:=R_m^{**}\eta$ and
+$\sigma_m:=|\zeta_m|_m$, so that $c_\eta+\sum_m\sigma_m=1$.
+
+\subsection{Slices, excess and tame points}
+
+\begin{lemma}[Bidual slice]\label{lem:slice}
+Let $g\in\Cset(f)$.  Then $g(\eta)=0$, and for every $\chi\in X^{**}$ with
+$\chi(f)=0$,
+\[
+ \chi(g)^2\le\varphi(\chi)\big(2+\varphi(\chi)\big),\qquad
+ \varphi(\chi):=p^{**}(\eta+\chi)-1 .
+\]
+In particular, if $\varphi(s\chi)=o(s^2)$ as $s\to0^+$, then $\chi(g)=0$.
+\end{lemma}
+
+\begin{proof}
+For $\theta\in X^{**}$ and $t\in\R$,
+$\theta(f)+t\theta(g)=\theta(f+tg)\le p^{**}(\theta)s(t)$; the supremum of the
+left side divided by $s(t)$ over $t$ is $\sqrt{\theta(f)^2+\theta(g)^2}$, so
+$\theta(f)^2+\theta(g)^2\le p^{**}(\theta)^2$.  With $\theta=\eta$ we get
+$g(\eta)=0$, and with $\theta=\eta+\chi$ we get
+$1+\chi(g)^2\le(1+\varphi(\chi))^2$.  For the last claim apply this to
+$s\chi$ and divide by $s^2$.
+\end{proof}
+
+\begin{lemma}[Excess splitting]\label{lem:excess}
+For $\chi\in X^{**}$ put
+$\Delta(\eta+\chi):=p^{**}(\eta+\chi)-f(\eta+\chi)\ge0$.  Then
+\begin{gather*}
+ \Delta(\eta+\chi)=E_q(\chi)+\sum_mE_m(R_m^{**}\chi),\\
+ E_q(\chi):=q^{**}(\eta+\chi)-c_\eta-a(\chi),\qquad
+ E_m(\delta):=|\zeta_m+\delta|_m-\sigma_m-w_m(\delta),
+\end{gather*}
+and all these terms are nonnegative.  If $f(\chi)=0$, then
+$\Delta(\eta+\chi)=\varphi(\chi)$.
+\end{lemma}
+
+\begin{proof}
+$p^{**}(\eta)=1=f(\eta)=c_\eta+\sum_m\sigma_m$, $f=a+\sum_mR_m^*w_m$ and
+$p^{**}=q^{**}+\sum_m|R_m^{**}\cdot|_m$; nonnegativity holds because $a$ and
+$w_m$ have norm one.
+\end{proof}
+
+\begin{lemma}[Flatness on free coordinates]\label{lem:flat}
+If $\chi\in\ell_\infty$ is supported in $J$ and $|\chi_j|\le
+c_\eta(1-|z_j|)$ for all $j$, then $E_q(\chi)=0$ and $a(\chi)=0$.
+\end{lemma}
+
+\begin{proof}
+$\eta+\chi=c_\eta((z+\chi/c_\eta)+Ue)$ with $\|z+\chi/c_\eta\|_\infty\le1$,
+so $q^{**}(\eta+\chi)\le c_\eta$; and $q^{**}(\eta+\chi)\ge a(\eta+\chi)=
+c_\eta$ because $J\cap F=\emptyset$.
+\end{proof}
+
+\begin{lemma}[Overshoot bound]\label{lem:overshoot}
+Fix a block and drop $m$.  Let $\delta=\mu\zeta+\delta'$ with $\mu>-1$,
+$\delta'\in\ell_1$ supported in $P$ and $\sum_{k\in P}s_k\delta'_k=0$, where
+$s_k:=\sgn w(k)$.  Then
+\[
+ E(\delta)\le2\sum_{k\in P}\big(-s_k\delta'_k-(1+\mu)|\zeta||\alpha(k)|
+ \big)_+\le2\sum_{k\in P}\big(|\delta'_k|-(1+\mu)\lambda_k\mu_k\big)_+ .
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:threshold}, $\zeta+\delta=[(1+\mu)|\zeta|\alpha+\delta']
++(1+\mu)|\zeta|D(Dw/C)$.  Using $|x+y|=|x|+sy+2(-sy-|x|)_+$ for $s\in\{\pm1\}$
+with $sx=|x|$, the $\ell_1$-norm of the bracket is $(1+\mu)|\zeta|+
+\sum_Ps_k\delta'_k+2\,\mathrm{ov}=(1+\mu)|\zeta|+2\,\mathrm{ov}$, where
+$\mathrm{ov}$ is the sum in the statement; the second term lies in
+$(1+\mu)|\zeta|D(B_{\ell_2})$.  Hence $|\zeta+\delta|\le(1+\mu)|\zeta|
++2\,\mathrm{ov}$, while $w(\delta)=\mu|\zeta|+M\sum_Ps_k\delta'_k=\mu|\zeta|$.
+The second inequality is \eqref{eq:margin}.
+\end{proof}
+
+Note that $|(R_m\chi)(k)|=\lambda_{k,m}|u_{k,m}(\chi)|\le\lambda_{k,m}q(\chi)$
+for $\chi\in X$.
+
+\begin{definition}[Tame points, certificate span]\label{def:tame}
+Let $P^\circ_m:=\{k\in P_m:\mu_{k,m}>0\}$ and $Dg_m:=P_m\setminus P_m^\circ$
+(degenerate peaks), $\bar Q_m:=Q_m\cup Dg_m$.  The normer $\eta$ satisfies
+\emph{margin sparsity} \textup{(MS)} if
+$\sum_{k\in P_m^\circ,\ \mu_{k,m}<s}\Phi_m(k)=o(s)$ as $s\to0^+$ for every
+$m$.  It is \emph{C-tame} if $a\in c_{00}$, $K$ is finite, every
+$\bar Q_m$ is finite, and \textup{(MS)} holds.  (At $\eta=x'\in c_0$ the
+first two conditions are automatic.)  The \emph{certificate span} at $f$ is
+\begin{gather*}
+ S(f):=\Big\{b+\sum_mR_m^*(\omega_m-d_m(\omega_m)w_m):\ b\in\ell_1(F),\
+ b(\eta)=0,\ \omega_m\in c_{00}(Q_m)\Big\},\\
+ d_m(\omega):=\frac{\ip{D_mw_m}{D_m\omega}}{C_m},
+\end{gather*}
+and its elements are called \emph{balanced finite certificates} (the base
+part need not satisfy $\|b/a\|_\infty<\infty$ when $F$ is infinite).
+Equivalently
+$S(f)=(\ell_1(F)\cap\eta^\perp)+\spn\{y_{k,m}:k\in Q_m,m\in I\}$ with
+$y_{k,m}:=\lambda_{k,m}u_{k,m}-(\Phi_m(k)^2w_m(k)/C_m)R_m^*w_m$.  For
+$g\in S(f)$ with data $(b,\omega)$ put $H_b:=h(b)$, $H_m:=H_m(\omega_m)$ and
+\[
+ \Gamma_w(g):=c_\eta H_b+\sum_m\sigma_mH_m,\qquad
+ \Gamma_{\max}(g):=\max(H_b,\max_mH_m).
+\]
+\end{definition}
+
+When $F$ and all $Q_m$ are finite the data $(b,\omega)$ of $g\in S(f)$ are
+unique (Lemma~\ref{lem:rigidity}), so $\Gamma_w$ is well defined; in general
+we regard $\Gamma_w$ as a function of the data.  Since $c_\eta+\sum_m
+\sigma_m=1$, $\Gamma_w\le\Gamma_{\max}$.
+
+\begin{theorem}[Fibres at C-tame points]\label{thm:tamefibre}
+If the normer $\eta$ of $f$ is C-tame, then $\Cset(f)\subseteq S(f)$; that
+is, every mate is a balanced finite certificate
+$g=b+\sum_mR_m^*(\omega_m-d_mw_m)$ with $\supp b\subseteq F$, $b(\eta)=0$
+and $\omega_m$ supported in the finite set $Q_m$.  In particular
+$\Cset(f)$ is finite dimensional.
+\end{theorem}
+
+\begin{proof}
+$J$ is cofinite.  By Lemma~\ref{lem:rigidity}(b) with $P'_m:=P^\circ_m$
+(cofinite, hence infinite) and $\pi_m:=\sum_{k\in P_m}s_k\lambda_{k,m}
+u_{k,m}$ (so that $\pi_m(\chi)=\sum_{P_m}s_k(R_m\chi)_k$; the degenerate
+peaks are among the finitely many $u_{k,m}$, $k\in\bar Q_m$), the
+restrictions to $c_{00}(J)$ of the finite family
+\[
+ \Psi:=\{u_{k,m}:k\in\bar Q_m,m\in I\}\cup\{\pi_m:m\in I\}
+\]
+are linearly independent.  Note $R_m^*w_m=M_m\pi_m+\sum_{k\in
+Q_m}w_m(k)\lambda_{k,m}u_{k,m}$.  We use repeatedly: if $\chi\in X$ and
+$R_m\chi=\mu\zeta_m+\delta'$ where $\delta'$ vanishes on $\bar Q_m$ and
+has zero peak sum, then by Lemma~\ref{lem:overshoot} and \textup{(MS)},
+$E_m(t\mu\zeta_m+t\delta')\le2m\sum_{k\in P^\circ_m}\Phi_m(k)\big(|t|B-
+\tfrac12\mu_{k,m}\big)_+=o(t^2)$ for $|t\mu|\le\frac12$, where $B$ bounds
+$|\delta'_k|/\lambda_{k,m}$.
+
+\emph{Step 1: $\Cset(f)\subseteq W:=\spn\{e_j^*:j\in F\cup K\}+\spn\Psi$.}
+Let $\nu\in c_{00}(J)$ with $\psi(\nu)=0$ for all $\psi\in\Psi$.  Then
+$a(\nu)=0$, $R_m\nu$ vanishes on $\bar Q_m$, and its peak sum is
+$\pi_m(\nu)=0$; also $f(\nu)=a(\nu)+\sum_mw_m(R_m\nu)=0$.  For small $|t|$,
+$E_q(t\nu)=0$ (Lemma~\ref{lem:flat}: $\nu$ is finitely supported in $J$) and
+$E_m(tR_m\nu)=o(t^2)$, so $\varphi(t\nu)=o(t^2)$ and $g(\nu)=0$ for every
+$g\in\Cset(f)$ (Lemma~\ref{lem:slice}).  By linear algebra, the restriction
+of $g$ to $c_{00}(J)$ is a combination of the restrictions of $\Psi$; hence
+$g$ minus that combination is supported in $F\cup K$.
+
+\emph{Step 2: unique form.}  Since $\pi_m$ and the $u_{k,m}$ are images
+under $R_m^*$ of $s1_{P_m}$ and $\lambda_{k,m}^{-1}e_k$, every $g\in W$ can
+be written $g=b+\sum_mR_m^*(\omega_m+c_mw_m)$ with $\supp b\subseteq F\cup
+K$ and $\omega_m\in c_{00}(\bar Q_m)$; the representation is unique by
+Lemma~\ref{lem:rigidity}(a) and because $w_m\ne0$ on the infinite set
+$P_m^\circ$.
+
+\emph{Step 3: no contact components.}  Let $j\in K$.  Choose
+$\nu_J\in c_{00}(J)$ with $\psi(\nu_J)=z_j\psi(e_j)$ for $\psi\in\Psi$ and
+put $\nu:=-z_je_j+\nu_J$, so $\psi(\nu)=0$ for $\psi\in\Psi$.  For small
+$s>0$, $\eta+s\nu=c_\eta\big((z-sz_je_j/c_\eta+s\nu_J/c_\eta)+Ue\big)$ has
+cube part of norm $\le1$ (the contact moves inward), so
+$q^{**}(\eta+s\nu)\le c_\eta=a(\eta+s\nu)$ and $E_q(s\nu)=0$.  As in
+Step~1, $E_m(sR_m\nu)=o(s^2)$ and $f(\nu)=0$.  Hence $g(\nu)=0$.  But
+$g(\nu)=-z_jb_j$, because $b(\nu_J)=0$ and
+$(\omega_m+c_mw_m)(R_m\nu)=0$.  So $b_j=0$.
+
+\emph{Step 4: no degenerate components.}  Let $k_0\in Dg_{m_0}$ and
+$s_0:=\sgn w_{m_0}(k_0)$.  Choose $\nu\in c_{00}(J)$ with
+$u_{k_0,m_0}(\nu)=s_0$ and $\psi(\nu)=0$ for all other $\psi\in\Psi$.  Then
+$R_{m_0}\nu$ vanishes on $\bar Q_{m_0}\setminus\{k_0\}$, equals
+$s_0\lambda_{k_0,m_0}$ at $k_0$, and has zero peak sum.  For $s>0$ the
+first bound of Lemma~\ref{lem:overshoot} contributes nothing at $k_0$
+(there $-s_0\cdot s\,s_0\lambda_{k_0,m_0}<0$) and nothing at the other
+degenerate peaks; the non-degenerate peaks give $o(s^2)$ by (MS).  Other
+blocks and the base are as in Step~1.  So $\varphi(s\nu)=o(s^2)$ for
+$s>0$ and $g(\nu)=0$; but
+$g(\nu)=\omega_{m_0}(k_0)\lambda_{k_0,m_0}s_0$.  So $\omega_{m_0}(k_0)=0$.
+
+\emph{Step 5: balance.}  Fix $m_0$.  Choose $\nu_J\in c_{00}(J)$ with
+$\psi(\nu_J)=-\psi(\eta)/\sigma_{m_0}$ for $\psi\in\{u_{k,m_0}:k\in\bar
+Q_{m_0}\}\cup\{\pi_{m_0}\}$ and $\psi(\nu_J)=0$ for the other elements of
+$\Psi$, and put $\nu:=\eta+\nu_J\in X^{**}$.  Then
+$f(\nu)=1+\sum_mw_m(R_m\nu_J)=1-w_{m_0}(\zeta_{m_0})/\sigma_{m_0}=0$.  The
+base: $\eta+t\nu=(1+t)(\eta+t\nu_J/(1+t))$, so $E_q(t\nu)=0$ for small
+$|t|$ by Lemma~\ref{lem:flat} and homogeneity.  Blocks $m\ne m_0$:
+$R_m^{**}(t\nu)=t\zeta_m+tR_m\nu_J$ with $R_m\nu_J$ vanishing on $\bar Q_m$
+and of zero peak sum.  Block $m_0$: $R^{**}_{m_0}(t\nu)=t(1-1/\sigma_{m_0})
+\zeta_{m_0}+t\delta''$ with $\delta'':=R_{m_0}\nu_J+\zeta_{m_0}/\sigma_{m_0}$
+vanishing on $\bar Q_{m_0}$ and of zero peak sum.  Hence $\varphi(t\nu)=
+o(t^2)$, and $g(\nu)=0$ by Lemma~\ref{lem:slice}.  Writing
+$v_m:=\omega_m+c_mw_m$ we compute $g(\nu)=g(\eta)+b(\nu_J)+\sum_m
+v_m(R_m\nu_J)=-v_{m_0}(\zeta_{m_0})/\sigma_{m_0}$, since $v_m(\delta)=0$
+whenever $\delta$ vanishes on $\bar Q_m$ and has zero peak sum.  Thus
+$v_m(\zeta_m)=0$ for all $m$.  As $\omega_m$ lives on $Q_m$, where
+$\zeta_m(k)=\sigma_m\Phi_m(k)^2w_m(k)/C_m$, we have
+$\omega_m(\zeta_m)=\sigma_md_m(\omega_m)$, and $v_m(\zeta_m)=\sigma_m(d_m+
+c_m)$; hence $c_m=-d_m$.  Finally $b(\eta)=g(\eta)-\sum_mv_m(\zeta_m)=0$.
+\end{proof}
+
+\begin{remark}\label{rem:tameNA}
+At a norm-attaining $f'$ with C-tame normer $x'$ (i.e.\ finitely many
+strict non-peaks and degenerate peaks, and (MS)), Theorem~\ref{thm:tamefibre}
+says $\Cset(f')\subseteq S(f')$.  This is a \emph{linear obstruction at the
+approximants}: if $f_n\to f$ are norm attaining with C-tame normers, then
+$\Li_n\Cset(f_n)\subseteq\Li_nS(f_n)$.  It will be used in
+Section~\ref{sec:resonance}.
+\end{remark}
+

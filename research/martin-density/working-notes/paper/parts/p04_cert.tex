@@ -1,0 +1,184 @@
+\section{Certificates and the transport theorem}\label{sec:certificates}
+
+Throughout this section $f\in S_{p^*}$ has forced data as in
+Section~\ref{sec:setting}; block indices are dropped when a single block is
+involved.  For $b\in\ell_1$ we write $\|b/a\|_\infty:=\sup_{j\in F}|b_j|/|a_j|$
+(when $\supp b\subseteq F$), and $P^\perp$ denotes the orthogonal projection
+of $H$ onto $e^\perp$.
+
+\subsection{Definitions and exact expansions}
+
+\begin{definition}[Finite certificates]\label{def:certificate}
+A \emph{finite certificate} at $f$ is a pair $c=(b,\omega)$,
+$\omega=(\omega_m)_{m\in I}$, such that
+\begin{enumerate}
+\item[(C1)] $b\in\ell_1$, $\supp b\subseteq F$, $\|b/a\|_\infty<\infty$ and
+$b(\zh)=0$;
+\item[(C2)] each $\omega_m$ is finitely supported in $Q_m$, and
+$\omega_m=0$ for all but finitely many $m$ (the \emph{active} blocks).
+\end{enumerate}
+Put $d_m:=\ip{D_mw_m}{D_m\omega_m}/C_m$ and define the \emph{direction}
+$g_c:=b+\sum_mR_m^*(\omega_m-d_mw_m)$, the coefficients
+\begin{gather*}
+ h(b):=\frac{\|P^\perp U^*b\|^2}{\nu},\qquad
+ H_m(\omega_m):=\frac{\|D_m\omega_m\|_2^2-d_m^2}{C_m},\\
+ H(c):=\max\big(h(b),\max_mH_m(\omega_m)\big),
+\end{gather*}
+the constant $\kappa(c):=\max\{2\beta/\nu,\ \max_m2|d_m|M_m/C_m\}$ with
+$\beta:=\|U^*b\|$, and the \emph{coordinatewise radius}
+\[
+ r(c):=\min\Big\{\frac1{\|b/a\|_\infty},\ \frac\nu{2\beta},\
+ \min_m\min\Big(\min_{k\in\supp\omega_m}\frac{\gap_m(k)}{2|\omega_m(k)|},\
+ \frac1{2|d_m|},\ \frac{C_m}{2|d_m|M_m}\Big)\Big\}
+\]
+(with $1/0=\infty$).  Finally
+\[
+ \Cert(f):=\{g_c:\ c\text{ a finite certificate at }f,\ H(c)\le1,\ g_c\in\Cset(f)\}.
+\]
+\end{definition}
+
+Note that $\|P^\perp D_m\omega_m\|^2=\|D_m\omega_m\|^2-d_m^2$, where now
+$P^\perp$ projects onto $(D_mw_m)^\perp$; so $H_m\ge0$.  The radius is the
+\emph{coordinatewise} one: each off-peak coordinate is compared with its own
+gap.  (A cruder radius $\min_k\gap(k)/(2\max_k|\omega(k)|)$ would not suffice
+for Theorem~\ref{thm:weighted} below.)
+
+\begin{lemma}[Algebra]\label{lem:algebra}
+Finite certificates form a vector space and $c\mapsto g_c$ is linear; $H$ is
+convex and $H(\lambda c)=\lambda^2H(c)$; $r(\lambda c)=r(c)/|\lambda|$,
+$\kappa(\lambda c)=|\lambda|\kappa(c)$, and $\kappa(c)r(c)\le1$.  Every
+direction satisfies $g_c(\xi)=0$, and $\Cert(f)$ is convex and symmetric.
+\end{lemma}
+
+\begin{proof}
+$d_m$ is linear in $\omega_m$, and $H$ is a maximum of positive
+semidefinite quadratic forms.  The inequality $\kappa r\le1$ follows from
+the terms $\nu/(2\beta)$ and $C_m/(2|d_m|M_m)$ of the radius.  We have
+$b(\xi)=q_0b(\zh)=0$ and, by Lemma~\ref{lem:threshold},
+\begin{align*}
+ \frac{\ip{\omega_m-d_mw_m}{\zeta_m}}{\sigma_m}
+ &=\ip{\omega_m}{\alpha_m}+\frac{\ip{D_m\omega_m}{D_mw_m}}{C_m}
+ -d_m\Big(\ip{w_m}{\alpha_m}+\frac{\|D_mw_m\|^2}{C_m}\Big)\\
+ &=0+d_m-d_m(M_m+C_m)=0,
+\end{align*}
+because $\alpha_m$ lives on $P_m$ and $\omega_m$ vanishes there.  Convexity
+of $\Cert(f)$ follows from linearity, convexity of $H$ and of $\Cset(f)$.
+\end{proof}
+
+\begin{lemma}[Exact base identity]\label{lem:base}
+Put $\Psi(h):=\|e+h\|-1-\ip{e}{h}$ for $h\in H$.  For $B\in\ell_1$ and
+$t\in\R$,
+\begin{equation}\label{eq:baseidentity}
+ q^*(a+tB)=1+tB(\zh)+\mathrm{Fl}_B(t)+\sum_{j\notin F}\big(|tB_j|-z_jtB_j\big)
+ +\nu\Psi(tU^*B/\nu),
+\end{equation}
+where $\mathrm{Fl}_B(t):=\sum_{j\in F}2(-\sgn(a_j)tB_j-|a_j|)_+$; all terms
+after $tB(\zh)$ are nonnegative.  Moreover
+$\Psi(h)=\|h_\perp\|^2/(\|e+h\|+1+\ip eh)$ with $h_\perp=P^\perp h$, and
+for $\|h\|\le\frac12$:
+$\|h_\perp\|^2/(2(1+\|h\|))\le\Psi(h)\le\|h_\perp\|^2/(2(1-\|h\|))$.
+Consequently:
+\begin{enumerate}
+\item[(a)] if $B(\zh)=0$ and $|t|\,\|U^*B\|\le\nu/2$, then
+$q^*(a+tB)-1\ge\frac{t^2}{2}h(B)/(1+|t|\|U^*B\|/\nu)$;
+\item[(b)] if $b$ satisfies \textup{(C1)} and
+$|t|\le\min(1/\|b/a\|_\infty,\nu/(2\beta))$, then
+$q^*(a+tb)\le1+\frac{t^2}2h(b)(1+2|t|\beta/\nu)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For real $x\ne0$ and $y$: $|x+y|=|x|+\sgn(x)y+2(-\sgn(x)y-|x|)_+$.  Summing
+over $j\in F$ (where $z_j=\sgn a_j$) gives
+$\sum_{j\in F}|a_j+tB_j|=\|a\|_1+\sum_{j\in F}z_jtB_j+\mathrm{Fl}_B(t)$,
+and $\sum_{j\notin F}|tB_j|=\sum_{j\notin F}z_jtB_j+\sum_{j\notin
+F}(|tB_j|-z_jtB_j)$.  Next $\|U^*a+tU^*B\|=\nu\|e+h\|$ with $h=tU^*B/\nu$
+and $\nu\ip eh=t\ip{U^*B}{e}$.  Adding and using $\|a\|_1+\nu=1$ and
+$B(z)+\ip{U^*B}{e}=B(\zh)$ gives \eqref{eq:baseidentity}.  Nonnegativity of
+$\Psi$: $\|e+h\|\ge\ip{e}{e+h}$.  The formula for $\Psi$ follows from
+$\|e+h\|^2-(1+\ip eh)^2=\|h\|^2-\ip eh^2$; for $\|h\|\le\frac12$ the
+denominator lies in $[2(1-\|h\|),2(1+\|h\|)]$.  With $h=tU^*B/\nu$ one has
+$\nu\|h_\perp\|^2=t^2h(B)$; (a) follows by dropping the nonnegative terms,
+and (b) because no flip occurs for $|t|\le1/\|b/a\|_\infty$, the sum over
+$j\notin F$ vanishes, and $1/(1-x)\le1+2x$ for $x\le\frac12$.
+\end{proof}
+
+\begin{lemma}[Block expansion]\label{lem:block}
+Fix a block.  Let $\omega:\N\to\R$ vanish on $P$ with $D\omega\in\ell_2$,
+$d:=\ip{Dw}{D\omega}/C$, $h_\perp:=D\omega-(d/C)Dw$ \textup{(}so
+$\|h_\perp\|^2=\|D\omega\|^2-d^2$\textup{)}, $W(\sigma):=(1-d\sigma)w+
+\sigma\omega$ and $Y:=C+d\sigma M$.  Then:
+\begin{enumerate}
+\item[(a)] $\|DW(\sigma)\|_2=\sqrt{Y^2+\sigma^2\|h_\perp\|^2}$;
+\item[(b)] if $1-d\sigma\ge0$ and $Y>0$, then
+$N(W(\sigma))\ge1+\sigma^2\|h_\perp\|^2/(\sqrt{Y^2+\sigma^2\|h_\perp\|^2}+Y)$;
+\item[(c)] if $|d\sigma|\le\frac12$ and $|\sigma\omega(k)|\le\gap(k)/2$ for
+all $k$ with $\omega(k)\ne0$, then $\|W(\sigma)\|_\infty=(1-d\sigma)M$ and
+equality holds in \textup{(b)};
+\item[(d)] if $\omega\in c_{00}$ and $|\sigma|\le\min\big(\min_{k}
+\gap(k)/(2|\omega(k)|),1/(2|d|),C/(2|d|M)\big)$, then
+$N(W(\sigma))\le1+\frac{\sigma^2}2H(\omega)(1+2|d\sigma|M/C)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Using $1/C-1=M/C$, $(1-d\sigma)Dw+\sigma D\omega=(1+d\sigma M/C)Dw
++\sigma h_\perp$, and $h_\perp\perp Dw$.  (b) At a peak $k$,
+$|W(\sigma)(k)|=(1-d\sigma)M$, and $(1-d\sigma)M+Y=M+C=1$.  (c) Off
+$\supp\omega$, $|W(k)|=(1-d\sigma)|w(k)|$; on $\supp\omega$,
+$|W(k)|\le(1-d\sigma)(M-\gap(k))+\gap(k)/2\le(1-d\sigma)M$.  (d) Here $Y\ge
+C/2$, the bracket in (c) is at most $\sigma^2\|h_\perp\|^2/(2Y)$, and
+$C/Y\le1/(1-|d\sigma|M/C)\le1+2|d\sigma|M/C$.
+\end{proof}
+
+\begin{proposition}[Certificate expansion]\label{prop:expansion}
+For a finite certificate $c$ at $f$ and $|\sigma|\le r(c)$,
+\[
+ p^*(f+\sigma g_c)\le1+\frac{\sigma^2}2H(c)\big(1+\kappa(c)|\sigma|\big).
+\]
+\end{proposition}
+
+\begin{proof}
+$f+\sigma g_c=(a+\sigma b)+\sum_mR_m^*W_m(\sigma)$ with
+$W_m(\sigma)=(1-d_m\sigma)w_m+\sigma\omega_m$ ($=w_m$ on inactive blocks).
+Apply Lemma~\ref{lem:dualball}, Lemma~\ref{lem:base}(b) and
+Lemma~\ref{lem:block}(d).
+\end{proof}
+
+\begin{lemma}[Slack and validity window]\label{lem:slack}
+\textup{(a)} For $\rho\in(0,1)$ and real $t$,
+$s(t)-s(\rho t)\ge(1-\rho^2)\min(t^2,|t|)/3$.
+\textup{(b)} If $H(c)\le1-\delta$ with $0<\delta\le1$ and
+$|\sigma|\le r_*(c,\delta):=\min(r(c),\delta/(2\kappa(c)+2),\sqrt\delta)$,
+then $p^*(f+\sigma g_c)\le s(\sigma)$.
+\end{lemma}
+
+\begin{proof}
+(a) $s(t)-s(\rho t)=(1-\rho^2)t^2/(s(t)+s(\rho t))\ge(1-\rho^2)t^2/(2s(t))$
+and $2s(t)\le3\max(1,|t|)$.  (b) $(1-\delta)(1+\kappa|\sigma|)\le
+(1-\delta)(1+\delta/2)\le1-\delta/2$, and $1+\frac{\sigma^2}2(1-\frac\delta
+2)\le1+\frac{\sigma^2}2-\frac{\sigma^4}8\le s(\sigma)$ since
+$\sigma^2\le\delta$ and $\sqrt{1+x}\ge1+\frac x2-\frac{x^2}8$ for $x\ge0$.
+\end{proof}
+
+\begin{proposition}[Scale criterion]\label{prop:scale}
+Let $f,f'\in S_{p^*}$, $g\in\Cset(f)$, $\rho\in(0,1)$, and let $c'$ be a
+finite certificate at $f'$ with $H(c')\le1-\delta$, $0<\delta\le1$.  Put
+$r_*:=r_*(c',\delta)$, $\varepsilon:=p^*(f'-f)$ and
+$\eta:=p^*(g_{c'}-\rho g)$.  If $\varepsilon\le(1-\rho^2)r_*^2/6$ and
+$\eta\le(1-\rho^2)r_*/6$, then $g_{c'}\in\Cert(f')$ and
+$\dist_{p^*}(\rho g,\Cset(f'))\le\eta$.
+\end{proposition}
+
+\begin{proof}
+For $|t|\le r_*$ use Lemma~\ref{lem:slack}(b) at $f'$.  For $|t|\ge r_*$,
+$p^*(f'+tg_{c'})\le p^*(f+t\rho g)+\varepsilon+|t|\eta\le
+s(\rho t)+\varepsilon+|t|\eta$; for $r_*\le|t|\le1$ both $\varepsilon$
+and $|t|\eta$ are at most $(1-\rho^2)t^2/6$, and for $|t|\ge1$ their sum
+is at most $(1-\rho^2)|t|/3$; conclude with Lemma~\ref{lem:slack}(a).
+\end{proof}
+
+Thus the slack alone certifies the scales $|t|\gtrsim\sqrt{\varepsilon/(1-
+\rho^2)}$, and the smaller scales must be certified by the local structure
+of $f'$; this is the multi-scale nature of the problem.
+

@@ -1,0 +1,1109 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./rev.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsart.cls
+Document Class: amsart 2020/05/29 v2.20.6
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file rev.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+))) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+No file rev.toc.
+
+LaTeX Warning: Citation `PrA' on page 1 undefined on input line 72.
+
+
+LaTeX Warning: Citation `DGS' on page 1 undefined on input line 82.
+
+
+LaTeX Warning: Citation `Martin' on page 1 undefined on input line 84.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `Martin' on page 2 undefined on input line 101.
+
+
+LaTeX Warning: Citation `KLMW20' on page 2 undefined on input line 107.
+
+
+LaTeX Warning: Citation `KLMW20' on page 2 undefined on input line 114.
+
+
+LaTeX Warning: Citation `Martin' on page 2 undefined on input line 115.
+
+
+LaTeX Warning: Reference `prop:smooth' on page 2 undefined on input line 131.
+
+
+LaTeX Warning: Citation `Martin' on page 2 undefined on input line 132.
+
+
+LaTeX Warning: Reference `rem:lemmaA' on page 2 undefined on input line 144.
+
+
+LaTeX Warning: Citation `PrB' on page 2 undefined on input line 153.
+
+[2]
+
+LaTeX Warning: Citation `PrB' on page 3 undefined on input line 166.
+
+
+LaTeX Warning: Citation `PrB' on page 3 undefined on input line 171.
+
+
+LaTeX Warning: Reference `sec:setting' on page 3 undefined on input line 172.
+
+
+LaTeX Warning: Reference `sec:averaging' on page 3 undefined on input line 172.
+
+
+
+LaTeX Warning: Reference `cor:decomposition' on page 3 undefined on input line 
+174.
+
+
+LaTeX Warning: Reference `rem:G2' on page 3 undefined on input line 175.
+
+
+LaTeX Warning: Reference `thm:locsplit' on page 3 undefined on input line 176.
+
+
+LaTeX Warning: Reference `cor:splitcontractive' on page 3 undefined on input li
+ne 176.
+
+
+LaTeX Warning: Reference `sec:second' on page 3 undefined on input line 182.
+
+
+LaTeX Warning: Reference `sec:resonance' on page 3 undefined on input line 183.
+
+
+
+LaTeX Warning: Citation `PrB' on page 3 undefined on input line 208.
+
+
+Overfull \hbox (14.57051pt too wide) detected at line 216
+\OML/cmm/m/it/10 ^^P=\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^P\OMS/cmsy/m/n/10 j \
+OT1/cmr/m/n/10 = \OML/cmm/m/it/10  \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 D[]w=C; 
+ \OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 \OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 = 1\O
+ML/cmm/m/it/10 ;  []  \OMS/cmsy/m/n/10 ^^R \OML/cmm/m/it/10 P;  [] \OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 w\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) (\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 2 
+[] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :
+
+LaTeX Warning: Reference `lem:threshold' on page 3 undefined on input line 237.
+
+
+[3]
+
+LaTeX Warning: Reference `lem:dualball' on page 4 undefined on input line 290.
+
+
+LaTeX Warning: Reference `lem:threshold' on page 4 undefined on input line 297.
+
+
+[4]
+
+LaTeX Warning: Reference `lem:dualball' on page 5 undefined on input line 348.
+
+
+LaTeX Warning: Reference `prop:forced' on page 5 undefined on input line 351.
+
+[5]
+
+LaTeX Warning: Reference `prop:continuity' on page 6 undefined on input line 43
+4.
+
+
+LaTeX Warning: Reference `prop:smooth' on page 6 undefined on input line 437.
+
+
+LaTeX Warning: Reference `prop:continuity' on page 6 undefined on input line 43
+7.
+
+
+LaTeX Warning: Reference `prop:smooth' on page 6 undefined on input line 438.
+
+
+LaTeX Warning: Citation `PrA' on page 6 undefined on input line 444.
+
+
+LaTeX Warning: Citation `KLMW' on page 6 undefined on input line 476.
+
+[6]
+
+LaTeX Warning: Reference `prop:reduction' on page 7 undefined on input line 494
+.
+
+
+LaTeX Warning: Reference `prop:reduction' on page 7 undefined on input line 509
+.
+
+
+LaTeX Warning: Reference `prop:reduction' on page 7 undefined on input line 522
+.
+
+
+LaTeX Warning: Citation `PrA' on page 7 undefined on input line 541.
+
+
+LaTeX Warning: Reference `lem:dualball' on page 7 undefined on input line 554.
+
+
+Overfull \hbox (13.24777pt too wide) detected at line 564
+\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ^^A = [] \OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 A
+[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 A\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 
+= [](\OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]\OT1/cmr/m/n/10 )
+ \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\O
+T1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 s\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = []\OML/
+cmm/m/it/10 :
+[7]
+
+LaTeX Warning: Reference `prop:primal' on page 8 undefined on input line 583.
+
+
+LaTeX Warning: Reference `thm:compact' on page 8 undefined on input line 589.
+
+
+LaTeX Warning: Reference `thm:lowerlimit' on page 8 undefined on input line 625
+.
+
+
+LaTeX Warning: Reference `lem:pair' on page 8 undefined on input line 626.
+
+
+LaTeX Warning: Reference `prop:reduction' on page 8 undefined on input line 637
+.
+
+
+LaTeX Warning: Reference `thm:lowerlimit' on page 8 undefined on input line 638
+.
+
+
+LaTeX Warning: Reference `thm:compact' on page 8 undefined on input line 648.
+
+
+LaTeX Warning: Reference `thm:lowerlimit' on page 8 undefined on input line 648
+.
+
+
+LaTeX Warning: Reference `cor:finite' on page 8 undefined on input line 649.
+
+
+LaTeX Warning: Reference `thm:transitivity' on page 8 undefined on input line 6
+49.
+
+
+LaTeX Warning: Citation `PrA' on page 8 undefined on input line 652.
+
+
+LaTeX Warning: Reference `sec:setting' on page 8 undefined on input line 662.
+
+[8]
+
+LaTeX Warning: Reference `thm:weighted' on page 9 undefined on input line 704.
+
+
+Overfull \hbox (16.99135pt too wide) in paragraph at lines 699--705
+[]\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 P[]$ \OT1/cmr/m/n/10 de-note the or-tho
+g-o-nal pro-jec-tion of $\OML/cmm/m/it/10 `[]$ \OT1/cmr/m/n/10 onto $(\OML/cmm/
+m/it/10 D[]w[]\OT1/cmr/m/n/10 )[]$. Then $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 P[
+]D[]![]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 =
+
+Overfull \hbox (3.2333pt too wide) in paragraph at lines 699--705
+\OT1/cmr/m/n/10 or-di-nate is com-pared with its own gap. (A cruder ra-dius $[]
+[] [](\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (2 [
+][] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1
+/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 )$
+
+LaTeX Warning: Reference `lem:threshold' on page 9 undefined on input line 717.
+
+
+[9]
+
+LaTeX Warning: Reference `eq:baseidentity' on page 10 undefined on input line 7
+57.
+
+
+Overfull \hbox (3.20792pt too wide) in paragraph at lines 775--778
+[]\OT1/cmr/m/it/10 if $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 d^^[\OMS/cmsy/m/n/10 
+j ^^T []$ \OT1/cmr/m/it/10 and $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^[!\OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j ^^T []\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2$ 
+\OT1/cmr/m/it/10 for all $\OML/cmm/m/it/10 k$ \OT1/cmr/m/it/10 with $\OML/cmm/m
+/it/10 !\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6
+\OT1/cmr/m/n/10 = 0$\OT1/cmr/m/it/10 , then $\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10
+ W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 k[] \O
+T1/cmr/m/n/10 =
+
+LaTeX Warning: Reference `lem:dualball' on page 10 undefined on input line 804.
+
+
+
+LaTeX Warning: Reference `lem:base' on page 10 undefined on input line 804.
+
+
+LaTeX Warning: Reference `lem:block' on page 10 undefined on input line 805.
+
+[10]
+
+LaTeX Warning: Reference `lem:slack' on page 11 undefined on input line 834.
+
+
+LaTeX Warning: Reference `lem:slack' on page 11 undefined on input line 838.
+
+
+LaTeX Warning: Reference `prop:continuity' on page 11 undefined on input line 8
+64.
+
+
+LaTeX Warning: Reference `prop:scale' on page 11 undefined on input line 888.
+
+
+Overfull \hbox (13.41725pt too wide) in paragraph at lines 896--904
+\OT1/cmr/m/it/10 quence $\OML/cmm/m/it/10 f[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/
+10 f$\OT1/cmr/m/it/10 , finitely many such mates si-mul-ta-ne-ously, and $\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 f; g\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 [] []\OT1
+/cmr/m/n/10 ((\OML/cmm/m/it/10 X; p\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; `[]\OT1/
+cmr/m/n/10 )$\OT1/cmr/m/it/10 ;
+
+LaTeX Warning: Reference `thm:transport' on page 11 undefined on input line 907
+.
+
+
+LaTeX Warning: Reference `lem:pair' on page 11 undefined on input line 909.
+
+
+LaTeX Warning: Reference `cor:finite' on page 11 undefined on input line 909.
+
+
+LaTeX Warning: Reference `thm:compact' on page 11 undefined on input line 910.
+
+
+LaTeX Warning: Reference `cor:finite' on page 11 undefined on input line 914.
+
+[11]
+
+LaTeX Warning: Citation `Check' on page 12 undefined on input line 922.
+
+
+LaTeX Warning: Citation `PrA' on page 12 undefined on input line 922.
+
+
+LaTeX Warning: Reference `lem:slack' on page 12 undefined on input line 935.
+
+
+LaTeX Warning: Reference `lem:block' on page 12 undefined on input line 980.
+
+
+LaTeX Warning: Reference `eq:baseidentity' on page 12 undefined on input line 9
+82.
+
+
+LaTeX Warning: Reference `lem:dualball' on page 12 undefined on input line 990.
+
+
+
+LaTeX Warning: Reference `thm:transport' on page 12 undefined on input line 996
+.
+
+[12]
+
+LaTeX Warning: Reference `prop:shifted' on page 13 undefined on input line 1009
+.
+
+
+LaTeX Warning: Reference `thm:transport' on page 13 undefined on input line 101
+0.
+
+
+LaTeX Warning: Reference `eq:baseidentity' on page 13 undefined on input line 1
+012.
+
+
+LaTeX Warning: Reference `lem:slack' on page 13 undefined on input line 1037.
+
+
+LaTeX Warning: Reference `sec:second' on page 13 undefined on input line 1048.
+
+
+LaTeX Warning: Reference `rem:gammaw' on page 13 undefined on input line 1050.
+
+
+LaTeX Warning: Reference `thm:transport' on page 13 undefined on input line 106
+7.
+
+
+LaTeX Warning: Reference `thm:transport' on page 13 undefined on input line 106
+8.
+
+
+LaTeX Warning: Reference `prop:scale' on page 13 undefined on input line 1076.
+
+
+LaTeX Warning: Reference `lem:slack' on page 13 undefined on input line 1077.
+
+[13]
+
+LaTeX Warning: Reference `prop:expansion' on page 14 undefined on input line 11
+10.
+
+
+Overfull \hbox (3.53159pt too wide) in paragraph at lines 1107--1115
+[]\OT1/cmr/m/n/10 By lin-ear-ity $\OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 = [][] \
+OML/cmm/m/it/10 ^^V[]g[]$\OT1/cmr/m/n/10 , and by con-vex-ity of $\OML/cmm/m/it
+/10 p[]$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 f \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 s^^Zg[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/1
+0 ^^T [][] \OML/cmm/m/it/10 ^^V[]p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OT1/cm
+r/m/n/10 +
+
+LaTeX Warning: Reference `lem:slack' on page 14 undefined on input line 1125.
+
+
+LaTeX Warning: Reference `cor:lsc' on page 14 undefined on input line 1149.
+
+
+LaTeX Warning: Reference `thm:averaging' on page 14 undefined on input line 116
+5.
+
+[14]
+
+LaTeX Warning: Reference `cor:ladder' on page 15 undefined on input line 1182.
+
+
+LaTeX Warning: Reference `lem:block' on page 15 undefined on input line 1189.
+
+
+LaTeX Warning: Reference `lem:algebra' on page 15 undefined on input line 1196.
+
+
+
+LaTeX Warning: Reference `lem:base' on page 15 undefined on input line 1198.
+
+
+LaTeX Warning: Reference `cor:decomposition' on page 15 undefined on input line
+ 1204.
+
+
+LaTeX Warning: Reference `cor:ladder' on page 15 undefined on input line 1208.
+
+
+Overfull \hbox (8.82774pt too wide) detected at line 1217
+\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ; \OML
+/cmm/m/it/10 !\OT1/cmr/m/n/10 ) := \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 k \OMS/cm
+sy/m/n/10 2 \OML/cmm/m/it/10 Q[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ^^[\OMS/cms
+y/m/n/10 j\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 
+)\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\
+OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 g\OML/cmm/m
+/it/10 ;  T[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^[\OT1/cmr/m/n/10 ; \OML/cmm/m/
+it/10 !\OT1/cmr/m/n/10 ) := [] \OML/cmm/m/it/10 ^^U[]\OMS/cmsy/m/n/10 j\OML/cmm
+/m/it/10 !\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 
+j\OML/cmm/m/it/10 :
+
+LaTeX Warning: Citation `PrA' on page 15 undefined on input line 1226.
+
+[15]
+
+LaTeX Warning: Reference `cor:ladder' on page 16 undefined on input line 1279.
+
+
+LaTeX Warning: Reference `lem:boxtails' on page 16 undefined on input line 1282
+.
+
+
+LaTeX Warning: Reference `thm:weighted' on page 16 undefined on input line 1282
+.
+
+
+LaTeX Warning: Citation `PrA' on page 16 undefined on input line 1283.
+
+
+LaTeX Warning: Citation `Check' on page 16 undefined on input line 1283.
+
+
+LaTeX Warning: Citation `PrA' on page 16 undefined on input line 1285.
+
+
+LaTeX Warning: Reference `lem:base' on page 16 undefined on input line 1300.
+
+
+LaTeX Warning: Reference `lem:block' on page 16 undefined on input line 1301.
+
+
+LaTeX Warning: Reference `lem:slack' on page 16 undefined on input line 1301.
+
+
+Overfull \hbox (2.05066pt too wide) in paragraph at lines 1325--1330
+[]\OT1/cmr/m/it/10 Truncation. \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 r \OT1/cmr
+/m/n/10 := (\OML/cmm/m/it/10 I \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P[]\OT1/cm
+r/m/n/10 )\OML/cmm/m/it/10 b$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 "[] \OT1/cmr/m
+/n/10 := \OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 U[]r\OMS/cmsy/m/n/10 k$\OT1/cmr/m/n
+/10 , and note $\OML/cmm/m/it/10 ^^L[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 r\OT1
+/cmr/m/n/10 ([]) = [][] \OML/cmm/m/it/10 z[]r[] \OT1/cmr/m/n/10 +
+[16] [17]
+
+LaTeX Warning: Reference `def:locsplit' on page 18 undefined on input line 1423
+.
+
+
+LaTeX Warning: Reference `lem:basetrunc' on page 18 undefined on input line 142
+4.
+
+
+LaTeX Warning: Reference `lem:blocktrunc' on page 18 undefined on input line 14
+25.
+
+
+LaTeX Warning: Reference `lem:basetrunc' on page 18 undefined on input line 142
+9.
+
+
+LaTeX Warning: Reference `lem:blocktrunc' on page 18 undefined on input line 14
+29.
+
+
+LaTeX Warning: Reference `lem:blocktrunc' on page 18 undefined on input line 14
+32.
+
+
+LaTeX Warning: Reference `lem:base' on page 18 undefined on input line 1443.
+
+
+LaTeX Warning: Reference `lem:block' on page 18 undefined on input line 1446.
+
+
+LaTeX Warning: Reference `lem:slack' on page 18 undefined on input line 1451.
+
+
+LaTeX Warning: Reference `cor:lsc' on page 18 undefined on input line 1458.
+
+
+Overfull \hbox (20.87653pt too wide) in paragraph at lines 1449--1459
+[]\OT1/cmr/m/it/10 Mate. \OT1/cmr/m/n/10 For $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/1
+0 t\OMS/cmsy/m/n/10 j ^^T \OML/cmm/m/it/10 ^^\[]=^^Z$\OT1/cmr/m/n/10 , $\OML/cm
+m/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 + \OML/cmm/m/i
+t/10 t^^Zg[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 s\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 ^^Zt\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 ^^N^^Z[]t[] \O
+MS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 s\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cm
+r/m/n/10 )$ as soon as $\OML/cmm/m/it/10 ^^N^^Z[] []\OT1/cmr/m/n/10 (1\OML/cmm/
+m/it/10 ; ^^\[]=^^Z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^T
+
+LaTeX Warning: Reference `prop:forced' on page 18 undefined on input line 1472.
+
+
+
+LaTeX Warning: Reference `thm:locsplit' on page 18 undefined on input line 1475
+.
+
+
+LaTeX Warning: Citation `PrA' on page 18 undefined on input line 1479.
+
+[18]
+
+LaTeX Warning: Reference `thm:averaging' on page 19 undefined on input line 151
+5.
+
+
+LaTeX Warning: Reference `thm:averaging' on page 19 undefined on input line 152
+9.
+
+
+LaTeX Warning: Reference `sec:resonance' on page 19 undefined on input line 154
+1.
+
+
+LaTeX Warning: Reference `sec:setting' on page 19 undefined on input line 1549.
+
+
+[19]
+
+LaTeX Warning: Reference `lem:threshold' on page 20 undefined on input line 161
+6.
+
+
+LaTeX Warning: Reference `eq:margin' on page 20 undefined on input line 1623.
+
+
+LaTeX Warning: Reference `lem:rigidity' on page 20 undefined on input line 1655
+.
+
+[20]
+
+LaTeX Warning: Reference `lem:rigidity' on page 21 undefined on input line 1668
+.
+
+
+LaTeX Warning: Reference `lem:overshoot' on page 21 undefined on input line 167
+9.
+
+
+LaTeX Warning: Reference `lem:flat' on page 21 undefined on input line 1688.
+
+
+LaTeX Warning: Reference `lem:slice' on page 21 undefined on input line 1690.
+
+
+LaTeX Warning: Reference `lem:rigidity' on page 21 undefined on input line 1698
+.
+
+
+LaTeX Warning: Reference `lem:overshoot' on page 21 undefined on input line 171
+6.
+
+
+LaTeX Warning: Reference `lem:flat' on page 21 undefined on input line 1729.
+
+
+LaTeX Warning: Reference `lem:slice' on page 21 undefined on input line 1734.
+
+[21]
+
+LaTeX Warning: Reference `thm:tamefibre' on page 22 undefined on input line 174
+6.
+
+
+LaTeX Warning: Reference `sec:resonance' on page 22 undefined on input line 175
+0.
+
+
+LaTeX Warning: Reference `prop:smooth' on page 22 undefined on input line 1758.
+
+
+
+LaTeX Warning: Reference `prop:approximants' on page 22 undefined on input line
+ 1760.
+
+
+LaTeX Warning: Reference `prop:continuity' on page 22 undefined on input line 1
+763.
+
+
+LaTeX Warning: Reference `lem:base' on page 22 undefined on input line 1787.
+
+
+LaTeX Warning: Reference `lem:block' on page 22 undefined on input line 1795.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd) [22]
+
+LaTeX Warning: Reference `lem:threshold' on page 23 undefined on input line 185
+8.
+
+
+LaTeX Warning: Reference `eq:margin' on page 23 undefined on input line 1858.
+
+
+LaTeX Warning: Reference `eq:bookkeeping' on page 23 undefined on input line 18
+78.
+
+
+LaTeX Warning: Reference `eq:hilbertineq' on page 23 undefined on input line 19
+00.
+
+[23]
+
+LaTeX Warning: Reference `lem:dualball' on page 24 undefined on input line 1908
+.
+
+
+LaTeX Warning: Reference `lem:slack' on page 24 undefined on input line 1916.
+
+
+LaTeX Warning: Reference `cor:check' on page 24 undefined on input line 1923.
+
+
+LaTeX Warning: Citation `Check' on page 24 undefined on input line 1924.
+
+
+LaTeX Warning: Reference `thm:transfer' on page 24 undefined on input line 1946
+.
+
+
+Overfull \hbox (6.83041pt too wide) in paragraph at lines 1955--1960
+\OT1/cmr/bx/n/10 Lemma 5.11 \OT1/cmr/m/n/10 (Ex-act lo-cal block for-mula)\OT1/
+cmr/bx/n/10 . \OT1/cmr/m/it/10 Fix a block and drop $\OML/cmm/m/it/10 m$\OT1/cm
+r/m/it/10 ; re-call $[][] \OT1/cmr/m/n/10 ^^H(\OML/cmm/m/it/10 k\OT1/cmr/m/n/10
+ )[] \OML/cmm/m/it/10 <
+[24]
+
+LaTeX Warning: Reference `eq:overshootformula' on page 25 undefined on input li
+ne 1990.
+
+
+LaTeX Warning: Reference `lem:threshold' on page 25 undefined on input line 199
+2.
+
+
+LaTeX Warning: Reference `lem:excess' on page 25 undefined on input line 2026.
+
+
+LaTeX Warning: Reference `eq:overshootformula' on page 25 undefined on input li
+ne 2050.
+
+
+LaTeX Warning: Reference `lem:localformula' on page 25 undefined on input line 
+2054.
+
+
+LaTeX Warning: Reference `eq:margin' on page 25 undefined on input line 2059.
+
+[25]
+
+LaTeX Warning: Reference `lem:rigidity' on page 26 undefined on input line 2068
+.
+
+
+LaTeX Warning: Reference `eq:testratio' on page 26 undefined on input line 2071
+.
+
+
+Overfull \hbox (4.43724pt too wide) detected at line 2076
+[] [] \OMS/cmsy/m/n/10 ^^U [][] [] []\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 h\OML/cm
+m/m/it/10 U[]b; k[]\OMS/cmsy/m/n/10 i ^^@ []k\OML/cmm/m/it/10 k[]\OMS/cmsy/m/n/
+10 k[][] \OT1/cmr/m/n/10 + [] [] []2\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 ^^N\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ H[]\OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 ^^N\OT1/cmr/m/n/10 )[][]\OML/cmm/m/it/10 :
+
+LaTeX Warning: Reference `lem:localformula' on page 26 undefined on input line 
+2087.
+
+
+LaTeX Warning: Reference `thm:tamefibre' on page 26 undefined on input line 212
+5.
+
+
+LaTeX Warning: Reference `prop:lowerbound' on page 26 undefined on input line 2
+126.
+
+
+LaTeX Warning: Reference `thm:transfer' on page 26 undefined on input line 2127
+.
+
+
+LaTeX Warning: Reference `cor:finite' on page 26 undefined on input line 2128.
+
+
+LaTeX Warning: Reference `thm:tame' on page 26 undefined on input line 2132.
+
+
+LaTeX Warning: Reference `thm:tamefibre' on page 26 undefined on input line 213
+3.
+
+
+LaTeX Warning: Reference `prop:lowerbound' on page 26 undefined on input line 2
+134.
+
+
+LaTeX Warning: Reference `lem:rigidity' on page 26 undefined on input line 2135
+.
+
+
+LaTeX Warning: Reference `thm:transfer' on page 26 undefined on input line 2145
+.
+
+
+LaTeX Warning: Reference `thm:tamefibre' on page 26 undefined on input line 214
+6.
+
+
+LaTeX Warning: Citation `PrA' on page 26 undefined on input line 2150.
+
+
+LaTeX Warning: Reference `sec:resonance' on page 26 undefined on input line 215
+1.
+
+
+LaTeX Warning: Reference `prop:nonrecovery' on page 26 undefined on input line 
+2153.
+
+[26]
+
+LaTeX Warning: Reference `lem:rigidity' on page 27 undefined on input line 2163
+.
+
+
+LaTeX Warning: Reference `sec:certificates' on page 27 undefined on input line 
+2170.
+
+
+LaTeX Warning: Reference `sec:second' on page 27 undefined on input line 2170.
+
+
+LaTeX Warning: Reference `cor:check' on page 27 undefined on input line 2171.
+
+
+LaTeX Warning: Reference `cor:ladder' on page 27 undefined on input line 2171.
+
+
+LaTeX Warning: Reference `thm:weighted' on page 27 undefined on input line 2172
+.
+
+
+LaTeX Warning: Reference `thm:locsplit' on page 27 undefined on input line 2172
+.
+
+
+LaTeX Warning: Reference `thm:carriers' on page 27 undefined on input line 2172
+.
+
+
+LaTeX Warning: Reference `thm:shifted' on page 27 undefined on input line 2185.
+
+
+
+LaTeX Warning: Reference `thm:transfer' on page 27 undefined on input line 2186
+.
+
+[27]
+Overfull \hbox (2.64015pt too wide) detected at line 2229
+[] \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10
+ = \OMS/cmsy/m/n/10 ;\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 c[] 
+\OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 c[]^^N[][]s \OMS/cmsy/
+m/n/10 2 [] \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 S[];  l[] 
+\OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 l;  \OT1/cmr/m/n/10 3\OML/
+cmm/m/it/10 r[]\OT1/cmr/m/n/10 (2\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 ^^C[]\OMS/cm
+sy/m/n/10 j \OT1/cmr/m/n/10 + 3) \OMS/cmsy/m/n/10 ^^T []\OML/cmm/m/it/10 :
+[28]
+
+LaTeX Warning: Reference `lem:T' on page 29 undefined on input line 2314.
+
+
+LaTeX Warning: Reference `lem:dualball' on page 29 undefined on input line 2327
+.
+
+
+LaTeX Warning: Reference `prop:forced' on page 29 undefined on input line 2327.
+
+
+
+LaTeX Warning: Reference `lem:threshold' on page 29 undefined on input line 233
+2.
+
+[29]
+
+LaTeX Warning: Reference `lem:T' on page 30 undefined on input line 2392.
+
+
+LaTeX Warning: Reference `lem:firstrow' on page 30 undefined on input line 2393
+.
+
+
+LaTeX Warning: Reference `prop:twopiece' on page 30 undefined on input line 239
+5.
+
+
+LaTeX Warning: Reference `prop:twopiece' on page 30 undefined on input line 239
+6.
+
+
+LaTeX Warning: Reference `lem:firstrow' on page 30 undefined on input line 2405
+.
+
+
+LaTeX Warning: Reference `prop:intrinsic' on page 30 undefined on input line 24
+05.
+
+
+LaTeX Warning: Reference `prop:twopiece' on page 30 undefined on input line 240
+7.
+
+
+LaTeX Warning: Reference `prop:twopiece' on page 30 undefined on input line 242
+8.
+
+
+LaTeX Warning: Reference `thm:tamefibre' on page 30 undefined on input line 243
+4.
+
+
+LaTeX Warning: Reference `prop:exact' on page 30 undefined on input line 2435.
+
+
+LaTeX Warning: Reference `thm:defect' on page 30 undefined on input line 2439.
+
+
+LaTeX Warning: Reference `thm:defect' on page 30 undefined on input line 2444.
+
+[30]
+
+LaTeX Warning: Reference `prop:smooth' on page 31 undefined on input line 2465.
+
+
+
+LaTeX Warning: Reference `prop:approximants' on page 31 undefined on input line
+ 2466.
+
+
+LaTeX Warning: Reference `lem:firstrow' on page 31 undefined on input line 2470
+.
+
+
+LaTeX Warning: Reference `prop:continuity' on page 31 undefined on input line 2
+480.
+
+
+LaTeX Warning: Reference `thm:tamefibre' on page 31 undefined on input line 248
+5.
+
+
+LaTeX Warning: Reference `prop:continuity' on page 31 undefined on input line 2
+487.
+
+
+LaTeX Warning: Reference `thm:defect' on page 31 undefined on input line 2494.
+
+
+LaTeX Warning: Reference `rem:engineered' on page 31 undefined on input line 25
+01.
+
+
+LaTeX Warning: Reference `rem:tameNA' on page 31 undefined on input line 2501.
+
+
+LaTeX Warning: Reference `prop:approximants' on page 31 undefined on input line
+ 2509.
+
+
+LaTeX Warning: Reference `lem:slack' on page 31 undefined on input line 2533.
+
+[31]
+
+LaTeX Warning: Reference `thm:defect' on page 32 undefined on input line 2546.
+
+
+LaTeX Warning: Reference `prop:twopiece' on page 32 undefined on input line 254
+8.
+
+
+LaTeX Warning: Reference `thm:defect' on page 32 undefined on input line 2550.
+
+
+LaTeX Warning: Reference `prop:nonrecovery' on page 32 undefined on input line 
+2551.
+
+
+LaTeX Warning: Reference `lem:base' on page 32 undefined on input line 2572.
+
+
+LaTeX Warning: Reference `prop:exact' on page 32 undefined on input line 2598.
+
+
+LaTeX Warning: Reference `thm:locsplit' on page 32 undefined on input line 2601
+.
+
+
+LaTeX Warning: Reference `cor:twosided' on page 32 undefined on input line 2605
+.
+
+
+LaTeX Warning: Reference `prop:exact' on page 32 undefined on input line 2612.
+
+
+LaTeX Warning: Reference `thm:defect' on page 32 undefined on input line 2615.
+
+
+LaTeX Warning: Reference `lem:threshold' on page 32 undefined on input line 261
+9.
+
+
+LaTeX Warning: Reference `thm:carriers' on page 32 undefined on input line 2626
+.
+
+
+LaTeX Warning: Reference `rem:summablegaps' on page 32 undefined on input line 
+2628.
+
+[32]
+
+LaTeX Warning: Reference `prop:reduction' on page 33 undefined on input line 26
+36.
+
+
+LaTeX Warning: Citation `PrB' on page 33 undefined on input line 2636.
+
+
+LaTeX Warning: Reference `prop:reduction' on page 33 undefined on input line 26
+40.
+
+
+LaTeX Warning: Citation `PrA' on page 33 undefined on input line 2642.
+
+
+LaTeX Warning: Reference `thm:shifted' on page 33 undefined on input line 2644.
+
+
+
+LaTeX Warning: Reference `prop:intrinsic' on page 33 undefined on input line 26
+45.
+
+
+LaTeX Warning: Reference `thm:tame' on page 33 undefined on input line 2647.
+
+
+LaTeX Warning: Reference `thm:transitivity' on page 33 undefined on input line 
+2650.
+
+
+LaTeX Warning: Reference `thm:transport' on page 33 undefined on input line 265
+4.
+
+
+LaTeX Warning: Reference `thm:shifted' on page 33 undefined on input line 2654.
+
+
+
+LaTeX Warning: Reference `thm:weighted' on page 33 undefined on input line 2655
+.
+
+
+LaTeX Warning: Reference `thm:locsplit' on page 33 undefined on input line 2656
+.
+
+
+LaTeX Warning: Reference `cor:splitcontractive' on page 33 undefined on input l
+ine 2657.
+
+
+LaTeX Warning: Reference `cor:ladder' on page 33 undefined on input line 2659.
+
+
+LaTeX Warning: Reference `thm:carriers' on page 33 undefined on input line 2660
+.
+
+
+LaTeX Warning: Reference `thm:transfer' on page 33 undefined on input line 2662
+.
+
+
+LaTeX Warning: Reference `thm:joint' on page 33 undefined on input line 2664.
+
+
+LaTeX Warning: Reference `thm:defect' on page 33 undefined on input line 2669.
+
+
+LaTeX Warning: Reference `prop:nonrecovery' on page 33 undefined on input line 
+2670.
+
+
+LaTeX Warning: Reference `rem:engineered' on page 33 undefined on input line 26
+72.
+
+
+LaTeX Warning: Reference `prop:exact' on page 33 undefined on input line 2676.
+
+
+LaTeX Warning: Citation `JW' on page 33 undefined on input line 2679.
+
+[33]
+
+LaTeX Warning: Reference `lem:pair' on page 34 undefined on input line 2682.
+
+
+LaTeX Warning: Reference `cor:lsc' on page 34 undefined on input line 2682.
+
+
+LaTeX Warning: Reference `rem:blocks' on page 34 undefined on input line 2695.
+
+
+LaTeX Warning: Reference `prop:nonrecovery' on page 34 undefined on input line 
+2697.
+
+
+LaTeX Warning: Reference `prob:main' on page 34 undefined on input line 2698.
+
+
+LaTeX Warning: Reference `thm:defect' on page 34 undefined on input line 2709.
+
+
+LaTeX Warning: Reference `prob:resonant' on page 34 undefined on input line 271
+0.
+
+
+LaTeX Warning: Reference `rem:engineered' on page 34 undefined on input line 27
+12.
+
+
+LaTeX Warning: Reference `prop:lowerbound' on page 34 undefined on input line 2
+719.
+
+
+LaTeX Warning: Reference `rem:kinks' on page 34 undefined on input line 2722.
+
+
+LaTeX Warning: Reference `rem:summablegaps' on page 34 undefined on input line 
+2729.
+
+
+LaTeX Warning: Reference `cor:lsc' on page 34 undefined on input line 2731.
+
+
+LaTeX Warning: Reference `lem:pair' on page 34 undefined on input line 2745.
+
+
+LaTeX Warning: Reference `cor:finite' on page 34 undefined on input line 2749.
+
+[34]
+
+LaTeX Warning: Citation `PrA' on page 35 undefined on input line 2783.
+
+
+LaTeX Warning: Reference `cor:check' on page 35 undefined on input line 2784.
+
+[35] (./rev.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on rev.pdf (35 pages, 541742 bytes).
+Transcript written on rev.log.

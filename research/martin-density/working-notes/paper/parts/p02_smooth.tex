@@ -1,0 +1,213 @@
+\subsection{Smoothness and norm-attaining functionals}
+
+\begin{proposition}[Fr\'echet smoothness]\label{prop:smooth}
+\textup{(a)} The norm $p$ is Fr\'echet differentiable at every $x\neq0$,
+and $\nabla p(x)=\nabla q(x)+L^*J_V(Lx)$, where $J_V(Lx)=(J_m(R_mx))_m$.
+
+\textup{(b)} $\NA((X,p),\R)\cap S_{p^*}=\nabla p(S_p)$, and the duality map
+$\nabla p:S_p\to S_{p^*}$ is norm-to-norm continuous.
+
+\textup{(c)} $\NA((X,q),\R)=c_{00}$.  More precisely, if $a'\in c_{00}$,
+$q^*(a')=1$, and $z'\in c_0$ satisfies $\|z'\|_\infty\le1$ and
+$z'_j=\sgn a'_j$ on $\supp a'$, then $y':=z'+U(U^*a'/\|U^*a'\|)$ satisfies
+$q(y')=1$, $\nabla q(y')=a'$ and $\nabla p(y')=a'+L^*J_V(Ly')$.
+Conversely every $f'\in\NA((X,p),\R)\cap S_{p^*}$ equals $\nabla p(y')$ for
+such a pair $(a',z')$, with $a'=\nabla q(y')$.
+\end{proposition}
+
+\begin{proof}
+\emph{Gateaux smoothness.}  The norm $q^*$ is strictly convex: if
+$q^*(a)=q^*(b)=1=q^*(\frac{a+b}2)$, then $\|U^*a+U^*b\|=\|U^*a\|+\|U^*b\|$, so
+$U^*b=\lambda U^*a$ with $\lambda\ge0$ (both are nonzero), hence $b=\lambda a$
+by injectivity of $U^*$, and $\lambda=1$.  Thus $q$ is Gateaux smooth.  In
+the same way $N_m$ is strictly convex ($D_m$ is injective), so $|\cdot|_m$
+is smooth.  Let $x\neq0$ and let $f,f'\in S_{p^*}$ both norm $x$.  Write
+$f=A+L^*W$ with $q^*(A),\|W\|\le1$ (Lemma~\ref{lem:dualball}).  Then
+$p(x)=A(x)+W(Lx)\le q(x)+\|Lx\|=p(x)$ forces $A(x)=q(x)$ and
+$W_m(R_mx)=|R_mx|_m$ for every $m$.  Since $R_m$ is injective (by the
+argument of Proposition~\ref{prop:forced}(a)), $R_mx\ne0$, so $A=\nabla q(x)$
+and $W_m=J_m(R_mx)$.  The same holds for $f'$, so $f=f'$.
+
+\emph{Fr\'echet smoothness.}  By \v{S}mulyan's lemma it suffices to show:
+if $x\in S_p$, $f_n\in B_{p^*}$ and $f_n(x)\to1$, then
+$f_n\to\nabla p(x)$ in norm.  Write $f_n=a_n+L^*w_n$ with
+$q^*(a_n),\|w_n\|\le1$.  As $a_n(x)\le q(x)$, $w_n(Lx)\le\|Lx\|$ and the
+sum tends to $p(x)$, we get $a_n(x)\to q(x)$.  Write $x/q(x)=z+Uh$ with
+$z\in B_{c_0}$, $\|h\|\le1$.  Then
+\[
+ \frac{a_n(x)}{q(x)}\le\sum_j|a_n(j)||z_j|+\|U^*a_n\|
+ \le1-\sum_j|a_n(j)|(1-|z_j|),
+\]
+so $\sum_j|a_n(j)|(1-|z_j|)\to0$.  The set $G=\{j:|z_j|\ge\frac12\}$ is
+finite, $\sum_{j\notin G}|a_n(j)|\to0$, and the coordinates in $G$ are
+bounded; hence every subsequence of $(a_n)$ has a norm convergent
+subsequence, whose limit $a'$ satisfies $q^*(a')\le1$, $a'(x)=q(x)$, so
+$a'=\nabla q(x)$.  Every subsequence of $(w_n)$ has a weak$^*$ convergent
+subsequence $w_n\to w$, and $L^*w_n\to L^*w$ in norm because $L$ is
+compact.  Then $\nabla q(x)+L^*w\in B_{p^*}$ norms $x$, so it equals
+$\nabla p(x)$.  This proves (a), and the continuity in (b).
+
+(b) If $f\in S_{p^*}$ attains its norm at $x\in S_p$, then $f=\nabla p(x)$.
+
+(c) If $a\in S_{q^*}$ attains its norm at $y\in S_q$, write $y=z+Uh$,
+$z\in B_{c_0}$, $\|h\|\le1$; then $1=a(z)+\ip{U^*a}{h}$ forces
+$|z_j|=1$ on $\supp a$, which is finite because $z\in c_0$.  For the
+pair $(a',z')$: $y'\in B_q$ and
+$a'(y')=\|a'\|_1+\|U^*a'\|=1=q^*(a')$, hence $q(y')=1$ and
+$\nabla q(y')=a'$; then (a) gives $\nabla p(y')$.  Conversely, if
+$f'=\nabla p(x')$ with $x'\in S_p$, then $a':=\nabla q(x')\in c_{00}$ and
+$y':=x'/q(x')=z'+Uh'$ with $z'\in B_{c_0}$; the equality
+$1=a'(z')+\ip{U^*a'}{h'}\le\|a'\|_1+\|U^*a'\|=1$ forces $z'=\sgn a'$ on
+$\supp a'$ and $h'=U^*a'/\|U^*a'\|$; finally $\nabla p(y')=\nabla p(x')$.
+\end{proof}
+
+\begin{proposition}[Continuity of the forced data]\label{prop:continuity}
+Let $f_n\to f$ in $S_{p^*}$ \textup{(}not necessarily norm attaining\textup{)}
+with forced data indexed by $n$.  Then $\xi_n\to\xi$ weak$^*$;
+$R_m^{**}\xi_n\to R_m^{**}\xi$ in $\ell_1$; $w_{n,m}\to w_m$ weak$^*$ and
+$D_mw_{n,m}\to D_mw_m$ in $\ell_2$, so $M_{n,m}\to M_m$, $C_{n,m}\to C_m$,
+$\sigma_{n,m}\to\sigma_m$ and $\vartheta_{n,m}\to\vartheta_m$;
+$R_m^*w_{n,m}\to R_m^*w_m$ and $L^*w_n\to L^*w$ in norm; $a_n\to a$ in
+$\ell_1$; $e_n\to e$ in $H$; $q_0^{(n)}\to q_0$; $\zh_n\to\zh$ and
+$z_n\to z$ weak$^*$.
+\end{proposition}
+
+\begin{proof}
+A weak$^*$ cluster point $\eta$ of $(\xi_n)$ lies in $B_{p^{**}}$ and
+$f(\eta)=\lim f_n(\xi_n)=1$, so $\eta=\xi$; $B_{p^{**}}$ is weak$^*$
+metrizable.  $R_m$ is compact, so $R_m^{**}$ maps bounded weak$^*$
+convergent sequences to norm convergent ones.  A weak$^*$ cluster point
+$w'$ of $(w_{n,m})_n$ has $N_m(w')\le1$ and
+$w'(\zeta_m)=\lim w_{n,m}(\zeta_{n,m})=\sigma_m$, so $w'=w_m$.  Since
+$\Phi_m\in\ell_2$, $D_m$ maps bounded weak$^*$ convergent sequences to
+norm convergent ones; $M=1-C$.  $L^*$ is weak$^*$-to-norm continuous on
+bounded sets, and $a_n=f_n-L^*w_n$.  Finally
+$q_0^{(n)}=a_n(\xi_n)\to a(\xi)$, $e_n=U^*a_n/\|U^*a_n\|$, and
+$z_n=\xi_n/q_0^{(n)}-Ue_n$.
+\end{proof}
+
+\begin{proposition}[Norm-attaining approximants]\label{prop:approximants}
+Let $f\in S_{p^*}$ have forced data as above.  For a sequence
+$f'_n\in\NA((X,p),\R)\cap S_{p^*}$ the following are equivalent:
+\begin{enumerate}
+\item[(i)] $f'_n\to f$ in norm;
+\item[(ii)] $f'_n=\nabla p(y'_n)$ with $y'_n=z'_n+U(U^*a'_n/\|U^*a'_n\|)$,
+where $a'_n\in c_{00}\cap S_{q^*}$, $a'_n\to a$ in $\ell_1$, $z'_n\in c_0$,
+$\|z'_n\|_\infty\le1$, $z'_n=\sgn a'_n$ on $\supp a'_n$, and $z'_n\to z$
+coordinatewise.
+\end{enumerate}
+In particular, for every $n$ the coordinates of $z'_n$ outside a finite
+window may be chosen freely \textup{(}moduli $\le1$, membership in
+$c_0$\textup{)} as long as the windows exhaust $\N$.
+\end{proposition}
+
+\begin{proof}
+(ii)$\Rightarrow$(i): $y'_n\to\zh$ weak$^*$ (bounded coordinatewise
+convergence plus norm convergence of the $U$-part, as $U^*a'_n/\|U^*a'_n\|\to
+e$).  By compactness of $L$, $p(y'_n)=1+\|Ly'_n\|\to1+\|L^{**}\zh\|=1/q_0$,
+so $x_n:=y'_n/p(y'_n)\to\xi$ weak$^*$.  Then $\nabla q(x_n)=a'_n\to a$, and
+$L^*J_V(Lx_n)\to L^*w$ in norm by the argument of
+Proposition~\ref{prop:continuity} (a weak$^*$ cluster point of $J_V(Lx_n)$
+norms $L^{**}\xi$, whose components are nonzero).
+(i)$\Rightarrow$(ii): write $f'_n=\nabla p(x'_n)$ (Proposition
+\ref{prop:smooth}); by Proposition~\ref{prop:continuity}, $x'_n\to\xi$
+weak$^*$, $a'_n:=\nabla q(x'_n)\to a$, and Proposition~\ref{prop:smooth}(c)
+gives the form of $y'_n=x'_n/q(x'_n)$; finally $z'_n=y'_n-U(\cdot)\to z$
+weak$^*$.
+\end{proof}
+
+\subsection{Mates and the reduction}
+For $f\in S_{p^*}$ we use, as in \cite{PrA},
+\[
+ \Cset(f):=\{g\in X^*:\ p^*(f+tg)\le s(t)\ \text{for all }t\in\R\}.
+\]
+
+\begin{proposition}[Reduction]\label{prop:reduction}
+\textup{(a)} For $f\in S_{p^*}$ and $g\in X^*$ the operator
+$(f,g):(X,p)\to\ell_2^2$ is contractive iff $g\in\Cset(f)$ iff
+$f(y)^2+g(y)^2\le p(y)^2$ for all $y\in X$.
+\textup{(b)} Every $S\in\mathcal L((X,p),\ell_2^2)$ of norm one is, after a
+rotation of $\ell_2^2$, of the form $(f,g)$ with $f\in S_{p^*}$ and
+$g\in\Cset(f)$.  Hence $\NA((X,p),\ell_2^2)$ is dense iff
+$(f,\rho g)\in\cl\NA((X,p),\ell_2^2)$ for all $f\in S_{p^*}$,
+$g\in\Cset(f)$ and $\rho\in(0,1)$.
+\textup{(c)} If $g\in\Cset(f)$ then $p^*(g)\le1$, $g(\xi)=0$, and
+$p^*(f+t\rho g)\le s(\rho t)<s(t)$ for $t\ne0$, $\rho\in(0,1)$.
+\textup{(d)} If $f$ attains its norm at $x$ and $g\in\Cset(f)$, then
+$(f,g)$ attains its norm at $x$.
+\end{proposition}
+
+\begin{proof}
+(a) $\|(f,g)\|=\sup_\theta p^*(\cos\theta f+\sin\theta g)$ and
+$p^*(\cos\theta f+\sin\theta g)=|\cos\theta|p^*(f+\tan\theta\,g)$ with
+$|\cos\theta|=s(\tan\theta)^{-1}$; the case $\cos\theta=0$ is the limit
+$t\to\infty$.  The primal form is
+$\|(f,g)\|^2=\sup_{p(y)\le1}f(y)^2+g(y)^2$.
+(b) $\theta\mapsto p^*(S^*(\cos\theta,\sin\theta))$ attains its maximum
+$1$; rotate that direction to $e_1$.  Since $\NA$ is a cone and
+$(f,g)=\lim_{\rho\to1}(f,\rho g)$, the reduction follows.
+(c) Divide $p^*(f+tg)\le s(t)$ by $|t|\to\infty$; and
+$1+tg(\xi)=(f+tg)(\xi)\le s(t)$ for all $t$ forces $g(\xi)=0$.
+(d) $g(x)^2\le p(x)^2-f(x)^2=0$ (this observation is from \cite{KLMW}).
+\end{proof}
+
+\begin{proposition}[Primal description of the fibre]\label{prop:primal}
+For $f\in S_{p^*}$ put $r_f:=\sqrt{p^2-f^2}$ on $X$ and let $\tilde r_f$ be
+its largest sublinear minorant,
+$\tilde r_f(x)=\inf\{\sum_jr_f(y_j):\sum_jy_j=x\}$ \textup{(}finite
+families\textup{)}.  Then $\tilde r_f$ is a seminorm,
+$\Cset(f)=\{g\in X^*:g\le\tilde r_f\}$, $\Cset(f)$ is convex, symmetric
+and weak$^*$ compact, and $\max_{g\in\Cset(f)}g(x)=\tilde r_f(x)$ for
+$x\in X$.
+\end{proposition}
+
+\begin{proof}
+The infimum $\varphi$ is subadditive, positively homogeneous, even and
+$\le r_f$, and every sublinear minorant $s$ of $r_f$ satisfies
+$s(x)\le\sum s(y_j)\le\sum r_f(y_j)$, so $\varphi=\tilde r_f$.  A linear $g$
+satisfies $g\le r_f$ iff $g\le\tilde r_f$, and as $r_f$ is even this is
+$|g|\le r_f$, i.e.\ $g\in\Cset(f)$ by Proposition~\ref{prop:reduction}(a).
+Given $x$, the Hahn--Banach theorem gives a linear $g\le\tilde r_f$ with
+$g(x)=\tilde r_f(x)$, continuous because $\tilde r_f\le p$.
+\end{proof}
+
+\begin{definition}[Recovery]\label{def:recovery}
+For subsets $C_n\subseteq X^*$ let
+$\Li_nC_n:=\{g:\dist(g,C_n)\to0\}$ (Kuratowski lower limit; it is closed,
+and convex if the $C_n$ are convex).  A mate $g\in\Cset(f)$ is
+\emph{recovered along} a sequence $f_n\to f$ in $S_{p^*}$ if
+$g\in\Li_n\Cset(f_n)$.  We write
+\[
+ \Rec:=\{f\in S_{p^*}:\ (f,g)\in\cl\NA((X,p),\ell_2^2)\text{ for every }
+ g\in\Cset(f)\}
+\]
+for the \emph{recoverable set}.  By Proposition~\ref{prop:reduction},
+$\NA((X,p),\ell_2^2)$ is dense iff $\Rec=S_{p^*}$.
+\end{definition}
+
+\begin{lemma}[Recoverability of a single pair]\label{lem:pair}
+Let $f\in S_{p^*}$, $g\in\Cset(f)$ and $\rho\in(0,1)$.  Then
+$(f,\rho g)\in\cl\NA((X,p),\ell_2^2)$ iff there are
+$f_n\in\NA((X,p),\R)\cap S_{p^*}$ with $f_n\to f$ and
+$\rho g\in\Li_n\Cset(f_n)$.
+\end{lemma}
+
+\begin{proof}
+If $g_n\in\Cset(f_n)$ and $g_n\to\rho g$, then $(f_n,g_n)$ attains its norm
+(Proposition~\ref{prop:reduction}(d)) and converges to $(f,\rho g)$.
+Conversely let $S_k\in\NA$ converge to $T:=(f,\rho g)$; $\|T\|=1$.  For a
+unit vector $y=(\cos\theta,\sin\theta)$ with $\sin\theta\ne0$ we have
+$p^*(T^*y)<1$: if $\cos\theta\ne0$,
+$p^*(T^*y)=|\cos\theta|p^*(f+\tan\theta\,\rho g)\le|\cos\theta|s(\rho
+\tan\theta)<1$, and $p^*(\rho g)\le\rho<1$ otherwise.  Let $S_k$ attain its
+norm at $x_k\in S_p$ and $y_k:=S_kx_k/\|S_kx_k\|$.  Then
+$p^*(T^*y_k)\ge\|S_k\|-\|S_k-T\|\to1$, so every limit point of $(y_k)$ is
+$\pm e_1$; replacing $x_k$ by $-x_k$ we may assume $y_k\to e_1$.  Let $Q_k$
+be the rotation with $Q_ky_k=e_1$; then $Q_k\to I$, and $Q_kS_k=(\tilde
+f_k,\tilde g_k)$ attains its norm at $x_k$ with $\tilde
+f_k(x_k)=\|S_k\|$, $\tilde g_k(x_k)=0$.  The functionals
+$f_k:=\tilde f_k/\|S_k\|$ and $g_k:=\tilde g_k/\|S_k\|$ satisfy
+$\|(f_k,g_k)\|=1=f_k(x_k)$, so $f_k\in\NA\cap S_{p^*}$, $g_k\in\Cset(f_k)$,
+and $(f_k,g_k)\to(f,\rho g)$.
+\end{proof}
+

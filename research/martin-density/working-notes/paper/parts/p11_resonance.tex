@@ -1,0 +1,268 @@
+\section{The resonance obstruction}\label{sec:resonance}
+
+Throughout this section $I$ is finite.
+
+\subsection{The linear obstruction}
+For $f\in S_{p^*}$ let $\mathfrak B(f):=\{g\in\Cset(f)\cap S(f):\Gamma_w(g)
+\le1\}$ if $a\in c_{00}$ (then the data of $g\in S(f)$ are unique by
+Lemma~\ref{lem:rigidity}(a)), and $\mathfrak B(f):=\emptyset$ otherwise.
+The \emph{intrinsic class} $\mathcal K(f)$ is the closed convex hull of
+$\Cert^{\rm sh}(f)\cup\mathfrak B(f)$, and the \emph{defect} is
+$\Def(f):=\Cset(f)\setminus\mathcal K(f)$.
+
+\begin{proposition}[Intrinsic classes]\label{prop:intrinsic}
+\textup{(a)} $\mathcal K(f)$ contains every mate shown to be recoverable in
+Sections~\ref{sec:certificates}--\ref{sec:second}: $\cl\Cert(f)$ (hence the
+mates of Corollaries~\ref{cor:check} and~\ref{cor:ladder} and
+Theorems~\ref{thm:weighted}, \ref{thm:locsplit}, \ref{thm:carriers}),
+$\cl\Cert^{\rm sh}(f)$ and $\mathfrak B(f)$.
+\textup{(b)} $\mathcal K(f)\subseteq\cl S(f)$, a closed linear subspace of
+$\{g:g(\xi)=0\}$.
+\textup{(c)} If $a\in c_{00}$, then $\mathcal K(f)\subseteq\Li_N\Cset(f'_N)$
+for the canonical truncations; in any case $\cl\Cert^{\rm sh}(f)\subseteq
+\Li_n\Cset(f_n)$ for every sequence $f_n\to f$.
+\end{proposition}
+
+\begin{proof}
+(a) is a summary of the quoted results ($\Cert(f)\subseteq\Cert^{\rm
+sh}(f)$).  (b) Conditions (C1), (C2) say exactly that $g_c\in S(f)$, for
+shifted certificates as well, and $\mathfrak B(f)\subseteq S(f)$ by
+definition.  (c) Theorem~\ref{thm:shifted} for $\Cert^{\rm sh}$,
+Theorem~\ref{thm:transfer} for $\mathfrak B(f)$, and closedness and
+convexity of lower limits of convex sets.
+\end{proof}
+
+\begin{corollary}[Linear obstruction]\label{cor:linear}
+$\Cset(f)\setminus\cl S(f)\subseteq\Def(f)$.  If $F$ and every $Q_m$ are
+finite, then $S(f)$ is finite dimensional, and a mate $g$ lies outside
+$\mathcal K(f)$ as soon as $g\notin\spn\{e_j^*:j\in F\}+\spn\{u_{k,m}:k\in
+Q_m\}+\spn\{R_m^*w_m\}$.
+\end{corollary}
+
+When some block has infinitely many strict non-peaks whose vectors are
+spread in $\ker\xi$, the closure of $S(f)$ may be all of $\ker\xi$ and the
+obstruction is void.  It bites at first rows with few non-peaks.  We now
+construct such a first row with an infinite-dimensional fibre.
+
+\subsection{An admissible operator with an exact resonance}
+Let $\nu_j:=\|U^*e_j^*\|\to0$ and $J_0:=\{j\ge2:\nu_j\le\frac12\}$
+(cofinite).  Put $\alpha:=1/(1+\nu_1)$, $a:=\alpha e_1^*$ (so $q^*(a)=1$),
+$e:=U^*e_1^*/\nu_1$, and note $(Ue)_1=\nu_1$.  Fix a bijection
+$l:\N\times\N\to\N$ with $l(1,1)=1$ and $l(n,m)<l(n',m)$ for $n<n'$, pairwise
+disjoint infinite sets $S_l\subseteq J_0$ ($l\in\N$), and put
+$h_l:=\sum_{s\in S_l}2^{-s}e_s^*$, $c_l:=2^{-(l-1)^2}$ (so $c_1=1$ and
+$\sum_{l'\ge l}c_{l'}\le2c_l$).  Let $l_0:=l(2,1)$, $K':=S_{l_0}$,
+\[
+ z:=e_1+1_{K'}\in\ell_\infty,\quad \zh:=z+Ue,\quad
+ z^{(n)}:=e_1+1_{K'\cap[1,n]},\quad x^{(n)}:=z^{(n)}+Ue\in c_0 .
+\]
+Note $\zh_1=x^{(n)}_1=1+\nu_1=1/\alpha$.  For $k\ge2$, $(k,m)\ne(2,1)$, put
+$\pi_{k,m}:=2^{1-m-k}c_{l(k,m)}/c_{l(1,m)}\le\frac14$ and
+$\rho_{l(k,m)}:=\sqrt{\pi_{k,m}}$, and call $(k,m)$ \emph{exceptional} if
+$\pi_{k,m}\ge\epsilon_*^2$, $\epsilon_*:=1/(72(1+\|U\|))$ (finitely many).
+Let $\delta_{l(1,m)}:=\min(2^{-l},1/(8(1+\|U\|)))$, $\delta_{l_0}:=1$,
+$\delta_l:=\min(2^{-l},1/(16(1+\|U\|)))$ for exceptional $l$, and
+$\delta_l:=\min(2^{-l},\rho_l/(1+\|U\|))$ otherwise.  Fix a dense sequence
+$(y^{(i)})_{i\ge1}$ in $c_{00}\cap S_{q^*}$ with $y^{(1)}:=e_1^*/q^*(e_1^*)$,
+let $\Lambda(i):=\{n:\supp y^{(i)}\cap K'\cap(n,\infty)\ne\emptyset\}$
+(finite), and call $i$ \emph{allowed} at a non-exceptional
+$l=l(k,m)$ ($k\ge2$, $l\ne l_0$) if
+\[
+ \supp y^{(i)}\cap S_l=\emptyset,\quad 2c_l\le2^{-2s}c_{l'}\delta_{l'}
+ \text{ for } s\in\supp y^{(i)}\cap S_{l'},\ l'\ne l,\quad
+ 3\rho_l(2|\Lambda(i)|+3)\le\tfrac18 .
+\]
+Each $i$ is allowed at all large $l$, and $i=1$ is allowed everywhere
+($\Lambda(1)=\emptyset$ and $9\rho_l\le\frac18$).  Fix a sequence $(i_n)$ in
+which every positive integer occurs infinitely often, and let
+$i(n,m):=i_n$ if $i_n$ is allowed at $l(n,m)$ and $i(n,m):=1$ otherwise.
+Define, with $n_l$ the $q^*$-norm of the bracket,
+\begin{itemize}
+\item $u_{1,m}:=(e_1^*/q^*(e_1^*)+\delta_lh_l)/n_l$ and, for exceptional
+$(k,m)$, $u_{k,m}:=(e_1^*/q^*(e_1^*)+\delta_lh_l)/n_l$ ($l=l(k,m)$);
+\item $u_{2,1}:=(-\kappa e_1^*+h_{l_0})/n_{l_0}$, with
+$\kappa:=(\|h_{l_0}\|_1+\ip{U^*h_{l_0}}{e})/(1+\nu_1)$;
+\item for the remaining $(k,m)$, with $l=l(k,m)$ and $y:=y^{(i(k,m))}$:
+$u_{k,m}:=(y+s_l\alpha e_1^*+\delta_lh_l)/n_l$, where
+$|s_l|\le3\rho_l(2|\Lambda(i)|+3)$ is chosen so that $|y(x)+s_l|\ge3\rho_l$
+for every $x$ in the finite set $\{\zh\}\cup\{x^{(n)}:n\in\Lambda(i)\}$;
+\end{itemize}
+and $Te_{n,m}:=c_{l(n,m)}u_{n,m}$.  The choice of $s_l$ is possible: the
+excluded values form $|\Lambda(i)|+1$ intervals of length $6\rho_l$ inside an
+interval of length $6\rho_l(2|\Lambda(i)|+3)$; and $(\alpha
+e_1^*)(x)=\alpha x_1=1$ for all these $x$.
+
+\begin{lemma}[The operator $T$]\label{lem:T}
+$T$ is admissible, $\Phi_m(k)=2^{-m-k}c_{l(k,m)}$, and:
+\begin{enumerate}
+\item[(P1)] $\supp u_{2,1}=\{1\}\cup K'$, $u_{2,1}(1)<0<u_{2,1}(j)$ for
+$j\in K'$, and $u_{2,1}(\zh)=0$;
+\item[(P2)] $|u_{1,m}(x)|\ge7/9$ for $x\in X_0:=\{\zh\}\cup\{x^{(n)}:n\in\N\}$
+and every $m$;
+\item[(P3)] $|u_{k,m}(x)|\ge\frac32\rho_{l(k,m)}$ for $x\in X_0$, every
+non-exceptional $(k,m)$ with $k\ge2$, $(k,m)\ne(2,1)$, and
+$|u_{k,m}(x)|\ge\frac12$ for exceptional $(k,m)$; in both cases
+$|u_{k,m}(x)|>\pi_{k,m}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{Norms.}  $q^*(h_l)\le(1+\|U\|)\|h_l\|_1\le1+\|U\|$, so
+$q^*(\delta_lh_l)\le\frac18$ for $l=l(1,m)$, $\le\frac1{16}$ for exceptional
+$l$, and $\le\rho_l\le\frac1{72}$ otherwise; also $q^*(s_l\alpha e_1^*)=
+|s_l|\le\frac18$.  Hence $n_l\in[\frac78,\frac98]$ in the first two cases and
+$n_l\in[\frac34,\frac54]$ in the last.  (T-a): $q^*(Te_{n,m})=c_{l(n,m)}\le1
+=c_1$.
+
+(P1): $|\ip{U^*h_{l_0}}{e}|\le\sum_{s\in K'}2^{-s}\nu_s\le\|h_{l_0}\|_1/2$, so
+$\kappa>0$, and $(-\kappa e_1^*+h_{l_0})(\zh)=-\kappa(1+\nu_1)+\|h_{l_0}\|_1+
+\ip{U^*h_{l_0}}{e}=0$ because $z=1$ on $K'$.
+
+(P2), (P3): every $x\in X_0$ satisfies $x_1=1/\alpha$, $x=Ue$ on
+$\bigcup_{l\ne l_0}S_l$ and $|x_s|\le\|U\|$ there.  Hence
+$(e_1^*/q^*(e_1^*))(x)=1$ and $|\delta_lh_l(x)|\le\delta_l\|U\|$; this gives
+$|u_{1,m}(x)|\ge(1-\frac18)/\frac98=\frac79$ and, for exceptional $(k,m)$,
+$\ge(1-\frac1{16})/\frac{17}{16}>\frac12\ge2\pi_{k,m}$.  For the remaining
+$(k,m)$ and $n\notin\Lambda(i)$, $x^{(n)}-\zh=-1_{K'\cap(n,\infty)}$ is
+annihilated by $y$, by $e_1^*$ and by $h_l$, so the choice of $s_l$ gives
+$|(y+s_l\alpha e_1^*)(x)|\ge3\rho_l$ for all $x\in X_0$, and
+$|u_{k,m}(x)|\ge(3\rho_l-\rho_l)/\frac54=\frac85\rho_l>\rho_l\ge\pi_{k,m}$.
+
+(T-d): fix $m$ and $i$.  Infinitely many $n$ have $i(n,m)=i$, and along
+them $\|u_{n,m}-y^{(i)}\|_1\to0$, because $\rho_l,\delta_l\to0$,
+$|s_l|\le3\rho_l(2|\Lambda(i)|+3)\to0$ and $n_l\to1$ ($l=l(n,m)$).  Hence
+every $y^{(i)}$ is a limit point of $(u_{n,m})_n$.
+
+(T-b), (T-c): let $x\in\ell_1(\N\times\N)$, indexed by $l$, with
+$\mathcal Z:=\sum_lx_lc_lu_l\in c_{00}$, and suppose $x_{l'}\ne0$.  Write
+$u_l=(y_l+\delta_lh_l)/n_l$ with $y_l\in c_{00}$; the $y_l$ of the first
+two items and the multiples of $e_1^*$ live on $\{1\}$, and
+$1\notin\bigcup S_l$.  For $s\in S_{l'}$ only $h_{l'}$ among the $h_l$ is
+nonzero at $s$, and $y_{l'}(s)=0$ (allowedness).  If $s\in\supp y_l$ for
+some $l$, let $L(s)$ be the least such $l$; allowedness at $L(s)$ gives
+$2c_{L(s)}\le2^{-2s}c_{l'}\delta_{l'}$, and with $|y_l(s)|\le1$,
+$n_l\ge\frac34$,
+\[
+ |\mathcal Z(s)|\ge\frac{|x_{l'}|c_{l'}\delta_{l'}2^{-s}}{n_{l'}}-\frac43
+ \|x\|_\infty\sum_{l\ge L(s)}c_l\ge c_{l'}\delta_{l'}2^{-s}
+ \Big(\frac{|x_{l'}|}{n_{l'}}-\frac43\|x\|_\infty2^{-s}\Big)>0
+\]
+for all large $s\in S_{l'}$.  As $S_{l'}$ is infinite, $\mathcal Z\notin c_{00}$,
+a contradiction.  Hence $x=0$: $T$ is injective and $Y\cap c_{00}=\{0\}$.
+\end{proof}
+
+The construction is flexible (any finite set of prescribed vectors can be
+inserted, and the targets may be the same in all blocks, as in Mart\'in's
+proof); only (T-a)--(T-d) and (P1)--(P3) are used below.
+
+\begin{lemma}[The first row]\label{lem:firstrow}
+With $T$ as in Lemma~\ref{lem:T} and any finite $I\ni1$, put
+$\xi:=\zh/p^{**}(\zh)$ and $f:=a+L^*J_V(L^{**}\xi)$.  Then $f\in S_{p^*}$ is
+not norm attaining, $\xi$ is its normer, $q_0=1/p^{**}(\zh)$, its forced data
+are $a=\alpha e_1^*$, $w=J_V(L^{**}\xi)$ and $z=e_1+1_{K'}$, $F=\{1\}$, and
+$K=K'$ is infinite.  Moreover $(2,1)$ is a strict non-peak with $w_1(2)=0$,
+every other coordinate $(k,m)$, $m\in I$, is a non-degenerate peak, and
+$S(f)=\R u_{2,1}$.
+\end{lemma}
+
+\begin{proof}
+$\zh\in B_{\ell_\infty}+U(B_H)=B_{q^{**}}$ and $a(\zh)=\alpha\zh_1=1=q^*(a)$,
+so $q^{**}(\zh)=1$ and $p^{**}(\zh)=1+\|L^{**}\zh\|$.  Then
+$f(\xi)=(1+\|L^{**}\zh\|)/p^{**}(\zh)=1$ and $p^*(f)\le\max(q^*(a),\|J_V\|)
+=1$ by Lemma~\ref{lem:dualball}.  Proposition~\ref{prop:forced} gives the
+forced data, and $\xi\notin c_0$ shows that $f$ does not attain its norm
+(a norming point in $X$ would be the unique normer).
+
+Blocks: $\zeta_m(k)=\lambda_{k,m}q_0u_{k,m}(\zh)$, and
+$\sigma_m\le\|\zeta_m\|_1\le q_0m2^{-m}$.  By Lemma~\ref{lem:threshold},
+off $P_m$ we have $|\zeta_m(k)|=\sigma_m\Phi_m(k)^2|w_m(k)|/C_m\le\sigma_m
+\Phi_m(k)$, i.e.\ $|u_{k,m}(\xi)|\le\sigma_m/m$, and
+$|u_{k,m}(\xi)|>\vartheta_m\Phi_m(k)$ implies $k\in P_m$ with positive
+margin.  By (P2), $|u_{1,m}(\xi)|\ge\frac79q_0>q_02^{-m}\ge\sigma_m/m$, so
+$1\in P_m$; hence $C_m\ge\Phi_m(1)M_m$ and
+$\vartheta_m\Phi_m(k)\le\sigma_m\Phi_m(k)/(m\Phi_m(1))\le q_0\pi_{k,m}$.  By
+(P3), every $(k,m)\ne(2,1)$ with $k\ge2$ is a peak with positive margin; and
+$u_{1,m}(\xi)$ exceeds $q_0/2\ge\vartheta_m\Phi_m(1)$.  Finally
+$u_{2,1}(\xi)=0$ by (P1), so $\zeta_1(2)=0$, $2\notin P_1$ and
+$w_1(2)=0$.  Thus $Q_1=\{2\}$, $Q_m=\emptyset$ for $m\ne1$, and
+$S(f)=(\ell_1(\{1\})\cap\xi^\perp)+\R y_{2,1}=\R\lambda_{2,1}u_{2,1}$
+because $\xi_1\ne0$ and $w_1(2)=0$.
+\end{proof}
+
+\begin{proposition}[Two-piece mates]\label{prop:twopiece}
+Let $u:=u_{2,1}$, $\lambda_0:=\lambda_{2,1}=\Phi_1(2)$, $c>0$, $v:=cu$, and for
+$K_1\subseteq K'$ put $K_2:=K'\setminus K_1$,
+$\beta:=(v1_{K_1})(\zh)$ and $g_{K_1}:=v1_{K_1}-\beta a$.  There is $c_*>0$,
+depending only on $\|U\|,\nu_1,M_1,C_1,\lambda_0$, such that for $0<c\le c_*$
+every $g_{K_1}$ lies in $\Cset(f)$, with the admissible decompositions
+\[
+ f+tg=(a+tg)+L^*w\ \ (t\ge0),\qquad
+ f+tg=(a+t(g-v))+L^*(w+tD)\ \ (t\le0),
+\]
+where $D:=(c/\lambda_0)e_2$ in block $1$ \textup{(}so $L^*D=v$\textup{)}.
+\end{proposition}
+
+\begin{proof}
+We use $\|xe+y\|\le x+\ip ey+\|y\|^2/(2x)$ for $x>0$, $y\in H$, which follows
+from $(\ip ey+\|y\|^2/(2x))^2\ge0$.  Let $|t|\le1$ and $c\le c_1:=
+\min(\alpha/4,1/(4(1+\|U\|)))$; then $|\beta|\le\|v\|_1\|\zh\|_\infty\le
+c(1+\|U\|)\le\frac14$.  Put $\nu:=\|U^*a\|=\alpha\nu_1$.
+
+\emph{Side $t\ge0$.}  $a+tg=(1-t\beta)\alpha e_1^*+tv1_{K_1}$, with
+$1-t\beta\ge\frac34$ and $v>0$ on $K_1$.  So
+$q^*(a+tg)\le(1-t\beta)(\alpha+\nu)+t(\|v1_{K_1}\|_1+\ip e{h_1})+\frac23t^2
+\|h_1\|^2/\nu$ with $h_1:=U^*(v1_{K_1})$.  Here $\alpha+\nu=1$ and
+$\|v1_{K_1}\|_1+\ip e{h_1}=(v1_{K_1})(z+Ue)=\beta$ since $z=1$ on $K_1$.
+Hence $q^*(a+tg)\le1+\frac23t^2\|h_1\|^2/\nu$, and the block part is $w$.
+
+\emph{Side $t=-s\le0$.}  $g-v=-\beta a-v_1e_1^*-v1_{K_2}$ with
+$v_1:=v(1)<0$, $|v_1|\le c$, so $a+t(g-v)=(\alpha(1+s\beta)+sv_1)e_1^*+
+sv1_{K_2}$ with first coefficient $\ge\alpha/2$.  As before,
+$q^*(a+t(g-v))\le(1+s\beta)+sv_1/\alpha+s(v1_{K_2})(\zh)+s^2\|h_2\|^2/\nu$
+with $h_2:=U^*(v1_{K_2})$, and the first-order bracket equals
+$s\,v(\zh)=sc\,u(\zh)=0$ (P1).  In block $1$, $W:=w_1+tD$ differs from
+$w_1$ only at $2$, where $|W(2)|=sc/\lambda_0\le M_1$ if $c\le M_1\lambda_0$;
+the peaks keep the value $M_1$, so $\|W\|_\infty=M_1$, and
+$\|D_1W\|^2=C_1^2+s^2c^2$ because $w_1(2)=0$ and $\Phi_1(2)/\lambda_0=1$.
+Thus $N_1(W)\le1+s^2c^2/(2C_1)$.
+
+\emph{Conclusion.}  For $|t|\le1$, $p^*(f+tg)\le1+t^2\max(\|U\|^2c^2/\nu,
+c^2/(2C_1))\le1+\frac38t^2\le s(t)$ if moreover $c^2\|U\|^2\le3\nu/8$ and
+$c^2\le\frac34C_1$.  For $|t|\ge1$, $p^*(f+tg)\le1+|t|q^*(g)\le1+|t|\cdot
+2c(1+\|U\|)\le1+|t|(\sqrt2-1)\le s(t)$ if $c\le0.2/(1+\|U\|)$, since
+$(s(t)-1)/|t|$ increases.  Take $c_*$ the minimum of these bounds.
+\end{proof}
+
+\begin{theorem}[Nonempty defect]\label{thm:defect}
+For the admissible operator $T$ of Lemma~\ref{lem:T} and every finite
+$I\ni1$, the first row $f$ of Lemma~\ref{lem:firstrow} satisfies
+$\mathcal K(f)\subseteq\R u_{2,1}$, while $\Cset(f)\ni g_{K_1}$ for every
+$K_1\subseteq K'$.  If $\emptyset\ne K_1\ne K'$, then $g_{K_1}\notin\R
+u_{2,1}$, so $g_{K_1}\in\Def(f)$.  The mates $g_{\{j\}}=c\,u_{2,1}(j)
+(e_j^*-\zh_j\alpha e_1^*)$, $j\in K'$, are finitely supported, and the
+defect spans an infinite-dimensional space.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:firstrow} and Proposition~\ref{prop:intrinsic}(b),
+$\mathcal K(f)\subseteq\R u_{2,1}$.  If $g_{K_1}=\mu u_{2,1}$, comparing
+coordinates $j\in K'$ (where $a$ vanishes and $u_{2,1}(j)>0$) gives
+$c1_{K_1}(j)=\mu$ for all $j\in K'$, which forces $K_1\in\{\emptyset,K'\}$.
+\end{proof}
+
+\begin{remark}\label{rem:twopiece}
+(a) The mechanism is an \emph{exact resonance}: the block vector $u_{2,1}$
+of a strict non-peak with $w=0$ is, as a base functional, supported on
+$F\cup K'$ with the contact signs on $K'$, and $u_{2,1}(\zh)=0$; hence the
+block carrier and the contact vector represent the same functional, and
+splitting the contacts between the two signs of $t$ produces switching
+mates.  For $K_1\in\{\emptyset,K'\}$, $g_{K_1}$ is a two-sided certificate.
+(b) The same estimates show that every $g$ supported in $\{1\}\cup K'$ with
+$g(\xi)=0$ and $\sup_{j\in K'}|g_j/u_{2,1}(j)|$ small is a mate, so
+$\Cset(f)$ contains an infinite-dimensional slab; conversely one can show
+that every mate is supported in $\{1\}\cup K'$ with $g_j/u_{2,1}(j)$
+bounded on $K'$ (we do not use this).  (c) Since $K'$ is infinite, $f$ is
+not C-tame, and Theorem~\ref{thm:tamefibre} does not apply at $f$; the
+infinite contact set is unavoidable (Proposition~\ref{prop:exact}).
+\end{remark}
+

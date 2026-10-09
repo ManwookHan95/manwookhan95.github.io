@@ -1,0 +1,244 @@
+\subsection{Locally split mates}
+
+\begin{definition}\label{def:locsplit}
+A mate $g\in\Cset(f)$ is \emph{locally split} if there are $\tau>0$,
+$b\in X^*$ and $v\in V^*$ with $g=b+L^*v$ and, for $|t|\le\tau$,
+\[
+ q^*(a+tb)\le s(t)\quad\text{and}\quad\|w+tv\|_{V^*}\le s(t).
+\]
+\end{definition}
+
+Equivalently, the linear path $f+tg=(a+tb)+L^*(w+tv)$ is admissible at
+level $s(t)$ near $t=0$.  Every finite certificate direction with $H\le1$
+is locally split (Proposition~\ref{prop:expansion}); the converse fails,
+since $b$ and $v$ may have infinite supports.
+
+\begin{lemma}[Base truncation with exact first-order correction]\label{lem:basetrunc}
+Let $b\in\ell_1$ satisfy $q^*(a+tb)\le s(t)$ for $|t|\le\tau$.  Then
+$\supp b\subseteq F$ and $b(\zh)=0$.  Put
+$\tau_a:=\frac14\min\big(\tau,1,\nu/(2\|U^*b\|+1)\big)$.  For every
+$\delta>0$ there is $N$ such that $b'':=P_Nb+\beta_Na$, with $P_N$ the
+coordinate projection onto $[1,N]$ and $\beta_N:=((I-P_N)b)(\zh)$,
+satisfies $b''(\zh)=0$, $\|b''-b\|_1<\delta$, and
+$q^*(a+tb'')\le s(t)+\delta t^2$ for $|t|\le\tau_a$.
+\end{lemma}
+
+\begin{proof}
+\emph{First order.}  The function $\varphi(t)=q^*(a+tb)$ is convex with
+$\varphi(0)=1$ and $\varphi(t)\le1+t^2/2$ on $[-\tau,\tau]$, so both one-sided
+derivatives at $0$ vanish.  The right derivative is
+$\sum_{j\in F}\sgn(a_j)b_j+\sum_{j\notin F}|b_j|+\ip{U^*b}{e}$ and the left
+derivative is $\sum_{j\in F}\sgn(a_j)b_j-\sum_{j\notin
+F}|b_j|+\ip{U^*b}{e}$; hence $\sum_{j\notin F}|b_j|=0$ and $b(\zh)=0$.
+
+\emph{Truncation.}  Let $r:=(I-P_N)b$, $\varepsilon_N:=\|U^*r\|$, and note
+$\beta_N=r(\zh)=\sum_{j>N}z_jr_j+\ip{U^*r}{e}\to0$.  For $|s|\le2\tau_a$ and
+$j>N$ in $F$, $|a_j|\le|a_j+sr_j|-sz_jr_j$; hence
+$\|a+sP_Nb\|_1\le\|a+sb\|_1-s\sum_{j>N}z_jr_j$.  For the Hilbert part we use
+the elementary inequality
+\begin{equation}\label{eq:hilbertineq}
+ \|y-x\|\le\|y\|-\ip{y}{x}/\|y\|+\|x\|^2/(2\|y\|)\qquad(y\ne0),
+\end{equation}
+which follows from $(\ip{y}{x}/\|y\|^2-\|x\|^2/(2\|y\|^2))^2\ge0$.  With
+$y_s:=U^*(a+sb)$ (so $\|y_s\|\ge\frac34\nu$ and
+$\|y_s/\|y_s\|-e\|\le2|s|\|U^*b\|/\nu$) and $x=sU^*r$,
+$\|U^*(a+sP_Nb)\|\le\|y_s\|-s\ip{e}{U^*r}+C_2s^2\varepsilon_N$, with $C_2$
+depending only on $\nu$, $\|U^*b\|$.  Adding,
+\[
+ q^*(a+sP_Nb)\le q^*(a+sb)-s\beta_N+C_2s^2\varepsilon_N.
+\]
+Now $a+tb''=(1+t\beta_N)(a+sP_Nb)$ with $s=t/(1+t\beta_N)$; for $N$ large
+($|\beta_N|\le1$) and $|t|\le\tau_a$ we have $|s|\le2\tau_a$, and
+\[
+ q^*(a+tb'')\le(1+t\beta_N)s(s)-t\beta_N+C_3t^2\varepsilon_N
+ =1+F_t(\beta_N)+C_3t^2\varepsilon_N,
+\]
+where $F_t(\beta):=\sqrt{(1+t\beta)^2+t^2}-(1+t\beta)$.  Since $F_t(0)=
+s(t)-1$ and $|\partial_\beta F_t|=|t|\,|(1+t\beta)/\sqrt{(1+t\beta)^2+t^2}-1|
+\le2|t|^3$ for $|t\beta|\le\frac12$, we get $q^*(a+tb'')\le s(t)+
+2|\beta_N||t|^3+C_3t^2\varepsilon_N\le s(t)+\delta t^2$ for $N$ large.
+Finally $\|b''-b\|_1\le\|r\|_1+|\beta_N|\|a\|_1\to0$ and
+$b''(\zh)=b(\zh)-r(\zh)+\beta_N=0$.
+\end{proof}
+
+\begin{lemma}[Block truncation]\label{lem:blocktrunc}
+Fix a block \textup{(}drop $m$\textup{)} and let $v\in\ell_\infty$ satisfy
+$N(w+tv)\le s(t)$ for $|t|\le\tau$.  Put $c:=\ip{Dw}{Dv}/C$, $d:=c/M$ and
+$\omega:=v+dw$.  Then $\omega=0$ on $P$, $|\sgn(w(k))v(k)+c|\le
+\sqrt{2\gap(k)}$ whenever $w(k)\neq0$ and $\gap(k)\le\tau^2/2$, and
+$d=\ip{Dw}{D\omega}/C$.  Moreover there is $\tau_3>0$ such that for every
+$\delta>0$ there is a finitely supported $\omega''$, vanishing on $P$, with
+$\min_{\supp\omega''}\gap>0$ and $\ip{Dw}{D\omega''}=\ip{Dw}{D\omega}$, such
+that $v'':=\omega''-dw$ satisfies $\|R^*(v''-v)\|_1<\delta$ and
+$N(w+tv'')\le N(w+tv)+\delta t^2$ for $|t|\le\tau_3$.
+\end{lemma}
+
+\begin{proof}
+\emph{Structure.}  $\chi(t):=\|D(w+tv)\|$ is convex and differentiable at
+$0$ with $\chi'(0)=c$, so $\chi(t)\ge C+tc$, and $\|w+tv\|_\infty\le s(t)-
+\chi(t)\le M-tc+t^2/2$ for $|t|\le\tau$.  For $k$ with $w(k)\neq0$ and
+$\varsigma_k:=\sgn w(k)$ this gives
+$|w(k)|+t\varsigma_kv(k)\le M-tc+t^2/2$, i.e.\
+$t(\varsigma_kv(k)+c)\le\gap(k)+t^2/2$ for $|t|\le\tau$.  For a peak
+($\gap=0$) both signs of $t$ give $\varsigma_kv(k)=-c$; for $\gap(k)\le
+\tau^2/2$ take $t=\pm\sqrt{2\gap(k)}$.  Then $\omega(k)=\varsigma_k(\varsigma_k
+v(k)+c)=0$ on $P$, and off $P$ with $w(k)\ne0$,
+$\omega(k)=\varsigma_k\big((\varsigma_kv(k)+c)-c\gap(k)/M\big)$, which tends to
+$0$ along every sequence with $\gap(k)\to0$; $\omega$ is bounded.
+Finally $\ip{Dw}{D\omega}=cC+dC^2=cC(M+C)/M=dC$.
+
+\emph{Truncation.}  If $w(k)=0$ for every $k\in Q$, then
+$\ip{Dw}{D\omega}=0$, $d=c=0$, and we put $k_0:=$ none, $\varkappa:=0$.
+Otherwise fix $k_0\in Q$ with $w(k_0)\neq0$, $\gamma_0:=\gap(k_0)$.  For
+$\gamma\in(0,\gamma_0)$ and $K\ge k_0$ let $S:=\{k\le K:\gap(k)\ge\gamma\}$
+(finite, contains $k_0$) and
+\[
+ \omega'':=\omega1_S+\varkappa e_{k_0},\qquad
+ \varkappa:=\ip{Dw}{D(\omega-\omega1_S)}/(\Phi(k_0)^2w(k_0)),
+\]
+so that $\ip{Dw}{D\omega''}=\ip{Dw}{D\omega}$.  As $\gamma\to0$ and
+$K\to\infty$, $\omega-\omega1_S\to0$ pointwise and boundedly ($\omega=0$ on
+$P$), hence $\Delta:=D(\omega''-\omega)\to0$ in $\ell_2$, $\varkappa\to0$ and
+$\|R^*(\omega''-\omega)\|_1\le\sum_k\lambda_k|\omega''(k)-\omega(k)|\to0$.
+
+\emph{Sup part.}  Let $W:=w+tv=(1-dt)w+t\omega$ and
+$W'':=w+tv''=(1-dt)w+t\omega''$.  They agree on $S\setminus\{k_0\}$.  For
+$k\notin S\cup\{k_0\}$, $|W''(k)|=|1-dt||w(k)|\le|1-dt|M=|W(k_*)|$ for any
+peak $k_*$ ($\omega(k_*)=0$), so $|W''(k)|\le\|W\|_\infty$.  At $k_0$,
+$|W''(k_0)|\le|1-dt|(M-\gamma_0)+|t|(\|\omega\|_\infty+1)\le|1-dt|M$ for
+$|t|\le t_0:=\gamma_0/(4(|d|M+\|\omega\|_\infty+2))$ (once $|\varkappa|\le1$).
+Hence $\|W''\|_\infty\le\|W\|_\infty$ for $|t|\le t_0$.
+
+\emph{Hilbert part.}  Put $A_t:=DW$.  Since $\ip{Dw}{\Delta}=0$,
+$\ip{A_t}{\Delta}=t\ip{D\omega}{\Delta}$ and
+\begin{gather*}
+ \|A_t+t\Delta\|^2=\|A_t\|^2+2t^2\ip{D\omega}{\Delta}+t^2\|\Delta\|^2,
+ \quad\text{so}\\
+ \|A_t+t\Delta\|\le\|A_t\|+\frac{2t^2(\|D\omega\|\|\Delta\|+\|\Delta\|^2)}{C}
+\end{gather*}
+for $|t|\le t_1:=C/(2\|D(\omega-dw)\|+2)$ (then $\|A_t\|\ge C/2$).  Adding,
+$N(W'')\le N(W)+o(1)t^2$ on $|t|\le\tau_3:=\min(\tau,t_0,t_1)$, where
+$o(1)\to0$ as $\gamma\to0$, $K\to\infty$.
+\end{proof}
+
+\begin{theorem}[Locally split mates]\label{thm:locsplit}
+Let $I$ be any nonempty block set.  Every locally split mate
+$g\in\Cset(f)$ lies in $\cl\Cert(f)$; in particular $(f,g)\in
+\cl\NA((c_0,p),\ell_2^2)$ and $g$ is recovered along every sequence
+$f_n\to f$ in $S_{p^*}$.
+\end{theorem}
+
+\begin{proof}
+Let $g=b+L^*v$ be as in Definition~\ref{def:locsplit}.  Fix $\rho\in(0,1)$
+and $\delta>0$.  Choose a finite set $I_0$ of blocks with
+$\|v\|\sum_{m\notin I_0}m2^{-m}<\delta$ and replace $v_m$ by $0$ for
+$m\notin I_0$; this keeps the admissibility ($N_m(w_m)=1$) and moves $g$ by
+at most $(1+\|U\|)\delta$ in $p^*$.  Apply Lemma~\ref{lem:basetrunc} to $b$ and
+Lemma~\ref{lem:blocktrunc} to each $v_m$, $m\in I_0$: we obtain a finite
+certificate $c''=(b'',(\omega''_m)_{m\in I_0})$ \textup{(}its $d$-coefficients
+are the $d_m$ of the lemma\textup{)} with $\|g_{c''}-g\|_{p^*}\le\delta'$,
+$\delta'\to0$ as $\delta\to0$, and a range $|t|\le\tau_5$, independent of
+$\delta$, on which
+\[
+ q^*(a+tb'')\le s(t)+\delta t^2,\qquad
+ N_m(w_m+t(\omega''_m-d_mw_m))\le s(t)+\delta t^2 .
+\]
+\emph{Coefficient.}  Lemma~\ref{lem:base}(a) gives
+$\frac{t^2}2h(b'')/(1+|t|\|U^*b''\|/\nu)\le s(t)-1+\delta t^2$; dividing
+by $t^2$ and letting $t\to0$, $h(b'')\le1+2\delta$.  Similarly
+Lemma~\ref{lem:block}(b) gives $H_m(\omega''_m)\le1+2\delta$.  So
+$H(c'')\le1+2\delta$.
+
+\emph{Mate.}  For $|t|\le\tau_5/\rho$,
+$p^*(f+t\rho g_{c''})\le s(\rho t)+\delta\rho^2t^2\le s(t)$ as soon as
+$\delta\rho^2\max(1,\tau_5/\rho)\le(1-\rho^2)/3$ (Lemma~\ref{lem:slack}(a)).
+For $|t|\ge\tau_5/\rho$ we have $p^*(f+t\rho g_{c''})\le s(\rho
+t)+\rho|t|\delta'\le s(t)$ as soon as
+$\rho\delta'\le(1-\rho^2)\min(1,\tau_5/\rho)/3$.  So
+for $\delta$ small, $\rho g_{c''}\in\Cset(f)$ and $H(\rho c'')\le
+\rho^2(1+2\delta)\le1$, i.e.\ $\rho g_{c''}\in\Cert(f)$, at distance at most
+$\rho\delta'$ from $\rho g$.  Let $\delta\to0$ and $\rho\to1$.  The last
+assertions follow from Corollary~\ref{cor:lsc}.
+\end{proof}
+
+\begin{corollary}[Split-contractive operators]\label{cor:splitcontractive}
+Let $S\in\mathcal L((c_0,q),\ell_2^2)$ and $\Phi\in\mathcal L(V,\ell_2^2)$
+with $\|S\|_q\le1$, $\|\Phi\|\le1$, and suppose $T:=S+\Phi\circ L$ has
+$\|T\|_p=1$.  Then $T\in\cl\NA((c_0,p),\ell_2^2)$.
+\end{corollary}
+
+\begin{proof}
+After a rotation $T=(f,g)$ with $p^*(f)=1$, $f=s_1+L^*\varphi_1$,
+$g=s_2+L^*\varphi_2$, where $(s_1,s_2)$ is $q$-contractive and
+$(\varphi_1,\varphi_2)$ is $V$-contractive.  Then $q^*(s_1),\|\varphi_1\|\le
+1$, so by Proposition~\ref{prop:forced}, $s_1=a$ and $\varphi_1=w$; the
+contractivity of the components gives $q^*(a+ts_2)\le s(t)$ and
+$\|w+t\varphi_2\|\le s(t)$ for all $t$.  So $g$ is locally split, and
+Theorem~\ref{thm:locsplit} applies.
+\end{proof}
+
+Since $\NA\cap\{S+\Phi\circ L\}$ is not dense \cite[Section~3]{PrA}, the
+corollary shows that split operators are recovered by non-split
+norm-attaining ones.
+
+\subsection{Carriers with non-summable gaps}
+
+\begin{theorem}[Carrier mates]\label{thm:carriers}
+Let $g\in\Cset(f)$, let $c^0=(b^0,\omega^0)$ be a finite certificate, fix a
+block $m$ and $c\in\R\setminus\{0\}$, and let $k_1,k_2,\dots$ be distinct
+strict non-peaks of $w_m$ outside $\supp\omega^0_m$, with
+$\lambda_i:=\lambda_{k_i,m}$ and $\gamma_i:=\gap_m(k_i)$, such that
+\begin{enumerate}
+\item[(a)] $\gamma_{i+1}\lambda_{i+1}\le\gamma_i\lambda_i/2$ for all $i$;
+\item[(b)] $p^*(g-g_{c^0}-c\,u_{k_i,m})\le K\lambda_i$ for all $i$;
+\item[(c)] $H_*:=\max\big(h(b^0),\ \max_{m'\ne m}H_{m'}(\omega^0_{m'}),\
+H_m(\omega^0_m)+c^2/(m^2C_m)\big)\le1$;
+\item[(d)] $\sum_i\gamma_i=\infty$.
+\end{enumerate}
+Then $g\in\cl\Cert(f)$.  In particular this holds when $\inf_i\gamma_i>0$
+and $\|u_{k_i,m}-v\|\le K'\lambda_i$ for some $v$ with $g=g_{c^0}+cv$
+\textup{(}after passing to a subsequence for which \textup{(a)}
+holds\textup{)}: cross mates with rates through carriers whose gaps are
+bounded below are recovered along every sequence.
+\end{theorem}
+
+\begin{proof}
+Let $c_i:=c^0+(0,(c/\lambda_i)e_{k_i}\text{ in block }m)$.  Its
+$d$-coefficient in block $m$ is $d_{i}=d^0_m+c\Phi_m(k_i)w_m(k_i)/(mC_m)
+\to d^0_m$, and $\|D_m\omega_{i}\|^2=\|D_m\omega^0_m\|^2+c^2/m^2$ (because
+$\Phi_m(k_i)/\lambda_i=1/m$), so $\limsup_iH(c_i)\le H_*\le1$.  The
+coordinatewise radius is $r_i=\min(r_*,\gamma_i\lambda_i/(2|c|))$ with
+$r_*>0$ bounded below for large $i$, $\kappa(c_i)$ is bounded, and
+\[
+ e_i:=p^*(g-g_{c_i})\le p^*(g-g_{c^0}-cu_{k_i,m})+|d_i-d^0_m|p^*(R_m^*w_m)
+ \le K'\lambda_i .
+\]
+Fix $\rho<1$, choose $\eta_0,\kappa_0,s_0$ as in Theorem~\ref{thm:averaging}
+with moreover $s_0\sup_i\kappa(c_i)\le\kappa_0$.  For a stretch
+$i_0\le i\le i_1$ put $\Gamma:=\sum_{i_0}^{i_1}\gamma_i$ and
+$\mu_i:=\gamma_i/\Gamma$.  If $s\le r_*/\rho$, then by (a)
+\[
+ \sum_{r_i<\rho s}\mu_ie_i\le\frac{K'}{\Gamma}\sum_{\gamma_i\lambda_i<2|c|\rho
+ s}\gamma_i\lambda_i\le\frac{4K'|c|\rho s}{\Gamma}\le\frac{(1-\rho^2)s}
+ {12\rho}
+\]
+once $\Gamma\ge48K'|c|\rho^2/(1-\rho^2)$, which is possible with $i_0$
+arbitrarily large by (d).  If $r_*/\rho<s\le s_0$, then
+$\sum_i\mu_ie_i\le K'\sup_{i\ge i_0}\lambda_i\le(1-\rho^2)r_*/(12\rho^2)$
+for $i_0$ large (note $\lambda_i\to0$), which gives (ii) as well; (iii) holds similarly, and (i) holds for
+$i_0$ large because $\limsup H(c_i)\le1$ and we may take $\eta_0>0$.
+Theorem~\ref{thm:averaging} gives $\rho g_c\in\Cert(f)$ within
+$\rho K'\sup_{i\ge i_0}\lambda_i$ of $\rho g$.  For the last assertion,
+$e_i\le|c|K'\lambda_i+O(\lambda_i)$, and a subsequence with
+$\lambda_{i+1}\le\lambda_i\inf\gamma/2$ satisfies (a).
+\end{proof}
+
+\begin{remark}\label{rem:summablegaps}
+If $\sum_i\gamma_i<\infty$ the argument breaks down: condition (ii) at
+$s\approx\gamma_i\lambda_i$ forces $\mu_i\lesssim\gamma_i$.  Whether
+switching mates carried by such ``super-near-threshold'' coordinates, or by
+weak peaks (small margins), lie in $\cl\Cert(f)$ is open; their limit
+directions lie in the closed span of the non-peak vectors, so the linear
+obstruction of Section~\ref{sec:resonance} does not apply to them.
+\end{remark}
+

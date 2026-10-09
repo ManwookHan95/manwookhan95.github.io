@@ -1,0 +1,20 @@
+Lines 1-1256 checked. Proofs ok so far. Notes:
+- L464 cite{KLMW} vs cite{KLMW20} (check bib)
+- L1035 Remark shiftopen claims min_theta Hsh >= Gamma_w; verify rem:gammaw
+- Lemma block (c): "equality holds in (b)" needs Y>0 (not implied by |d sigma|<=1/2 since C small)
+- Prop approximants "free coordinates": must avoid supp a'_n / window must contain supp a'_n
+- Cor ladder geometric sequence t_1 vs t_* ambiguity (minor)
+- L1282-1283 "Every finite certificate direction with H<=1 is locally split (Prop expansion)" FALSE for H=1 (expansion gives 1+t^2/2(1+kappa|t|) > s(t)); need H<1
+- Thm locsplit (L1394) "any nonempty block set": tau_5 depends on I_0 which depends on delta (tau_{3,m} <~ C_m -> 0); claim "range independent of delta" false for I infinite; mate step needs delta' <~ tau_5. Gap for I=N. Check D notes.
+- L1405-1406 "(1+||U||)delta" fine but overestimate.
+- L1450 "NA cap {S+Phi o L} not dense" vague wording
+- Thm carriers "In particular" (L1468-1472): must keep (c); say so.
+- Thm transfer Step1 L1768-1769: Hilbert bound "t^2/2 H' C' theta" should be "t^2/2 H' theta" (||h_perp||^2 = H'C', divided by 2Y ~ 2C'); Step 5 uses the correct one
+- Thm transfer: notation clashes: eta (normer of sec 5) reused as small param (L1747) and eta_N (L1886); L (operator) reused L:=Gamma_w/2+eta; Lambda_m used both as index set (L1776) and level (L1809); T_m clashes with T and T_m(sigma;omega); 
+- Thm transfer statement says g'_N in C(f'_N), g'_N -> rho g; proof: g'_N -> g and rho g'_N in C(f'_N). Fix.
+- Rem gammaw last sentence: needs a in c00 for Thm transfer; also "direction lies in S(f)" always true
+- Rem transfer (b) "finite-dim models: coefficient strictly larger than Gamma_w" numerical claim; (c) unproved claim
+- Sec 6.2 heavy notation clashes: alpha (vs alpha_m), pi_{k,m} (vs pi_m peak functional), rho_l (vs rho), Lambda(i) (vs Lambda function), kappa (vs kappa(c)), h_l (vs h(b)), c_l, l as index & bijection, nu (redefined in twopiece as alpha nu_1 — consistent with forced nu actually)
+- Thm defect: g_{K_1} depends on c; state 0<c<=c_*
+- Rem twopiece(b) "conversely one can show every mate supported..." unproved claim -> label sketch/remove (check P1)
+- Lemma firstrow: checked OK. Prop twopiece OK. Prop nonrecovery OK.

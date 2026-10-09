@@ -1,0 +1,238 @@
+\subsection{Transport along every sequence}
+
+\begin{theorem}[Transport]\label{thm:transport}
+Let $f_n\to f$ in $S_{p^*}$ be an arbitrary sequence \textup{(}norm
+attaining or not\textup{)} and let $c=(b,\omega)$ be a finite certificate
+at $f$.  Put
+\begin{gather*}
+ G_n:=\{j\in F:\ \sgn a_n(j)=\sgn a_j,\ |a_n(j)|\ge|a_j|/2\},\\
+ b'_n:=b\,1_{G_n},\qquad \tau_n:=b'_n(\zh_n),\qquad b_n:=b'_n-\tau_na_n,
+\end{gather*}
+and $c_n:=(b_n,\omega)$ \textup{(}the same block coefficients; $d_{n,m}$ is
+computed at $f_n$\textup{)}.  Then for $n$ large $c_n$ is a finite
+certificate at $f_n$, $\|g_{c_n}-g_c\|\to0$, $H(c_n)\to H(c)$,
+$\kappa(c_n)\to\kappa(c)$ and $\liminf_nr(c_n)\ge r(c)/2$.  If moreover
+$g_c\in\Cset(f)$ and $H(c)\le1$, then for every $\rho\in(0,1)$,
+$\rho g_{c_n}\in\Cert(f_n)$ for all large $n$.
+\end{theorem}
+
+\begin{proof}
+\emph{Base.}  By Proposition~\ref{prop:continuity}, $a_n\to a$ in $\ell_1$,
+$\nu_n\to\nu$, $e_n\to e$ and $z_n\to z$ weak$^*$; also $z_n=\sgn a_n$ on
+$\supp a_n$.  Every $j\in F$ eventually lies in $G_n$, so $b'_n\to b$ in
+$\ell_1$ by dominated convergence.  On $G_n$,
+$z_n(j)=\sgn a_n(j)=\sgn a_j=z_j$, hence
+$\tau_n=\sum_{j\in G_n}b_jz_j+\ip{U^*b'_n}{e_n}\to b(z)+\ip{U^*b}{e}=
+b(\zh)=0$, and $b_n\to b$.  Further $\supp b_n\subseteq\supp a_n$,
+$\|b_n/a_n\|_\infty\le2\|b/a\|_\infty+|\tau_n|$, and
+$b_n(\zh_n)=\tau_n-\tau_na_n(\zh_n)=0$.  Thus (C1) holds at $f_n$,
+$h_n(b_n)\to h(b)$ and $\|U^*b_n\|\to\beta$.
+
+\emph{Blocks.}  For the finitely many active $m$ and $k\in\supp\omega_m$,
+$w_{n,m}(k)\to w_m(k)$ and $M_{n,m}\to M_m$, so
+$M_{n,m}-|w_{n,m}(k)|\to\gap_m(k)>0$: eventually $\supp\omega_m\subseteq
+Q_{n,m}$ and the gaps converge.  Also $d_{n,m}\to d_m$, $C_{n,m}\to C_m$,
+$D_mw_{n,m}\to D_mw_m$, so $H(c_n)\to H(c)$, $\kappa(c_n)\to\kappa(c)$ and
+$\liminf r(c_n)\ge r(c)/2$ (the base ratio is at most halved).
+
+\emph{Directions.}  $g_{c_n}-g_c=(b_n-b)+\sum_m(d_mR_m^*w_m-d_{n,m}R_m^*w_{n,m})
+\to0$, since $R_m^*w_{n,m}\to R_m^*w_m$ in norm.
+
+\emph{Mates.}  Let $\delta:=(1-\rho^2)/2$.  Then $H(\rho c_n)=\rho^2H(c_n)
+\to\rho^2H(c)\le1-2\delta$, so $H(\rho c_n)\le1-\delta$ for large $n$, and
+$r_*(\rho c_n,\delta)$ is bounded below by some $r_0>0$.  Apply
+Proposition~\ref{prop:scale} with $f'=f_n$, $c'=\rho c_n$ and $g=g_c$:
+$p^*(f_n-f)\to0$ and $p^*(g_{\rho c_n}-\rho g_c)=\rho p^*(g_{c_n}-g_c)\to0$.
+\end{proof}
+
+\begin{corollary}[Lower semicontinuity of the certified fibre]\label{cor:lsc}
+For every sequence $f_n\to f$ in $S_{p^*}$,
+\[
+ \cl\Cert(f)\subseteq\Li_n\cl\Cert(f_n)\subseteq\Li_n\Cset(f_n).
+\]
+Consequently: \textup{(a)} every $g\in\cl\Cert(f)$ is recovered along every
+norm-attaining sequence $f_n\to f$, finitely many such mates simultaneously,
+and $(f,g)\in\cl\NA((X,p),\ell_2^2)$; \textup{(b)} if
+$\Cset(f)=\cl\Cert(f)$, then $f\in\Rec$ and $\Cset$ is Hausdorff continuous
+at $f$; \textup{(c)} if for every $f$ the set $\Cset(f)\setminus\cl\Cert(f)$
+is contained in $\Li_n\Cset(f_n)$ for \emph{some} norm-attaining sequence
+$f_n\to f$, then $\NA((X,p),\ell_2^2)$ is dense.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:transport}, $\rho\Cert(f)\subseteq\Li_n\Cert(f_n)$ for
+each $\rho<1$; lower limits are closed.  (a) follows from
+Lemma~\ref{lem:pair} and Corollary~\ref{cor:finite} (applied to finitely
+many mates).  (b) Upper semicontinuity (Theorem~\ref{thm:compact}) and
+$\Cset(f)\subseteq\Li\Cset(f_n)$ give Kuratowski, hence Hausdorff,
+convergence inside a compact set.  (c) Then $\Cset(f)\subseteq
+\Li\Cset(f_n)$ for that sequence (the lower limit is closed and convex);
+apply Corollary~\ref{cor:finite}.
+\end{proof}
+
+\begin{corollary}[Base and block directions]\label{cor:check}
+\textup{(i)} If $\omega$ is finitely supported strictly below the peak of
+$w_m$, $d=\ip{D_mw_m}{D_m\omega}/C_m$, $g=R_m^*(\omega-dw_m)\in\Cset(f)$
+and $H_m(\omega)\le1$, then $g\in\Cert(f)$; in particular $(f,g)$ is
+recovered along every sequence.  This is the finite local-certificate
+theorem quoted from the unavailable note \cite{Check} in \cite{PrA}.
+\textup{(ii)} If $b$ satisfies \textup{(C1)}, then $b/\Lambda\in\Cert(f)$
+for every
+\[
+ \Lambda\ge\max\big(1,\sqrt{2h(b)},p^*(b)r_0/(s(r_0)-1)\big),
+ \qquad r_0:=\min\big(r(c),1/(4\kappa(c)+4),1/\sqrt2\big),
+\]
+where $c=(b,0)$.
+\end{corollary}
+
+\begin{proof}
+(i) is the definition of $\Cert(f)$.  (ii) $H(c/\Lambda)=h(b)/\Lambda^2\le
+\frac12$, $\kappa(c/\Lambda)\le\kappa(c)$ and $r(c/\Lambda)\ge r(c)$, so
+$r_*(c/\Lambda,\frac12)\ge r_0$ and Lemma~\ref{lem:slack}(b) gives
+$p^*(f+\sigma b/\Lambda)\le s(\sigma)$ for $|\sigma|\le r_0$.  For
+$|\sigma|\ge r_0$, $p^*(f+\sigma b/\Lambda)\le1+|\sigma|p^*(b)/\Lambda\le
+s(\sigma)$, since $(s(\sigma)-1)/|\sigma|$ is increasing in $|\sigma|$.
+\end{proof}
+
+\subsection{Shifted certificates}
+Since $f=a+L^*w$, one may move a second-order amount of mass between the
+base and the blocks: $f=\lambda(a+L^*w)-(\lambda-1)f$ with
+$\lambda=1+\theta\tau^2$.
+
+\begin{definition}[Shifted certificates]\label{def:shifted}
+A \emph{shifted certificate} is $c=(b,\omega,\theta)$, where $(b,\omega)$ is
+a finite certificate and $\theta=(\theta_m)$ is a finitely supported real
+family.  Put $v_\theta:=\sum_m\theta_mR_m^*w_m\in\ell_1$,
+$\kappa_q(v):=\sum_{j\notin F}(|v_j|+z_jv_j)\in[0,2\|v\|_1]$ and
+\[
+ H^{\rm sh}(c):=\max\Big(h(b)-\frac2{q_0}\sum_m\theta_m\sigma_m
+ +2\kappa_q(v_\theta),\ \max_m\big(H_m(\omega_m)+2\theta_m\big)\Big).
+\]
+The direction is $g_c:=g_{(b,\omega)}$, and
+$\Cert^{\rm sh}(f):=\{g_c\in\Cset(f):\ H^{\rm sh}(c)\le1\}$.
+\end{definition}
+
+Note $v_\theta(\zh)=\sum_m\theta_m\ip{w_m}{\zeta_m}/q_0=\sum_m\theta_m
+\sigma_m/q_0$.  The associated decomposition is
+\begin{equation}\label{eq:shiftdec}
+ \begin{gathered}
+ A(\tau):=a+\tau b-\tau^2v_\theta,\qquad W_m(\tau):=(1+\theta_m\tau^2)w_m+
+ \tau(\omega_m-d_mw_m),\\
+ A(\tau)+L^*W(\tau)=f+\tau g_c.
+ \end{gathered}
+\end{equation}
+For $\rho>0$ put $\rho.c:=(\rho b,\rho\omega,\rho^2\theta)$; then
+$g_{\rho.c}=\rho g_c$ and $H^{\rm sh}(\rho.c)=\rho^2H^{\rm sh}(c)$.
+$H^{\rm sh}$ is jointly convex, so $\Cert^{\rm sh}(f)$ is convex,
+symmetric and contains $\Cert(f)$ ($\theta=0$).
+
+\begin{proposition}[Shifted expansion]\label{prop:shifted}
+For a shifted certificate $c$ at $f$ there is $\varepsilon_c(\tau)\to0$ with
+$p^*(f+\tau g_c)\le1+\frac{\tau^2}2(H^{\rm sh}(c)+\varepsilon_c(\tau))$.
+\end{proposition}
+
+\begin{proof}
+\emph{Blocks.} $W_m(\tau)=(1+\theta_m\tau^2)[w_m+\tau'(\omega_m-d_mw_m)]$
+with $\tau'=\tau/(1+\theta_m\tau^2)$, so Lemma~\ref{lem:block}(d) gives
+$N_m(W_m(\tau))\le1+\tau^2(\theta_m+H_m/2)+O(|\tau|^3)$.
+\emph{Base.} Apply \eqref{eq:baseidentity} with $t=\tau$,
+$B=b-\tau v_\theta$: $\tau B(\zh)=-\tau^2v_\theta(\zh)$; off $F$,
+$|\tau B_j|-z_j\tau B_j=\tau^2(|v_j|+z_jv_j)$; for $|\tau|\le
+1/(2\|b/a\|_\infty)$ each flip term is at most
+$2(\tau^2|v_j|-|a_j|/2)_+$, so
+$\mathrm{Fl}\le2\tau^2\sum_{j\in F,\,|v_j|>|a_j|/(2\tau^2)}|v_j|=o(\tau^2)$;
+and $\nu\Psi(\tau U^*B/\nu)=\frac{\tau^2}2(h(b)+O(\tau))$.  Hence
+$q^*(A(\tau))\le1+\frac{\tau^2}2\big(h(b)-2v_\theta(\zh)+2\kappa_q(v_\theta)
+\big)+o(\tau^2)$.  Conclude with Lemma~\ref{lem:dualball}.
+\end{proof}
+
+\begin{theorem}[Shifted transport]\label{thm:shifted}
+Let $f_n\to f$ in $S_{p^*}$ be arbitrary, $c=(b,\omega,\theta)$ a shifted
+certificate at $f$, and $c_n:=(b_n,\omega,\theta)$ with $b_n$ as in
+Theorem~\ref{thm:transport}.  For every $\eta>0$ there are $\tau_\eta>0$ and
+$n_\eta$ with $p^*(f_n+\tau g_{c_n})\le1+\frac{\tau^2}2(H^{\rm sh}(c)+\eta)$
+for $n\ge n_\eta$, $|\tau|\le\tau_\eta$; moreover $\limsup_nH^{\rm
+sh}_n(c_n)\le H^{\rm sh}(c)$ \textup{(}computed at $f_n$\textup{)}.
+Consequently, if $g_c\in\Cset(f)$ and $H^{\rm sh}(c)\le1$, then
+$\rho g_{c_n}\in\Cert^{\rm sh}(f_n)$ for every $\rho<1$ and $n$ large, and
+\[
+ \cl\Cert^{\rm sh}(f)\subseteq\Li_n\cl\Cert^{\rm sh}(f_n)\subseteq
+ \Li_n\Cset(f_n)\quad\text{for every sequence }f_n\to f.
+\]
+\end{theorem}
+
+\begin{proof}
+The blocks are treated as in Proposition~\ref{prop:shifted}, with the
+uniform bounds of Theorem~\ref{thm:transport}.  For the base let
+$v_n:=\sum_m\theta_mR_m^*w_{n,m}\to v_\theta$ in $\ell_1$ and apply
+\eqref{eq:baseidentity} at $f_n$ with $B=b_n-\tau v_n$.  For
+$|\tau|\le1/(2\|b_n/a_n\|_\infty)$ and $|\tau\tau_n|\le1$ one checks
+coordinatewise: for $j\in G_n$ the flip term is at most
+$2\tau^2|v_{n,j}|1[|v_{n,j}|>|a_j|/(4\tau^2)]$; for $j\in\supp a_n\setminus
+G_n$ one has $b_n(j)=-\tau_na_n(j)$ and the flip term is at most
+$\tau^2(|v_{n,j}|+z_n(j)v_{n,j})$; off $\supp a_n$ the kink term equals
+$\tau^2(|v_{n,j}|+z_n(j)v_{n,j})$.  Hence the flip and kink terms are at
+most $\tau^2$ times
+\[
+ 2\sum_{j\in F}|v_{n,j}|1\big[|v_{n,j}|>\tfrac{|a_j|}{4\tau^2}\big]
+ +\sum_{j\notin F}(|v_{n,j}|+z_n(j)v_{n,j})+2\sum_{j\in F\setminus
+ G_n}|v_{n,j}|.
+\]
+As $n\to\infty$ and $\tau\to0$ the first and third sums tend to $0$
+(compare $v_n$ with $v_\theta$ in $\ell_1$, use dominated convergence and
+that each $j\in F$ eventually lies in $G_n$), and the second tends to
+$\kappa_q(v_\theta)$ ($z_n\to z$ coordinatewise, $|z_n|\le1$).  Also
+$v_n(\zh_n)\to v_\theta(\zh)$, $\sigma_{n,m}\to\sigma_m$,
+$q_0^{(n)}\to q_0$, and the Hilbert term is
+$\frac{\tau^2}2(h_n(b_n)+O(\tau))$ with $h_n(b_n)\to h(b)$.  This gives the
+uniform estimate, and the same computation without $\tau$ gives the
+$\limsup$ of $H^{\rm sh}_n(c_n)$.  For the mates, fix $\rho<1$ and
+$\eta\le(1-\rho)/\rho$; for $|\tau|\le t_1:=\min(\tau_\eta/\rho,
+2\sqrt{1-\rho})$ we get $p^*(f_n+\tau\rho g_{c_n})\le1+\rho\tau^2/2\le
+s(\tau)$, and for $|\tau|\ge t_1$ we use the slack
+(Lemma~\ref{lem:slack}(a)) with $p^*(f_n-f)\to0$ and
+$p^*(g_{c_n}-g_c)\to0$.  Finally $H^{\rm sh}_n(\rho.c_n)=\rho^2H^{\rm
+sh}_n(c_n)\le1$ for large $n$.
+\end{proof}
+
+\begin{remark}\label{rem:shiftopen}
+Shifts relax the condition $H\le1$ to $H^{\rm sh}\le1$.  Whether
+$\cl\Cert^{\rm sh}(f)$ is strictly larger than $\cl\Cert(f)$ for some $f$ in
+Mart\'in's space is \emph{open}: no mate with $H>1\ge H^{\rm sh}$ outside
+$\cl\Cert(f)$ has been exhibited (finite-dimensional models suggest that
+shifts help, but they cannot distinguish $\Cert(f)$ from its closure).
+Section~\ref{sec:second} identifies the sharp second-order invariant at
+tame supports, $\Gamma_w$, and one checks that $\min_\theta H^{\rm
+sh}(b,\omega,\theta)\ge\Gamma_w$ (Remark~\ref{rem:gammaw}).
+\end{remark}
+
+\subsection{Several rows}
+
+\begin{theorem}[Joint fibres]\label{thm:joint}
+Let $c_1,\dots,c_d$ be finite certificates at $f$ with
+$G:=(g_{c_1},\dots,g_{c_d})\in\Cset_d(f)$ and
+$\sup_{\theta\in S^{d-1}}H(\sum_i\theta_ic_i)\le1$.  Then for every sequence
+$f_n\to f$ in $S_{p^*}$ and every $\rho<1$ the transported tuple
+$\rho G_n:=(\rho g_{c_{1,n}},\dots,\rho g_{c_{d,n}})$ lies in $\Cset_d(f_n)$
+for $n$ large, and $G_n\to G$.  In particular, if the $f_n$ attain their
+norms, then $(f,\rho G)$ is a limit of norm-attaining operators into
+$\ell_2^{d+1}$.
+\end{theorem}
+
+\begin{proof}
+The construction of Theorem~\ref{thm:transport} is linear in $c$ (the sets
+$G_n$ do not depend on $b$), so $c(\theta):=\sum_i\theta_ic_i$ is
+transported to $c_n(\theta)=\sum_i\theta_ic_{i,n}$.  On $S^{d-1}$ the
+coefficients $H(c_n(\theta))$ converge to $H(c(\theta))$ uniformly (they
+are maxima of quadratic forms in $\theta$ with convergent coefficients),
+$\kappa(c_n(\theta))$ is bounded, and $r(c_n(\theta))\ge r_0>0$ uniformly
+for $n$ large, because only the finitely many coordinates of
+$\bigcup_i\supp\omega_i$ and the bounded quantities
+$\|b_{i,n}/a_n\|_\infty$, $\|U^*b_{i,n}\|$, $|d_{i,n,m}|$ enter.  Now run
+the proof of Proposition~\ref{prop:scale} along each ray $t=|t|\theta$:
+for $|t|\le r_0$ use Lemma~\ref{lem:slack}(b) for $\rho c_n(\theta)$; for
+$|t|\ge r_0$ use $p^*(f+\rho\sum_it_ig_{c_i})\le s(\rho|t|)$ and the slack
+in $|t|$.  If $f_n$ attains its norm at $x_n$, then each row of $\rho G_n$
+vanishes at $x_n$ and $(f_n,\rho G_n)$ attains its norm there.
+\end{proof}
+
