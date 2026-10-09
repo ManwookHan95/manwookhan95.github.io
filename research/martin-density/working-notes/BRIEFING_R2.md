@@ -206,3 +206,46 @@ CONSENSUS OPEN CORE after Round 5 (F finite, g not window-pinned, design D''' / 
  (m) mixed blocks neither compensated nor rigid (f-dependent d-row Hoffman constants, failure of (DR));
  (h) failure of (H2''); (O4) infinite F as listed under Z5.
  Window methods for a fixed design absorb only design quantities; the only non-window tool is Z3's Theorem E (companions, cost o(T_lo^2)).
+
+## ADDENDUM 6 (Round 6, all refereed): r6/Y1_*, r6/Y2_*, r6/Y3_*, r6/Y4_* (read *_referee.md first, then notes and ref_notes)
+Y1 (refereed CORRECT in all PROVED claims): design D_X = SLD with each window level split into M(l) = omega(l)+1 sub-windows with
+  pairwise disjoint bands (b(w), u(w)); Design(l) contains G*(l), H_comb(l), D(l), G**(l) (generalized configuration Hoffman constant,
+  arbitrary contact patterns on all coarse targets T(l)), 2^{sigma(l)}, |T(l)|. Admissible, N-free; all of Section 8 and Round-5 window
+  theorems hold on sub-windows. Theorem 2 (clean sub-windows, pigeonhole): every F-finite f has at every level a sub-window where every rate
+  (room of each signature set on S^nat = S \ (F ∪ T(l)), target rooms, threshold distance |rho-1|, relative position rho) is TINY (<= b)
+  or ROBUST (>= u). Lemma T (threshold equation: block threshold theta is the unique root of an explicit equation; raising/Lipschitz bounds;
+  a raise rescales every untouched d-coefficient by one common factor). Pinning at clean sub-windows is DIAGONAL (no room products, no
+  slaving). Exactifying companion f^#_w (close tiny rooms and target rooms, raise threshold through a DONOR) at cost o(T_lo^2).
+  Proposition 5.2 (transplant to exact d-neutral data at f^#_w), Theorem E' (window-dependent c_flat, inward-only coordinates).
+  MASTER THEOREM (D_X): F finite; if at infinitely many levels a clean sub-window satisfies (SP_w) shift sources, (Do_w) donors,
+  (Cmp_w) each block compensated or one-signed, (NN_w) no uncompensable nearly neutral kept carrier, then f in Rec. NO rate conditions.
+  Cor M1 (maximal contact), M2.
+Y2 (refereed, strong): status steering is free at a companion (donor = far z-move on an unused signature set raises the threshold,
+  turns used degenerate peaks into strict non-peaks, keeps exact d-neutrality). Prop Q / Cor Q' (peak-carrying Cor D1), Theorem P
+  (degenerate swallowing-type peaks carried under donor condition (TD_m); always at maximal contact, Cor P.1). Design D^Y; faces of
+  configuration cones are free configurations; Prop 4.3 face reduction; Theorem M (mixed blocks without (DR), rate K_F^rel = face-Farkas);
+  Theorem H (failure of (H2''): shift-cost pinning c_* > 0); Theorem Y (master theorem for D^Y). Referee: Lemma R-T (target-coordinate
+  donors), gap G1 (SLD_G only). OPEN: aligned corner (d'), coherent shift resonance (h'), Conjecture G.
+Y3 (refereed): infinite F. Flip-profile calculus (sparse / critical / super-critical: m_beta(x) = sum{beta_j : |a_j| < x beta_j}).
+  Theorem 2.1 (T8 with raised support: only one-sided parts need cushion sparsity), Theorem 2.2, un-switching pair (Lemma 3.1), design
+  D_sigma (bounded-gap signatures + allowedness rule (c)), Theorem 3.5 (super-critical support swallowing recovered), Theorem 4.1
+  (one-sided coefficient at arbitrary F without Gram system), Cor 4.2, Theorem 5.1 = Theorem N (box-dominated support Bx <= C_a|a|, F = N:
+  every mate recovered for EVERY admissible T under (SC_I) and a margin rate), Theorem 6.1 (master theorem at infinite F), (LSC-trunc)
+  holds wherever exact data exist. Referee: Remark 3.6(b) wrong (corrected), rho-threshold proposition. OPEN: (O4-crit) critical support
+  swallowing (model |a_j| ~ v_l(j)^2: fixed data lose the cushion-sharing factor 2 exactly in the self-similar model), (O4-nd), (O4-box).
+Y4 (refereed): explosive design vs per-carrier rates (Prop 1.2), pigeonhole design D^PW (Lemma 1.5, Thm 1.6 clean sub-windows; referee
+  design fixes u_R, Design incl. 2^{s_max}/delta_min, Q(w)), Lemma 1.8 (ray removal), Lemma 2.3 (Theorem E with BANKED support: growing
+  base support inside the contact set), channels/raising lemma. Y4's "directional residual (UN+)" is WRONG: REFEREE (Y4_ref_notes C.2-C.7):
+  FAR PULLS at companions (flip a far swallowing contact j in S_l to a tiny opposite-sign support coordinate with mass 24 lambda_l v_l(j):
+  lowers that single carrier's value by exactly 2 v_l(j) at first order, cost O(v log 1/v), any base; Lemma U/Thm E accept pulled supports)
+  + private banks give two-sided per-carrier exact tuning for a DIAGONAL base U; Cor P5: at every clean sub-window all tiny single-block ray
+  d-sums can be made exactly zero at cost o(T_lo^2) (sign-constrained Hoffman solve). Assembly is a SKETCH.
+CONSENSUS OPEN CORE after Round 6 (diagonal base U allowed: U is any compact dense-range operator, choose it diagonal):
+ (A) ASSEMBLY (SKETCH): one pulled/banked/tuned/donor companion per clean sub-window of a single unified design carrying ALL
+     exactifications at once (close rooms and target rooms, raise thresholds, neutralize tiny rays, pull wrong-sign nearly neutral carriers),
+     closed under slaving, status stability (BS) under the O(Delta) threshold drift, then transplant (Prop 5.2 / Prop T) and Theorem E'.
+     This would remove (NN_w), (Do_w) except the aligned corner, and single-block tiny rays.
+ (B) multi-block rays (m'): vector-valued d-rows; exactifying tiny joint objects is determinantal.
+ (C) coherent shift resonance (h'): c_*(l) = 0; exact data with Delta d != 0 need sum_m' Delta d_m' R*_m' w_m' z-signed on K.
+ (D) aligned corner (d'): no signature donor and no target donor (Lemma R-T); far pulls on the peak itself (SKETCH).
+ (E) infinite F: (O4-crit), (O4-nd), (O4-box), plus the finite-F core at infinite F.
