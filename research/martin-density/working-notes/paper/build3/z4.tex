@@ -1,0 +1,276 @@
+
+\begin{lemma}[Window two-piece data]\label{lem:windowtwopiece}
+Let $f\in\mathcal R_S$, $l_*\ge l_f$, and let $t\in\mathcal W(l_*)$ with
+$t\le\min(t_\eta,1)$ and $C_fK_\star t\le1$; let $\tau',V'$ be as in
+Lemma~\ref{lem:exactswitch}, and $\chi,\mathfrak e_\pm$ as in
+Lemma~\ref{lem:split} for $e:=\Delta B1_{F^c}-V'$.  Let $\mathcal B_{\rm np}
+:=\{l\in\mathcal B:l\le l_*,\ k(l)\in Q_{m(l)}\}$, so that $V'=\sum_{l\in
+\mathcal B_{\rm np}}\epsilon_l\tau'_lu_l1_{F^c}$.  Define
+\begin{itemize}
+\item[$+$:] $\omega^+_m:=\omega^c_m$ \textup{(}Definition~\ref{def:windowcert}\textup{)}
+off the coordinates $k(l)$, $l\in\mathcal B_{\rm np}$, and
+$\omega^+_m(k(l)):=\omega_{+,m}(k(l))$ for $l\in\mathcal B_{\rm np}$ with
+$m(l)=m$;\quad $b^+:=B_+1_F+\chi V'-\kappa a$, $\kappa:=(B_+1_F+\chi V')(\zh)$;
+\item[$-$:] $\omega^-_m:=\omega^+_m+\sum_{l\in\mathcal B_{\rm np},\,m(l)=m}
+(\epsilon_l\tau'_l/\lambda_l)e_{k(l)}$;\quad $b^-:=b^+-\sum_{l\in\mathcal
+B_{\rm np}}\epsilon_l\tau'_lu_l$;
+\end{itemize}
+and $g_t:=b^++\sum_mR_m^*(\omega^+_m-d_m(\omega^+_m)w_m)$.  Put
+$\gamma_{\mathcal B}:=\min\big(\min_mM_m,\inf\{\gap_{m(l)}(k(l)):l\in
+\mathcal B,\ k(l)\in Q_{m(l)}\}\big)>0$.  Then, with constants $K^\star_2,
+K^\star_4$ of the form \textup{(}constant depending only on $f$, $N$ and the
+design\textup{)}${}\times\Lambda^\star_f(l_*)$, and $A^\star_0,A_2$
+depending only on $f$, $N$ and the design:
+\begin{enumerate}
+\item[(a)] $(b^+,\omega^+)$ is side-$+$ admissible, $(b^-,\omega^-)$ is
+side-$-$ admissible, both represent $g_t$, and they are $d$-neutral
+two-piece data for $g_t$ \textup{(}Definition~\ref{def:twopiece}\textup{)};
+$b^\pm(\xi)=0$;
+\item[(b)] $\|g-g_t\|_1\le K^\star_2t$;
+\item[(c)] $\Gamma_w(b^\pm,\omega^\pm)\le\big(\sqrt{1+\eta_\Gamma(\eta)}+
+K^\star_4t\big)^2$;
+\item[(d)] $t\|b^\pm\|_1\le A^\star_0$, and every $k\in\supp\omega^\pm_m$
+satisfies either $\gap_m(k)\ge t^2$ and $|\omega^\pm_m(k)|\le2\gap_m(k)/t$,
+or $k=k(l)$ with $l\in\mathcal B_{\rm np}$, $\gap_m(k)\ge\gamma_{\mathcal B}$
+and $|\omega^\pm_m(k)|\le A_2/t$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$\gamma_{\mathcal B}>0$: under ($\mathcal B_{\rm fin}$) the infimum is over
+finitely many strict non-peaks; under ($\mathcal B_{\rm res}$) all these gaps
+equal $M_m$.  Recall $\|\zh\|_\infty\le1+\|U\|$, $R_m^*e_k=\lambda_{k,m}u_{k,m}$,
+$\lambda_l=m(l)\Phi_{m(l)}(k(l))$, and $\sum_l\lambda_l\le\frac13$ (by
+Theorem~\ref{thm:SLD}, $\lambda_l\le c_l/4$ and $c_{l+1}\le c_l/4$).
+
+(a) $b^+1_{F^c}=\chi V'$ is $z$-signed and supported in $K$, and
+$b^-1_{F^c}=\chi V'-V'=-(1-\chi)V'$ is $(-z)$-signed; $\omega^\pm_m$ are
+finitely supported in $Q_m$ (coarse strict non-peaks).  The second
+representation: $\sum_mR_m^*\big((\omega^-_m-\omega^+_m)\big)=\sum_{l\in
+\mathcal B_{\rm np}}\epsilon_l\tau'_lu_l=b^+-b^-$, and
+\[
+ d_m(\omega^-_m)-d_m(\omega^+_m)=\sum_{l\in\mathcal B_{\rm np},\,m(l)=m}
+ \frac{\epsilon_l\tau'_l}{\lambda_l}\,\frac{\Phi_m(k(l))^2w_m(k(l))}{C_m}=
+ \sum_{m(l)=m}\mathfrak q_l\tau'_l=0
+\]
+by Lemma~\ref{lem:exactswitch}(a) ($\tau'_l=0$ at bad peaks).  So both pairs
+represent $g_t$ and $\Delta d_m=0$.  Since $a(\zh)=1$, $b^+(\zh)=0$; and by
+Lemma~\ref{lem:algebra} (the computation in its proof)
+$b^-(\xi)=g_t(\xi)=b^+(\xi)=0$.
+
+(b) Since $B_+1_{F^c}=\chi V'+\mathfrak e_+$, we have $B_+-b^+=\mathfrak
+e_++\kappa a$ and $\kappa=(B_+-\mathfrak e_+)(\zh)$, so by
+Lemma~\ref{lem:budget}(a), $|\kappa|\le t/(2q_0)+(1+\|U\|)\|\mathfrak
+e_+\|_1$; and $\|\mathfrak e_\pm\|_1\le C_fK_\star t+t/q_0$
+(Lemmas~\ref{lem:split}, \ref{lem:exactswitch}).  Hence $\|B_+-b^+\|_1\le
+C'K_\star t$.  Next $g-g_t=(B_+-b^+)+\sum_mR_m^*X_m$ with $X_m:=\Theta_{+,m}-
+\omega^+_m+d_m(\omega^+_m)w_m$, and $\|R_m^*X\|_1\le\sum_k\lambda_{k,m}|X(k)|$.
+Drop $m$; $X=(\omega_+-\omega^+)-(d_+-d(\omega^+))w$.  Let
+$\varrho_k:=|\omega_+(k)-\omega^+(k)|$.  At good coarse coordinates the
+claim in the proof of Proposition~\ref{prop:windowcert}(c), which is
+derived there from Lemma~\ref{lem:suplevel} alone, gives
+$\lambda_k\varrho_k\le|\Delta\theta_k|+\lambda_k|\Delta d|M+2t\lambda_k$.  At
+the coordinates $k(l)$, $l\in\mathcal B_{\rm np}$, $\varrho_k=0$.  At a bad
+coarse peak $k=k(l)$ (only under ($\mathcal B_{\rm fin}$)), $\omega^+(k)=0$
+and, by \eqref{eq:peakshift}, $\varrho_k\le|\omega_+(k)|+|\omega_-(k)|\le
+|\tau_l|/\lambda_l+|\Delta d|M$, where $|\tau_l|=|\tau_l-\tau'_l|$.  With
+Lemmas~\ref{lem:modswallow}(a), \ref{lem:badpeaks}(a) and
+\ref{lem:exactswitch}(c), $\sum_{\rm coarse}\lambda_k\varrho_k\le C''K_\star
+t$.  The fine coordinates and the $d$-terms are estimated exactly as in the
+proof of Proposition~\ref{prop:windowcert}(c), using
+$|d(\omega^+)|\le\|D\omega^+\|_2\le2/t$ (by (d) below, $|\omega^+(k)|\le4/t$,
+and $\|\Phi_m\|_2\le\frac12$) in place of $|d(\omega^c)|\le1/t$.  This
+gives (b).
+
+(c) The pair $(b^+,(\omega^+_m-d_m(\omega^+_m)w_m)_m)$ equals
+$(B_+,\Theta_+)-(B_+-b^+,X)$, and $H_m$ ignores multiples of $w_m$.  Since
+$\sqrt{\Gamma_w}$ is a seminorm, $\Gamma_w(B_+,\Theta_+)\le1+\eta_\Gamma(\eta)$
+(Lemma~\ref{lem:budget}(d)), $q_0h(x)\le\|U\|^2\|x\|_1^2/\nu$ and
+$\sigma_mH_m(X_m)\le(\sum_k\lambda_{k,m}|X_m(k)|)^2/C_m$, the bounds of (b)
+give the $+$ side.  For the $-$ side compare with $(B_-,\Theta_-)$.  Off
+$F$, $B_--b^-=\mathfrak e_-$.  On $F$, by \eqref{eq:DeltaB},
+\[
+ (B_--b^-)1_F=\sum_{l\in\mathcal B,\,l\le l_*}\epsilon_l(\tau'_l-\tau_l)u_l1_F
+ +\sum_{l\notin\mathcal B\text{ or }l>l_*}\Delta\theta_lu_l1_F+\kappa a,
+\]
+of norm at most $C_fK_\star t+K_\star t+6t^2+|\kappa|$.  For the blocks,
+using $d_m(\omega^-_m)=d_m(\omega^+_m)$,
+$\Theta_{-,m}-\omega^-_m+d_m(\omega^-_m)w_m=X_m-\Delta\Theta_m-\sum_{l\in
+\mathcal B_{\rm np},\,m(l)=m}(\epsilon_l\tau'_l/\lambda_l)e_{k(l)}$, and
+$\lambda_k$ times the coefficient of the last two terms at $k$ is
+$-\Delta\theta_k$ at good and fine coordinates and $\epsilon_l(\tau_l-
+\tau'_l)$ at $k=k(l)$, $l\in\mathcal B$, $l\le l_*$.  Its $\lambda$-weighted
+$\ell_1$-norm is at most $K_\star t+6t^2+C_fK_\star t$.  Conclude as for the
+$+$ side, with Lemma~\ref{lem:budget}(d) for $(B_-,\Theta_-)$.
+
+(d) By Lemma~\ref{lem:box}, $|\tau_l|=|\Delta\theta_l|\le6\lambda_l/t$, so
+$\|V'\|_1\le\sum_{l\in\mathcal B,\,l\le l_*}\tau'_l\le6\sum_l\lambda_l/t+
+C_fK_\star t\le2/t+1$.  By Lemma~\ref{lem:finitebase} with $\beta=B_+1_F$,
+$\|P^\perp U^*B_+\|\le(2\nu/q_0)^{1/2}$ and Lemma~\ref{lem:budget}(a),
+\[
+ \|B_+1_F\|_1\le C_F\big((2\nu/q_0)^{1/2}+(1+2\|U\|)\|B_+1_{F^c}\|_1+t/(2q_0)
+ \big),\qquad\|B_+1_{F^c}\|_1\le\|V'\|_1+\|\mathfrak e_+\|_1 .
+\]
+Together with $|\kappa|\le(1+\|U\|)(\|B_+1_F\|_1+\|V'\|_1)$ and
+$\|b^-\|_1\le\|b^+\|_1+\sum\tau'_l$, this gives $t\|b^\pm\|_1\le A^\star_0$.
+At good coordinates, $\supp\omega^c_m\subseteq\{k\in Q_m:\gap_m(k)\ge t^2\}$
+and $|\omega^c_m(k)|\le2\gap_m(k)/t$ (Proposition~\ref{prop:windowcert}(a),
+whose proof is valid at every $f$), and $\omega^-_m=\omega^+_m$ there.  At
+$k=k(l)$, $l\in\mathcal B_{\rm np}$: by Lemma~\ref{lem:suplevel}(a),(e),
+$|\omega^+_m(k)|=|\Theta_{+,m}(k)+d_{+,m}w_m(k)|\le(3+\eta)/t\le4/t$, and
+$|\omega^-_m(k)|\le4/t+\tau'_l/\lambda_l$, where $\tau'_l/\lambda_l\le6/t$
+under ($\mathcal B_{\rm res}$) ($\tau'_l\le|\tau_l|$) and
+$\tau'_l/\lambda_l\le6/t+C_fK_\star t/\lambda_{\mathcal B}\le(6+1/
+\lambda_{\mathcal B})/t$ under ($\mathcal B_{\rm fin}$), with
+$\lambda_{\mathcal B}:=\min_{l\in\mathcal B}\lambda_l$ (using $C_fK_\star t^2
+\le1$).  Take $A_2:=10+1/\lambda_{\mathcal B}$ (resp.\ $10$).
+\end{proof}
+
+\begin{lemma}[One-sided uniform transfer expansion]\label{lem:onesidedtransfer}
+Let $T$ be admissible, $I$ finite and $f\in S_{p^*}$ with $F$ finite.  For
+every $\varepsilon_{\rm tr}>0$, $A_0\ge1$, $A_2\ge1$ and $\gamma_B\in(0,1]$
+there are $c_\flat\in(0,\frac18]$ and $t_1>0$ such that for every
+$t\in(0,t_1]$ and every side-$+$ \textup{(}resp.\ side-$-$\textup{)}
+admissible pair $(b,\omega)$ with $b(\zh)=0$, $t\|b\|_1\le A_0$,
+$\Gamma_w(b,\omega)\le2$, and such that every $k\in\supp\omega_m$ satisfies
+either $\gap_m(k)\ge t^2$ and $|\omega_m(k)|\le2\gap_m(k)/t$, or
+$\gap_m(k)\ge\gamma_B$ and $|\omega_m(k)|\le A_2/t$, the functional
+$g:=b+\sum_mR_m^*(\omega_m-d_m(\omega_m)w_m)$ satisfies
+\[
+ p^*(f+rg)\le1+\frac{r^2}2\big(\Gamma_w(b,\omega)+\varepsilon_{\rm tr}\big)
+ \qquad\text{for }0<r\le c_\flat t\ \ \textup{(}\text{resp. }-c_\flat t\le
+ r<0\textup{)}.
+\]
+\end{lemma}
+
+\begin{proof}
+The proof of Lemma~\ref{lem:uniformtransfer} applies with the following
+changes; we write $A_3:=2+A_2$ and $a_{\min}:=\min_{j\in F}|a_j|$.  The
+first-order terms vanish as there: $\lin_b(A)=rb(\zh)=0$ and
+$\lin_m(W_m)=0$ by Lemma~\ref{lem:algebra}.
+
+\emph{Base.}  If $c_\flat A_0\le a_{\min}$, then $|rb_j|\le c_\flat t\|b\|_1
+\le|a_j|$ on $F$, so no flips occur; off $F$, $rb_j$ is $z_j$-signed on $K$
+(side condition and sign of $r$) and vanishes elsewhere, so
+$|rb_j|-z_jrb_j=0$.  By Lemma~\ref{lem:bookkeeping}(b),
+$G_b(a+rb)=\nu\Psi(rU^*b/\nu)$, and as $\|rU^*b\|/\nu\le c_\flat\|U\|A_0/\nu
+\le\frac12$ (a further condition on $c_\flat$), Lemma~\ref{lem:base} gives
+$G_b(a+rb)\le\hat G_b:=\frac{r^2}2h(b)(1+K'_Ac_\flat)$, $K'_A:=2\|U\|A_0/\nu$.
+The relative error is now $O(c_\flat)$ instead of $O(|r|)$.
+
+\emph{Blocks.}  Since $\|\Phi_m\|_2\le\frac12$ and $\|\omega_m\|_\infty\le
+A_3/t$, we have $|d_m|\le\|D_m\omega_m\|_2\le A_3/(2t)$.  If $c_\flat\le
+\min(\frac14,\gamma_B/(2A_2),C_{\min}/(2A_3))$, then $|r|\le c_\flat t$ lies
+below the bound of Lemma~\ref{lem:block}(d) (the coordinates of the first
+kind allow $t/4$, those of the second kind $\gamma_Bt/(2A_2)$), so
+$G_m(W_m)\le\hat G_m:=\frac{r^2}2H_m(\omega_m)(1+2A_3c_\flat/C_{\min})$.
+
+\emph{Rebalancing.}  Now $\|W_m-w_m\|_\infty\le|r|(\|\omega_m\|_\infty+|d_m|)
+\le2A_3c_\flat$ and $\|D_m(W_m-w_m)\|_2\le A_3c_\flat$; in the conditions on
+$c_\flat$ in the proof of Lemma~\ref{lem:uniformtransfer} replace $3c_\flat$
+and $2c_\flat$ by $2A_3c_\flat$.  In the error of
+Proposition~\ref{prop:rebalancing}, $|q^*(A)-1|+q^*(A-a)\le2q^*(rb)\le
+2(1+\|U\|)c_\flat A_0$, so the term
+$2|I|K_3K_Y(1+\|U\|)A_0|r|^3$ becomes $2|I|K_3K_Y(1+\|U\|)A_0c_\flat r^2$,
+and $8K_3K_yc_\flat r^2/C_{\min}$ becomes $4K_3K_yA_3c_\flat r^2/C_{\min}$.
+All new relative errors are $O(c_\flat)r^2$ with constants depending only on
+$f$, $A_0$, $A_2$, $\gamma_B$.  Choose $\eta_1$ as there, then $c_\flat$ so
+small that, besides the conditions above, these $O(c_\flat)$ terms and
+$\Gamma_w(b,\omega)\cdot(K'_A+2A_3/C_{\min})c_\flat\le2(K'_A+2A_3/C_{\min})
+c_\flat$ contribute at most $\frac{r^2}2\cdot\frac{\varepsilon_{\rm tr}}2$,
+and then $t_1$ so small that the terms of order $r^4$ contribute at most
+$\frac{r^2}2\cdot\frac{\varepsilon_{\rm tr}}4$.
+\end{proof}
+
+\begin{lemma}[Averaging functionals]\label{lem:avgfunctionals}
+In Theorem~\ref{thm:windowed} the certificates may be replaced by
+arbitrary functionals: if, for every $j$ and every scale
+$t\in\{t^{(j)}2^{1-i}:1\le i\le n_j\}$, $g_t\in X^*$ satisfies
+\textup{(i)} $p^*(f+rg_t)\le1+\frac{r^2}2(1+\eta_0)$ for $|r|\le c_\flat t$
+and \textup{(ii)} $p^*(g-g_t)\le K_jt$, then for $\bar g_j:=\frac1{n_j}
+\sum_ig_{t^{(j)}2^{1-i}}$ and all large $j$, $\rho\bar g_j\in\Cset(f)$ and
+$p^*(\rho\bar g_j-\rho g)\le2\rho K_jt^{(j)}/n_j\to0$.
+\end{lemma}
+
+\begin{proof}
+The proof of Theorem~\ref{thm:windowed} up to ``Hence $\rho g_c\in
+\Cset(f)$'' uses only (i), (ii), $g\in\Cset(f)$ and the convexity of
+$p^*$; and $p^*(\bar g_j-g)\le\frac1{n_j}\sum_iK_jt^{(j)}2^{1-i}\le
+2K_jt^{(j)}/n_j$.
+\end{proof}
+
+\begin{theorem}[Exactly swallowed signatures]\label{thm:S}
+For the operator of Definition~\ref{def:SLD} and every $N\ge1$,
+$\mathcal R_S\subseteq\Rec$.  In particular every first row with finite
+base support satisfying \textup{(W$^\star$)}, \textup{(H2)} and
+\textup{(H3)} whose set of exactly swallowed signature sets is finite is
+recoverable, whatever its contact set and its blocks.
+\end{theorem}
+
+\begin{proof}
+Let $f\in\mathcal R_S$, $g\in\Cset(f)$ and $\rho\in(0,1)$.  Choose
+$\eta_0\in(0,2]$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$, put
+$\kappa_0:=\frac12(\sqrt{1+\eta_0/2}-1)$ and $\varepsilon_{\rm tr}:=
+\eta_0/2$, and choose $\eta\le\eta_*$ with $\eta_\Gamma(\eta)\le1$ and
+$\sqrt{1+\eta_\Gamma(\eta)}\le1+\kappa_0$.  Let $A^\star_0,A_2,
+\gamma_{\mathcal B}$ be as in Lemma~\ref{lem:windowtwopiece}, and
+$c_\flat,t_1$ as in Lemma~\ref{lem:onesidedtransfer} for
+$(\varepsilon_{\rm tr},A^\star_0,A_2,\gamma_{\mathcal B})$.  By (W$^\star$)
+choose window indices $l_1<l_2<\cdots$ with
+$\Lambda^\star_f(l_j)/(l_j2^{l_j^3}\Lambda^\circ(l_j))\to0$; by (P3),
+$\Lambda^\star_f(l_j)T_{\rm hi}(l_j)\to0$ and $n^w_{l_j}/\Lambda^\star_f
+(l_j)\to\infty$.  Hence for $j$ large and every $t\in\mathcal W(l_j)$:
+$l_j\ge l_f$, $t\le\min(t_\eta,t_1,1)$, $C_fK_\star t\le1$ and
+$K^\star_4t\le\kappa_0$.
+
+For $j$ large and each dyadic scale $t_i:=T_{\rm hi}(l_j)2^{1-i}$, $1\le
+i\le n_j:=n^w_{l_j}$, take a two-sided decomposition of $g$ at scale $t_i$
+(Lemma~\ref{lem:twosided}) and let $D_i=(b^\pm_i,\omega^\pm_i)$ and
+$g_i:=g_{t_i}$ be given by Lemma~\ref{lem:windowtwopiece}.  By its part (c),
+$\Gamma_w(b^\pm_i,\omega^\pm_i)\le(1+2\kappa_0)^2=1+\eta_0/2\le2$; with parts
+(a) and (d), Lemma~\ref{lem:onesidedtransfer} applies to the $+$ data for
+$0<r\le c_\flat t_i$ and to the $-$ data for $-c_\flat t_i\le r<0$, and both
+represent $g_i$.  Hence $p^*(f+rg_i)\le1+\frac{r^2}2(1+\eta_0)$ for
+$|r|\le c_\flat t_i$, and $p^*(g-g_i)\le(1+\|U\|)K^\star_2t_i$.  Put
+$K_j:=(1+\|U\|)K^\star_2$ (computed at $l_*=l_j$); as $K_j$ is a constant
+times $\Lambda^\star_f(l_j)$, $n_j\ge24\rho^2K_j/(c_\flat(1-\rho^2))$ and
+$K_jT_{\rm hi}(l_j)/n_j\to0$ for $j$ large.  By
+Lemma~\ref{lem:avgfunctionals}, $\rho\bar g_j\in\Cset(f)$ and
+$\rho\bar g_j\to\rho g$, where $\bar g_j:=\frac1{n_j}\sum_ig_i$.
+
+The averaged data $\bar D_j:=\frac1{n_j}\sum_iD_i$ are $d$-neutral two-piece
+data for $\bar g_j$: the sign conditions on $K$, the vanishing off $F\cup
+K$, the finite supports in $Q_m$, the two representations and $\Delta d_m=0$
+are preserved under averaging.  As $\Gamma_w$ is convex,
+$\kappa_w(\bar D_j)\le1+\eta_0/2$, so the data $\rho\bar D_j$ of
+$\rho\bar g_j$ are $d$-neutral with $\kappa_w\le\rho^2(1+\eta_0/2)\le1$.
+Corollary~\ref{cor:D1} gives $(f,\rho\bar g_j)\in\cl\NA$.  Letting
+$j\to\infty$ and then $\rho\to1$, $(f,g)\in\cl\NA$.
+\end{proof}
+
+\begin{remark}[On Theorem~\ref{thm:S}]\label{rem:S}
+(a) Nothing in $f$ is moved: the unpinned switching of each mate is kept in
+the two-piece part of the data, and the engineering of
+Section~\ref{sec:engineered} (Corollary~\ref{cor:D1}), which accepts any
+contact set and any block structure but needs \emph{exact} two-piece data,
+does the rest.  This proves the heuristic of Remark~\ref{rem:lemmaZ}(d)
+for exact, finitely generated (or resonant and $d$-neutral) swallowing,
+under \textup{(W$^\star$)}, \textup{(H2)}, \textup{(H3)}.
+
+(b) Exact $d$-neutrality of the switching is essential for this
+construction: data with $\Delta d_m\neq0$ would need $-\Delta d_mR_m^*w_m$
+inside $b^+-b^-$, and $R_m^*w_m$ has signature mass on roomy good signature
+sets, where it is not $z$-signed.  By Lemma~\ref{lem:badpeaks}, one pinned
+non-degenerate peak makes the switching $d$-neutral up to $O(K_\star t)$,
+which the projection of Lemma~\ref{lem:exactswitch} makes exact.
+
+(c) Not covered (open): infinitely many exactly swallowed carriers that are
+not resonant or not $d$-neutral (the Hoffman constants of the growing
+finite systems are then not controlled by the window lengths; this is a
+limitation of the method); bad degenerate peaks with the swallowing sign
+(failure of (H3): one-sided peak usage is not two-piece data); and
+\emph{approximate} swallowing ($\mathfrak r_l>0$ but too small for
+(W$^\pm$)), where the switching is $z$-signed only up to first-order errors
+and Corollary~\ref{cor:D1} does not apply.  \textup{(BT)} points are
+covered by Corollary~\ref{cor:BTrecovered} in any case.
+\end{remark}

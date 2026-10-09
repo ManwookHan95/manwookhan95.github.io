@@ -1,0 +1,229 @@
+
+\subsection{Toward Lemma Z}\label{subsec:towardZ}
+This subsection collects what is proved about Lemma~Z beyond
+Theorem~\ref{thm:R0}.  Three recovery theorems are proved:
+Theorem~\ref{thm:Bstar} (mates pinned on long windows are recovered at
+every first row with finite base support),
+Theorem~\ref{thm:Bpm} (signature room may be \emph{sign-mixed}: cofinite
+contact sets are allowed) and Theorem~\ref{thm:S} (first rows whose
+signature sets are \emph{exactly} swallowed by finitely many, or by
+resonant and $d$-neutral, contact patterns are recovered without
+approximating the first row).  The remaining cases are listed in
+Problem~\ref{prob:lemmaZper} and Remark~\ref{rem:openZ}.  Several statements
+are only sketched; they are labelled as such and are not used.
+
+Local notation: $\phi_z$, the split fractions $\chi$, the sign-mixed rooms
+$\mathfrak r_l,\mathfrak r^\star_l$, the products $\Lambda^\pm_f,
+\Lambda^\star_f$, the swallowing signs $\epsilon_l$, the switching
+amplitudes $\tau_l$, the weights $\mathfrak q_l$, the cost $\mathfrak c$
+and the remainders $\mathfrak e_\pm,\mathfrak f^\pm_j,\mathfrak g_j$ are
+local to this subsection.
+
+\subsubsection*{Tools valid for every admissible operator}
+In Lemmas~\ref{lem:phicalc}--\ref{lem:boundedfree} the operator $T$ is
+admissible and otherwise arbitrary, $I$ is finite, $f\in S_{p^*}$ has
+forced data as in Section~\ref{sec:setting}, $g\in\Cset(f)$, $t>0$, and
+$(B_\pm,\Theta_\pm)$ is a two-sided decomposition of $g$ at scale $t$
+(Lemma~\ref{lem:twosided}).  We write $\Delta B:=B_+-B_-$,
+$\Delta\Theta:=\Theta_+-\Theta_-$ and
+$\Delta\theta_{k,m}:=\lambda_{k,m}\Delta\Theta_m(k)$; since
+$R_m^*W=\sum_k\lambda_{k,m}W(k)u_{k,m}$,
+\begin{equation}\label{eq:DeltaB}
+ \Delta B=-L^*\Delta\Theta=-\sum_{m\in I}\sum_k\Delta\theta_{k,m}u_{k,m},
+\end{equation}
+and for the operator of Definition~\ref{def:SLD}, $\Delta\theta_{k,m}=
+\Delta\theta_{\mathfrak j(k,m)}$ in the notation of the previous subsections.
+For $|z|\le1$ and $x\in\R$ put $\phi_z(x):=|x|-zx$.
+
+\begin{lemma}[The functions $\phi_z$]\label{lem:phicalc}
+Let $|z|\le1$, $x,y,r,c\in\R$ and $v\ge0$.
+\begin{enumerate}
+\item[(a)] $\phi_z(x)\ge(1-|z|)|x|\ge0$; if $|z|=1$, then $\phi_z(x)=2(zx)_-$
+and $\phi_{-z}(x)=2(zx)_+$.
+\item[(b)] $\phi_z(x-y)\le\phi_z(x)+\phi_{-z}(y)$ and
+$|x|+|y|\le|x-y|+\phi_z(x)+\phi_{-z}(y)$.
+\item[(c)] $|\phi_z(x+r)-\phi_z(x)|\le2|r|$.
+\item[(d)] $\phi_z(-cv)=|c|v(1+z\sgn c)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $|x|-zx\ge|x|-|z||x|$; if $|z|=1$, $|x|=|zx|$.  (b) $\phi_z(x-y)=
+|x-y|-zx+zy\le|x|-zx+|y|+zy$; and the difference of the two sides of the
+second inequality is $|x-y|-z(x-y)\ge0$.  (c) $\big||x+r|-|x|\big|\le|r|$
+and $|zr|\le|r|$.  (d) $|cv|+zcv=|c|v(1+z\sgn c)$.
+\end{proof}
+
+\begin{lemma}[Switching budget]\label{lem:switchbudget}
+\[
+ \sum_{j\notin F}\phi_{z_j}(B_+(j))\le\frac t{2q_0},\qquad
+ \sum_{j\notin F}\phi_{-z_j}(B_-(j))\le\frac t{2q_0},\qquad
+ \sum_{j\notin F}\phi_{z_j}(\Delta B(j))\le\frac t{q_0}.
+\]
+Consequently $\sum_{j\in K}2(z_j\Delta B(j))_-\le t/q_0$ and
+$\sum_{j\notin F}(1-|z_j|)|\Delta B(j)|\le t/q_0$; in particular
+$\sum_{j\in J_\gamma}|\Delta B(j)|\le t/(\gamma q_0)$ for $\gamma\in(0,1)$.
+\end{lemma}
+
+\begin{proof}
+The derivation of \eqref{eq:budget} in the proof of
+Lemma~\ref{lem:budget} uses only Lemma~\ref{lem:bookkeeping}(a),
+$g(\xi)=0$ and $s(t)-1\le t^2/2$, so it holds for every $t>0$; as the
+block excesses are nonnegative, $q_0G_b(a+tB_+)\le t^2/2$.  By
+Lemma~\ref{lem:bookkeeping}(b), $G_b(a+tB_+)\ge\sum_{j\notin F}
+(|tB_+(j)|-z_jtB_+(j))=t\sum_{j\notin F}\phi_{z_j}(B_+(j))$.  The $-$ side
+is the same with $-B_-$ in place of $B_+$, and $\phi_z(-x)=\phi_{-z}(x)$.
+The third inequality follows from Lemma~\ref{lem:phicalc}(b), the
+consequences from Lemma~\ref{lem:phicalc}(a).
+\end{proof}
+
+\begin{remark}[What the budget does not say]\label{rem:budgetgloss}
+The budget controls the $\ell_1$-mass of $\Delta B$ off $F$ only where
+$z$ keeps room.  On contacts $\Delta B$ is $z$-signed up to $\ell_1$-mass
+$t/(2q_0)$, but near contacts the $\ell_1$-mass of $\Delta B$ off $F\cup K$
+need not be $O(t)$: if $z_j=1-1/j$ on an infinite set of coordinates
+$j\notin F$, a switching $\Delta B(j)=c_j\ge0$ there is charged only
+$\sum_jc_j/j$.  Only the $\phi_{z}$-weighted mass is $O(t)$ in general.
+\end{remark}
+
+\begin{lemma}[Split lemma]\label{lem:split}
+Suppose $\Delta B1_{F^c}=V+e$ with $e\in\ell_1$ and $V\in\ell_1$ supported
+in $K$ and $z$-signed \textup{(}$z_jV(j)\ge0$\textup{)}.  Then there are
+$\chi:K\to[0,1]$ and $\mathfrak e_\pm\in\ell_1(F^c)$ with
+\[
+ B_+1_{F^c}=\chi V+\mathfrak e_+,\qquad B_-1_{F^c}=-(1-\chi)V+\mathfrak e_-,
+ \qquad\|\mathfrak e_\pm\|_1\le\|e\|_1+\frac t{q_0}.
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $j\notin F$ and put $x:=B_+(j)$, $y:=B_-(j)$, so $x-y=V(j)+e(j)$.  If
+$V(j)=0$, let $\chi_j:=0$, $\mathfrak e_+(j):=x$, $\mathfrak e_-(j):=y$; by
+Lemma~\ref{lem:phicalc}(b), $|x|,|y|\le|x|+|y|\le|e(j)|+\phi_{z_j}(x)+
+\phi_{-z_j}(y)$.  If $V(j)\ne0$, then $|z_j|=1$; put $X:=z_jx$,
+$Y:=z_jy$, $v:=z_jV(j)=|V(j)|>0$, so that $X-Y=v+z_je(j)$, and
+$\phi_{z_j}(x)=2X_-$, $\phi_{-z_j}(y)=2Y_+$ by Lemma~\ref{lem:phicalc}(a).
+Let $\chi_j:=\min(1,\max(0,X/v))$, $\mathfrak e_+(j):=x-\chi_jV(j)=
+z_j(X-\chi_jv)$ and $\mathfrak e_-(j):=y+(1-\chi_j)V(j)=z_j(Y+(1-\chi_j)v)$.
+Then $|\mathfrak e_+(j)|=\dist(X,[0,v])\le X_-+(X-v)_+\le X_-+Y_++|e(j)|$,
+because $X-v=Y+z_je(j)$.  If $0<\chi_j<1$, then $|\mathfrak e_-(j)|=
+|Y+v-X|=|e(j)|$; if $\chi_j=0$ ($X\le0$), then $|\mathfrak e_-(j)|=
+|X-z_je(j)|\le X_-+|e(j)|$; if $\chi_j=1$ ($X\ge v$), then $|\mathfrak
+e_-(j)|=|Y|$ and $Y=X-v-z_je(j)\ge-|e(j)|$, so $|Y|\le Y_++|e(j)|$.  In all
+cases $|\mathfrak e_\pm(j)|\le|e(j)|+\phi_{z_j}(B_+(j))+\phi_{-z_j}(B_-(j))$;
+sum over $j\notin F$ and use Lemma~\ref{lem:switchbudget}.
+\end{proof}
+
+Thus, when the switching difference is a $z$-signed contact vector up to
+$e$, the $+$ side carries the fraction $\chi$ of it and the $-$ side the
+complementary fraction with the opposite sign, coordinatewise.
+
+\begin{lemma}[Peak pinning of the shift]\label{lem:peakshift}
+Let $\eta\le\eta_*$, $0<t\le\min(t_\eta,1)$, and let $d_{\pm,m}$,
+$\omega_{\pm,m}$ be as in Lemma~\ref{lem:suplevel};
+put $\Delta d_m:=d_{+,m}-d_{-,m}$.  For every peak $k\in P_m$, with
+$\varsigma_k:=\sgn w_m(k)$,
+\begin{equation}\label{eq:peakshift}
+ |\omega_{+,m}(k)|+|\omega_{-,m}(k)|=-\varsigma_k\Delta\Theta_m(k)-
+ \Delta d_mM_m\ \ge0,
+\end{equation}
+and if $\alpha_m(k)\ne0$, the left side is at most
+$t/(\sigma_m|\alpha_m(k)|)$, so that
+\[
+ -|\Delta\Theta_m(k)|-\frac t{\sigma_m|\alpha_m(k)|}\le\Delta d_mM_m\le
+ |\Delta\Theta_m(k)|.
+\]
+Moreover
+\begin{equation}\label{eq:didentity}
+ \Delta d_mM_m=\frac1{mC_m}\sum_k\Phi_m(k)w_m(k)\Delta\theta_{k,m}+r_m,
+ \qquad|r_m|\le\frac{2t}{\sigma_m}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Drop $m$.  By Lemma~\ref{lem:suplevel}(c), $\varsigma_k\omega_+(k)\le0\le
+\varsigma_k\omega_-(k)$, so $|\omega_+(k)|+|\omega_-(k)|=\varsigma_k(\omega_-
+-\omega_+)(k)$; and $\omega_--\omega_+=-\Delta\Theta-\Delta d\,w$ with
+$w(k)=\varsigma_kM$.  This is \eqref{eq:peakshift}.  By
+Lemma~\ref{lem:suplevel}(c) also $|\alpha(k)||\omega_\pm(k)|\le t/(2\sigma)$
+for each sign, which gives the bound when $\alpha(k)\ne0$.  For
+\eqref{eq:didentity}: by Lemma~\ref{lem:suplevel}(d), $\Delta d=d(\omega_+)-
+d(\omega_-)+r'$ with $|r'|\le2t/\sigma$; since $d(w)=\|Dw\|_2^2/C=C$,
+$d(\omega_+)-d(\omega_-)=d(\Delta\Theta)+C\Delta d$, hence $\Delta d\,M=
+\ip{Dw}{D\Delta\Theta}/C+r'$, and $\ip{Dw}{D\Delta\Theta}=\sum_k\Phi(k)^2w(k)
+\Delta\Theta(k)=\frac1m\sum_k\Phi(k)w(k)\Delta\theta_k$ because
+$\lambda_k=m\Phi(k)$.
+\end{proof}
+
+Since $\|\alpha_m\|_1=1$, every block has a non-degenerate peak, so the
+uniform shift $\Delta d_m$ is controlled by the switching at a single
+non-degenerate peak; Proposition~\ref{prop:pinned}(c) used all
+coordinates of the block.
+
+\begin{lemma}[Flips on the base support]\label{lem:flip}
+Here $F$ may be infinite.  For $j\in F$ put
+\[
+ \mathfrak f^+_j:=\Big(-\sgn(a_j)B_+(j)-\frac{|a_j|}t\Big)_+,\quad
+ \mathfrak f^-_j:=\Big(\sgn(a_j)B_-(j)-\frac{|a_j|}t\Big)_+,\quad
+ \mathfrak g_j:=\Big(\sgn(a_j)B_+(j)-\frac{2|a_j|}t\Big)_+ .
+\]
+Then $\sum_{j\in F}\mathfrak f^\pm_j\le t/(4q_0)$ and $\mathfrak g_j\le
+|\Delta B(j)|+\mathfrak f^-_j$; and the clamp $b^{\rm cl}(j):=\sgn(B_+(j))
+\min(|B_+(j)|,2|a_j|/t)$ $(j\in F)$ satisfies
+\[
+ \|(B_+-b^{\rm cl})1_F\|_1\le\|\Delta B1_F\|_1+\frac t{2q_0}.
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:bookkeeping}(b) and \eqref{eq:baseidentity}, the flip
+part of $G_b(a+tB_+)$ is $\sum_{j\in F}2(-\sgn(a_j)tB_+(j)-|a_j|)_+=
+2t\sum_j\mathfrak f^+_j$, and all other parts are nonnegative; as in the
+proof of Lemma~\ref{lem:switchbudget}, $G_b(a+tB_+)\le t^2/(2q_0)$.  The
+$-$ side ($-B_-$ in place of $B_+$) gives $2t\sum_j\mathfrak f^-_j\le
+t^2/(2q_0)$.  If $\mathfrak g_j>0$, then $\sgn(a_j)B_+(j)=2|a_j|/t+\mathfrak
+g_j$ and $\sgn(a_j)B_-(j)\le|a_j|/t+\mathfrak f^-_j$, so
+$\sgn(a_j)\Delta B(j)\ge|a_j|/t+\mathfrak g_j-\mathfrak f^-_j\ge\mathfrak
+g_j-\mathfrak f^-_j$.  Finally $|B_+(j)-b^{\rm cl}(j)|=(|B_+(j)|-2|a_j|/t)_+$,
+which equals $\mathfrak g_j$ if $\sgn B_+(j)=\sgn a_j$ and is at most
+$\mathfrak f^+_j$ otherwise; sum over $j\in F$.
+\end{proof}
+
+So near-flips on $F$ are pinned exactly like contacts: wherever $\|\Delta
+B\|_1=O(Kt)$, clamping the base part on $F$ at $2|a_j|/t$ costs $O(Kt)$.
+
+\begin{lemma}[Bounded free switching]\label{lem:boundedfree}
+Let $F$ be finite, $\eta\le\eta_*$ with $\eta_\Gamma(\eta)\le1$ and
+$0<t\le\min(t_\eta,1)$.  For every finite set $\mathcal U$ of pairs $(k,m)$,
+$m\in I$, there is $C_{\mathcal U}<\infty$, depending only on $f$ and $\mathcal U$, such that
+\[
+ \max_{(k,m)\in\mathcal U}|\Delta\theta_{k,m}|\le C_{\mathcal U}\Big(1+\Big\|\sum_{(k,m)\notin\mathcal U}
+ \Delta\theta_{k,m}u_{k,m}\Big\|_1\Big).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $P^\perp$ be the orthogonal projection of $H$ onto $e^\perp$.  By
+Lemma~\ref{lem:budget}(d), $q_0h(B_\pm)\le\Gamma_w(B_\pm,\Theta_\pm)\le2$,
+i.e.\ $\|P^\perp U^*B_\pm\|\le c_f:=(2\nu/q_0)^{1/2}$.  By
+\eqref{eq:DeltaB},
+\[
+ \Big\|P^\perp U^*\sum_{\mathcal U}\Delta\theta_{k,m}u_{k,m}\Big\|\le2c_f+\|U\|\,
+ \Big\|\sum_{(k,m)\notin\mathcal U}\Delta\theta_{k,m}u_{k,m}\Big\|_1 .
+\]
+The linear map $c\mapsto P^\perp U^*\sum_{\mathcal U}c_{k,m}u_{k,m}$ on $\R^{\mathcal U}$ is
+injective: if it vanishes, then $U^*\sum_{\mathcal U}c_{k,m}u_{k,m}$ is a multiple of
+$e=U^*a/\nu$, so $\sum_{\mathcal U}c_{k,m}u_{k,m}=\mu a$ for some $\mu$ ($U^*$ is
+injective); the left side lies in $Y$ and $a\in c_{00}$, so both sides
+vanish by (T-c), and then $T\big(\sum_{\mathcal U}(c_{k,m}/q^*(Te_{k,m}))e_{k,m}
+\big)=0$ forces $c=0$ by (T-b).  An injective linear map on a
+finite-dimensional space is bounded below.
+\end{proof}
+
+For the operator of Definition~\ref{def:SLD} and a finite set $\mathcal U$ of ladder
+indices, the lemma says: if all carriers outside $\mathcal U$ are pinned on a window
+($\sum_{l\notin\mathcal U}|\Delta\theta_l|\le Kt$), then the switching through $\mathcal U$
+is \emph{bounded}, not merely box-bounded ($|\Delta\theta_l|\le6\lambda_l/t$,
+Lemma~\ref{lem:box}).  This is far from pinning, which on the window
+$\mathcal W(l_*)$ requires $|\Delta\theta_l|\lesssim KT_{\rm lo}(l_*)$ at
+the bottom scale.

@@ -1,0 +1,169 @@
+
+\subsubsection*{Sketches and limits}
+The following statements are recorded for orientation; those labelled
+\emph{sketch} have not been written out and are not used.
+
+\begin{remark}[Infinite base support with room; sketch]\label{rem:Binf}
+\emph{Claim (sketch).}  For the operator of Definition~\ref{def:SLD} and
+every $N$, every $f\in S_{p^*}$ satisfying \textup{(SR)}, with $F$ possibly
+infinite, is in $\Rec$; more generally Theorem~\ref{thm:Bstar} should hold
+for window-pinned mates at first rows with arbitrary $F$.  The intended
+changes to the proof of Theorem~\ref{thm:R0} are: (i) in the window
+certificate replace $B_+1_F$ by the clamp $b^{\rm cl}$ of
+Lemma~\ref{lem:flip}, which by that lemma and
+Proposition~\ref{prop:pinned}(a) costs $O(Kt)$ (near-flips are pinned like
+contacts); truncate it to a finite $F_t\subseteq F$ with $\sum_{F\setminus
+F_t}|a_j|\le t^2$ (cost $\le2t$) and balance it with a multiple of
+$a1_{F_t}$, so that the base part is finitely supported with
+$|b_t(j)|\le3|a_j|/t$, and Lemma~\ref{lem:finitebase} is no longer needed;
+(ii) Lemma~\ref{lem:uniformtransfer} with (C-a) replaced by
+$|b_j|\le3|a_j|/t$ and $\Gamma_w\le2$ (no flips for $|r|\le c_\flat t$ if
+$c_\flat<\frac13$; the base relative error becomes $O(c_\flat)$, as in
+Lemma~\ref{lem:onesidedtransfer}); (iii) Theorem~\ref{thm:windowed} up to
+its last step; (iv) for the last step, Theorem~\ref{thm:transfer} for
+$a\in\ell_1\setminus c_{00}$ and finitely supported $b$.  Step (iv) is not
+proved in this note.  Problem~\ref{prob:infiniteF} therefore remains open
+as stated.
+\end{remark}
+
+\begin{remark}[Finitely swallowed points with exact free resources; sketch]\label{rem:thmM}
+Let $F$ be finite and let $\mathcal U\subseteq\mathcal L_N$ be finite and
+\emph{closed under slaving}: if $l'\in\mathcal U$ and $\supp y_{l'}\cap
+S_l\ne\emptyset$, then $l\in\mathcal U$ (the closure of a finite set is
+finite, since then $l<l'$ by allowedness (a) and targets are finitely
+supported).  Assume \textup{(SR)} for $l\notin\mathcal U$, and
+(E1) every $l\in\mathcal U$ is a strict non-peak, (E2) $\supp u_l\setminus
+F\subseteq K$ for $l\in\mathcal U$.  \emph{Claim (sketch; an argument of
+the referee of the underlying notes): $f\in\Rec$.}  On each window the
+carriers outside $\mathcal U$ are pinned as in
+Proposition~\ref{prop:pinned}; the free switching through $\mathcal U$ is
+bounded (Lemma~\ref{lem:boundedfree}) and violates the finitely many
+constraints of the polyhedral cone of exact $d$-neutral resonances
+\[
+ \Big\{\xi\in\R^{\mathcal U}:\ z_j\Big(\sum_{\mathcal U}\xi_lu_l\Big)(j)\ge0\
+ (j\in K_{\mathcal U}),\ \sum_{l\in\mathcal U,\,m(l)=m}\xi_lu_l(\xi)=0\
+ (m\in I)\Big\},\qquad K_{\mathcal U}:=\bigcup_{\mathcal U}\supp u_l
+ \setminus F,
+\]
+by $O(Kt)$ (Lemma~\ref{lem:switchbudget}, and \eqref{eq:didentity} together
+with Lemma~\ref{lem:budget}(a)); Hoffman's bound projects it onto the cone,
+and trimming the $z$-signed contact part of $B_+$ by $O(Kt)$ yields, at
+every window scale, one functional with exact $d$-neutral two-piece data;
+windowed averaging and Corollary~\ref{cor:D1} conclude.  This is close in
+spirit to Theorem~\ref{thm:S} (case ($\mathcal B_{\rm fin}$)), which is
+proved; the trimming step and the corresponding one-sided expansion have
+not been written out here.  The argument extends to finitely many inexact
+coordinates in the free supports, but not to infinitely many
+(e.g.\ near-contacts with $|z_j|\to1$ along a swallowed signature set).
+\end{remark}
+
+\begin{remark}[No design removes swallowing at first order]\label{rem:nodesign}
+Let $T$ be any admissible operator, $F$ finite, $a\in S_{q^*}$ with
+$\supp a=F$, and let $(k,m)$ be a carrier with $u:=u_{k,m}$ not supported
+in $F$.  Put $z_j:=\sgn u(j)$ for $j\in\supp u\setminus F$, $z_j:=\sgn a_j$
+on $F$ and $z_j:=0$ elsewhere, and let $f$ be the first row with forced
+data $(a,z)$ (Remark~\ref{rem:lemmaZ}(c)).  Then $\phi_{z_j}(cu(j))=0$ for
+all $j\notin F$ and $c\ge0$, so a switching $\Delta B=cu1_{F^c}$ costs
+nothing in the base part of the budget (Lemma~\ref{lem:switchbudget}).  For
+designs with private signatures, $z\equiv\epsilon$ off $F$ swallows all
+signature sets at once.  This concerns the \emph{first-order base cost}
+only: it does not place $f$ outside $\Rec$ (compare
+Theorems~\ref{thm:Bpm}, \ref{thm:S} and Corollary~\ref{cor:BTrecovered}).
+Designs can shape the fine structure of the resonances, not remove them.
+\end{remark}
+
+\begin{remark}[Baire category]\label{rem:meagre}
+(a) $S_{p^*}\setminus\Rec$ is meagre, since $\Rec$ contains the residual
+set of (S2) in Section~\ref{sec:status} \cite{PrA}.  (b) The set
+$\{f:F\text{ finite}\}$ is meagre in $S_{p^*}$: by
+Proposition~\ref{prop:continuity}, $\{f:|\supp a|\le n\}$ is closed, and it
+has empty interior, since by Remark~\ref{rem:lemmaZ}(c) any $f$ is the
+limit of first rows with data $(a_\varepsilon,z^{(\varepsilon)})$, where
+$a_\varepsilon$ adds a small mass at a coordinate $j_\varepsilon\notin F$,
+$j_\varepsilon\to\infty$, and $z^{(\varepsilon)}$ differs from $z$ only at
+$j_\varepsilon$.  Hence the norm-attaining first rows and the classes
+$\mathcal R_0$, $\mathcal R_0^\pm$, $\mathcal R_S$ and \textup{(BT)} are
+all meagre: the recovery theorems of this section and of
+Section~\ref{sec:engineered} concern meagre sets, complementary to (a).
+(c) If $(f,\rho g)\notin\cl\NA$, then for some $\varepsilon>0$ the set
+$A_\varepsilon:=\{f'\in S_{p^*}:p^*(f'-f)<\varepsilon,\ \dist(\rho g,
+\Cset(f'))<\varepsilon\}$ does not meet $\Rec$ (otherwise
+$\dist((f,\rho g),\cl\NA)<2\varepsilon$), hence is meagre.  So a
+counterexample requires a mate that is destroyed by all generic small
+perturbations of $f$; this is compatible with all open cases below, and
+category arguments alone cannot decide Lemma~Z.
+\end{remark}
+
+\subsubsection*{Lemma Z per mate, and what remains}
+
+\begin{problem}[Lemma Z, per mate]\label{prob:lemmaZper}
+Let $T$ be the operator of Definition~\ref{def:SLD} and $N\ge1$.  Is it
+true that for every $f\in S_{p_N^*}$, every $g\in\Cset(f)$, every $\rho<1$
+and every $\varepsilon>0$ there is $f'\in\mathcal G:=\mathcal R_0^\pm\cup
+\mathcal R_S\cup\mathcal R_{\rm BT}$ with $p_N^*(f'-f)<\varepsilon$ and
+$\dist(\rho g,\Cset(f'))<\varepsilon$?  The approximant $f'$ may depend on
+$g$ and $\rho$.  Here $\mathcal R_{\rm BT}$ is the set of first rows
+satisfying \textup{(BT)}.
+\end{problem}
+
+The answer is positive if and only if $\NA((c_0,p_N),\ell_2^2)$ is dense,
+if and only if Lemma~Z (Problem~\ref{prob:lemmaZ}) holds: $\mathcal
+G\subseteq\Rec$ by Theorems~\ref{thm:Bpm}, \ref{thm:S} and
+Corollary~\ref{cor:BTrecovered}, so the argument of
+Theorem~\ref{thm:reductionZ} applies; conversely, density gives
+norm-attaining approximants, which lie in $\mathcal R_0\subseteq\mathcal
+G$.  The statement holds for the pair $(f,g)$, with norm-attaining $f'$,
+whenever $f\in\mathcal G$ or $g$ is window-pinned at $f$
+(Theorem~\ref{thm:Bstar} and Lemma~\ref{lem:pair}).  It is open for the
+remaining pairs, which we now describe.
+
+\begin{remark}[The remaining open cases for the designed operator]\label{rem:openZ}
+Problem~\ref{prob:lemmaZper} is open for pairs $(f,g)$ with $g$ not
+window-pinned at $f$ and $f\notin\mathcal G$; in particular $f$ violates
+\textup{(BT)}.  If $F$ is finite, $f\notin\mathcal G$ means that
+\textup{(W$^\pm$)} fails and that one of \textup{(W$^\star$)},
+\textup{(H2)}, \textup{(H3)} fails or both \textup{($\mathcal B_{\rm
+fin}$)} and \textup{($\mathcal B_{\rm res}$)} fail.  The mechanisms behind
+these failures are the following (the classes overlap).
+\begin{enumerate}
+\item[(O1)] \emph{Genuinely scale-dependent switching on swallowed
+signature sets} ($F$ finite).  (i) \emph{Approximate swallowing}: the
+rooms $\mathfrak r_l$ (or $\mathfrak r^\star_l$) are positive but decay too
+fast for (W$^\pm$) (or (W$^\star$)); e.g.\ \emph{near-contact tails},
+$|z_j|\to1$ rapidly along $S_l\setminus F$, or contact signs on $S_l
+\setminus F$ that change only far out.  By Remark~\ref{rem:budgetgloss} the
+switching through such carriers is $z$-signed only up to errors whose
+$\ell_1$-mass is not $O(t)$, so neither the window certificate nor
+Corollary~\ref{cor:D1} (which needs exact data) applies.  (ii) \emph{Weak
+or near-threshold free carriers}: unpinned carriers that are not exact
+one-sided resources, such as weak peaks or near-threshold strict non-peaks
+(failure of (E1) in Remark~\ref{rem:thmM}), bad degenerate peaks with the
+swallowing sign (failure of (H3)), or blocks whose non-degenerate peaks
+are all swallowed (failure of (H2)); their one-sided usage has a
+first-order cost, and they are not covered by the exact two-piece data of
+Lemma~\ref{lem:windowtwopiece}.
+\item[(O2)] \emph{Infinitely many swallowed carriers: lower
+semicontinuity along far-lowering approximants.}  For $L$ large let $f^L$
+be the first row with data $(a,z^L)$, $z^L:=0$ on $\bigcup_{l>L}S_l$ and
+$z^L:=z$ elsewhere (Remark~\ref{rem:lemmaZ}(c)).  Since the $S_l$ are
+disjoint, $z^L\to z$ coordinatewise and $f^L\to f$; every $S_l$ with $l>L$
+has full room at $f^L$; and for $l\le L$ the room of $S_l$ and the values
+$u_l(\zh^L)=u_l(\zh)$ are unchanged (allowedness (a)).  At $f$ the fine
+carriers are only box-bounded, $\sum_{l>L}|\Delta\theta_l|\le6c_{L+1}/t$
+(Lemma~\ref{lem:box} and (P2)).  Open: is $\dist(\rho g,\Cset(f^L))\to0$
+(or along some other sequence of finitely swallowed approximants)?  And
+are all finitely swallowed first rows in $\Rec$?  The latter is proved
+under the hypotheses of Theorem~\ref{thm:S}, sketched in
+Remark~\ref{rem:thmM}, and open in case (O1).
+\item[(O3)] \emph{Maximal contact off \textup{(BT)}}: $F$ finite and
+$z\equiv\epsilon$ off $F$.  Every signature set is swallowed, and
+infinitely many bad carriers are not resonant (each target recurs
+infinitely often), so Theorem~\ref{thm:S} does not apply.
+\item[(O4)] \emph{Infinite base support without room}: $F$ infinite and
+\textup{(SR)} (or any substitute) failing.  With room this is
+Remark~\ref{rem:Binf} (sketch).
+\end{enumerate}
+No counterexample is known in any of these classes, and nothing proved here
+points to one.  The density problem remains open for every admissible $T$,
+including the operator of Definition~\ref{def:SLD}.
+\end{remark}

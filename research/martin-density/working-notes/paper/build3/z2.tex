@@ -1,0 +1,196 @@
+
+\subsubsection*{Window-pinned mates}
+From now on $T$ is the operator of Definition~\ref{def:SLD}, $N\ge1$,
+$I=\{1,\dots,N\}$ and $p=p_N$.
+
+\begin{definition}[Window-pinned mates]\label{def:windowpinned}
+Let $f\in S_{p^*}$ have finite base support $F$ and let $g\in\Cset(f)$.  We
+say that $g$ is \emph{window-pinned} at $f$ if there are window indices
+$l_1<l_2<\cdots$ and numbers $K_j\ge1$ with
+\[
+ K_jT_{\rm hi}(l_j)\to0,\qquad n^w_{l_j}/K_j\to\infty,
+\]
+such that for every $j$ and every dyadic scale $t=T_{\rm hi}(l_j)2^{1-i}$,
+$1\le i\le n^w_{l_j}$, some two-sided decomposition of $g$ at scale $t$
+satisfies $\sum_{l\le l_j}|\Delta\theta_l|\le K_jt$.
+\end{definition}
+
+\begin{theorem}[Window-pinned mates are recovered]\label{thm:Bstar}
+Let $T$ be the operator of Definition~\ref{def:SLD}, $N\ge1$, and let
+$f\in S_{p_N^*}$ have finite base support.  If $g\in\Cset(f)$ is
+window-pinned at $f$, then $(f,g)\in\cl\NA((c_0,p_N),\ell_2^2)$.  No
+condition on the contact set, on the room of the signature sets or on
+the blocks of $f$ is needed.
+\end{theorem}
+
+\begin{proof}
+The signature room (SR) and the constant $\gamma$ enter
+Section~\ref{sec:designed} only through Proposition~\ref{prop:pinned}(a),
+via Lemmas~\ref{lem:pinning} and~\ref{lem:triangular} and the constant
+$K_1$; everything else in the proofs of Propositions~\ref{prop:pinned}
+and~\ref{prop:windowcert} and of Theorem~\ref{thm:R0} is valid at every
+$f$ with $F$ finite, given the conclusion of
+Proposition~\ref{prop:pinned}(a).  In detail:
+
+\emph{(1) Pinning.}  Let $l_*:=l_j$, $t$ a dyadic scale of
+$\mathcal W(l_*)$ with $t\le\min(t_\eta,1)$ ($\eta\le\eta_*$), and
+$(B_\pm,\Theta_\pm)$ the decomposition given by
+Definition~\ref{def:windowpinned}.  By Lemma~\ref{lem:box} and (P2),
+$\sum_{l>l_*}|\Delta\theta_l|\le6T_{\rm lo}(l_*)^3/t\le6t^2$, so
+$\sum_l|\Delta\theta_l|\le Kt$ with $K:=K_j+6\le7K_j$, and
+$\|\Delta B\|_1\le Kt$ by \eqref{eq:DeltaB} and $\|u_l\|_1\le1$.  This is
+Proposition~\ref{prop:pinned}(a) with this $K$.  Parts (b) and (c) of
+Proposition~\ref{prop:pinned} are derived in its proof from (a),
+Lemma~\ref{lem:budget}(b) and Lemma~\ref{lem:suplevel} alone, so they hold
+with this $K$.
+
+\emph{(2) Window certificate.}  The proof of
+Proposition~\ref{prop:windowcert} uses $f\in\mathcal R_0$ only through
+Proposition~\ref{prop:pinned}(a)--(c) and the hypothesis $Kt\le1$; all its
+bounds are of the form (constant depending on $f$, $N$ and the
+design)${}\times Kt$.  Hence, if $Kt\le1$, the window certificate $c_t$ of
+this decomposition satisfies (a) and (b) of
+Proposition~\ref{prop:windowcert}, and (c), (d) with $K_2\Lambda_f(l_*)$,
+$K_4\Lambda_f(l_*)$ replaced by $K'_2K$, $K'_4K$, where $K'_2,K'_4$ depend
+only on $f$, $N$ and the design.
+
+\emph{(3) Averaging.}  Fix $\rho\in(0,1)$ and choose $\eta_0,\kappa_0,
+\varepsilon_{\rm tr},A_0,c_\flat,t_1,\eta,t_\star$ as in the proof of
+Theorem~\ref{thm:R0}.  Since $K_jT_{\rm hi}(l_j)\to0$, for all large $j$
+every dyadic scale $t$ of $\mathcal W(l_j)$ satisfies $t\le t_\star$,
+$Kt\le7K_jT_{\rm hi}(l_j)\le1$ and $7K'_4K_jt\le\kappa_0$.  As in the proof
+of Theorem~\ref{thm:R0}, $c_t$ then satisfies (i)--(iii) of
+Theorem~\ref{thm:windowed} with $t^{(j)}:=T_{\rm hi}(l_j)$,
+$n_j:=n^w_{l_j}$ and $K_j$ replaced by $K''_j:=7(1+\|U\|)K'_2K_j$.  Finally
+$n_j/K''_j\to\infty$ and $K''_jt^{(j)}/n_j\le K''_jT_{\rm hi}(l_j)\to0$, so
+Theorem~\ref{thm:windowed} gives $(f,\rho g)\in\cl\NA$.  Let $\rho\to1$.
+\end{proof}
+
+\begin{remark}\label{rem:Bstar}
+(a) At $f\in\mathcal R_0$ every mate is window-pinned, with
+$K_j:=K_1\Lambda_f(l_j)$ (Proposition~\ref{prop:pinned}(a) and the limits
+in the proof of Theorem~\ref{thm:R0}); so Theorem~\ref{thm:R0} is a special
+case of Theorem~\ref{thm:Bstar}.
+
+(b) Window pinning is a property of the \emph{mate}, not of the first row,
+and it is needed only on the $n^w_{l_j}$ dyadic scales of the windows and
+only for coarse carriers.  Consequently Lemma~Z (and density) needs to be
+proved only for pairs $(f,g)$ such that $g$ is not window-pinned at $f$
+(roughly: persistent switching through unpinned carriers on the late
+windows) and, by Theorems~\ref{thm:Bpm} and~\ref{thm:S} below and
+Corollary~\ref{cor:BTrecovered}, $f\notin\mathcal R_0^\pm\cup\mathcal
+R_S\cup\textup{(BT)}$; see Problem~\ref{prob:lemmaZper}.
+\end{remark}
+
+\subsubsection*{Sign-mixed room}
+For $l\in\mathcal L_N$ let $v_l:=\delta_lh_l/n_l$, so that $u_l=v_l$ on
+$S_l$ by (P1), and, for $f$ with $F$ finite, put
+\[
+ \mathfrak r_l:=\min_{\sigma=\pm1}\sum_{s\in S_l\setminus F}v_l(s)
+ (1+\sigma z_s)=\|v_l1_{S_l\setminus F}\|_1-|\ip{v_l1_{S_l\setminus F}}z|,
+ \qquad
+ \Lambda^\pm_f(l):=\prod_{l''\le l,\ l''\in\mathcal L_N}\Big(1+
+ \frac3{\mathfrak r_{l''}}\Big).
+\]
+
+\begin{definition}[Sign-mixed room]\label{def:R0pm}
+$\mathcal R_0^\pm$ is the set of $f\in S_{p^*}$ with $F$ finite,
+$\mathfrak r_l>0$ for every $l\in\mathcal L_N$, and
+\[
+ \textup{(W$^\pm$)}\qquad\liminf_{l\to\infty}\frac{\Lambda^\pm_f(l)}
+ {l\,2^{l^3}\Lambda^\circ(l)}=0 .
+\]
+\end{definition}
+
+\begin{lemma}[Sign-mixed pinning]\label{lem:signmixed}
+Let $f\in S_{p^*}$ have finite base support, $g\in\Cset(f)$, $\eta\le
+\eta_*$, $0<t\le\min(t_\eta,1)$, and let $(B_\pm,\Theta_\pm)$ be a
+two-sided decomposition of $g$ at scale $t$.  For $l\in\mathcal L_N$ put
+$E^\pm_l:=\sum_{s\in S_l\setminus F}\phi_{z_s}(\Delta B(s))$.  Then
+$\sum_lE^\pm_l\le t/q_0$ and
+\[
+ \mathfrak r_l|\Delta\theta_l|\le E^\pm_l+2\sum_{l'>l}\pi_{l',l}
+ |\Delta\theta_{l'}|\qquad(l\in\mathcal L_N).
+\]
+If moreover $\mathfrak r_l>0$ for all $l\in\mathcal L_N$ and
+$t\in\mathcal W(l_*)$, then $\sum_l|\Delta\theta_l|\le(1/q_0+22)
+\Lambda^\pm_f(l_*)\,t$.
+\end{lemma}
+
+\begin{proof}
+The sets $S_l\setminus F$ are disjoint subsets of $F^c$, so $\sum_lE^\pm_l
+\le t/q_0$ by Lemma~\ref{lem:switchbudget}.  By (P1) and
+\eqref{eq:DeltaB}, for $s\in S_l$,
+\[
+ -\Delta B(s)=\Delta\theta_lv_l(s)+r_l(s),\qquad r_l(s):=\sum_{l'>l}
+ \Delta\theta_{l'}y_{l'}(s)/n_{l'} .
+\]
+By Lemma~\ref{lem:phicalc}(c),(d), $|\Delta\theta_l|v_l(s)(1+z_s\sgn
+\Delta\theta_l)=\phi_{z_s}(-\Delta\theta_lv_l(s))\le\phi_{z_s}(\Delta B(s))+
+2|r_l(s)|$.  The sign $\sgn\Delta\theta_l$ is the same for all $s$; summing
+over $s\in S_l\setminus F$ gives $\mathfrak r_l|\Delta\theta_l|$ on the left
+and at most $E^\pm_l+2\sum_{l'>l}\pi_{l',l}|\Delta\theta_{l'}|$ on the right.
+
+For the second statement put $D_l:=|\Delta\theta_l|$ ($D_l=0$ for
+$l\notin\mathcal L_N$), $\Sigma_l:=\sum_{l\le l'\le l_*}D_{l'}$
+($\Sigma_{l_*+1}:=0$) and $X_l:=E^\pm_l+2\sum_{l'>l_*}\pi_{l',l}D_{l'}$.
+Since $\pi_{l',l}\le\|y_{l'}\|_1/n_{l'}\le\frac43$, the first part gives
+$D_l\le(X_l+\frac83\Sigma_{l+1})/\mathfrak r_l$, i.e.\
+$\Sigma_l\le X_l/\mathfrak r_l+(1+\frac8{3\mathfrak r_l})\Sigma_{l+1}$.
+Unrolling from $l_*$ downwards and using $1/\mathfrak r_l\le1+3/\mathfrak
+r_l$,
+\[
+ \Sigma_1\le\Lambda^\pm_f(l_*)\sum_{l\le l_*}X_l\le\Lambda^\pm_f(l_*)
+ \Big(\frac t{q_0}+\frac83\sum_{l>l_*}D_l\Big),
+\]
+by $\sum_l\pi_{l',l}\le\frac43$ (Lemma~\ref{lem:pinning}).  As in the proof
+of Proposition~\ref{prop:pinned}, $\sum_{l>l_*}D_l\le6t^2$; so
+$\sum_lD_l\le\Lambda^\pm_f(l_*)(t/q_0+16t^2)+6t^2\le(1/q_0+22)
+\Lambda^\pm_f(l_*)t$.
+\end{proof}
+
+\begin{theorem}[Sign-mixed room suffices]\label{thm:Bpm}
+For the operator of Definition~\ref{def:SLD} and every $N\ge1$,
+$\mathcal R_0\subseteq\mathcal R_0^\pm\subseteq\Rec$.
+\end{theorem}
+
+\begin{proof}
+\emph{$\mathcal R_0\subseteq\mathcal R_0^\pm$.}  Let $f\in\mathcal R_0$
+with constants $\gamma,\varpi_0$.  For $s\in S_l\cap J_\gamma$ and
+$\sigma=\pm1$, $1+\sigma z_s\ge1-|z_s|\ge\gamma$, and all other summands
+are nonnegative, so $\mathfrak r_l\ge\gamma\|v_l1_{S_l\cap J_\gamma}\|_1=
+\gamma\delta'_l>0$.  Then $1+3/\mathfrak r_l\le1+3/(\gamma\delta'_l)\le
+\frac3{2\gamma}(1+2/\delta'_l)$, so $\Lambda^\pm_f(l)\le(\frac3{2\gamma})^l
+\Lambda_f(l)\le(\frac3{2\gamma})^l\varpi_0^{-l^2}\Lambda^\circ(l)$, and
+(W$^\pm$) holds (even with $\lim$).
+
+\emph{$\mathcal R_0^\pm\subseteq\Rec$.}  Let $f\in\mathcal R_0^\pm$,
+$g\in\Cset(f)$, and choose $l_1<l_2<\cdots$ with $\Lambda^\pm_f(l_j)/
+(l_j2^{l_j^3}\Lambda^\circ(l_j))\to0$.  Put $K_j:=(1/q_0+22)
+\Lambda^\pm_f(l_j)$.  By (P3), $T_{\rm hi}(l)\le2^{-l^3}/(l\Lambda^\circ(l))$
+and $n^w_l\ge l2^{l^3}\Lambda^\circ(l)$, so $K_jT_{\rm hi}(l_j)\to0$ and
+$n^w_{l_j}/K_j\to\infty$.  By Lemma~\ref{lem:signmixed} (with $\eta:=\eta_*$
+and $j$ so large that $T_{\rm hi}(l_j)\le\min(t_\eta,1)$), every two-sided
+decomposition at every scale of $\mathcal W(l_j)$ satisfies
+$\sum_l|\Delta\theta_l|\le K_jt$.  So $g$ is window-pinned at $f$, and
+Theorem~\ref{thm:Bstar} applies.
+\end{proof}
+
+\begin{remark}[Scope of sign-mixed room]\label{rem:Bpm}
+(a) $\mathfrak r_l=0$ iff $z\equiv\epsilon$ on $S_l\setminus F$ for a sign
+$\epsilon$: \emph{exact monochromatic swallowing}.  (b) $\mathfrak r_l\ge
+\sum_{s\in S_l\setminus F}v_l(s)(1-|z_s|)$, so no fixed room constant
+$\gamma$ is needed: near-contacts on signature sets are allowed as long as
+the products $\Lambda^\pm_f$ satisfy (W$^\pm$), e.g.\ when the relative
+rooms decay at most geometrically in $l$.  (c) Contact sets may be
+cofinite.  If $z$ alternates in sign along the increasing enumeration
+$s_0<s_1<\cdots$ of $S_l\setminus F$, then (alternating series)
+$\mathfrak r_l\ge\frac34\,2^{-(s_1-s_0)}\|v_l1_{S_l\setminus F}\|_1$; whether
+(W$^\pm$) then holds depends on the gaps $s_1-s_0$ of the sets $S_l$, which
+Definition~\ref{def:SLD} does not fix (it holds, for instance, if
+$\sum_{l'\le l}(s_1-s_0)(l')=o(l^3)$ along a subsequence).  (d) By
+Corollary~\ref{cor:BTrecovered}, every \textup{(BT)} point is in $\Rec$
+for every admissible $T$ and every contact set; Theorem~\ref{thm:Bpm} (and
+Theorem~\ref{thm:S} below) are new only at first rows violating
+\textup{(BT)}.
+\end{remark}

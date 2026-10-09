@@ -1,0 +1,230 @@
+
+\subsubsection*{Exactly swallowed signature sets}
+By Remark~\ref{rem:Bpm}(a), a first row with $F$ finite fails
+$\mathfrak r_l>0$ exactly when some signature set is swallowed by contacts
+of one sign.  We show that such first rows are recoverable when the
+swallowing is finitely generated, or resonant and $d$-neutral.  The idea
+is to keep the unpinned switching as \emph{exact} two-piece data on every
+window scale (instead of dropping it, as the window certificate does) and
+to let Corollary~\ref{cor:D1} do the engineering.
+
+\begin{definition}[Swallowed carriers]\label{def:swallowed}
+Let $f\in S_{p^*}$ have finite base support.  Put $\mathcal B:=\mathcal
+B(f):=\{l\in\mathcal L_N:\mathfrak r_l=0\}$ (the \emph{bad} carriers) and,
+for $l\in\mathcal B$, let $\epsilon_l\in\{\pm1\}$ be the sign with
+$z\equiv\epsilon_l$ on $S_l\setminus F$, and $\tilde u_l:=\epsilon_lu_l
+1_{F^c}$.  A bad carrier $l$ is \emph{resonant} if $\tilde u_l$ is
+$z$-signed and supported in $K$, and \emph{$d$-neutral} if
+$w_{m(l)}(k(l))=0$ (then $k(l)\in Q_{m(l)}$, as $M_{m(l)}>0$).  The carriers
+in $\mathcal L_N\setminus\mathcal B$ are \emph{good}.  For good $l$ let
+$S^\star_l:=S_l\setminus\big(F\cup\bigcup_{l'\in\mathcal B,\,l'>l}\supp
+y_{l'}\big)$ and $\mathfrak r^\star_l:=\min_{\sigma=\pm1}\sum_{s\in
+S^\star_l}v_l(s)(1+\sigma z_s)$; for bad $l$ let $\mathfrak r^\star_l:=
+2\|v_l1_{S_l\setminus F}\|_1$.  Put $\Lambda^\star_f(l):=\prod_{l''\le l,\,
+l''\in\mathcal L_N}(1+3/\mathfrak r^\star_{l''})$, and for $l\in\mathcal B$
+let
+\[
+ \mathfrak q_l:=\frac{\epsilon_l\Phi_{m(l)}(k(l))\,w_{m(l)}(k(l))}{m(l)C_{m(l)}} .
+\]
+Consider the conditions:
+\begin{enumerate}
+\item[(W$^\star$)] $\mathfrak r^\star_l>0$ for all $l\in\mathcal L_N$, and
+$\liminf_l\Lambda^\star_f(l)/(l2^{l^3}\Lambda^\circ(l))=0$;
+\item[(H1)] $\supp y_{l'}\cap S_l=\emptyset$ whenever $l<l'$ are both in
+$\mathcal B$;
+\item[(H2)] every block $m\in I$ has a peak $k$ with $\alpha_m(k)\ne0$
+and $\mathfrak j(k,m)\notin\mathcal B$;
+\item[(H3)] no $l\in\mathcal B$ has $k(l)$ a degenerate peak of block
+$m(l)$ with $\sgn w_{m(l)}(k(l))=\epsilon_l$;
+\item[($\mathcal B_{\rm fin}$)] $\mathcal B$ is finite;
+\item[($\mathcal B_{\rm res}$)] \textup{(H1)} holds and every $l\in\mathcal
+B$ is resonant and $d$-neutral.
+\end{enumerate}
+$\mathcal R_S$ denotes the set of $f$ with $F$ finite satisfying
+\textup{(W$^\star$)}, \textup{(H2)}, \textup{(H3)}, and
+\textup{($\mathcal B_{\rm fin}$)} or \textup{($\mathcal B_{\rm res}$)}.
+\end{definition}
+
+Under ($\mathcal B_{\rm res}$), (H2) is automatic (every block has a
+non-degenerate peak, and bad carriers are strict non-peaks) and (H3) is
+vacuous.  If $\mathcal B=\emptyset$, then $\mathfrak r^\star_l=\mathfrak r_l$
+and $\mathcal R_S\cap\{\mathcal B=\emptyset\}=\mathcal R_0^\pm$; if
+$\mathcal B\ne\emptyset$, then $f\notin\mathcal R_0^\pm$.  As in the proof
+of Theorem~\ref{thm:Bpm}, (W$^\star$) holds under ($\mathcal B_{\rm fin}$)
+if there are $\gamma\in(0,1)$, $\varpi_0\in(0,1]$ with $\|v_l
+1_{S^\star_l\cap J_\gamma}\|_1\ge\varpi_0^l\delta^\circ_l$ for every good
+$l$ (the finitely many bad factors contribute a constant).
+
+In Lemmas~\ref{lem:modswallow}--\ref{lem:onesidedtransfer}, $f\in S_{p^*}$
+has finite base support, $g\in\Cset(f)$, $\eta\le\eta_*$ with
+$\eta_\Gamma(\eta)\le1$, $l_*$ is a window index, $t\in\mathcal W(l_*)$ with
+$t\le\min(t_\eta,1)$, $(B_\pm,\Theta_\pm)$ is a two-sided decomposition of
+$g$ at scale $t$, $\tau_l:=-\epsilon_l\Delta\theta_l$ for $l\in\mathcal B$
+(the \emph{switching amplitudes}), and
+\[
+ K_\star:=(1/q_0+22)\Lambda^\star_f(l_*).
+\]
+
+\begin{lemma}[Pinning modulo swallowed carriers]\label{lem:modswallow}
+Assume $\mathfrak r^\star_l>0$ for all good $l$.  Then
+\textup{(a)} $\sum_{l>l_*}|\Delta\theta_l|\le6t^2$ and
+$\sum_{l\notin\mathcal B}|\Delta\theta_l|\le K_\star t$;
+\textup{(b)} under \textup{(H1)},
+$\sum_{l\in\mathcal B,\,l\le l_*}(\tau_l)_-\le K_\star t$.
+\end{lemma}
+
+\begin{proof}
+The first bound in (a) is in the proof of Proposition~\ref{prop:pinned}.
+Put $E_l:=\sum_{s\in S_l\setminus F}\phi_{z_s}(\Delta B(s))$; then
+$\sum_lE_l\le t/q_0$ (Lemma~\ref{lem:switchbudget}).
+
+\emph{Good inequalities.}  Let $l$ be good.  For $s\in S^\star_l$, by (P1)
+and \eqref{eq:DeltaB}, $-\Delta B(s)=\Delta\theta_lv_l(s)+\sum_{l'>l,\,l'
+\notin\mathcal B}\Delta\theta_{l'}y_{l'}(s)/n_{l'}$: coarser targets vanish
+on $S_l$ by allowedness (a), other signatures vanish there, and targets of
+bad $l'>l$ vanish on $S^\star_l$ by definition.  As in the proof of
+Lemma~\ref{lem:signmixed},
+\[
+ \mathfrak r^\star_l|\Delta\theta_l|\le E_l+2\sum_{l'>l,\ l'\notin\mathcal B}
+ \pi_{l',l}|\Delta\theta_{l'}| .
+\]
+\emph{Bad inequalities.}  Let $l\in\mathcal B$ and assume (H1).  For $s\in
+S_l\setminus F$, $-\Delta B(s)=\Delta\theta_lv_l(s)+\sum_{l'>l,\,l'\notin
+\mathcal B}\Delta\theta_{l'}y_{l'}(s)/n_{l'}$ by (P1) and (H1), and
+$z_s=\epsilon_l$, so $\phi_{z_s}(-\Delta\theta_lv_l(s))=2(\epsilon_l
+\Delta\theta_l)_+v_l(s)=2(\tau_l)_-v_l(s)$ by Lemma~\ref{lem:phicalc}(a).
+With Lemma~\ref{lem:phicalc}(c),
+\[
+ \mathfrak r^\star_l(\tau_l)_-\le E_l+2\sum_{l'>l,\ l'\notin\mathcal B}
+ \pi_{l',l}|\Delta\theta_{l'}| .
+\]
+\emph{Unified triangular system.}  For coarse $l\in\mathcal L_N$ let
+$x_l:=|\Delta\theta_l|$ if $l$ is good and $x_l:=(\tau_l)_-$ if $l$ is bad
+(in case (a) only good $l$ are used, and $x_l:=0$ for bad $l$).  In every
+inequality the right side contains only \emph{good} later indices, and
+$|\Delta\theta_{l'}|=x_{l'}$ for good coarse $l'$.  With
+$\Sigma_l:=\sum_{l\le l'\le l_*}x_{l'}$ and $X_l:=E_l+2\sum_{l'>l_*}
+\pi_{l',l}|\Delta\theta_{l'}|$ we get $x_l\le(X_l+\frac83\Sigma_{l+1})/
+\mathfrak r^\star_l$, and unrolling as in the proof of
+Lemma~\ref{lem:signmixed},
+\[
+ \sum_{l\le l_*}x_l\le\Lambda^\star_f(l_*)\Big(\frac t{q_0}+\frac83\cdot
+ 6t^2\Big)=\Lambda^\star_f(l_*)\Big(\frac t{q_0}+16t^2\Big).
+\]
+Adding the fine good carriers ($\le6t^2$) gives (a), and the bad part of
+the sum gives (b).
+\end{proof}
+
+\begin{lemma}[Shift and bad peaks]\label{lem:badpeaks}
+Assume \textup{(H2)} and $\mathfrak r^\star_l>0$ for all good $l$.  For
+each block $m$ fix a peak $k^\circ_m$ with $\alpha_m(k^\circ_m)\ne0$ and
+$l^\circ_m:=\mathfrak j(k^\circ_m,m)\notin\mathcal B$, and suppose
+$l_*\ge\max_ml^\circ_m$.  Put $K_d:=\max_m\big(1/(\sigma_m|\alpha_m
+(k^\circ_m)|)+K_\star/\lambda_{l^\circ_m}\big)$.  Then for every block $m$:
+\begin{enumerate}
+\item[(a)] $|\Delta d_m|M_m\le K_dt$;
+\item[(b)] $\big|\sum_{l\in\mathcal B,\,l\le l_*,\,m(l)=m}\mathfrak q_l
+\tau_l\big|\le\big(K_d+2/\sigma_m+2K_\star/(mC_m)\big)t$ if, in addition,
+$\sum_{l\in\mathcal B,\,l>l_*,\,m(l)=m}\mathfrak q_l\tau_l=0$ \textup{(}e.g.\
+if $l_*\ge\max\mathcal B$, or if all bad carriers are $d$-neutral\textup{)};
+\item[(c)] if $l\in\mathcal B$, $l\le l_*$, and $k:=k(l)$ is a peak of
+block $m=m(l)$, then $|\tau_l|\le\lambda_l\big(t/(\sigma_m|\alpha_m(k)|)+
+K_dt\big)$ when $\alpha_m(k)\ne0$, and $\tau_l\le\lambda_lK_dt$ when
+$\sgn w_m(k)=-\epsilon_l$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Lemma~\ref{lem:peakshift} at $k^\circ_m$ gives $|\Delta d_m|M_m\le
+t/(\sigma_m|\alpha_m(k^\circ_m)|)+|\Delta\Theta_m(k^\circ_m)|$, and
+$|\Delta\Theta_m(k^\circ_m)|=|\Delta\theta_{l^\circ_m}|/\lambda_{l^\circ_m}\le
+K_\star t/\lambda_{l^\circ_m}$ by Lemma~\ref{lem:modswallow}(a).
+(b) In \eqref{eq:didentity} split the sum into good carriers (modulus at
+most $K_\star t/(mC_m)$, since $\Phi_m(k)|w_m(k)|\le1$), fine bad carriers
+(zero by assumption) and coarse bad carriers, for which
+$\Phi_m(k(l))w_m(k(l))\Delta\theta_l/(mC_m)=-\mathfrak q_l\tau_l$.  Use (a)
+and $|r_m|\le2t/\sigma_m$.
+(c) By \eqref{eq:peakshift} at $k$, with $\Delta\Theta_m(k)=\Delta\theta_l/
+\lambda_l=-\epsilon_l\tau_l/\lambda_l$ and $\varsigma_k:=\sgn w_m(k)$:
+$\varsigma_k\epsilon_l\tau_l/\lambda_l-\Delta d_mM_m=|\omega_{+,m}(k)|+
+|\omega_{-,m}(k)|\ge0$.  If $\alpha_m(k)\ne0$ the middle term is at most
+$t/(\sigma_m|\alpha_m(k)|)$; if $\varsigma_k=-\epsilon_l$, then
+$\tau_l\le-\lambda_l\Delta d_mM_m$.  Use (a).
+\end{proof}
+
+\begin{lemma}[Exact switching]\label{lem:exactswitch}
+Let $f\in\mathcal R_S$.  There are $C_f<\infty$ and $l_f$, depending only
+on $f$, $N$ and the design, such that for $l_*\ge l_f$ there is
+$\tau'=(\tau'_l)_{l\in\mathcal B,\,l\le l_*}$ with
+\begin{enumerate}
+\item[(a)] $\tau'_l\ge0$; $\tau'_l=0$ when $k(l)$ is a peak; and
+$\sum_{l\in\mathcal B,\,l\le l_*,\,m(l)=m}\mathfrak q_l\tau'_l=0$ for every
+$m$;
+\item[(b)] $V':=\sum_{l\in\mathcal B,\,l\le l_*}\epsilon_l\tau'_lu_l1_{F^c}$
+is $z$-signed and supported in $K$;
+\item[(c)] $\sum_{l\in\mathcal B,\,l\le l_*}|\tau_l-\tau'_l|\le C_fK_\star t$
+and $\|\Delta B1_{F^c}-V'\|_1\le C_fK_\star t$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $l_f\ge\max_ml^\circ_m$ (Lemma~\ref{lem:badpeaks}), and under
+($\mathcal B_{\rm fin}$) also $l_f\ge\max\mathcal B$.
+
+\emph{Case ($\mathcal B_{\rm res}$).}  Put $\tau'_l:=(\tau_l)_+$.  Bad
+carriers are strict non-peaks and $\mathfrak q_l=0$ ($d$-neutrality), so
+(a) holds; $V'=\sum\tau'_l\tilde u_l$ is $z$-signed and supported in $K$
+by resonance; and $\sum|\tau_l-\tau'_l|=\sum(\tau_l)_-\le K_\star t$ by
+Lemma~\ref{lem:modswallow}(b).  By \eqref{eq:DeltaB}, $\Delta B1_{F^c}=
+\sum_{l\in\mathcal B,\,l\le l_*}\tau_l\tilde u_l-\sum_{l\notin\mathcal B}
+\Delta\theta_lu_l1_{F^c}-\sum_{l\in\mathcal B,\,l>l_*}\Delta\theta_lu_l
+1_{F^c}$, so $\|\Delta B1_{F^c}-V'\|_1\le K_\star t+K_\star t+6t^2\le3K_\star t$
+by Lemma~\ref{lem:modswallow}.
+
+\emph{Case ($\mathcal B_{\rm fin}$).}  Every bad carrier is coarse.  Let $T_0:=\bigcup_{l\in\mathcal B}\supp y_l$ (finite), and for
+$\tau\in\R^{\mathcal B}$ put $L_j(\tau):=\sum_{l\in\mathcal B}\epsilon_l
+\tau_lu_l(j)$ and $\mathfrak c(\tau):=\sum_{j\notin F}\phi_{z_j}(L_j(\tau))$.
+For $j\notin F\cup T_0$ the only bad vector that can be nonzero at $j$ is
+the signature of the bad $l$ with $j\in S_l$ (if any), where
+$L_j(\tau)=\epsilon_l\tau_lv_l(j)$ and $z_j=\epsilon_l$.  Hence, by
+Lemma~\ref{lem:phicalc}(a),
+\[
+ \mathfrak c(\tau)=\sum_{l\in\mathcal B}2(\tau_l)_-\mathfrak m_l+\sum_{j\in
+ T_0\setminus F}\phi_{z_j}(L_j(\tau)),\qquad\mathfrak m_l:=\|v_l1_{S_l
+ \setminus(F\cup T_0)}\|_1>0 .
+\]
+Let $\mathcal B_{\rm pk}:=\{l\in\mathcal B:k(l)\in P_{m(l)}\}$ and let
+$\mathcal Z_f\subseteq\R^{\mathcal B}$ be the polyhedral cone defined by
+the finitely many conditions $\tau_l\ge0$ ($l\in\mathcal B$);
+$z_jL_j(\tau)\ge0$ ($j\in T_0\cap K$); $L_j(\tau)=0$ ($j\in T_0\setminus
+(F\cup K)$); $\tau_l=0$ ($l\in\mathcal B_{\rm pk}$); $\sum_{m(l)=m}
+\mathfrak q_l\tau_l=0$ ($m\in I$).  It contains $0$, and every
+$\tau\in\mathcal Z_f$ has $\mathfrak c(\tau)=0$.  By
+Lemma~\ref{lem:phicalc}(a), $\mathfrak c(\tau)\ge2\sum_l\mathfrak m_l
+(\tau_l)_-+2\sum_{T_0\cap K}(z_jL_j(\tau))_-+\sum_{T_0\setminus(F\cup K)}
+(1-|z_j|)|L_j(\tau)|$, so the total violation of the first three groups
+of conditions is at most $C_0\mathfrak c(\tau)$, with $C_0$ depending only
+on $f$.  By Hoffman's error bound for systems of linear inequalities
+\cite{Hoffman} there is $C_{\rm H}$, depending only on $f$, with
+\begin{equation}\label{eq:hoffman}
+ \dist_1(\tau,\mathcal Z_f)\le C_{\rm H}\Big(C_0\mathfrak c(\tau)+
+ \sum_{l\in\mathcal B_{\rm pk}}|\tau_l|+\sum_m\Big|\sum_{m(l)=m}\mathfrak
+ q_l\tau_l\Big|\Big)\qquad(\tau\in\R^{\mathcal B}).
+\end{equation}
+Apply this to the actual amplitudes $\tau$.  By \eqref{eq:DeltaB},
+$\Delta B1_{F^c}=\sum_{l\in\mathcal B}\epsilon_l\tau_lu_l1_{F^c}+e_0$ with
+$e_0:=-\sum_{l\notin\mathcal B}\Delta\theta_lu_l1_{F^c}$, $\|e_0\|_1\le
+K_\star t$ (Lemma~\ref{lem:modswallow}(a)); so by Lemmas~\ref{lem:phicalc}(c)
+and~\ref{lem:switchbudget}, $\mathfrak c(\tau)\le t/q_0+2K_\star t$.  For
+$l\in\mathcal B_{\rm pk}$, by (H3) either $\alpha(k(l))\ne0$, and then
+$|\tau_l|\le\lambda_l(t/(\sigma|\alpha(k(l))|)+K_dt)$, or $k(l)$ is
+degenerate with $\sgn w(k(l))=-\epsilon_l$, and then $\tau_l\le
+\lambda_lK_dt$ and $(\tau_l)_-\le\mathfrak c(\tau)/(2\mathfrak m_l)$
+(Lemma~\ref{lem:badpeaks}(c)).  The $d$-sums are bounded by
+Lemma~\ref{lem:badpeaks}(b).  As $K_d\le C'_fK_\star$, the right side of
+\eqref{eq:hoffman} is at most $C_fK_\star t$; let $\tau'$ be a nearest point
+of $\mathcal Z_f$.  Then (a) holds; $\mathfrak c(\tau')=0$ means
+$\phi_{z_j}(V'(j))=0$ for all $j\notin F$, i.e.\ $z_jV'(j)=|V'(j)|$, which
+forces $|z_j|=1$ where $V'(j)\ne0$: (b).  Finally $\|\Delta B1_{F^c}-V'\|_1\le
+\|e_0\|_1+\sum_l|\tau_l-\tau'_l|\,\|u_l\|_1$.
+\end{proof}

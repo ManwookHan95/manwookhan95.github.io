@@ -1,0 +1,51 @@
+\contentsline {section}{\tocsection {}{1}{Setting and standing facts}}{3}{}%
+\contentsline {subsection}{\tocsubsection {}{1.1}{The base, the blocks and Mart\'in's lemmas}}{3}{}%
+\contentsline {subsection}{\tocsubsection {}{1.2}{The norm $p$}}{3}{}%
+\contentsline {subsection}{\tocsubsection {}{1.3}{Elementary structure}}{4}{}%
+\contentsline {subsection}{\tocsubsection {}{1.4}{Smoothness and norm-attaining functionals}}{6}{}%
+\contentsline {subsection}{\tocsubsection {}{1.5}{Mates and the reduction}}{8}{}%
+\contentsline {section}{\tocsection {}{2}{The lower-limit theorem}}{9}{}%
+\contentsline {section}{\tocsection {}{3}{Certificates and the transport theorem}}{10}{}%
+\contentsline {subsection}{\tocsubsection {}{3.1}{Definitions and exact expansions}}{10}{}%
+\contentsline {subsection}{\tocsubsection {}{3.2}{Transport along every sequence}}{13}{}%
+\contentsline {subsection}{\tocsubsection {}{3.3}{Shifted certificates}}{14}{}%
+\contentsline {subsection}{\tocsubsection {}{3.4}{Several rows}}{15}{}%
+\contentsline {section}{\tocsection {}{4}{Averaging over scales}}{15}{}%
+\contentsline {subsection}{\tocsubsection {}{4.1}{The averaging theorem}}{15}{}%
+\contentsline {subsection}{\tocsubsection {}{4.2}{Weighted directions}}{17}{}%
+\contentsline {subsection}{\tocsubsection {}{4.3}{Locally split mates}}{18}{}%
+\contentsline {subsection}{\tocsubsection {}{4.4}{Carriers with non-summable gaps}}{20}{}%
+\contentsline {section}{\tocsection {}{5}{Second-order rebalancing and tame supports}}{21}{}%
+\contentsline {subsection}{\tocsubsection {}{5.1}{Slices, excess and tame points}}{21}{}%
+\contentsline {subsection}{\tocsubsection {}{5.2}{Transfer peaks and the mass-weighted coefficient}}{24}{}%
+\contentsline {subsection}{\tocsubsection {}{5.3}{The sharp second-order coefficient at tame supports}}{26}{}%
+\contentsline {section}{\tocsection {}{6}{The resonance obstruction}}{29}{}%
+\contentsline {subsection}{\tocsubsection {}{6.1}{The linear obstruction}}{29}{}%
+\contentsline {subsection}{\tocsubsection {}{6.2}{An admissible operator with an exact resonance}}{30}{}%
+\contentsline {subsection}{\tocsubsection {}{6.3}{Non-recovery along canonical truncations}}{33}{}%
+\contentsline {subsection}{\tocsubsection {}{6.4}{Exact resonances}}{34}{}%
+\contentsline {section}{\tocsection {}{7}{Engineered approximants}}{35}{}%
+\contentsline {subsection}{\tocsubsection {}{7.1}{Levels, excesses and rebalancing}}{35}{}%
+\contentsline {subsection}{\tocsubsection {}{7.2}{Two-piece data and the exact one-sided coefficient}}{38}{}%
+\contentsline {subsection}{\tocsubsection {}{7.3}{The engineered approximants}}{41}{}%
+\contentsline {subsection}{\tocsubsection {}{7.4}{Engineering without steering}}{45}{}%
+\contentsline {subsection}{\tocsubsection {}{7.5}{Consequences}}{48}{}%
+\contentsline {section}{\tocsection {}{8}{A designed admissible operator}}{50}{}%
+\contentsline {subsection}{\tocsubsection {}{8.1}{The signature-ladder design}}{50}{}%
+\contentsline {subsection}{\tocsubsection {}{8.2}{The class $\mathcal R_0$}}{52}{}%
+\contentsline {subsection}{\tocsubsection {}{8.3}{Two-sided decompositions (any admissible $T$)}}{53}{}%
+\contentsline {subsection}{\tocsubsection {}{8.4}{Signature pinning}}{54}{}%
+\contentsline {subsection}{\tocsubsection {}{8.5}{The window certificate}}{56}{}%
+\contentsline {subsection}{\tocsubsection {}{8.6}{Uniform transfer expansion and windowed averaging}}{57}{}%
+\contentsline {subsection}{\tocsubsection {}{8.7}{Recovery on $\mathcal R_0$ and the reduction to Lemma Z}}{58}{}%
+\contentsline {subsection}{\tocsubsection {}{8.8}{Toward Lemma Z}}{60}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Tools valid for every admissible operator}}{60}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Window-pinned mates}}{63}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Sign-mixed room}}{64}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Exactly swallowed signature sets}}{66}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Sketches and limits}}{72}{}%
+\contentsline {subsubsection}{\tocsubsubsection {}{}{Lemma Z with the enlarged target class, and what remains}}{73}{}%
+\contentsline {section}{\tocsection {}{9}{Status of the density problem}}{74}{}%
+\contentsline {subsection}{\tocsubsection {}{9.1}{What is proved}}{74}{}%
+\contentsline {subsection}{\tocsubsection {}{9.2}{What remains}}{76}{}%
+\contentsline {section}{\tocsection {}{}{References}}{77}{}%
