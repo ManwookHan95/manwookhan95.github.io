@@ -134,3 +134,75 @@ OPEN CORE after Round 2 (all referees agree; nothing points to a counterexample 
   Referee's suggested route: lower |z| on FAR parts of the swallowed signature sets (pinning constant delta' tiny), so that
   at scales well above it f' copies f's mate structure and the windows of f' lie below it (scale decoupling as in P2A); the
   transition band handled by the rho-slack plus Round-2/S3 engineering of the finitely many unpinned carriers (G3 6.3(d)).
+
+## ADDENDUM 4 (Round 4, refereed, and integrated into the note): r4/Z1_*, r4/Z2_*; note = paper/martin_density_note.tex (78 pp)
+The note paper/martin_density_note.tex (Section 8, especially Subsection "Toward Lemma Z", lines ~4700-5845, and Remark rem:openZ)
+is the authoritative, refereed state; use its numbering and notation. Summary:
+- Theorem B* (Z1, refereed): for the SLD T, F finite, every WINDOW-PINNED mate is recovered at ANY f (obstruction is a property of
+  the mate: persistent switching through unpinned carriers).
+- Theorem B± (Z2): sign-mixed room theta_l = ||v_l 1_{S_l\F}|| - |<v_l 1_{S_l\F}, z>| replaces (SR): cofinite contact sets with
+  sign-mixed signatures are in R.
+- Theorem S (Z2, with referee fixes): F finite, finitely many EXACTLY swallowed signature sets (or infinitely many, all resonant and
+  d-neutral, (H1)), under (W*), (H2), (H3): f in R without approximating f. Method = HOFFMAN MATCHING: on each window the free switching
+  violates the finitely many constraints of the polyhedral cone of exact d-neutral resonances by O(K t); Hoffman projection + trimming of
+  the + contact base + theta-split give EXACT two-piece data at every window scale; windowed averaging (G3 5.2) + S3 Cor D1 recover.
+- Theorem M (Z1 referee, SKETCH): finitely swallowed points with exact free resources are in R.
+- Theorem B^inf (Z1, SKETCH): infinite F with room; step (iv) unproved.
+- Far lowerings f^L (z^L := 0 on union_{l>L} S_l): admissible forced data, f^L -> f, every S_l (l > L) roomy at f^L, coarse data kept;
+  at f fine carriers only box-bounded: sum_{l>L} |Delta theta_l| <= 6 c_{L+1}/t. Heuristically p*(f^L - f) = O(c_{L+1}).
+- Corrections: Z1's "exposed face => rho C(f) subset C(f') forces f' = f" is a NON SEQUITUR (exact criterion: f'^2 + rho^2 r~_f^2 <= p^2);
+  pure base mates transfer exactly (q*(a + s b) <= s(s) for all s => p*(f' + s b) <= max(q*(a+sb), 1)); Z1's common-functional
+  obstruction is WRONG. Z2's switching-budget gloss is false with near-contacts: off F ∪ K only the (1-|z_j|)-weighted mass is O(t).
+- Lemma Z is per mate (f' chosen after g, rho). Enlarged target class G := R_0^± ∪ R_S ∪ R_BT ⊂ R (Problem prob:lemmaZper).
+OPEN CORE after Round 4 (Remark rem:openZ of the note), all for the SLD T and finite I:
+ (O1) genuinely scale-dependent switching on swallowed signature sets, F finite: (i) APPROXIMATE swallowing (rooms positive but decaying
+      too fast: near-contact tails |z_j| -> 1 on S_l \ F, or contact signs on S_l changing only far out): switching data are z-signed only
+      up to first-order errors of l_1-mass O(t) (weighted), so S3 Cor D1 (needs EXACT two-piece data) does not apply — "exactness vs scale";
+      (ii) weak or near-threshold free carriers, bad degenerate peaks with the swallowing sign (H3 fails), blocks whose non-degenerate peaks are
+      all swallowed (H2 fails).
+ (O2) infinitely many swallowed carriers (non-resonant or non-d-neutral): lower semicontinuity dist(rho g, C(f^L)) -> 0 along far-lowering
+      (or other finitely-swallowed) approximants; and are all finitely swallowed first rows in R?
+ (O3) maximal contact off (BT): F finite, z ≡ epsilon off F (every signature swallowed, every peak carrier bad, B infinite).
+ (O4) infinite base support F without room (with room: B^inf, SKETCH).
+Referee suggestions: (i) an "approximately two-piece" version of S3 Cor D1 tolerating first-order defects (sign errors of l_1-mass
+O(scale) on near-contacts); (ii) uniform Hoffman constants over growing finite carrier sets (scale-dependent active sets U*(t)).
+
+## ADDENDUM 5 (Round 5, all refereed): r5/Z3_*, r5/Z4_*, r5/Z5_*, r5/Z6_* (notes, referee reports, ref_notes with fixes)
+NOT yet integrated into the note. Use the referee-corrected versions (each *_referee.md lists fixes; *_ref_notes.md proves them).
+Z3 (O1): Theorem E (PROVED): windowed recovery THROUGH NEARBY FIRST ROWS f_j -> f (same base support): exact d-neutral two-piece window
+  data at f_j on windows (T_j, n_j) with K_j T_j -> 0, n_j/K_j -> inf and p*(f_j - f) = o((T_j 2^{-n_j})^2) give (f, rho g) in cl NA.
+  Lemma U (uniform one-sided transfer along f_j, supp a_j = F). Lemma 3.1: companion cost p*(f^# - f) <= C c(delta),
+  c(delta) = sum_m [Delta_m log(e/Delta_m) + sum_k min(lambda_k, |u_k(delta)|)] (unweighted term necessary). Proposition T (transplant,
+  conditional; referee fixes T1-T6) + Cor 3.4: window decompositions at f become exact data at a coarse EXACTIFICATION f^#.
+  Lemma 1.4: exactifying a d-neutral approximately resonant carrier destroys d-neutrality (companion cone degenerates).
+  Lemma 5.1: inward block moves need no gap. Theorem 5.3 (weakened (H2)/(H3) per block), Theorem 5.4 (infinitely many weak bad peaks).
+  Prop 4.1/4.2 (need r*_l > 0 for good l): (O1)(i) only matters for infinitely many carriers; far lowerings f^L lie in R_0^pm or R_S.
+  REFEREE: the "band" (T_lo^2 << r_l << 1/n defeats pinning and exactification) is NOT design-independent: an EXPLOSIVE design
+  (window function F(l) recursive, F(l+1) >= max{F(l)^2, (l+1)2^{(l+1)^3}, b(l)^{-4(l+1)}}, u(l) = F(l)^{-1/(4l)}) keeps Section 8,
+  makes bands pairwise disjoint, so every F-finite f has infinitely many unblocked windows (rooms); then (O1)(i) = Hoffman problem (O2).
+Z4 (O2,O3): Theorem A = S_Binf (PROVED for modified design SLD_G with N-independence fix): F finite, infinitely many exactly swallowed,
+  non-resonant, non-d-neutral carriers, under (H2'') (referee weakening), (H3), (DR) d-repair, (W_inf). Key: zero-cost cone depends on f
+  only through finitely many combinatorial data => Hoffman constant G*(l) is a DESIGN constant absorbed by the ladder; active sets
+  U(t) = {lambda_l >= t^2}. Prop 1.2 (p*(f^L - f) = O(eps_L), proof fixed by referee). Cor 5.4: maximal contact recovered for SLD_G
+  under growth of margins. Lemma R: without (DR) d-row Hoffman constant ~ 1/c_l. Prop 5.6': non-d-neutral two-piece data need
+  sign-coherent far swallowing. Degenerate swallowing-sign peaks: window data exist (Lemma 8.1); engineering via steering is a SKETCH
+  under (FS) (free channels: z' at free coordinates and a on F create no base excess, ref Lemma 9.2); open at maximal contact.
+Z5 (O4): Remark rem:Binf is now a THEOREM (transfer peaks at a not in c_00 along truncated canonical NA approximants); B*, B±,
+  engineered recovery (under cushion compatibility / cushion sparsity (CS)), S extend to infinite F; bounded free switching holds at
+  any F (a in Y harmless). Referee Theorem R1: cushion domination replaced by cushion SPARSITY (CS_B). Open at infinite F: off-F room
+  decaying too fast; NON-sparse support swallowing (|a_j| ~ v_l(j)^{1+beta}, beta >= 1); infinitely many bad carriers (F = N, a > 0);
+  (H2)/(H3-inf) failure; (LSC-trunc) (= infinite-F half of Lemma Z); Theorem thm:onesided at infinite F. Support coordinate at scale t
+  = contact of sign sgn a_j + anti-sign allowance 2|a_j|/t growing as t -> 0.
+Z6 (stress test): no counterexample. Theorem C (original SLD), Theorem U' (referee-corrected, design D''' N-free), Theorem V
+  (d-rigidity: a d-rigid swallowing-type peak needs no margin), Prop P (Farkas pinning: carriers on which every zero-cost exactly
+  d-neutral direction vanishes are pinned at O(t) by an LP certificate; in one-signed blocks of size ~1/|q_l| <= 2/Phi_l, a design
+  quantity), Cor V.1 (non-rigid swallowing-type peaks only alongside non-rigid q<0 swallowed strict non-peaks), Prop R1 (referee).
+  Conjecture G (joint switching bound <= C t/m_u(l) through nearly neutral swallowed non-peaks; numerics support) OPEN.
+CONSENSUS OPEN CORE after Round 5 (F finite, g not window-pinned, design D''' / SLD_G / explosive):
+ (r) f-dependent RATES decaying faster than any design ladder ("exactness vs scale"): rooms of good signature sets (approximate
+     swallowing), margins of non-rigid swallowing-type peaks, relative Farkas constants / d-coefficients of nearly neutral swallowed
+     non-peaks (K_nn; Conjecture G would remove), gaps gamma_B of kept q<0 carriers, rooms gamma_T at bad target coordinates;
+ (d) degenerate NON-RIGID swallowing-type peaks (need peak-carrying engineering / steering; open at maximal contact);
+ (m) mixed blocks neither compensated nor rigid (f-dependent d-row Hoffman constants, failure of (DR));
+ (h) failure of (H2''); (O4) infinite F as listed under Z5.
+ Window methods for a fixed design absorb only design quantities; the only non-window tool is Z3's Theorem E (companions, cost o(T_lo^2)).
