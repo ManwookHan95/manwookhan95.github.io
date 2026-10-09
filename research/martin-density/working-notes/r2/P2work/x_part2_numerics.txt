@@ -1,0 +1,8 @@
+
+## 2.7 Numerical sanity check (P2work/bregman.py). 
+Single block, n = 60 coordinates, Phi_k = 2^{-k} x U(0.3,1), 17 off-peak coordinates, J computed by a nested 1-D optimization (exact up
+to ~1e-9). For random perturbations zeta' = lambda (u + Delta), |Delta_k| <= A:
+  A:            1e-2    3e-3    1e-3    3e-4    1e-4
+  max e/A:      0.11    0.046   0.011   0.0027  0.00097     (e = Bregman excess; ~ linear in A, i.e. e = O(A^2) here)
+  sum lam|dw|/A: 2.3     3.5     3.3     2.6     2.9        (displacement of w: Theta(A), not small)
+in agreement with Prop 2.3 and the Remark after it.

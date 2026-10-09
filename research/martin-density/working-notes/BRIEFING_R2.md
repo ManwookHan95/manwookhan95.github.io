@@ -78,3 +78,37 @@ fully rigorous; no heuristic presented as proof. Use numpy for finite-model sani
   along NA approximants (Prop 8.2), single far detectors can be neutralized (Lemma 6.4); OPEN loophole: error-dominated
   one-sided near-threshold peak carriers with bounded conversion capacity ("rigid" T); OPEN: two-piece mates with Delta d < 0
   (T1 ignores the d-coefficients of block carriers).
+
+## ADDENDUM 2 (after Round-2 tasks P2 (two instances: P2x and P2A) and N2, all refereed)
+Files: r2/P2_notes.md (= P2A), r2/P2x* (other instance; see the top of r2/P2_referee.md), r2/P2A_referee.md,
+r2/N2_notes.md, r2/N2_referee.md, r2/N2_ref_notes.md.
+PROVED (refereed):
+- P2A Thm 2.1 / N2 Thm 1: every d-neutral (Delta d = 0) exact two-piece switching mate (any contact set K, any split, one
+  active block, or several under a span hypothesis (S)) is recovered along ENGINEERED NA approximants, with no rate
+  condition on T. Tools: window masses on finitely many contacts, far sign-flipped contacts carrying negative masses
+  ("far pulls"), one raising/tuning mass fixed by the intermediate value theorem so that v_m(x') = 0 exactly, a constant
+  theta-tail of the target used only for |tau| <= s_1; the slack is then needed only beyond a FIXED T_0 (scale decoupling).
+  Hence ALL explicit defect mates of P1's example are in Ls(f): P1's defect is a defect of intrinsic mechanisms only.
+- P2x Thm 3.5: two-piece switching mates with Delta d_m >= 0 in all blocks (several blocks, any split) under a tuning-cone
+  condition (TC): the d-mismatch Delta d_m R_m*(w'_m - w_m) is placed by convexity into the block of the side on which it
+  moves toward w_m, paid by a Bregman excess which is o(s) (identity |zeta'|e(y;y') + |zeta|e(y';y) = <w'-w, zeta'-zeta>).
+- N2 Thm 2 (Delta d > 0 under (BR)), N2 Thm 3 (Delta d < 0 under (PC)); N2 referee Lemma R: with anchor
+  y = w' + (w'-w)1_S (S = coordinates where 2w'-w does not overshoot), N(y) <= 1 + (C'-C)_+ + second order, so Delta d < 0
+  needs only (PC*): (C'-C)_+ + ||D(w'-w)||^2 + sum over status-changing k of lambda_k|w'-w| = o(t_n). Every exact
+  resonance with a single carrier non-peak is recovered whatever the sign of Delta d.
+- Opposite peaks are unavoidable: every NA f' near a non-NA f has, in every block, infinitely many common peaks of
+  opposite sign (N2 3.3). Base mixed term (contact masses vs Hilbert part of q*) is NOT an obstruction (cancelled by tuning).
+- C's "implant scale gap" is not an obstruction for robust structure (scale decoupling).
+FALSE/CORRECTED: P2A Thm 3.4 is vacuous (tuning span can never hold: sum lambda omega_Delta psi = v vanishes on free
+coordinates); replication to depth theta costs O(theta log(1/theta)) (not O(theta)) for admissible T.
+OPEN CORE after Round 2 (all referees agree; nothing points to a counterexample yet):
+ (O1) carrier blocks with strict non-peaks at a positive proportion of fine scales / generic supports with infinitely many
+      non-peaks (C's deep coefficients c_k ~ sqrt(Phi_k); margin-sparsity (MS-Q) of fine non-peaks for Delta d < 0);
+ (O2) second-order rebalancing at engineered approximants (mates whose explicit side decompositions have coefficient > 1,
+      kappa_max > 1, Gamma_w <= 1): combine C's transfer peaks (Thm 7.4) / A's shifts with the engineering;
+ (O3) approximate resonances = genuinely scale-dependent switching (weak peaks, near-threshold carriers with summable gaps,
+      off-peak coordinates pushed beyond their gap, scale-dependent splits): need a transport hypothesis (HT) / quantitative
+      tail independence (QI) of T, or a supply of two-sided carriers with frozen error O(scale) at J ~ 16 kappa/(1-rho^2)
+      adjacent scales; "far rigidity" (nearly collinear far tails inside detector groups) is compatible with Lemma B
+      (N2 SKETCH), so Lemma B alone does not force conversion capacity;
+ (O4) several active blocks without (S)/(TC); infinite block sets.
