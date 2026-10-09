@@ -1,0 +1,180 @@
+\section{Status of the density problem}\label{sec:status}
+
+\subsection{What is proved}
+Let $T$ be an arbitrary admissible operator.  Density of
+$\NA((c_0,p),\ell_2^2)$ is equivalent to $\Rec=S_{p^*}$
+(Proposition~\ref{prop:reduction}), and by Lemma~\ref{lem:martintail} it
+suffices to prove $\Rec=S_{p_N^*}$ for infinitely many $N$.  A first row
+$f$ belongs to $\Rec$ under each of the following sufficient conditions:
+\begin{enumerate}
+\item[(S1)] $f$ attains its norm (Proposition~\ref{prop:reduction}(d));
+\item[(S2)] $f$ belongs to the residual set $\mathcal O$ of Hausdorff continuity
+points of the fibres (residual uniform recovery theorem of \cite{PrA});
+\item[(S3)] $\Cset(f)=\cl\Cert^{\rm sh}(f)$; then every mate is recovered
+along every sequence $f_n\to f$ (Theorem~\ref{thm:shifted}); more generally
+$\Cset(f)=\mathcal K(f)$ when $a\in c_{00}$ (Proposition~\ref{prop:intrinsic});
+\item[(S4)] $I$ is finite and $f$ satisfies \textup{(BT)}: finite base support,
+finitely many strict non-peaks, no degenerate peaks and \textup{(MS)}, with
+an \emph{arbitrary} contact set (Corollary~\ref{cor:BTrecovered}; this
+contains Theorem~\ref{thm:tame} and the first row of
+Section~\ref{sec:resonance});
+\item[(S5)] $f$ is a limit of points of $\Rec$ along which the support
+functions $\tilde r$ are asymptotically at least those of $f$
+(Theorem~\ref{thm:transitivity});
+\item[(S6)] $T$ is the signature-ladder operator of
+Definition~\ref{def:SLD}, $I=\{1,\dots,N\}$, and $f\in\mathcal R_0$, i.e.\
+$F$ is finite and the signature sets keep room (Theorem~\ref{thm:R0}); no
+condition on the blocks of $f$ is needed, and $\mathcal R_0$ contains all
+norm-attaining and all base-tame first rows.
+\end{enumerate}
+For an individual mate $g\in\Cset(f)$, $(f,g)\in\cl\NA$ whenever $g$ lies
+in $\cl\Cert^{\rm sh}(f)$; this covers finite and shifted certificates
+(Theorems~\ref{thm:transport}, \ref{thm:shifted}), weighted directions with
+$O(\sigma)$ box tails (Theorem~\ref{thm:weighted}), locally split mates and
+split-contractive operators when $I$ is finite (Theorem~\ref{thm:locsplit},
+Corollary~\ref{cor:splitcontractive}), every mate that is a certificate of
+radius $\gtrsim t$ up to an $O(t)$ remainder at all small scales
+(Corollary~\ref{cor:ladder}), and carrier mates with non-summable gaps
+(Theorem~\ref{thm:carriers}).  When $a\in c_{00}$, also every balanced
+finite certificate with $\Gamma_w\le1$ is recovered
+(Theorem~\ref{thm:transfer}).  When $I$ and $F$ are finite, every mate with
+two-piece data (one-sided linear decompositions, possibly through infinitely
+many contacts) with $\kappa_w\le1$ is recovered along engineered
+norm-attaining approximants if $\Delta d_m\ge0$ in every block
+(Corollary~\ref{cor:D1}), and if the blocks with $\Delta d_m<0$ satisfy the
+scrambling condition \textup{(SC)} (Theorem~\ref{thm:engineered}); no
+hypothesis on the number of active blocks, on the contact set or on rates of
+$T$ is needed.  At \textup{(BT)} points the exact one-sided second-order
+coefficients are known (Theorem~\ref{thm:onesided}).  For $\ell_2^{d+1}$ we
+only prove the joint recovery of tuples of finite certificates under the
+hypothesis of Theorem~\ref{thm:joint}.
+
+On the negative side, the intrinsic mechanisms of
+Sections~\ref{sec:certificates}--\ref{sec:second} do not suffice in general:
+for some admissible $T$ there is a non-attaining $f$ at which the defect
+$\Cset(f)\setminus\mathcal K(f)$ spans an infinite-dimensional space
+(Theorem~\ref{thm:defect}), and its explicit elements are not recovered
+along the canonical truncations (Proposition~\ref{prop:nonrecovery}).  This
+is a defect of the intrinsic mechanisms only: that first row satisfies
+\textup{(BT)}, and every one of its mates is recovered along engineered
+norm-attaining approximants (Corollary~\ref{cor:exampleRecovered}).  At
+every point where $a\in c_{00}$ and $K$ is finite (in particular at every
+norm-attaining point) exact resonances do not exist
+(Proposition~\ref{prop:exact}).  Nothing proved here points to a
+counterexample; a counterexample would produce a two-dimensional Hilbert
+space without Lindenstrauss' property B, answering Question~6 of Johnson and
+Wolfe \cite{JW} negatively.
+
+\subsection{What remains}
+By Lemma~\ref{lem:pair} and Corollary~\ref{cor:lsc}(c), the density problem
+for $p_N$ is equivalent to the following statement, in which only the defect
+matters.
+
+\begin{problem}\label{prob:main}
+Let $N\ge1$, let $T$ be admissible, and let $f\in S_{p_N^*}$.  Is it true
+that for every $g\in\Def(f)$ and every $\rho<1$ there are norm-attaining
+$f_n\to f$ with $\rho g\in\Li_n\Cset(f_n)$?  Equivalently, is every pair
+$(f,\rho g)$ with $g\in\Cset(f)\setminus\cl\Cert^{\rm sh}(f)$ a limit of
+norm-attaining operators into $\ell_2^2$?
+\end{problem}
+
+A positive answer for infinitely many $N$ gives density for Mart\'in's
+norm (Lemma~\ref{lem:martintail}); a negative answer for one $N$ and one
+admissible $T$ gives a two-dimensional range without property B.  By
+Proposition~\ref{prop:nonrecovery}, the approximants in
+Problem~\ref{prob:main} cannot in general be the canonical truncations.
+
+\emph{For the designed operator.}  For the operator $T$ of
+Definition~\ref{def:SLD} and every $N$, Problem~\ref{prob:main} is
+equivalent to Lemma~Z (Problem~\ref{prob:lemmaZ} and
+Theorem~\ref{thm:reductionZ}): every mate of every first row must be
+approximated by mates at first rows in $\mathcal R_0$, which need not attain
+their norms.  What remains is base-side engineering at signature-resonant
+first rows (contacts or near-contacts swallowing signature sets, as at the
+first row of Section~\ref{sec:resonance}) and at first rows with infinite
+base support (Remark~\ref{rem:lemmaZ}).
+
+\emph{For an arbitrary admissible $T$.}  The following classes are open.
+
+\begin{problem}[Negative $d$-mismatch]\label{prob:resonant}
+Let $I$ be finite, $f\in S_{p^*}$ with $F$ finite, and let $g\in\Cset(f)$
+carry two-piece data with $\kappa_w\le1$ such that the blocks with
+$\Delta d_m<0$ do not satisfy \textup{(SC)}.  Is $(f,g)\in\cl\NA$?
+\end{problem}
+
+Theorem~\ref{thm:engineered} settles $\Delta d\ge0$ (for any number of
+active blocks and without steering) and $\Delta d<0$ under \textup{(SC)};
+Remark~\ref{rem:withoutSC}(a) gives a quantitative partial answer, and
+Remark~\ref{rem:withoutSC}(b) indicates that \textup{(SC)} can fail for
+admissible $T$ (sketch).  The explicit switching mates of
+Theorem~\ref{thm:defect} are $d$-neutral and are recovered.
+
+\begin{problem}[Generic supports]\label{prob:generic}
+Let $F$ be finite and let some $Q_m$ be infinite, or \textup{(MS)} fail, or
+degenerate peaks exist.  Is every $g\in\Cset(f)$ a limit of mates
+$g_n\in\Cset(f_n)$, $f_n\to f$, carrying two-piece data to which
+Theorem~\ref{thm:engineered} applies?
+\end{problem}
+
+At such $f$ the lower bound of Theorem~\ref{thm:onesided} is not available
+(the block expansion is multiscale), and mates need not have two-piece data;
+mixed mates combining deep weighted parts with switching parts are not
+covered either.
+
+\begin{problem}[Second-order defect]\label{prob:secondorder}
+Is there $f$ with $a\in c_{00}$ and a balanced finite certificate
+$g\in\Cset(f)\cap S(f)$ with $\Gamma_w(g)>1$?  By
+Proposition~\ref{prop:lowerbound} such an $f$ must have degenerate peaks,
+infinitely many strict non-peaks, failure of (MS), or infinitely many
+contacts; in the last case a finite-dimensional analogue suggests that the
+second-order coefficient can drop below $\Gamma_w$ (Remark~\ref{rem:kinks}).
+At \textup{(BT)} points the question does not affect recoverability:
+Corollary~\ref{cor:BTrecovered} recovers every mate, and the relevant
+coefficients are the one-sided $\gamma^\pm\le\Gamma_w$
+(Theorem~\ref{thm:onesided}).
+\end{problem}
+
+\begin{problem}[Approximate resonances]\label{prob:approx}
+Do switching mates carried, on both sides of $t=0$, by near-threshold
+strict non-peaks with summable gaps or by weak peaks belong to
+$\cl\Cert(f)$, or at least to the closure of the mates recovered in
+Section~\ref{sec:engineered}?  There is no linear obstruction for them
+(Remark~\ref{rem:summablegaps}).  One way to prove non-membership in
+$\cl\Cert(f)$ is to exhibit a sequence $f_n\to f$ with
+$g\notin\Li_n\Cset(f_n)$ (Corollary~\ref{cor:lsc}).
+\end{problem}
+
+Such scale-dependent switching is the main remaining mechanism for an
+arbitrary admissible $T$.  We note that operators $T$ have been proposed whose
+near-threshold peak carriers are one-sided with bounded conversion capacity;
+for them no recovery argument is known (the available arguments leave a
+capacity requirement that does not improve as $\rho\to1$), and no
+counterexample either.
+
+\begin{problem}[Infinite base support]\label{prob:infiniteF}
+Extend Theorems~\ref{thm:onesided}, \ref{thm:engineered} and~\ref{thm:R0}
+to first rows with $a\notin c_{00}$.  All results of
+Sections~\ref{sec:engineered} and~\ref{sec:designed} use that $F$ is finite
+(no flips on $F$ below a fixed scale).
+\end{problem}
+
+\begin{problem}[Universality of the defect]\label{prob:universal}
+Does \emph{every} admissible $T$ (in particular every $T$ produced by the
+proof of Mart\'in's Lemma~B) admit a first row with nonempty defect?  The
+linear obstruction requires a first row with few strict non-peaks, which an
+adversarial $T$ may prevent; for the designed operator of
+Section~\ref{sec:designed} the defect is empty at every first row in
+$\mathcal R_0$ (Corollary~\ref{cor:nodefectR0}).
+\end{problem}
+
+Finally we note a gap between necessary and sufficient conditions in the
+reduction itself.  If $g_1,\dots,g_d\in\Cset(f)$, then
+$(g_1,\dots,g_d)/\sqrt d\in\Cset_d(f)$, and density into $\ell_2^{d+1}$
+implies that such tuples are recovered along a common norm-attaining
+sequence (by the argument of Lemma~\ref{lem:pair}, with rotations of
+$\ell_2^{d+1}$).  But we do not
+know whether density into $\ell_2^2$ alone forces the existence, for each
+$f$, of one norm-attaining sequence along which the whole fibre $\Cset(f)$ is
+recovered (condition (a) of Corollary~\ref{cor:finite}); only the
+sufficiency of that condition is used.
+

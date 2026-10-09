@@ -1,0 +1,147 @@
+
+\subsection{Two-sided decompositions (any admissible $T$)}
+In this subsection $T$ is an arbitrary admissible operator, $I$ is finite,
+$f\in S_{p^*}$ and $g\in\Cset(f)$.  For $\Theta\in\ell_\infty$ put
+$H_m(\Theta):=\|P_m^\perp D_m\Theta\|_2^2/C_m$ (this agrees with
+Definition~\ref{def:certificate} on vectors vanishing on $P_m$, and
+$H_m(\Theta+cw_m)=H_m(\Theta)$), and for $B\in\ell_1$,
+$\Theta=(\Theta_m)\in\prod_m\ell_\infty$ put $\Gamma_w(B,\Theta):=q_0h(B)+
+\sum_m\sigma_mH_m(\Theta_m)$.  Then $\sqrt{\Gamma_w}$ is a seminorm.
+
+\begin{lemma}[Two-sided decompositions]\label{lem:twosided}
+For every $t>0$ there are $B_\pm\in\ell_1$ and $\Theta_\pm\in\prod_m
+\ell_\infty$ with $g=B_++L^*\Theta_+=B_-+L^*\Theta_-$ and
+\[
+ q^*(a+tB_+),\ N_m(w_m+t\Theta_{+,m}),\ q^*(a-tB_-),\ N_m(w_m-t\Theta_{-,m})
+ \ \le s(t)\qquad(m\in I).
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:dualball}, $f+tg=A+L^*W$ with $\max(q^*(A),\|W\|_{V^*})=
+p^*(f+tg)\le s(t)$; put $B_+:=(A-a)/t$ and $\Theta_+:=(W-w)/t$.  The same
+with $-t$ gives $B_-,\Theta_-$.
+\end{proof}
+
+We call $(B_\pm,\Theta_\pm)$ a \emph{two-sided decomposition at scale $t$}.
+
+\begin{lemma}[Uniform smallness]\label{lem:smallness}
+For every $\eta>0$ there is $t_\eta>0$ such that every two-sided
+decomposition at a scale $t\in(0,t_\eta]$ satisfies, for both signs and
+every $m$, $\|tB_\pm\|_1\le\eta$, $\|D_m(t\Theta_{\pm,m})\|_2\le\eta$ and
+$\big|\|w_m\pm t\Theta_{\pm,m}\|_\infty-M_m\big|\le\eta$.
+\end{lemma}
+
+\begin{proof}
+Otherwise there are $t_n\to0$ and decompositions violating one of the
+inequalities, say on the $+$ side.  Put $A_n:=a+t_nB_{+,n}$ and
+$W_n:=w+t_n\Theta_{+,n}$; they are bounded, so after passing to a
+subsequence $A_n\to A$ weak$^*$ in $\ell_1$ and $W_{n,m}\to W_m$ weak$^*$ in
+$\ell_\infty$.  As $L^*$ is weak$^*$-continuous, $A+L^*W=f$ with
+$q^*(A)\le1$ and $\|W\|\le1$, so $A=a$ and $W=w$ by
+Proposition~\ref{prop:forced}(b).  Since $U$ is compact, $\|U^*A_n\|\to\nu$,
+hence $\limsup\|A_n\|_1\le\lim(s(t_n)-\|U^*A_n\|)=\|a\|_1$; for bounded
+coordinatewise convergent sequences this gives $\|A_n-a\|_1\to0$.  $D_m$ is
+weak$^*$-to-norm continuous on bounded sets, so $\|D_m(W_{n,m}-w_m)\|_2\to0$
+and $\|D_mW_{n,m}\|_2\to C_m$; then $\limsup\|W_{n,m}\|_\infty\le
+1-C_m=M_m\le\liminf\|W_{n,m}\|_\infty$.  This contradicts the choice of the
+decompositions.
+\end{proof}
+
+\begin{lemma}[First-order terms, budget and one-sided bounds]\label{lem:budget}
+Let $\eta\le\eta_*:=\frac12\min\big(\nu/(2\|U\|+2),\min_mC_m,\frac14\big)$
+and $0<t\le\min(t_\eta,1)$, and let $(B_\pm,\Theta_\pm)$ be a two-sided
+decomposition at scale $t$.  Then for both signs:
+\begin{enumerate}
+\item[(a)] $|q_0B_\pm(\zh)|\le t/2$ and $|\ip{\Theta_{\pm,m}}{\zeta_m}|\le
+t/2$ for every $m$;
+\item[(b)] $\sum_{j\notin F}(|B_+(j)|-z_jB_+(j))\le t/(2q_0)$ and
+$\sum_{j\notin F}(|B_-(j)|+z_jB_-(j))\le t/(2q_0)$; consequently
+$\sum_{j\in J_\gamma}|B_\pm(j)|\le t/(2\gamma q_0)$ for $\gamma\in(0,1)$, and
+$\|B_+1_{F^c}\|_1+\|B_-1_{F^c}\|_1\le\|(B_+-B_-)1_{F^c}\|_1+t/q_0$;
+\item[(c)] $\sum_{k\in P_m}|\alpha_m(k)|\big(\|W\|_\infty-\sgn(w_m(k))W(k)
+\big)\le t^2/(2\sigma_m)$ for $W=w_m+t\Theta_{+,m}$ and for
+$W=w_m-t\Theta_{-,m}$;
+\item[(d)] $\Gamma_w(B_\pm,\Theta_\pm)\le1+\eta_\Gamma(\eta)$, where
+$\eta_\Gamma(\eta):=(1+\|U\|\eta/\nu)\max_m(1+\eta/C_m)-1\to0$ as $\eta\to0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Consider the $+$ side; the $-$ side is the same with $-t$, $-B_-$,
+$-\Theta_-$.  Let $A:=a+tB_+$, $W_m:=w_m+t\Theta_{+,m}$.  By
+Lemma~\ref{lem:bookkeeping}(a) with $h=tg$ and $g(\xi)=0$,
+\begin{equation}\label{eq:budget}
+ q_0G_b(A)+\sum_m\sigma_mG_m(W_m)=q_0q^*(A)+\sum_m\sigma_mN_m(W_m)-1\le
+ s(t)-1\le\frac{t^2}2 .
+\end{equation}
+(a) $q^*(A)\ge A(\zh)$ gives $tB_+(\zh)\le s(t)-1\le t^2/2$, and
+$N_m(W_m)\ge\ip{W_m}{\zeta_m}/\sigma_m$ gives $\ip{\Theta_{+,m}}{\zeta_m}\le
+\sigma_mt/2$.  Since $q_0B_+(\zh)+\sum_m\ip{\Theta_{+,m}}{\zeta_m}=g(\xi)=0$
+and $q_0+\sum_m\sigma_m=1$, each of these terms is also $\ge-t/2$.
+(b) By Lemma~\ref{lem:bookkeeping}(b), $G_b(A)\ge\sum_{j\notin F}(|tB_+(j)|-
+z_jtB_+(j))$; use \eqref{eq:budget}.  On $J_\gamma$, $|x|\mp z_jx\ge\gamma|x|$.
+The last inequality follows by summing over $j\notin F$ the inequality
+$|x|+|y|\le|x-y|+(|x|-zx)+(|y|+zy)$ ($|z|\le1$), whose two sides differ by
+$|x-y|-z(x-y)\ge0$.
+(c) Lemma~\ref{lem:bookkeeping}(c) and \eqref{eq:budget}.
+(d) By Lemma~\ref{lem:base}, $G_b(A)\ge\nu\Psi(tU^*B_+/\nu)\ge\frac{t^2}2
+h(B_+)/(1+\|U\|\eta/\nu)$, since $t\|U^*B_+\|\le\|U\|\eta\le\nu/2$.  By
+Lemma~\ref{lem:bookkeeping}(c) and Lemma~\ref{lem:smallness},
+\begin{align*}
+ G_m(W_m)&\ge\|D_mW_m\|-\frac{\ip{D_mW_m}{D_mw_m}}{C_m}=
+ \frac{\|P^\perp_mD_mW_m\|^2}{\|D_mW_m\|+\ip{D_mW_m}{D_mw_m}/C_m}\\
+ &\ge\frac{t^2}2\,\frac{H_m(\Theta_{+,m})C_m}{C_m+\eta}.
+\end{align*}
+Insert both bounds in \eqref{eq:budget}.
+\end{proof}
+
+\begin{lemma}[Sup-level parametrization]\label{lem:suplevel}
+In the setting of Lemma~\ref{lem:budget}, fix $m$ and drop it.  Define
+$d_\pm$ by $\|w+t\Theta_+\|_\infty=(1-d_+t)M$ and $\|w-t\Theta_-\|_\infty=
+(1+d_-t)M$, and put $\omega_\pm:=\Theta_\pm+d_\pm w$.  Then:
+\begin{enumerate}
+\item[(a)] $|d_\pm|t\le\eta/M\le\frac12$;
+\item[(b)] \textup{(box)} $|(1-d_+t)w(k)+t\omega_+(k)|\le(1-d_+t)M$ and
+$|(1+d_-t)w(k)-t\omega_-(k)|\le(1+d_-t)M$ for every $k$;
+\item[(c)] \textup{(peaks)} for $k\in P$ and $\varsigma_k:=\sgn w(k)$,
+$\varsigma_k\omega_+(k)\le0\le\varsigma_k\omega_-(k)$, and
+$\sum_{k\in P}|\alpha(k)||\omega_\pm(k)|\le t/(2\sigma)$;
+\item[(d)] $|d(\omega_\pm)-d_\pm|\le t/\sigma$, where
+$d(\omega):=\ip{Dw}{D\omega}/C$;
+\item[(e)] $|t\Theta_\pm(k)|\le3$ for all $k$, and $|d_\pm|M\le3\|\Phi\|_2/t+
+t/\sigma$;
+\item[(f)] \textup{(non-peaks)} for $k\in Q$ and $\varsigma_k:=\sgn w(k)$ (any
+sign if $w(k)=0$), $\varsigma_k\omega_+(k)\le(1-d_+t)\gap(k)/t$ and
+$\varsigma_k\omega_-(k)\ge-(1+d_-t)\gap(k)/t$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) is Lemma~\ref{lem:smallness} ($M\ge\frac12$, $\eta\le\frac18$).  (b):
+$w+t\Theta_+=(1-d_+t)w+t\omega_+$ and $w-t\Theta_-=(1+d_-t)w-t\omega_-$.
+(c): at a peak, $|(1-d_+t)\varsigma_kM+t\omega_+(k)|\le(1-d_+t)M$ forces
+$\varsigma_kt\omega_+(k)\le0$, and then $\|w+t\Theta_+\|_\infty-\varsigma_k
+(w+t\Theta_+)(k)=t|\omega_+(k)|$; insert in Lemma~\ref{lem:budget}(c).  The
+$-$ side is symmetric.  (d): by Lemma~\ref{lem:threshold},
+$\ip{\Theta_+}{\zeta}/\sigma=\ip{\omega_+-d_+w}{\alpha}+\ip{D(\omega_+-d_+w)}
+{Dw}/C=-\sum_P|\alpha(k)||\omega_+(k)|+d(\omega_+)-d_+$, using (c) and
+$M+C=1$; similarly $\ip{\Theta_-}{\zeta}/\sigma=\sum_P|\alpha(k)||
+\omega_-(k)|+d(\omega_-)-d_-$.  Use Lemma~\ref{lem:budget}(a) and (c).
+(e): $|t\Theta_\pm(k)|\le N(w\pm t\Theta_\pm)+|w(k)|\le s(1)+1$; and
+$d(\omega_\pm)-d_\pm=\ip{Dw}{D\Theta_\pm}/C-d_\pm M$, so $|d_\pm|M\le
+\|D\Theta_\pm\|_2+t/\sigma$.  (f): multiply the box inequality (b) by
+$\varsigma_k$ and use $|w(k)|=M-\gap(k)$.
+\end{proof}
+
+\begin{lemma}[Base part on a finite support]\label{lem:finitebase}
+If $F$ is finite, there is $C_F<\infty$ with $\|\beta\|_1\le C_F(\|P^\perp
+U^*\beta\|+|\beta(\zh)|)$ for every $\beta$ supported in $F$.
+\end{lemma}
+
+\begin{proof}
+On the finite-dimensional space $\ell_1(F)$ the map $\beta\mapsto
+(P^\perp U^*\beta,\beta(\zh))$ is injective: if $P^\perp U^*\beta=0$, then
+$U^*\beta=\mu U^*a/\nu$, so $\beta=(\mu/\nu)a$ ($U^*$ injective) and
+$\beta(\zh)=\mu/\nu$.
+\end{proof}

@@ -1,0 +1,125 @@
+
+\subsection{Consequences}
+
+\begin{corollary}[Weighted engineered recovery]\label{cor:weightedengineered}
+Let $I$ be finite, $f\in S_{p^*}$ with $F$ finite, and let $g\in\Cset(f)$
+carry $d$-neutral two-piece data with any number of active blocks.  If
+$\rho^2\kappa_w<1$, then $(f,\rho g)\in\cl\NA((c_0,p),\ell_2^2)$; if
+$\kappa_w\le1$, then $(f,g)\in\cl\NA((c_0,p),\ell_2^2)$.
+\end{corollary}
+
+\begin{proof}
+$I_-=\emptyset$; apply Theorem~\ref{thm:engineered}.
+\end{proof}
+
+Since $q_0+\sum_m\sigma_m=1$, the coefficient $\kappa_w$ is at most the
+max-form coefficient
+\[
+ \kappa_{\max}:=\max_\pm\max\big(h(b^\pm),\max_mH_m(\omega^\pm_m)\big),
+\]
+and it can be much smaller.  Corollary~\ref{cor:weightedengineered} therefore contains the
+engineered recovery of $d$-neutral two-piece mates of the companion notes
+(which used the max-form coefficient, and for several active blocks a
+spanning hypothesis), with a self-contained proof.
+
+\begin{corollary}[Non-negative $d$-mismatch]\label{cor:D1}
+Let $I$ be finite, $f\in S_{p^*}$ with $F$ finite, and let $g\in\Cset(f)$
+carry two-piece data with $\Delta d_m\ge0$ for every $m$ and $\kappa_w\le1$.
+Then $(f,g)\in\cl\NA((c_0,p),\ell_2^2)$.  No hypothesis is made on $Q_m$
+\textup{(}infinitely many strict non-peaks, near-threshold coordinates and
+degenerate peaks are allowed\textup{)}, on $K$, or on $T$.
+\end{corollary}
+
+\begin{proof}
+$I_-=\emptyset$; apply Theorem~\ref{thm:engineered}.  The fine structure of
+the blocks enters the proof only through (E4), (E5) and
+Lemma~\ref{lem:F1}, which hold at every $f$ with $F$ finite.
+\end{proof}
+
+\begin{corollary}[Block-tame points are recoverable]\label{cor:BTrecovered}
+Let $I$ be finite.  Every $f\in S_{p^*}$ satisfying \textup{(BT)} belongs to
+$\Rec$; that is, $(f,g)\in\cl\NA((c_0,p),\ell_2^2)$ for every
+$g\in\Cset(f)$, whatever the contact set $K$.
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:onesided}(c), every $g\in\Cset(f)$ carries two-piece
+data with $\kappa_w\le1$.  By the remark after Definition~\ref{def:SC},
+\textup{(BT)} implies $\mathrm{Scr}_m(Ks)=o(s)$ as $s\to0$ for every block
+and every $K$, so every set of blocks satisfies \textup{(SC)}.
+Theorem~\ref{thm:engineered} gives $(f,\rho g)\in\cl\NA$ for every
+$\rho<1$, hence $(f,g)\in\cl\NA$.
+\end{proof}
+
+Corollary~\ref{cor:BTrecovered} contains Theorem~\ref{thm:tame}
+(which needed $K$ finite) and Proposition~\ref{prop:intrinsic}(c) at
+\textup{(BT)} points.
+
+\begin{corollary}[The example of Section~\ref{sec:resonance}]\label{cor:exampleRecovered}
+Let $T$, $I\ni1$ and $f$ be as in Lemma~\ref{lem:firstrow}.  Then $f$
+satisfies \textup{(BT)}, and:
+\begin{enumerate}
+\item[(a)] $f\in\Rec$: every mate of $f$, in particular every element of the
+defect $\Def(f)$ of Theorem~\ref{thm:defect}, is recovered along engineered
+norm-attaining approximants;
+\item[(b)] every $g\in\Cset(f)$ is supported in $\{1\}\cup K_0$, and
+$\mu^+\le g_j/u_{2,1}(j)\le\mu^-$ for $j\in K_0$, where
+$(\mu^\pm/\lambda_0)e_2$ \textup{(}in block $1$\textup{)} are the block parts
+of optimal two-piece data of $g$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\textup{(BT)}: $F=\{1\}$, $Q_1=\{2\}$ and $Q_m=\emptyset$ for $m\ne1$
+(Lemma~\ref{lem:firstrow}).  By the proof of Lemma~\ref{lem:firstrow},
+$\vartheta_m\Phi_m(k)\le q_0\varpi_{k,m}$ for $k\ge2$ and
+$\vartheta_m\Phi_m(1)\le q_0/2$.  With (P2), (P3) this gives
+$\mu_{1,m}\ge q_0(\frac79-\frac12)\ge q_0/4$, $\mu_{k,m}\ge q_0(\frac12-
+\varpi_{k,m})\ge q_0/4$ for exceptional $(k,m)$, and $\mu_{k,m}\ge
+q_0(\frac32r_l-r_l^2)\ge q_0r_l$ ($l=\ell(k,m)$, $r_l\le\frac12$) for the
+other peaks; so there are no degenerate peaks.  For $s<q_0/4$,
+$\mu_{k,m}<s$ forces a non-exceptional $(k,m)$ with $q_0r_l<s$, i.e.\
+$2\Phi_m(k)\le\varpi_{k,m}<s^2/q_0^2$.  Since $\Phi_m(k+1)\le\Phi_m(k)/2$, the
+sum of $\Phi_m(k)$ over these $k$ is at most $s^2/q_0^2=o(s)$: \textup{(MS)}
+holds.  (a) is Corollary~\ref{cor:BTrecovered}.  (b) By
+Theorem~\ref{thm:onesided}(c), $g=b^\pm+R_1^*(\omega^\pm_1-d_1(\omega^\pm_1)
+w_1)$ with $\omega^\pm_1=(\mu^\pm/\lambda_0)e_2$; since $w_1(2)=0$,
+$d_1(\omega^\pm_1)=0$ and $g=b^\pm+\mu^\pm u_{2,1}$.  The vectors $b^\pm$ are
+supported in $F\cup K=\{1\}\cup K_0$, with $b^+_j\ge0\ge b^-_j$ on $K_0$
+(where $z_j=1$), and $\supp u_{2,1}=\{1\}\cup K_0$ with $u_{2,1}>0$ on $K_0$
+(P1).
+\end{proof}
+
+Part (b) is the converse statement of Remark~\ref{rem:twopiece}(b), and
+(a) shows that the defect of Theorem~\ref{thm:defect} is a defect of the
+intrinsic mechanisms of Sections~\ref{sec:certificates}--\ref{sec:second}
+only.  The explicit mates $g_{K_1}$ are also covered directly by
+Corollary~\ref{cor:weightedengineered}, through their $d$-neutral data
+described after Definition~\ref{def:twopiece} (for $\rho$ with
+$\rho^2\kappa_w<1$).
+
+\begin{remark}[Negative $d$-mismatch without \textup{(SC)}]\label{rem:withoutSC}
+(a) Without \textup{(SC)}, the proof of Theorem~\ref{thm:engineered} still
+gives $(f,\rho g)\in\cl\NA$ whenever
+\[
+ \rho^2\kappa_w+\rho\sum_{m\in I_-}|\Delta d_m|K^{\rm scr}_m<1,\qquad
+ K^{\rm scr}_m:=\limsup_i\frac{\mathfrak g_m+2\|R^*_mZ_{A,m}\|_1}{s_{1,i}},
+\]
+along a construction sequence for which all $K^{\rm scr}_m$ are finite: in
+Step~5 the anchor costs then contribute at most
+$\frac{\tau^2}2\rho\sum_{I_-}|\Delta d_m|K^{\rm scr}_m(1+o(1))$ for
+$|\tau|>s_1$.  Finiteness of $K^{\rm scr}_m$ is not automatic: the truncated
+mass of near-threshold peaks can be of order $s\log(1/s)$ for admissible
+$T$; it holds, for instance, under \textup{(MS)} together with gaps of the
+strict non-peaks bounded below off a finite set.  So without \textup{(SC)}
+the possible failure of recovery for $\Delta d<0$ is confined to $\rho$
+close to $1$ only in such cases.
+(b) \emph{Sketch, not used.}  One can construct admissible operators for
+which \textup{(SC)} fails at a first row (prescribe block vectors in
+$\zh^\perp$ at a positive proportion of the indices of one block, so that
+these become strict non-peaks with $w_m(k)=0$ at all fine scales).  Then the
+estimate of Theorem~\ref{thm:engineered} does not apply to mates with
+$\Delta d<0$ in that block for $\rho$ close to $1$.  Whether these mates are
+recovered along other approximants is open; that the approximants of
+Definition~\ref{def:engineered} fail to recover them is \emph{not} proved.
+\end{remark}

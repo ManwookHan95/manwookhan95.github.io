@@ -3529,26 +3529,26 @@ $T_0^2\le4\delta$ and so small that the finitely many conditions marked
 $(T_0)$ below hold; they involve $f,g,\rho$, $\eta_1$ and the transfer
 data.  For the reader's convenience we collect them here (the constants
 $K,K_W,K_y,K_Y,K_A,K'$ are introduced in Steps~2--5 and depend only on
-$f,g,\rho$, except $K_A$, which also depends on the transfer data).
-Conditions $(T_1)$: the number $2\rho T_0$ is at most half of the
-coordinatewise radius of every $\omega^\diamond_m$ at $f$; at late stages
-$\rho T_0\max_m|\Delta d_m|+2T_0Ks_1\le\frac14$; and $\rho
-T_0(\|b^+\|_\infty+\|b^-\|_\infty)\le a_{\min}/8$.  Conditions $(T_0)$:
-for all $m$ and $\varsigma$,
-\begin{gather*}
- K_WT_0\le\min\big((M_m-\gamma_m)/8,\,C_m/4\big),\qquad
- 6K_{\sharp}T_0^2(2+\Lambda^\varsigma_m)\le\gamma_m/2,\\
- 6K_{\sharp}T_0^2\le(M_m-\gamma_m)/8,\qquad 6|I|K_{\sharp}K_YT_0^2\le1,
- \qquad K'T_0(1+\rho^2\kappa_w)\le\delta/8;
-\end{gather*}
-and the last two terms of the bound for $E$ in Step~4 are at most
-$\delta\tau^2/16$ for $|\tau|\le T_0$.  The order of choices is $T_1,K_{\sharp}\to\eta_1\to$ transfer data
+$f,g,\rho$, except $K_A$, which also depends on the transfer data):
+\begin{itemize}
+\item[$(T_1)$] $2\rho T_0$ is at most half the coordinatewise radius of
+every $\omega^\diamond_m$ at $f$; $\rho T_0\max_m|\Delta d_m|+2T_0Ks_1\le
+\frac14$ \textup{(}at late stages, where $s_1\le1$\textup{)}; and
+$\rho T_0(\|b^+\|_\infty+\|b^-\|_\infty)\le a_{\min}/8$;
+\item[$(T_0)$] $K_WT_0\le\min_m\min\big((M_m-\gamma_m)/8,C_m/4\big)$;
+$6K_{\sharp}T_0^2(2+\Lambda^\varsigma_m)\le\gamma_m/2$ and
+$6K_{\sharp}T_0^2\le(M_m-\gamma_m)/8$ for all $m,\varsigma$;
+$6|I|K_{\sharp}K_YT_0^2\le1$; the last two terms of the bound for $E$ in
+Step~4 are at most $\delta\tau^2/16$ for $|\tau|\le T_0$; and
+$K'T_0(1+\rho^2\kappa_w)\le\delta/8$.
+\end{itemize}
+The order of choices is $T_1,K_{\sharp}\to\eta_1\to$ transfer data
 $\to T_0\to(s_{1,i})\to(N''_i)$, and each condition involves only
 quantities fixed before it.
 
-\emph{Construction.}  If $I_-\ne\emptyset$, let $(s_i)$ be the sequence
-given by \textup{(SC)} for the multiplier $\Upsilon:=2K_*$ of
-Lemma~\ref{lem:scrambling}; otherwise let $s_i\downarrow0$ be arbitrary.  Consider the engineered approximants with
+\emph{Construction.}  If $I_-\ne\emptyset$ let $(s_i)$ be the sequence of
+\textup{(SC)} for $\Upsilon:=2K_*$ (Lemma~\ref{lem:scrambling}); otherwise let
+$s_i\downarrow0$ be arbitrary.  Consider the engineered approximants with
 $N_{w,i}\to\infty$, $s_{1,i}:=s_i$, and $N''_i$ chosen after $s_{1,i}$ so that
 \eqref{eq:N1}, \eqref{eq:N2} and
 \begin{equation}\label{eq:N3}
@@ -3857,10 +3857,10 @@ of this implication, and it is not automatic.  \emph{(Sketch, not proved
 here:} for suitable admissible $T$, built after $\zh$, the truncated mass of
 near-threshold peaks is of order $s\log(1/s)$.\emph{)}  A sufficient
 condition is that the blocks of $I_-$ have no degenerate peaks, that
-\textup{(MS)} holds in them, and that for $m\in I_-$, as $s\to0$,
+\textup{(MS)} holds in them, and that
 \[
  \sum\big\{\Phi_m(k):\ k\in Q_m,\ \Phi_m(k)\gap_m(k)\le s\ \text{or}\
- \gap_m(k)\le s\big\}=O(s);
+ \gap_m(k)\le s\big\}=O(s)\qquad(s\to0,\ m\in I_-);
 \]
 indeed, the proof of Lemma~\ref{lem:scrambling} then gives
 $\mathfrak S_m=O(s_1)$ instead of $o(s_1)$, and hence
@@ -3897,10 +3897,7 @@ decompositions of a mate are fixed by the mate itself, up to $O(t)$.
 Throughout this section $N\ge1$ is fixed, $I=\{1,\dots,N\}$ and $p=p_N$.
 The symbols $S_l,h_l,\delta_l,c_l,n_l,y_l,u_l$ below are local to this
 section and are unrelated to the construction of
-Section~\ref{sec:resonance}; so are the ladder bijection $\mathfrak j$, the
-room constant $\varpi_0$, the block coefficients $\theta^\pm_l$, the
-pinning weights $\pi_{l',l}$, the base coefficient $\mathfrak a_t$ and the
-local-validity constant $c_\flat$.
+Section~\ref{sec:resonance}.
 
 \subsection{The signature-ladder design}
 
@@ -3929,11 +3926,11 @@ Let $y_l:=y^{(i_{k(l)})}$ if this target is allowed at $l$, and
 $y_l:=y^{(1)}$ otherwise ($y^{(1)}$ is allowed at every $l$).  Put
 \begin{gather*}
  n_l:=q^*(y_l+\delta_lh_l),\quad u_l:=(y_l+\delta_lh_l)/n_l,\quad
- \delta^\circ_l:=\delta_l\|h_l\|_1/n_l,\\
- \Lambda^\circ(l):=\prod_{l''\le l}\Big(1+\frac2{\delta^\circ_{l''}}\Big),\qquad
- n^w_l:=\big\lceil l2^{l^3}\Lambda^\circ(l)\big\rceil,\\
+ \delta^\circ_l:=\delta_l\|h_l\|_1/n_l,\quad
+ \Lambda^\circ(l):=\prod_{l''\le l}\Big(1+\frac2{\delta^\circ_{l''}}\Big),\\
  T_{\rm hi}(l):=\min\Big\{T_{\rm lo}(l-1),\frac{2^{-l^3}}{l\Lambda^\circ(l)}
- \Big\}\ \ (T_{\rm lo}(0):=1),\\
+ \Big\}\ (T_{\rm lo}(0):=1),\quad n^w_l:=\big\lceil l2^{l^3}\Lambda^\circ(l)
+ \big\rceil,\\
  T_{\rm lo}(l):=2^{-n^w_l}T_{\rm hi}(l),\qquad
  c_{l+1}:=\min\{c_l/4,T_{\rm lo}(l)^3\}.
 \end{gather*}
@@ -3987,15 +3984,9 @@ $s\in S_{l'}$, by (P1),
 \]
 If the last sum is not empty, let $L(s)$ be its least index; by (b) at
 $L(s)$, $2c_{L(s)}\le2^{-2s}c_{l'}\delta_{l'}$, and the sum is at most
-\[
- \tfrac43\|x\|_\infty\sum_{l\ge L(s)}c_l\le\tfrac{16}9\|x\|_\infty c_{L(s)}\le
- \tfrac89\|x\|_\infty2^{-2s}c_{l'}\delta_{l'}.
-\]
-Hence
-\[
- |\mathcal Z(s)|\ge c_{l'}\delta_{l'}2^{-s}\Big(\frac{|x_{l'}|}{n_{l'}}
- -\frac89\|x\|_\infty2^{-s}\Big)>0
-\]
+$\frac43\|x\|_\infty\sum_{l\ge L(s)}c_l\le\frac{16}9\|x\|_\infty c_{L(s)}\le
+\frac89\|x\|_\infty2^{-2s}c_{l'}\delta_{l'}$.  Hence $|\mathcal Z(s)|\ge
+c_{l'}\delta_{l'}2^{-s}\big(|x_{l'}|/n_{l'}-\frac89\|x\|_\infty2^{-s}\big)>0$
 for all large $s\in S_{l'}$, contradicting $\mathcal Z\in c_{00}$.  So
 $x=0$: $T$ is injective and $T(\ell_1(\N\times\N))\cap c_{00}=\{0\}$.
 \end{proof}
@@ -4032,8 +4023,8 @@ $\sum_{l''\le l}l''\le l^2$, we have $\Lambda_f(l)\le\varpi_0^{-l^2}
 $\mathcal R_0$.  \textup{(b)} Every \emph{base-tame} $f$ \textup{(}$F$ and
 $K$ finite and $\sup_{j\notin F\cup K}|z_j|<1$\textup{)} belongs to
 $\mathcal R_0$.  \textup{(c)} $\mathcal R_0$ contains first rows with
-infinite contact sets and with near-contacts; \textup{(SR)} imposes no
-condition on the block data.
+infinite contact sets and with near-contacts, with arbitrary block
+structure.
 \end{lemma}
 
 \begin{proof}
@@ -4264,12 +4255,9 @@ For coarse $l\in\mathcal L_N$ put $D_l:=|\Delta\theta_l|$, $X_l:=E_l+
 ($\Sigma_{l_*+1}:=0$; $D_l:=0$ for $l\notin\mathcal L_N$).  By
 Lemma~\ref{lem:pinning}, $D_l\le(X_l+\frac43\Sigma_{l+1})/\delta'_l$, so
 $\Sigma_l\le X_l/\delta'_l+(1+\frac4{3\delta'_l})\Sigma_{l+1}$.  Unrolling
-from $l_*$ downwards (products over $\mathcal L_N$),
-\[
- \Sigma_1\le\sum_{l\le l_*}\frac{X_l}{\delta'_l}\prod_{l''<l}
- \Big(1+\frac4{3\delta'_{l''}}\Big)\le\Lambda_f(l_*)\sum_{l\le l_*}X_l,
-\]
-and $\sum_{l\le l_*}X_l\le\sum_{l\le l_*}E_l+\frac43
+from $l_*$ downwards, $\Sigma_1\le\sum_{l\le l_*}(X_l/\delta'_l)\prod_{l''<l}
+(1+\frac4{3\delta'_{l''}})\le\Lambda_f(l_*)\sum_{l\le l_*}X_l$ (products over
+$\mathcal L_N$), and $\sum_{l\le l_*}X_l\le\sum_{l\le l_*}E_l+\frac43
 \sum_{l'>l_*}D_{l'}$ by Lemma~\ref{lem:pinning}.
 \end{proof}
 
@@ -4341,16 +4329,10 @@ on $\supp\omega^c_m$, $\gap_m(k)\ge t^2$ and $|\omega^c_m(k)|\le
 $\|D_m\omega^c_m\|_2\le(2/t)\|\Phi_m\|_2\le1/t$, $|d_m(\omega)|\le
 \|D_m\omega\|_2$.
 
-(b) By Lemma~\ref{lem:budget}(a) and Proposition~\ref{prop:pinned}(b),
-\[
- |\mathfrak a_t|\le|B_+(\zh)|+\|\zh\|_\infty\|B_+1_{F^c}\|_1\le\frac t{2q_0}+
- (1+\|U\|)\Big(Kt+\frac t{q_0}\Big).
-\]
-By Lemma~\ref{lem:finitebase},
-\[
- \|B_+1_F\|_1\le C_F\big(\|P^\perp U^*B_+\|+\|U\|\|B_+1_{F^c}\|_1+
- |\mathfrak a_t|\big),
-\]
+(b) $|\mathfrak a_t|\le|B_+(\zh)|+\|\zh\|_\infty\|B_+1_{F^c}\|_1\le t/(2q_0)+
+(1+\|U\|)(Kt+t/q_0)$ by Lemma~\ref{lem:budget}(a) and
+Proposition~\ref{prop:pinned}(b).  By Lemma~\ref{lem:finitebase},
+$\|B_+1_F\|_1\le C_F(\|P^\perp U^*B_+\|+\|U\|\|B_+1_{F^c}\|_1+|\mathfrak a_t|)$,
 and $\|P^\perp U^*B_+\|^2=\nu h(B_+)\le2\nu/q_0$ by
 Lemma~\ref{lem:budget}(d).  Use $Kt\le1$ and $t\le1$.
 
@@ -4406,8 +4388,7 @@ seminorm,
 \[
  \sqrt{\Gamma_w(c_t)}\le\sqrt{\Gamma_w(B_+,\Theta_+)}+\sqrt{\Gamma_w(B_+-
  b_t,X)}.
-\]
-The first term is at most
+\]  The first term is at most
 $\sqrt{1+\eta_\Gamma(\eta)}$ (Lemma~\ref{lem:budget}(d)).  For the second,
 $q_0h(x)\le\|U\|^2\|x\|_1^2/\nu$ and
 $\sigma_mH_m(X_m)\le\|D_mX_m\|_2^2/C_m\le\big(\sum_k\lambda_{k,m}|X_m(k)|
@@ -4419,7 +4400,7 @@ constant times $\Lambda_f(l_*)t$.
 
 \begin{lemma}[Uniform transfer expansion]\label{lem:uniformtransfer}
 Let $T$ be admissible, $I$ finite and $f\in S_{p^*}$ with $F$ finite.  For
-every $\varepsilon_{\rm tr}>0$ and $A_0\ge1$ there are $c_{\flat}\in(0,\frac18]$ and
+every $\varepsilon_{\rm tr}>0$ and $A_0\ge1$ there are $c_1\in(0,\frac18]$ and
 $t_1>0$ such that for every $t\in(0,t_1]$ and every balanced finite
 certificate $c=(b,\omega)$ with
 \begin{enumerate}
@@ -4427,57 +4408,57 @@ certificate $c=(b,\omega)$ with
 \item[(C-b)] $\supp\omega_m\subseteq\{k\in Q_m:\gap_m(k)\ge t^2\}$ and
 $|\omega_m(k)|\le2\gap_m(k)/t$ for all $m,k$,
 \end{enumerate}
-we have $p^*(f+rg_c)\le1+\frac{r^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$ for
-all $|r|\le c_{\flat}t$.
+we have $p^*(f+sg_c)\le1+\frac{s^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$ for
+all $|s|\le c_1t$.
 \end{lemma}
 
 \begin{proof}
 Fix $\gamma_m\in(M_m/2,M_m)$ with $|w_m(k)|\ne\gamma_m$ for all $k$.  Let
-$|r|\le c_{\flat}t$, $t\le t_1$, and consider $f+rg_c=A+\sum_mR^*_mW_m$ with
-$A:=a+rb$, $W_m:=w_m+r(\omega_m-d_mw_m)$, $d_m:=d_m(\omega_m)$; the
+$|s|\le c_1t$, $t\le t_1$, and consider $f+sg_c=A+\sum_mR^*_mW_m$ with
+$A:=a+sb$, $W_m:=w_m+s(\omega_m-d_mw_m)$, $d_m:=d_m(\omega_m)$; the
 first-order terms vanish (Lemma~\ref{lem:algebra}, $b(\xi)=0$).
-\emph{Base.}  If $c_{\flat}t_1A_0\le\min(a_{\min},\nu/(2\|U\|+2))$, there are no
+\emph{Base.}  If $c_1t_1A_0\le\min(a_{\min},\nu/(2\|U\|+2))$, there are no
 flips on $F$ and $\supp b\subseteq F$, so by
 Lemmas~\ref{lem:bookkeeping}(b) and~\ref{lem:base},
-$G_b(A)\le\hat G_b:=\frac{r^2}2h(b)(1+K_A|r|)$, $K_A:=2\|U\|A_0/\nu$.
+$G_b(A)\le\hat G_b:=\frac{s^2}2h(b)(1+K_A|s|)$, $K_A:=2\|U\|A_0/\nu$.
 \emph{Blocks.}  $|d_m|\le\|D_m\omega_m\|_2\le(2/t)\|\Phi_m\|_2\le1/t$, so the
-coordinatewise radius of $\omega_m$ is at least $\min(t/4,C_mt/2)\ge c_{\flat}t$
-if $c_{\flat}\le\min_mC_m/2$, and Lemma~\ref{lem:block}(d) gives $G_m(W_m)\le\hat
-G_m:=\frac{r^2}2H_m(\omega_m)(1+2c_{\flat}/C_{\min})$, $C_{\min}:=\min_mC_m$.
-Hence $\hat\Gamma\le\frac{r^2}2\Gamma_w(c)(1+K_A|r|+2c_{\flat}/C_{\min})$.
+coordinatewise radius of $\omega_m$ is at least $\min(t/4,C_mt/2)\ge c_1t$
+if $c_1\le\min_mC_m/2$, and Lemma~\ref{lem:block}(d) gives $G_m(W_m)\le\hat
+G_m:=\frac{s^2}2H_m(\omega_m)(1+2c_1/C_{\min})$, $C_{\min}:=\min_mC_m$.
+Hence $\hat\Gamma\le\frac{s^2}2\Gamma_w(c)(1+K_A|s|+2c_1/C_{\min})$.
 \emph{Rebalancing.}  Since $h(b)\le2/q_0$ and $H_m(\omega_m)\le2/\sigma_m$,
-$|\varepsilon_m|:=|\hat G_m-\hat\Gamma|/e_{y,m}\le K_3r^2$ with $K_3$
+$|\varepsilon_m|:=|\hat G_m-\hat\Gamma|/e_{y,m}\le K_3s^2$ with $K_3$
 depending only on $f$ (as $e_{y,m}\ge\frac12$).  Choose
 $\eta_1:=\min(\frac14,\varepsilon_{\rm tr}/(8|I|K_3))$ and transfer data
 (Lemma~\ref{lem:transferdata}); $\|D_my_m\|_2\le K_y$ and $|Y_m|/q_0\le K_Y$
 with $K_y,K_Y$ independent of $\eta_1$.  Now $\|W_m-w_m\|_\infty\le
-|r|(2/t+1/t)\le3c_{\flat}$ and $\|D_m(W_m-w_m)\|_2\le2c_{\flat}$; so if $c_{\flat}\le
-\min_m\min((M_m-\gamma_m)/12,C_m/4)$ and $t_1$ is so small that $K_3c_{\flat}^2t_1^2
-(2+\Lambda^\varsigma_m)\le\gamma_m/2$ and $K_3c_{\flat}^2t_1^2\le(M_m-\gamma_m)/4$,
+|s|(2/t+1/t)\le3c_1$ and $\|D_m(W_m-w_m)\|_2\le2c_1$; so if $c_1\le
+\min_m\min((M_m-\gamma_m)/12,C_m/4)$ and $t_1$ is so small that $K_3c_1^2t_1^2
+(2+\Lambda^\varsigma_m)\le\gamma_m/2$ and $K_3c_1^2t_1^2\le(M_m-\gamma_m)/4$,
 Lemma~\ref{lem:TV} gives \eqref{eq:R1}.  Proposition~\ref{prop:rebalancing}
 yields
 \[
- p^*(f+rg_c)\le1+\hat\Gamma+|I|K_3\eta_1r^2+2|I|K_3K_Y(1+\|U\|)A_0|r|^3+
- \frac{8K_3K_yc_{\flat}r^2+K_3^2K_y^2r^4}{C_{\min}} .
+ p^*(f+sg_c)\le1+\hat\Gamma+|I|K_3\eta_1s^2+2|I|K_3K_Y(1+\|U\|)A_0|s|^3+
+ \frac{8K_3K_yc_1s^2+K_3^2K_y^2s^4}{C_{\min}} .
 \]
-Choose first $\eta_1$ as above, then $c_{\flat}$ with
-$(4+16K_3K_y)c_{\flat}/C_{\min}\le\varepsilon_{\rm tr}/4$, then $t_1$ so small that
-the terms of order $|r|^3,r^4$ (with $|r|\le c_{\flat}t_1$) and $\Gamma_w(c)K_A|r|$
-contribute at most $\frac{r^2}2\cdot\frac{\varepsilon_{\rm tr}}4$, besides the
+Choose first $\eta_1$ as above, then $c_1$ with
+$(4+16K_3K_y)c_1/C_{\min}\le\varepsilon_{\rm tr}/4$, then $t_1$ so small that
+the terms of order $|s|^3,s^4$ (with $|s|\le c_1t_1$) and $\Gamma_w(c)K_A|s|$
+contribute at most $\frac{s^2}2\cdot\frac{\varepsilon_{\rm tr}}4$, besides the
 conditions above.  Since $\Gamma_w(c)\le2$, the bound is at most
-$1+\frac{r^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$.
+$1+\frac{s^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$.
 \end{proof}
 
 \begin{theorem}[Windowed averaging]\label{thm:windowed}
 Let $I$ be finite, $f\in S_{p^*}$ with $F$ finite, $g\in\Cset(f)$,
 $\rho\in(0,1)$ and $\eta_0>0$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$.
-Suppose there are $c_{\flat}\in(0,1]$ and triples $(t^{(j)},n_j,K_j)$ with
-$t^{(j)}\to0$, $n_j\ge24\rho^2K_j/(c_{\flat}(1-\rho^2))$ and
+Suppose there are $c_1\in(0,1]$ and triples $(t^{(j)},n_j,K_j)$ with
+$t^{(j)}\to0$, $n_j\ge24\rho^2K_j/(c_1(1-\rho^2))$ and
 $K_jt^{(j)}/n_j\to0$, such that for every $j$ and every
 $t\in\{t^{(j)}2^{1-i}:1\le i\le n_j\}$ there is a balanced finite
 certificate $c_t$ at $f$ with
 \begin{enumerate}
-\item[(i)] $p^*(f+rg_{c_t})\le1+\frac{r^2}2(1+\eta_0)$ for $|r|\le c_{\flat}t$;
+\item[(i)] $p^*(f+sg_{c_t})\le1+\frac{s^2}2(1+\eta_0)$ for $|s|\le c_1t$;
 \item[(ii)] $p^*(g-g_{c_t})\le K_jt$;
 \item[(iii)] $\Gamma_w(c_t)\le1+\eta_0$.
 \end{enumerate}
@@ -4487,26 +4468,26 @@ and $\rho g_c\to\rho g$.
 \end{theorem}
 
 \begin{proof}
-Fix $r_0\in(0,1]$ with $r_0^2\le1-\rho^2$, and $j$ so large that
-$2\rho K_jt^{(j)}/n_j\le(1-\rho^2)r_0/3$.  Write $n:=n_j$, $K:=K_j$,
+Fix $s_0\in(0,1]$ with $s_0^2\le1-\rho^2$, and $j$ so large that
+$2\rho K_jt^{(j)}/n_j\le(1-\rho^2)s_0/3$.  Write $n:=n_j$, $K:=K_j$,
 $t_i:=t^{(j)}2^{1-i}$ and $c:=\frac1n\sum_ic_{t_i}$, a balanced finite
-certificate with $g_c=\frac1n\sum_ig_{c_{t_i}}$.  For each $i$ and real $r$:
-(A) if $\rho|r|\le c_{\flat}t_i$, then $p^*(f+r\rho g_{c_{t_i}})\le1+
-\frac{\rho^2r^2}2(1+\eta_0)$; (B) always $p^*(f+r\rho g_{c_{t_i}})\le
-p^*(f+r\rho g)+\rho|r|Kt_i\le s(\rho r)+\rho|r|Kt_i$.  By convexity,
-$p^*(f+r\rho g_c)\le\frac1n\sum_ip^*(f+r\rho g_{c_{t_i}})$.
+certificate with $g_c=\frac1n\sum_ig_{c_{t_i}}$.  For each $i$ and real $s$:
+(A) if $\rho|s|\le c_1t_i$, then $p^*(f+s\rho g_{c_{t_i}})\le1+
+\frac{\rho^2s^2}2(1+\eta_0)$; (B) always $p^*(f+s\rho g_{c_{t_i}})\le
+p^*(f+s\rho g)+\rho|s|Kt_i\le s(\rho s)+\rho|s|Kt_i$.  By convexity,
+$p^*(f+s\rho g_c)\le\frac1n\sum_ip^*(f+s\rho g_{c_{t_i}})$.
 
-\emph{Case $|r|\le r_0$.}  Let $I_r:=\{i:c_{\flat}t_i<\rho|r|\}$; as the $t_i$ are
-dyadic, $\sum_{I_r}t_i<2\rho|r|/c_{\flat}$.  Using (A) off $I_r$ and (B) on $I_r$,
-$p^*(f+r\rho g_c)\le\max\{1+\frac{\rho^2r^2}2(1+\eta_0),s(\rho r)\}+Qr^2$
-with $Q:=2\rho^2K/(c_{\flat}n)\le(1-\rho^2)/12$.  Now
-$1+\frac{\rho^2r^2}2(1+\eta_0)+Qr^2\le1+\frac{r^2}2(1-\frac{1-\rho^2}3)\le
-1+\frac{r^2}2-\frac{r^4}8\le s(r)$ because $r^2\le1-\rho^2$, and
-$s(\rho r)+Qr^2\le s(r)$ by Lemma~\ref{lem:slack}(a).
+\emph{Case $|s|\le s_0$.}  Let $I_s:=\{i:c_1t_i<\rho|s|\}$; as the $t_i$ are
+dyadic, $\sum_{I_s}t_i<2\rho|s|/c_1$.  Using (A) off $I_s$ and (B) on $I_s$,
+$p^*(f+s\rho g_c)\le\max\{1+\frac{\rho^2s^2}2(1+\eta_0),s(\rho s)\}+Qs^2$
+with $Q:=2\rho^2K/(c_1n)\le(1-\rho^2)/12$.  Now
+$1+\frac{\rho^2s^2}2(1+\eta_0)+Qs^2\le1+\frac{s^2}2(1-\frac{1-\rho^2}3)\le
+1+\frac{s^2}2-\frac{s^4}8\le s(s)$ because $s^2\le1-\rho^2$, and
+$s(\rho s)+Qs^2\le s(s)$ by Lemma~\ref{lem:slack}(a).
 
-\emph{Case $|r|\ge r_0$.}  Using (B) for all $i$, $p^*(f+r\rho g_c)\le
-s(\rho r)+2\rho Kt^{(j)}|r|/n\le s(\rho r)+(1-\rho^2)r_0|r|/3\le s(r)$, by
-Lemma~\ref{lem:slack}(a) and $\min(r^2,|r|)\ge r_0|r|$.
+\emph{Case $|s|\ge s_0$.}  Using (B) for all $i$, $p^*(f+s\rho g_c)\le
+s(\rho s)+2\rho Kt^{(j)}|s|/n\le s(\rho s)+(1-\rho^2)s_0|s|/3\le s(s)$, by
+Lemma~\ref{lem:slack}(a) and $\min(s^2,|s|)\ge s_0|s|$.
 
 Hence $\rho g_c\in\Cset(f)$.  By convexity of $\Gamma_w$ in the data,
 $\Gamma_w(\rho c)\le\rho^2(1+\eta_0)\le1$, and $p^*(\rho g_c-\rho g)\le
@@ -4529,18 +4510,17 @@ allowed\textup{)}.
 
 \begin{proof}
 Fix $f\in\mathcal R_0$ (constants $\gamma,\varpi_0$), $g\in\Cset(f)$ and
-$\rho\in(0,1)$.  Choose $\eta_0\in(0,2]$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$
-\textup{(}the bound $\eta_0\le2$ is used below for \textup{(C-a)}\textup{)} and
+$\rho\in(0,1)$.  Choose $\eta_0>0$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$ and
 put
 \[
  \kappa_0:=\tfrac12\big(\sqrt{1+\eta_0/2}-1\big),\qquad
  \varepsilon_{\rm tr}:=\eta_0/2,\qquad A_0:=K_b+1,
 \]
-with $K_b$ from Proposition~\ref{prop:windowcert}; let $c_{\flat},t_1$ be given by
+with $K_b$ from Proposition~\ref{prop:windowcert}; let $c_1,t_1$ be given by
 Lemma~\ref{lem:uniformtransfer}.  Choose $\eta\le\eta_*$ with
 $\eta_\Gamma(\eta)\le1$ and $\sqrt{1+\eta_\Gamma(\eta)}\le1+\kappa_0$, and put
 $t_\star:=\min(t_\eta,t_1,1)$.  For a window index $l$ put $t^{(l)}:=
-T_{\rm hi}(l)$ and $K_l:=(1+\|U\|)K_2\Lambda_f(l)$.  The scales
+T_{\rm hi}(l)$, $n_l:=n^w_l$ and $K_l:=(1+\|U\|)K_2\Lambda_f(l)$.  The scales
 $t_i=T_{\rm hi}(l)2^{1-i}$, $1\le i\le n^w_l$, lie in $\mathcal W(l)$.  By
 (P3) and $\Lambda_f(l)\le\varpi_0^{-l^2}\Lambda^\circ(l)$,
 \[
@@ -4552,8 +4532,8 @@ decomposition at scale $t$ (Lemma~\ref{lem:twosided}) and its window
 certificate $c_t$.  By Proposition~\ref{prop:windowcert},
 $\|b_t\|_1\le A_0$, $\sqrt{\Gamma_w(c_t)}\le1+2\kappa_0=\sqrt{1+\eta_0/2}$,
 i.e.\ $\Gamma_w(c_t)\le1+\eta_0/2\le2$, and (C-b) holds; by
-Lemma~\ref{lem:uniformtransfer}, $p^*(f+rg_{c_t})\le1+\frac{r^2}2(1+\eta_0)$
-for $|r|\le c_{\flat}t$; and $p^*(g-g_{c_t})\le q^*(g-g_{c_t})\le(1+\|U\|)
+Lemma~\ref{lem:uniformtransfer}, $p^*(f+sg_{c_t})\le1+\frac{s^2}2(1+\eta_0)$
+for $|s|\le c_1t$; and $p^*(g-g_{c_t})\le q^*(g-g_{c_t})\le(1+\|U\|)
 \|g-g_{c_t}\|_1\le K_lt$.  Finally, by (P3),
 \[
  \frac{n^w_l}{K_l}\ge\frac{l2^{l^3}\varpi_0^{l^2}}{(1+\|U\|)K_2}\to\infty,
@@ -4620,17 +4600,12 @@ Corollary~\ref{cor:BTrecovered} (the engineered approximants are norm
 attaining, hence in $\mathcal R_0$); in particular at every \textup{(BT)}
 point.
 
-(b) $f\notin\mathcal R_0$ iff $F$ is infinite or, for all $\gamma\in(0,1)$
-and $\varpi_0\in(0,1]$, some signature set $S_l$, $l\in\mathcal L_N$,
-satisfies
-\[
- \|h_l1_{S_l\cap J_\gamma}\|_1<\varpi_0^l\|h_l\|_1 :
-\]
-the one-sided base resources (support, contacts,
+(b) $f\notin\mathcal R_0$ iff $F$ is infinite or, for all $\gamma,\varpi_0$,
+some signature set satisfies $\|h_l1_{S_l\cap J_\gamma}\|_1<\varpi_0^l
+\|h_l\|_1$: the one-sided base resources (support, contacts,
 near-contacts) swallow the signature of some carrier, or of a fast sequence
 of carriers (\emph{signature-resonant} first rows).  If the signature of the
-carrier $l_0$ is swallowed (i.e.\ $\delta'_{l_0}=0$ for every
-$\gamma$), then $\Delta\theta_{l_0}$ is not
+carrier $l_0$ is swallowed ($\delta'_{l_0}=0$), then $\Delta\theta_{l_0}$ is not
 pinned, and every coarser carrier $l<l_0$ whose signature set is met by the
 target $y_{l_0}$ becomes slaved to the free coefficient $\Delta\theta_{l_0}$
 through the pinning inequality; so more than the swallowed carriers may
@@ -4688,8 +4663,7 @@ $\Cset(f)=\mathcal K(f)$ when $a\in c_{00}$ (Proposition~\ref{prop:intrinsic});
 \item[(S4)] $I$ is finite and $f$ satisfies \textup{(BT)}: finite base support,
 finitely many strict non-peaks, no degenerate peaks and \textup{(MS)}, with
 an \emph{arbitrary} contact set (Corollary~\ref{cor:BTrecovered}; this
-contains the conclusion $f\in\Rec$ of Theorem~\ref{thm:tame}, though not its
-recovery along the canonical truncations, and covers the first row of
+contains Theorem~\ref{thm:tame} and the first row of
 Section~\ref{sec:resonance});
 \item[(S5)] $f$ is a limit of points of $\Rec$ along which the support
 functions $\tilde r$ are asymptotically at least those of $f$
@@ -4751,8 +4725,8 @@ $(f,\rho g)$ with $g\in\Cset(f)\setminus\cl\Cert^{\rm sh}(f)$ a limit of
 norm-attaining operators into $\ell_2^2$?
 \end{problem}
 
-By Lemma~\ref{lem:martintail}, a positive answer for infinitely many $N$
-gives density for Mart\'in's norm; a negative answer for one $N$ and one
+A positive answer for infinitely many $N$ gives density for Mart\'in's
+norm (Lemma~\ref{lem:martintail}); a negative answer for one $N$ and one
 admissible $T$ gives a two-dimensional range without property B.  By
 Proposition~\ref{prop:nonrecovery}, the approximants in
 Problem~\ref{prob:main} cannot in general be the canonical truncations.
@@ -4818,12 +4792,11 @@ $g\notin\Li_n\Cset(f_n)$ (Corollary~\ref{cor:lsc}).
 \end{problem}
 
 Such scale-dependent switching is the main remaining mechanism for an
-arbitrary admissible $T$.  One can design operators $T$ whose
-near-threshold peak carriers are one-sided with bounded conversion capacity
-(we do not include this construction).  For them no recovery argument is
-known: the available arguments leave a Hilbert (room) capacity requirement
-on the converted carriers that is independent of $\rho$ and of the error
-terms.  No counterexample is known either.
+arbitrary admissible $T$.  We note that operators $T$ have been proposed whose
+near-threshold peak carriers are one-sided with bounded conversion capacity;
+for them no recovery argument is known (the available arguments leave a
+capacity requirement that does not improve as $\rho\to1$), and no
+counterexample either.
 
 \begin{problem}[Infinite base support]\label{prob:infiniteF}
 Extend Theorems~\ref{thm:onesided}, \ref{thm:engineered} and~\ref{thm:R0}

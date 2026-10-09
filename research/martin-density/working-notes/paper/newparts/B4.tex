@@ -1,0 +1,249 @@
+
+\subsection{Uniform transfer expansion and windowed averaging}
+
+\begin{lemma}[Uniform transfer expansion]\label{lem:uniformtransfer}
+Let $T$ be admissible, $I$ finite and $f\in S_{p^*}$ with $F$ finite.  For
+every $\varepsilon_{\rm tr}>0$ and $A_0\ge1$ there are $c_1\in(0,\frac18]$ and
+$t_1>0$ such that for every $t\in(0,t_1]$ and every balanced finite
+certificate $c=(b,\omega)$ with
+\begin{enumerate}
+\item[(C-a)] $\|b\|_1\le A_0$ and $\Gamma_w(c)\le2$, and
+\item[(C-b)] $\supp\omega_m\subseteq\{k\in Q_m:\gap_m(k)\ge t^2\}$ and
+$|\omega_m(k)|\le2\gap_m(k)/t$ for all $m,k$,
+\end{enumerate}
+we have $p^*(f+sg_c)\le1+\frac{s^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$ for
+all $|s|\le c_1t$.
+\end{lemma}
+
+\begin{proof}
+Fix $\gamma_m\in(M_m/2,M_m)$ with $|w_m(k)|\ne\gamma_m$ for all $k$.  Let
+$|s|\le c_1t$, $t\le t_1$, and consider $f+sg_c=A+\sum_mR^*_mW_m$ with
+$A:=a+sb$, $W_m:=w_m+s(\omega_m-d_mw_m)$, $d_m:=d_m(\omega_m)$; the
+first-order terms vanish (Lemma~\ref{lem:algebra}, $b(\xi)=0$).
+\emph{Base.}  If $c_1t_1A_0\le\min(a_{\min},\nu/(2\|U\|+2))$, there are no
+flips on $F$ and $\supp b\subseteq F$, so by
+Lemmas~\ref{lem:bookkeeping}(b) and~\ref{lem:base},
+$G_b(A)\le\hat G_b:=\frac{s^2}2h(b)(1+K_A|s|)$, $K_A:=2\|U\|A_0/\nu$.
+\emph{Blocks.}  $|d_m|\le\|D_m\omega_m\|_2\le(2/t)\|\Phi_m\|_2\le1/t$, so the
+coordinatewise radius of $\omega_m$ is at least $\min(t/4,C_mt/2)\ge c_1t$
+if $c_1\le\min_mC_m/2$, and Lemma~\ref{lem:block}(d) gives $G_m(W_m)\le\hat
+G_m:=\frac{s^2}2H_m(\omega_m)(1+2c_1/C_{\min})$, $C_{\min}:=\min_mC_m$.
+Hence $\hat\Gamma\le\frac{s^2}2\Gamma_w(c)(1+K_A|s|+2c_1/C_{\min})$.
+\emph{Rebalancing.}  Since $h(b)\le2/q_0$ and $H_m(\omega_m)\le2/\sigma_m$,
+$|\varepsilon_m|:=|\hat G_m-\hat\Gamma|/e_{y,m}\le K_3s^2$ with $K_3$
+depending only on $f$ (as $e_{y,m}\ge\frac12$).  Choose
+$\eta_1:=\min(\frac14,\varepsilon_{\rm tr}/(8|I|K_3))$ and transfer data
+(Lemma~\ref{lem:transferdata}); $\|D_my_m\|_2\le K_y$ and $|Y_m|/q_0\le K_Y$
+with $K_y,K_Y$ independent of $\eta_1$.  Now $\|W_m-w_m\|_\infty\le
+|s|(2/t+1/t)\le3c_1$ and $\|D_m(W_m-w_m)\|_2\le2c_1$; so if $c_1\le
+\min_m\min((M_m-\gamma_m)/12,C_m/4)$ and $t_1$ is so small that $K_3c_1^2t_1^2
+(2+\Lambda^\varsigma_m)\le\gamma_m/2$ and $K_3c_1^2t_1^2\le(M_m-\gamma_m)/4$,
+Lemma~\ref{lem:TV} gives \eqref{eq:R1}.  Proposition~\ref{prop:rebalancing}
+yields
+\[
+ p^*(f+sg_c)\le1+\hat\Gamma+|I|K_3\eta_1s^2+2|I|K_3K_Y(1+\|U\|)A_0|s|^3+
+ \frac{8K_3K_yc_1s^2+K_3^2K_y^2s^4}{C_{\min}} .
+\]
+Choose first $\eta_1$ as above, then $c_1$ with
+$(4+16K_3K_y)c_1/C_{\min}\le\varepsilon_{\rm tr}/4$, then $t_1$ so small that
+the terms of order $|s|^3,s^4$ (with $|s|\le c_1t_1$) and $\Gamma_w(c)K_A|s|$
+contribute at most $\frac{s^2}2\cdot\frac{\varepsilon_{\rm tr}}4$, besides the
+conditions above.  Since $\Gamma_w(c)\le2$, the bound is at most
+$1+\frac{s^2}2(\Gamma_w(c)+\varepsilon_{\rm tr})$.
+\end{proof}
+
+\begin{theorem}[Windowed averaging]\label{thm:windowed}
+Let $I$ be finite, $f\in S_{p^*}$ with $F$ finite, $g\in\Cset(f)$,
+$\rho\in(0,1)$ and $\eta_0>0$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$.
+Suppose there are $c_1\in(0,1]$ and triples $(t^{(j)},n_j,K_j)$ with
+$t^{(j)}\to0$, $n_j\ge24\rho^2K_j/(c_1(1-\rho^2))$ and
+$K_jt^{(j)}/n_j\to0$, such that for every $j$ and every
+$t\in\{t^{(j)}2^{1-i}:1\le i\le n_j\}$ there is a balanced finite
+certificate $c_t$ at $f$ with
+\begin{enumerate}
+\item[(i)] $p^*(f+sg_{c_t})\le1+\frac{s^2}2(1+\eta_0)$ for $|s|\le c_1t$;
+\item[(ii)] $p^*(g-g_{c_t})\le K_jt$;
+\item[(iii)] $\Gamma_w(c_t)\le1+\eta_0$.
+\end{enumerate}
+Then $(f,\rho g)\in\cl\NA((c_0,p),\ell_2^2)$.  More precisely, the averaged
+certificates $c$ below satisfy $\rho g_c\in\Cset(f)$, $\Gamma_w(\rho c)\le1$
+and $\rho g_c\to\rho g$.
+\end{theorem}
+
+\begin{proof}
+Fix $s_0\in(0,1]$ with $s_0^2\le1-\rho^2$, and $j$ so large that
+$2\rho K_jt^{(j)}/n_j\le(1-\rho^2)s_0/3$.  Write $n:=n_j$, $K:=K_j$,
+$t_i:=t^{(j)}2^{1-i}$ and $c:=\frac1n\sum_ic_{t_i}$, a balanced finite
+certificate with $g_c=\frac1n\sum_ig_{c_{t_i}}$.  For each $i$ and real $s$:
+(A) if $\rho|s|\le c_1t_i$, then $p^*(f+s\rho g_{c_{t_i}})\le1+
+\frac{\rho^2s^2}2(1+\eta_0)$; (B) always $p^*(f+s\rho g_{c_{t_i}})\le
+p^*(f+s\rho g)+\rho|s|Kt_i\le s(\rho s)+\rho|s|Kt_i$.  By convexity,
+$p^*(f+s\rho g_c)\le\frac1n\sum_ip^*(f+s\rho g_{c_{t_i}})$.
+
+\emph{Case $|s|\le s_0$.}  Let $I_s:=\{i:c_1t_i<\rho|s|\}$; as the $t_i$ are
+dyadic, $\sum_{I_s}t_i<2\rho|s|/c_1$.  Using (A) off $I_s$ and (B) on $I_s$,
+$p^*(f+s\rho g_c)\le\max\{1+\frac{\rho^2s^2}2(1+\eta_0),s(\rho s)\}+Qs^2$
+with $Q:=2\rho^2K/(c_1n)\le(1-\rho^2)/12$.  Now
+$1+\frac{\rho^2s^2}2(1+\eta_0)+Qs^2\le1+\frac{s^2}2(1-\frac{1-\rho^2}3)\le
+1+\frac{s^2}2-\frac{s^4}8\le s(s)$ because $s^2\le1-\rho^2$, and
+$s(\rho s)+Qs^2\le s(s)$ by Lemma~\ref{lem:slack}(a).
+
+\emph{Case $|s|\ge s_0$.}  Using (B) for all $i$, $p^*(f+s\rho g_c)\le
+s(\rho s)+2\rho Kt^{(j)}|s|/n\le s(\rho s)+(1-\rho^2)s_0|s|/3\le s(s)$, by
+Lemma~\ref{lem:slack}(a) and $\min(s^2,|s|)\ge s_0|s|$.
+
+Hence $\rho g_c\in\Cset(f)$.  By convexity of $\Gamma_w$ in the data,
+$\Gamma_w(\rho c)\le\rho^2(1+\eta_0)\le1$, and $p^*(\rho g_c-\rho g)\le
+2\rho Kt^{(j)}/n\to0$.  Since $a\in c_{00}$, Theorem~\ref{thm:transfer}
+gives $(f,\rho'\rho g_c)\in\cl\NA$ for all $\rho'<1$, hence
+$(f,\rho g_c)\in\cl\NA$; let $j\to\infty$.
+\end{proof}
+
+\subsection{Recovery on $\mathcal R_0$ and the reduction to Lemma Z}
+
+\begin{theorem}[Recovery on $\mathcal R_0$]\label{thm:R0}
+Let $T$ be the operator of Definition~\ref{def:SLD} and $N\ge1$.  Then
+$\mathcal R_0\subseteq\Rec$: for every $f\in\mathcal R_0$ and every
+$g\in\Cset(f)$, $(f,g)\in\cl\NA((c_0,p_N),\ell_2^2)$.  No condition on the
+blocks of $f$ is needed \textup{(}infinitely many strict non-peaks,
+near-threshold coordinates, weak or degenerate peaks, failure of
+\textup{(MS)}, several active blocks and infinite contact sets are
+allowed\textup{)}.
+\end{theorem}
+
+\begin{proof}
+Fix $f\in\mathcal R_0$ (constants $\gamma,\vartheta_0$), $g\in\Cset(f)$ and
+$\rho\in(0,1)$.  Choose $\eta_0>0$ with $\rho^2(1+\eta_0)\le(1+\rho^2)/2$ and
+put
+\[
+ \kappa_0:=\tfrac12\big(\sqrt{1+\eta_0/2}-1\big),\qquad
+ \varepsilon_{\rm tr}:=\eta_0/2,\qquad A_0:=K_b+1,
+\]
+with $K_b$ from Proposition~\ref{prop:windowcert}; let $c_1,t_1$ be given by
+Lemma~\ref{lem:uniformtransfer}.  Choose $\eta\le\eta_*$ with
+$\eta_\Gamma(\eta)\le1$ and $\sqrt{1+\eta_\Gamma(\eta)}\le1+\kappa_0$, and put
+$t_\star:=\min(t_\eta,t_1,1)$.  For a window index $l$ put $t^{(l)}:=
+T_{\rm hi}(l)$, $n_l:=n^w_l$ and $K_l:=(1+\|U\|)K_2\Lambda_f(l)$.  The scales
+$t_i=T_{\rm hi}(l)2^{1-i}$, $1\le i\le n^w_l$, lie in $\mathcal W(l)$.  By
+(P3) and $\Lambda_f(l)\le\vartheta_0^{-l^2}\Lambda^\circ(l)$,
+\[
+ \Lambda_f(l)T_{\rm hi}(l)\le\vartheta_0^{-l^2}2^{-l^3}/l\to0\qquad(l\to\infty).
+\]
+Hence for all large $l$ and every $t\in\mathcal W(l)$: $t\le t_\star$,
+$K_1\Lambda_f(l)t\le1$ and $K_4\Lambda_f(l)t\le\kappa_0$.  Take a two-sided
+decomposition at scale $t$ (Lemma~\ref{lem:twosided}) and its window
+certificate $c_t$.  By Proposition~\ref{prop:windowcert},
+$\|b_t\|_1\le A_0$, $\sqrt{\Gamma_w(c_t)}\le1+2\kappa_0=\sqrt{1+\eta_0/2}$,
+i.e.\ $\Gamma_w(c_t)\le1+\eta_0/2\le2$, and (C-b) holds; by
+Lemma~\ref{lem:uniformtransfer}, $p^*(f+sg_{c_t})\le1+\frac{s^2}2(1+\eta_0)$
+for $|s|\le c_1t$; and $p^*(g-g_{c_t})\le q^*(g-g_{c_t})\le(1+\|U\|)
+\|g-g_{c_t}\|_1\le K_lt$.  Finally, by (P3),
+\[
+ \frac{n^w_l}{K_l}\ge\frac{l2^{l^3}\vartheta_0^{l^2}}{(1+\|U\|)K_2}\to\infty,
+ \qquad\frac{K_lt^{(l)}}{n^w_l}\le K_lT_{\rm hi}(l)\le(1+\|U\|)K_2
+ \frac{\vartheta_0^{-l^2}2^{-l^3}}l\to0,
+\]
+so the hypotheses of Theorem~\ref{thm:windowed} hold along large $l$, and
+$(f,\rho g)\in\cl\NA$.  As $\rho<1$ was arbitrary, $(f,g)\in\cl\NA$.
+\end{proof}
+
+The super-exponential factor $2^{l^3}$ of the design absorbs the
+$f$-dependent constant $\vartheta_0^{-l^2}$ and every constant depending on
+$f$, $g$ and $\rho$; this is the only place where the order of quantifiers
+($T$ before $f$) matters.
+
+\begin{corollary}[No intrinsic defect on $\mathcal R_0$]\label{cor:nodefectR0}
+For the operator of Definition~\ref{def:SLD} and $f\in\mathcal R_0$,
+$\Cset(f)$ is the norm closure of the set of $g_c\in\Cset(f)$ with $c$ a
+balanced finite certificate and $\Gamma_w(c)\le1$.  In particular
+$\Def(f)=\emptyset$.
+\end{corollary}
+
+\begin{proof}
+By the proof of Theorem~\ref{thm:R0} and Theorem~\ref{thm:windowed}, every
+$\rho g$ ($g\in\Cset(f)$, $\rho<1$) is a limit of such $g_c$; let
+$\rho\to1$.  These $g_c$ lie in $\mathfrak B(f)\subseteq\mathcal K(f)$.
+\end{proof}
+
+\begin{theorem}[Reduction]\label{thm:reductionZ}
+For the operator of Definition~\ref{def:SLD} and $N\ge1$, the set
+$\NA((c_0,p_N),\ell_2^2)$ is dense if and only if the following statement
+\textup{(Lemma Z)} holds: for every $f\in S_{p_N^*}$, $g\in\Cset(f)$,
+$\rho<1$ and $\varepsilon>0$ there is $f'\in\mathcal R_0$ with
+$p_N^*(f'-f)<\varepsilon$ and $\dist(\rho g,\Cset(f'))<\varepsilon$.
+\end{theorem}
+
+\begin{proof}
+If Lemma~Z holds, take $f'\in\mathcal R_0$ and $g'\in\Cset(f')$ with
+$p^*(f'-f)<\varepsilon$ and $p^*(g'-\rho g)<\varepsilon$.  By
+Theorem~\ref{thm:R0}, $(f',g')\in\cl\NA$, and $\|(f',g')-(f,\rho g)\|<
+2\varepsilon$.  So $(f,\rho g)\in\cl\NA$ for all $f,g,\rho$, and density
+follows from Proposition~\ref{prop:reduction}(b).  Conversely, if
+$\NA((c_0,p_N),\ell_2^2)$ is dense, Lemma~\ref{lem:pair} gives
+norm-attaining $f_n\to f$ with $\rho g\in\Li_n\Cset(f_n)$, and
+$f_n\in\mathcal R_0$ by Lemma~\ref{lem:R0}(a).
+\end{proof}
+
+By Lemma~\ref{lem:martintail}, Lemma~Z for infinitely many $N$ would give
+the density of $\NA((c_0,p),\ell_2^2)$ for Mart\'in's norm $p$ built with
+the designed operator.
+
+\begin{problem}[Lemma Z]\label{prob:lemmaZ}
+Let $T$ be the operator of Definition~\ref{def:SLD} and $N\ge1$.  Is it true
+that for every $f\in S_{p_N^*}$, every $g\in\Cset(f)$, every $\rho<1$ and
+every $\varepsilon>0$ there is $f'\in\mathcal R_0$ \textup{(}not necessarily
+norm attaining\textup{)} with $p_N^*(f'-f)<\varepsilon$ and
+$\dist_{p_N^*}(\rho g,\Cset(f'))<\varepsilon$?
+\end{problem}
+
+\begin{remark}[What is known about Lemma Z]\label{rem:lemmaZ}
+(a) Lemma~Z holds at every $f\in\mathcal R_0$ (take $f'=f$), and for every
+mate covered by Theorem~\ref{thm:engineered} or
+Corollary~\ref{cor:BTrecovered} (the engineered approximants are norm
+attaining, hence in $\mathcal R_0$); in particular at every \textup{(BT)}
+point.
+
+(b) $f\notin\mathcal R_0$ iff $F$ is infinite or, for all $\gamma,\vartheta_0$,
+some signature set satisfies $\|h_l1_{S_l\cap J_\gamma}\|_1<\vartheta_0^l
+\|h_l\|_1$: the one-sided base resources (support, contacts,
+near-contacts) swallow the signature of some carrier, or of a fast sequence
+of carriers (\emph{signature-resonant} first rows).  If the signature of the
+carrier $l_0$ is swallowed ($\delta'_{l_0}=0$), then $\Delta c_{l_0}$ is not
+pinned, and every coarser carrier $l<l_0$ whose signature set is met by the
+target $y_{l_0}$ becomes slaved to the free coefficient $\Delta c_{l_0}$
+through the pinning inequality; so more than the swallowed carriers may
+lose their pinning.
+
+(c) The approximants in Lemma~Z need not attain their norms.  Every pair
+$(a',z')$ with $q^*(a')=1$, $z'\in B_{\ell_\infty}$ and $z'=\sgn a'$ on
+$\supp a'$ is the forced data of some $f'\in S_{p^*}$: put
+$e':=U^*a'/\|U^*a'\|$, $\zh':=z'+Ue'$, $q'_0:=(1+\sum_m|R^{**}_m\zh'|_m)^{-1}$,
+$\xi':=q_0'\zh'$ and $f':=a'+L^*J_V(L^{**}\xi')$.  Indeed $q^{**}(\zh')=
+a'(\zh')=1$, so $f'(\xi')=1=p^{**}(\xi')$ and $p^*(f')\le1$ by
+Lemma~\ref{lem:dualball}; Proposition~\ref{prop:forced} identifies the
+forced data.  If $a'\to a$ in $\ell_1$ and $z'\to z$ coordinatewise, then
+$f'\to f$ (as in the proof of Proposition~\ref{prop:approximants}).  So one
+may lower $|z|$ on far parts of the swallowed signature sets; whether the
+resulting $f'$ satisfy the mate condition of Lemma~Z is exactly the open
+question.
+
+(d) \emph{Heuristic, not used.}  If only finitely many carriers are unpinned,
+the arguments of this section suggest that every two-sided decomposition is a
+pinned part of size $O(Kt)$, plus finitely many free (and slaved)
+coefficients with their base counterparts, i.e.\ an exact two-piece
+structure up to $O(Kt)$ on whole windows; combining windowed averaging with
+the engineering of Section~\ref{sec:engineered} is a natural route to
+Lemma~Z in that case.  Lowering $|z|$ on far parts of the swallowed sets
+makes the corresponding pinning constants tiny; above that scale $f'$
+copies the mate structure of $f$, below it the windows of $f'$ take over,
+and the transition band would have to be handled by the $\rho$-slack.
+None of this is proved.
+
+(e) \emph{Sketch, not used.}  For $F$ infinite with (SR), the proof of
+Theorem~\ref{thm:R0} appears to go through after clamping $B_+$ on $F$ at
+$2|a_j|/t$ (the excess beyond the no-flip capacity is one-sided and bounded
+by $|\Delta B(j)|$ plus flip costs), truncating the clamped base part to a
+finite set, adapting Lemma~\ref{lem:uniformtransfer} to $|b_j|\le2|a_j|/t$,
+and using a version of Theorem~\ref{thm:transfer} for $a\notin c_{00}$; we
+have not written out the details.
+\end{remark}

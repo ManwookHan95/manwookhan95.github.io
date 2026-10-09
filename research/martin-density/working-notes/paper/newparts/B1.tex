@@ -1,0 +1,169 @@
+
+\section{A designed admissible operator}\label{sec:designed}
+
+Mart\'in's construction works with every admissible operator $T$
+(Remark~\ref{rem:lemmaB}).  In this section we \emph{design} $T$ and prove
+that, for this $T$ and every finite block set, every first row in a large
+class $\mathcal R_0$ is recoverable; consequently density for this $T$ is
+equivalent to a single statement about approximating mates by mates at
+first rows in $\mathcal R_0$ (Lemma~Z, Problem~\ref{prob:lemmaZ}).  The
+mechanism is \emph{signature pinning}: every block vector carries a private
+signature on its own set of coordinates, so that at a first row whose
+signature sets keep some room, the block coefficients of any two admissible
+decompositions of a mate are fixed by the mate itself, up to $O(t)$.
+
+Throughout this section $N\ge1$ is fixed, $I=\{1,\dots,N\}$ and $p=p_N$.
+The symbols $S_l,h_l,\delta_l,c_l,n_l,y_l,u_l$ below are local to this
+section and are unrelated to the construction of
+Section~\ref{sec:resonance}.
+
+\subsection{The signature-ladder design}
+
+\begin{definition}[Signature-ladder design]\label{def:SLD}
+\textup{(D0)} Fix a bijection $\iota:\N\times\N\to\N$ with
+$\iota(k,m)<\iota(k',m)$ for $k<k'$, and write $(k(l),m(l)):=\iota^{-1}(l)$.
+Fix a coordinate $j_0$, pairwise disjoint infinite sets
+$S_l\subseteq\N\setminus\{j_0\}$ $(l\in\N)$, and put
+\[
+ h_l:=\sum_{s\in S_l}2^{-s}e_s^*\ (\ge0),\qquad \delta_l:=\min\big\{2^{-l},
+ (4(1+\|U\|)\|h_l\|_1)^{-1}\big\},
+\]
+so that $q^*(\delta_lh_l)\le(1+\|U\|)\delta_l\|h_l\|_1\le\frac14$.  Fix
+\emph{targets} $y^{(i)}\in c_{00}\cap S_{q^*}$ $(i\ge1)$, dense in
+$S_{q^*}$, with $y^{(1)}:=e_{j_0}^*/q^*(e_{j_0}^*)$, and a sequence
+$(i_r)_{r\ge1}$ in which every positive integer occurs infinitely often.
+
+\textup{(D1)} Recursively in $l=1,2,\dots$: given $c_l\in(0,1]$ ($c_1:=1$),
+call $y\in c_{00}$ \emph{allowed at} $l$ if
+\begin{enumerate}
+\item[(a)] $\supp y\cap S_{l'}=\emptyset$ for every $l'\ge l$, and
+\item[(b)] $2c_l\le2^{-2s}c_{l'}\delta_{l'}$ for every $l'<l$ and every
+$s\in\supp y\cap S_{l'}$.
+\end{enumerate}
+Let $y_l:=y^{(i_{k(l)})}$ if this target is allowed at $l$, and
+$y_l:=y^{(1)}$ otherwise ($y^{(1)}$ is allowed at every $l$).  Put
+\begin{gather*}
+ n_l:=q^*(y_l+\delta_lh_l),\quad u_l:=(y_l+\delta_lh_l)/n_l,\quad
+ \delta^\circ_l:=\delta_l\|h_l\|_1/n_l,\quad
+ \Lambda^\circ(l):=\prod_{l''\le l}\Big(1+\frac2{\delta^\circ_{l''}}\Big),\\
+ T_{\rm hi}(l):=\min\Big\{T_{\rm lo}(l-1),\frac{2^{-l^3}}{l\Lambda^\circ(l)}
+ \Big\}\ (T_{\rm lo}(0):=1),\quad n^w_l:=\big\lceil l2^{l^3}\Lambda^\circ(l)
+ \big\rceil,\\
+ T_{\rm lo}(l):=2^{-n^w_l}T_{\rm hi}(l),\qquad
+ c_{l+1}:=\min\{c_l/4,T_{\rm lo}(l)^3\}.
+\end{gather*}
+
+\textup{(D2)} $Te_{k,m}:=c_{\iota(k,m)}u_{\iota(k,m)}$, extended linearly and
+continuously to $\ell_1(\N\times\N)$.
+\end{definition}
+
+The interval $\mathcal W(l):=[T_{\rm lo}(l),T_{\rm hi}(l)]$ is the
+\emph{$l$-th window}; it contains the $n^w_l$ dyadic scales
+$T_{\rm hi}(l)2^{1-i}$, $1\le i\le n^w_l$.
+
+\begin{theorem}[The design is admissible]\label{thm:SLD}
+The operator $T$ of Definition~\ref{def:SLD} is admissible.  For
+$l=\iota(k,m)$ we have $u_{k,m}=u_l$, $\Phi_m(k)=2^{-m-k}c_l$ and
+$\lambda_l:=\lambda_{k,m}\le c_l/4$, and:
+\begin{enumerate}
+\item[(P1)] $y_l\in c_{00}$, $\|y_l\|_1\le1$, $n_l\in[\frac34,\frac54]$ and
+$\supp y_l\cap S_{l'}=\emptyset$ for $l'\ge l$.  Consequently, for
+$s\in S_l$: $u_l(s)=\delta_l2^{-s}/n_l$, $u_{l'}(s)=0$ for $l'<l$, and
+$u_{l'}(s)=y_{l'}(s)/n_{l'}$ for $l'>l$.
+\item[(P2)] $\sum_{l'>l}c_{l'}\le2c_{l+1}\le2T_{\rm lo}(l)^3$ and
+$\sum_{l'>l}\lambda_{l'}\le T_{\rm lo}(l)^3$.
+\item[(P3)] $T_{\rm hi}(l)2^{l^3}\Lambda^\circ(l)\le1/l$,
+$n^w_l\ge l2^{l^3}\Lambda^\circ(l)$, and $T_{\rm hi}(l+1)\le T_{\rm lo}(l)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(P1): $q^*(y_l)=1$, $\|y_l\|_1\le q^*(y_l)$ and $q^*(\delta_lh_l)\le\frac14$
+give the bounds; the support statement is (a); for $s\in S_l$ the
+signatures $h_{l'}$, $l'\ne l$, vanish at $s$ (disjointness), and the targets
+$y_{l'}$ with $l'\le l$ vanish on $S_l$ by (a).  (P2): $c_{l'+1}\le
+c_{l'}/4$ and $\lambda_{l'}\le c_{l'}/4$.  (P3) is immediate from (D1).
+
+\emph{(T-a).} $q^*(Te_{k,m})=c_l\le1=c_1$.
+
+\emph{(T-d).}  Fix $m$ and $i$.  The finite set $\supp y^{(i)}$ meets only
+finitely many $S_{l'}$, and $c_l\to0$, so $y^{(i)}$ is allowed at every
+large $l$.  Since $i$ occurs infinitely often in $(i_r)$, $y_l=y^{(i)}$ for
+infinitely many $l=\iota(k,m)$, and along these $\delta_l\to0$ and
+$n_l\to1$, so $q^*(u_l-y^{(i)})\to0$.  Hence every $y^{(i)}$ is a limit of
+$u_{k,m}$, $k\to\infty$, and $\{u_{k,m}:k\in\N\}$ is dense in $S_{q^*}$.
+
+\emph{(T-b), (T-c).}  Let $x\in\ell_1(\N\times\N)$, indexed by $l$, with
+$\mathcal Z:=T x=\sum_lx_lc_lu_l\in c_{00}$, and suppose $x_{l'}\ne0$.  For
+$s\in S_{l'}$, by (P1),
+\[
+ \mathcal Z(s)=\frac{x_{l'}c_{l'}\delta_{l'}2^{-s}}{n_{l'}}+\sum_{l>l',\
+ s\in\supp y_l}\frac{x_lc_ly_l(s)}{n_l}.
+\]
+If the last sum is not empty, let $L(s)$ be its least index; by (b) at
+$L(s)$, $2c_{L(s)}\le2^{-2s}c_{l'}\delta_{l'}$, and the sum is at most
+$\frac43\|x\|_\infty\sum_{l\ge L(s)}c_l\le\frac{16}9\|x\|_\infty c_{L(s)}\le
+\frac89\|x\|_\infty2^{-2s}c_{l'}\delta_{l'}$.  Hence $|\mathcal Z(s)|\ge
+c_{l'}\delta_{l'}2^{-s}\big(|x_{l'}|/n_{l'}-\frac89\|x\|_\infty2^{-s}\big)>0$
+for all large $s\in S_{l'}$, contradicting $\mathcal Z\in c_{00}$.  So
+$x=0$: $T$ is injective and $T(\ell_1(\N\times\N))\cap c_{00}=\{0\}$.
+\end{proof}
+
+Only (T-a)--(T-d), (P1), (P2) and (P3) are used below.  No rate of
+approximation of the targets and no independence property of the targets
+is used; the same target sequence serves all blocks, so Mart\'in's
+cross-block near duplicates are compatible with the design.
+
+\subsection{The class $\mathcal R_0$}
+Let $\mathcal L_N:=\{l:m(l)\le N\}$, the ladder indices of the blocks
+present in $p_N$.  For $f\in S_{p^*}$ and $\gamma\in(0,1)$ let
+$J_\gamma:=\{j\notin F:|z_j|\le1-\gamma\}$ (coordinates with room
+$\ge\gamma$).
+
+\begin{definition}[Signature room]\label{def:R0}
+$f\in S_{p^*}$ belongs to $\mathcal R_0$ if $F$ is finite and
+\begin{enumerate}
+\item[(SR)] there are $\gamma\in(0,1)$ and $\vartheta_0\in(0,1]$ with
+$\|h_l1_{S_l\cap J_\gamma}\|_1\ge\vartheta_0^l\|h_l\|_1$ for every
+$l\in\mathcal L_N$.
+\end{enumerate}
+For such $f$ put $\delta'_l:=\delta_l\|h_l1_{S_l\cap J_\gamma}\|_1/n_l\ge
+\vartheta_0^l\delta^\circ_l$, $\Lambda_f(l):=\prod_{l''\le l,\,l''\in
+\mathcal L_N}(1+2/\delta'_{l''})$.
+\end{definition}
+
+Since $1+2/\delta'_l\le\vartheta_0^{-l}(1+2/\delta^\circ_l)$ and
+$\sum_{l''\le l}l''\le l^2$, we have $\Lambda_f(l)\le\vartheta_0^{-l^2}
+\Lambda^\circ(l)$.
+
+\begin{lemma}\label{lem:R0}
+\textup{(a)} Every $f'\in\NA((X,p),\R)\cap S_{p^*}$ belongs to
+$\mathcal R_0$.  \textup{(b)} Every \emph{base-tame} $f$ \textup{(}$F$ and
+$K$ finite and $\sup_{j\notin F\cup K}|z_j|<1$\textup{)} belongs to
+$\mathcal R_0$.  \textup{(c)} $\mathcal R_0$ contains first rows with
+infinite contact sets and with near-contacts, with arbitrary block
+structure.
+\end{lemma}
+
+\begin{proof}
+(a) By Proposition~\ref{prop:smooth}(c), $F'=\supp a'$ is finite and
+$z'\in c_0$, so $\{j\notin F':|z'_j|>\frac12\}$ is finite.  Choose
+$\gamma\in(0,\frac12]$ with $\gamma\le1-|z'_j|$ for each of these $j$ with
+$|z'_j|<1$.  Then $\N\setminus J_\gamma=F'\cup K'$ is finite.  Every $S_l$
+is infinite, so $\|h_l1_{S_l\cap J_\gamma}\|_1>0$ for all $l$, and the
+ratio is $1$ for all but finitely many $l$; take $\vartheta_0$ as the
+minimum of $1$ and of the $l$-th roots of the finitely many other ratios.
+(b) The same argument with $\gamma:=1-\sup_{j\notin F\cup K}|z_j|$.
+(c) Since $\sum_{s>s_0}2^{-s}=2^{-s_0}$, the least element of $S_l$ carries
+at least half of the mass of $h_l$.  Hence every $f$ with $F$ finite and
+disjoint from $\bigcup_lS_l$ (e.g.\ $F=\{j_0\}$),
+$|z_j|\le\frac12$ at $j=\min S_l$ for all $l$, and arbitrary $z$
+elsewhere (for instance $|z_j|=1$ on the infinite set
+$\bigcup_l(S_l\setminus\{\min S_l\})$) satisfies (SR) with $\gamma=\frac12$
+and $\vartheta_0=\frac12$.  First rows with prescribed $(a,z)$ exist by
+Remark~\ref{rem:lemmaZ}(c).
+\end{proof}
+
+The first row of Section~\ref{sec:resonance}, transplanted to this design
+(its contact set being a signature set), is the typical first row outside
+$\mathcal R_0$ (\emph{signature-resonant}).

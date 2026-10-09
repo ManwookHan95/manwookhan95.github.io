@@ -1,0 +1,241 @@
+
+\subsection{Two-piece data and the exact one-sided coefficient}
+
+\begin{definition}[Side-admissible data, two-piece data]\label{def:twopiece}
+Let $f\in S_{p^*}$ with $F$ finite, and $g\in X^*$.  A pair $(b,\omega)$
+with $b\in\ell_1$ and $\omega=(\omega_m)_{m\in I}$, $\omega_m\in c_{00}$,
+$\supp\omega_m\subseteq Q_m$, \emph{represents} $g$ if
+$g=b+\sum_mR_m^*(\omega_m-d_m(\omega_m)w_m)$, where
+$d_m(\omega):=\ip{D_mw_m}{D_m\omega}/C_m$.  It is \emph{side-$+$ admissible}
+\textup{(}resp.\ \emph{side-$-$ admissible}\textup{)} if moreover $b_j=0$
+for $j\notin F\cup K$ and $z_jb_j\ge0$ \textup{(}resp.\ $z_jb_j\le0$\textup{)}
+for $j\in K$.  \emph{Two-piece data} for $g$ are a side-$+$ admissible pair
+$(b^+,\omega^+)$ and a side-$-$ admissible pair $(b^-,\omega^-)$; put
+$\Delta d_m:=d_m(\omega^-_m)-d_m(\omega^+_m)$,
+\[
+ \Gamma_w(b,\omega):=q_0h(b)+\sum_m\sigma_mH_m(\omega_m),\qquad
+ \kappa_w:=\max\big(\Gamma_w(b^+,\omega^+),\Gamma_w(b^-,\omega^-)\big).
+\]
+The data are \emph{$d$-neutral} if $\Delta d_m=0$ for all $m$.  For $g$ with
+$g(\xi)=0$ the \emph{one-sided coefficients} are
+$\gamma^\pm(g):=\inf\{\Gamma_w(b,\omega):(b,\omega)\text{ side-$\pm$
+admissible for }g\}\in[0,\infty]$.
+\end{definition}
+
+If $(b,\omega)$ represents $g$, then $b(\xi)=g(\xi)$, because
+$\ip{\omega_m-d_m(\omega_m)w_m}{\zeta_m}=0$ (Lemma~\ref{lem:algebra}).  A
+pair with $b$ supported in $F$ is admissible on both sides; it is then a
+balanced finite certificate in the sense of Definition~\ref{def:tame}, and
+$\Gamma_w(b,\omega)=\Gamma_w(g)$.  The mates of
+Proposition~\ref{prop:twopiece} carry the two-piece data
+$(b^+,\omega^+)=(g_{K_1},0)$ and $(b^-,\omega^-)=(g_{K_1}-cu_{2,1},
+(c/\lambda_0)e_2\text{ in block }1)$, which are $d$-neutral because
+$w_1(2)=0$.  Since $h$ and $H_m$ are positive semidefinite quadratic forms,
+$\Gamma_w$ is convex in $(b,\omega)$.
+
+\begin{definition}[Block-tame points]\label{def:BT}
+$f\in S_{p^*}$ satisfies \textup{(BT)} if $F$ is finite, every $Q_m$ is
+finite, there are no degenerate peaks, and \textup{(MS)} holds at $\xi$.
+Nothing is assumed about the contact set $K$, which may be infinite.
+\end{definition}
+
+Thus the points of Theorem~\ref{thm:tame} are the \textup{(BT)} points with
+$K$ finite, and the first row $f$ of Lemma~\ref{lem:firstrow} is a
+\textup{(BT)} point with $K=K_0$ infinite
+(Corollary~\ref{cor:exampleRecovered} below).
+
+\begin{proposition}[One-sided upper bound]\label{prop:onesidedupper}
+Let $f\in S_{p^*}$ with $F$ finite, $g\in X^*$ with $g(\xi)=0$, and let
+$(b,\omega)$ be side-$+$ admissible for $g$.  Then
+\[
+ \limsup_{t\to0^+}\frac{2(p^*(f+tg)-1)}{t^2}\le\Gamma_w(b,\omega),
+\]
+and the same holds for $t\to0^-$ and side-$-$ admissible pairs.  In
+particular, for every balanced finite certificate $g\in S(f)$ with
+$a\in c_{00}$, $\limsup_{t\to0}2(p^*(f+tg)-1)/t^2\le\Gamma_w(g)$.
+\end{proposition}
+
+\begin{proof}
+Let $t>0$; the case $t<0$ is the same with $-g$, $-b$ and $-\omega$, which
+turns side $-$ into side $+$.  We have the exact decomposition
+$f+tg=A+\sum_mR_m^*W_m$, $A:=a+tb$, $W_m:=w_m+t(\omega_m-d_mw_m)$,
+$d_m:=d_m(\omega_m)$.
+
+\emph{First-order terms and excesses.}  $\lin_b(A)=tb(\zh)=0$, since
+$b(\xi)=g(\xi)=0$, and $\lin_m(W_m)=0$ by Lemma~\ref{lem:algebra}.  For
+$t\|b\|_\infty\le\min_F|a_j|$ there are no flips on $F$; off $F$, $b$
+vanishes on $J$ and $z_jb_j=|b_j|$ on $K$; so $\Exc(tb)=0$ by
+Lemma~\ref{lem:bookkeeping}(b), and by Lemma~\ref{lem:base},
+$G_b(A)=\nu\Psi(tU^*b/\nu)\le\frac{t^2}2h(b)(1+2t\|U^*b\|/\nu)$ for
+$t\|U^*b\|\le\nu/2$.  By Lemma~\ref{lem:block}(d), for $t$ below the
+coordinatewise radius of $\omega_m$,
+$G_m(W_m)=N_m(W_m)-1\le\frac{t^2}2H_m(\omega_m)(1+2t|d_m|M_m/C_m)$.  Hence
+there is $K_1$ with $G_b(A)\le\hat G_b:=\frac{t^2}2h(b)(1+K_1t)$ and
+$G_m(W_m)\le\hat G_m:=\frac{t^2}2H_m(\omega_m)(1+K_1t)$ for small $t$, and
+$\hat\Gamma=\frac{t^2}2\Gamma_w(b,\omega)(1+K_1t)$.
+
+\emph{Rebalancing.}  Fix $\eta_1\in(0,\frac14]$.  In every block choose
+$\gamma_m\in(0,M_m)$ with $|w_m(k)|\ne\gamma_m$ for all $k$ and transfer
+data as in Lemma~\ref{lem:transferdata}; then $e^\varsigma_{y,m}\ge
+\frac12$, $\iota^\varsigma_m\le\eta_1$, and $\|D_my^\varsigma_m\|_2\le K_2$,
+$|Y^\varsigma_m|/q_0\le K_2$ with $K_2$ independent of $\eta_1$.  Put
+$\varepsilon_m:=(\hat G_m-\hat\Gamma)/e_{y,m}$, where $y_m:=y^\downarrow_m$
+if $\hat G_m\ge\hat\Gamma$ and $y_m:=y^\uparrow_m$ otherwise.  Then
+$|\varepsilon_m|\le K_3t^2$ with $K_3$ independent of $\eta_1$.  Since
+$\|W_m-w_m\|_\infty+\|D_m(W_m-w_m)\|_2\le K_4t$, the hypotheses of
+Lemma~\ref{lem:TV}(a),(b),(c) hold for small $t$ (the radii depend on
+$\Lambda^\varsigma_m$, which is fixed once $\eta_1$ is), so \eqref{eq:R1}
+holds and $|\lambda|\le|I|K_2K_3t^2\le1$.  Proposition~\ref{prop:rebalancing}
+gives
+\[
+ p^*(f+tg)\le1+\frac{t^2}2\Gamma_w(b,\omega)(1+K_1t)+|I|K_3\eta_1t^2+O(t^3),
+\]
+because $|q^*(A)-1|+q^*(A-a)=O(t)$.  Hence the $\limsup$ is at most
+$\Gamma_w(b,\omega)+2|I|K_3\eta_1$, and $\eta_1$ is arbitrary.  The last
+sentence follows because such a $g$ has a pair $(b,\omega)$ with $\supp
+b\subseteq F$.
+\end{proof}
+
+The last sentence proves the statement left as a sketch in
+Remark~\ref{rem:transfer}(c).
+
+\begin{theorem}[Exact one-sided coefficient]\label{thm:onesided}
+Let $f$ satisfy \textup{(BT)} and let $g\in X^*$ with $g(\xi)=0$.  Then:
+\begin{enumerate}
+\item[(a)] $\displaystyle\lim_{t\to0^\pm}\frac{2(p^*(f+tg)-1)}{t^2}=
+\gamma^\pm(g)$ in $[0,\infty]$;
+\item[(b)] if $\gamma^\pm(g)<\infty$, the infimum defining it is attained;
+\item[(c)] every $g\in\Cset(f)$ satisfies $\gamma^\pm(g)\le1$, and therefore
+has two-piece data with $\kappa_w=\max(\gamma^+(g),\gamma^-(g))\le1$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:onesidedupper}, $\limsup_{t\to0^+}\le\gamma^+(g)$.
+We prove $\liminf_{t\to0^+}\ge\gamma^+(g)$ and (b) for side $+$; side $-$
+is symmetric (replace $t$ by $-t$ and the cone $C_+$ below by
+$C_-:=-C_+$).
+
+\emph{Step 1: test points.}  Let
+$C_+:=\{\chi_c\in c_{00}:\chi_c=0\text{ on }F,\ z_j\chi_{c,j}\le0\text{ for }
+j\in K\}$, a convex cone (inward moves of contacts, arbitrary moves of the
+free coordinates).  Let $k\in H$ with $\ip ke=0$ and $\chi_c\in C_+$, and put
+$\chi:=Uk+\chi_c\in c_0$.  As in the base test of the proof of
+Proposition~\ref{prop:lowerbound} (with $k$ in place of $k_\perp$, which is
+no longer restricted to $E_F$), let $\kappa_2:=\nu\|k\|^2/(2q_0)$, choose
+$k_2\in H$ with $(Uk_2)_j=-\kappa_2z_j$ for $j\in F$ and
+$\ip{e}{k_2}=\kappa_2-\|k\|^2/(2q_0)$ (possible by the Gram system there,
+which only involves $F$), put $\chi_2:=(Uk_2)1_{\N\setminus F}$,
+$\eta_t:=\xi+t\chi+t^2\chi_2$, $\mathbf h_t:=q_0e+tk+t^2k_2$ and
+$Z_t:=\eta_t-U\mathbf h_t$.  Then $Z_{t,j}=(q_0+t^2\kappa_2)z_j$ for $j\in F$
+and $Z_{t,j}=q_0z_j+t\chi_{c,j}$ for $j\notin F$: the vector $k$ does not
+move any coordinate of $Z_t$.  Since $\chi_c$ is finitely supported, moves
+contacts inward and $|z_j|<1$ on its support off $F\cup K$, we have
+$\|Z_t\|_\infty\le q_0+t^2\kappa_2$ for small $t$; and $\|\mathbf h_t\|=
+q_0+t^2\kappa_2+O(t^3)$ because $k\perp e$.  As
+$B_{q^{**}}=B_{\ell_\infty}+U(B_H)$, $q^{**}(\eta_t)\le q_0+t^2\kappa_2+
+O(t^3)$, while $a(\eta_t-\xi)=t\ip{U^*a}{k}=0$.  Hence the base excess
+satisfies $E_q(t\chi+t^2\chi_2)\le\frac{t^2}2\frac\nu{q_0}\|k\|^2+O(t^3)$.
+
+\emph{Step 2: the test inequality.}  For each block let
+$\mathfrak d_m(\delta):=(S_{P_m}(\delta),(\delta_k)_{k\in Q_m})\in
+\R\times\R^{Q_m}$, where $S_{P_m}(\delta)=\sum_{k\in P_m}\sgn(w_m(k))\delta_k$.
+The block test of the proof of Proposition~\ref{prop:lowerbound} (which uses
+only that $Q_m$ is finite, that there are no degenerate peaks, and
+\textup{(MS)}) gives $E_m(tR_m\chi+t^2R_m\chi_2)\le\frac{t^2}2\mathcal
+Q_m(\mathfrak d_m(R_m\chi))+o(t^2)$, where $\mathcal Q_m$ is the Hessian
+of the function $G$ there, a quadratic form on $\R\times\R^{Q_m}$.  The
+formulas of the block suprema in that proof show that $\mathcal Q_m$ is
+positive semidefinite and vanishes at $\mathfrak d_m(\zeta_m)$, and that
+for every $\omega\in\R^{Q_m}$
+\begin{equation}\label{eq:blocksup}
+ \sup_{\mathfrak d\in\R\times\R^{Q_m}}\big(2v(\mathfrak d)-\mathcal Q_m(
+ \mathfrak d)\big)=\sigma_mH_m(\omega),\qquad v:=\omega-d_m(\omega)w_m,
+\end{equation}
+where a vector $V\in\ell_\infty$ which is a constant multiple of
+$\sgn(w_m)$ on $P_m$ is regarded as the linear form
+$\mathfrak d_m(\delta)\mapsto\ip V\delta$ on the data (recall
+$P_m\cup Q_m=\N$, and every $\mathfrak d\in\R\times\R^{Q_m}$ is
+$\mathfrak d_m(\delta)$ for some $\delta\in\ell_1$).  Every linear form
+on $\R\times\R^{Q_m}$ is $\mathfrak d\mapsto\ip V\delta$ with
+$V=c\,\sgn(w_m)1_{P_m}+\tilde\omega$, $\tilde\omega\in\R^{Q_m}$, and then
+$V=\omega+(c/M_m)w_m$ with $\omega:=\tilde\omega-(c/M_m)w_m1_{Q_m}$; since
+$\ip{\omega}{\zeta_m}=\sigma_md_m(\omega)$, $V$ is of the form $2v$ in
+\eqref{eq:blocksup} iff $\ip V{\zeta_m}=0$.  If $\ip V{\zeta_m}\ne0$, the
+supremum of $\ip V\delta-\mathcal Q_m$ is $+\infty$ (take
+$\delta=s\zeta_m$).  As in \eqref{eq:testratio}, $p^*(f+tg)\ge
+(f+tg)(\eta_t)/p^{**}(\eta_t)=1+t^2g(\chi)-\Delta(\eta_t)+O(t^3)$, so
+\[
+ \liminf_{t\to0^+}\frac{2(p^*(f+tg)-1)}{t^2}\ge\Phi(k,\chi_c):=2g(\chi)
+ -\frac\nu{q_0}\|k\|^2-\sum_m\mathcal Q_m(\mathfrak d_m(R_m\chi)).
+\]
+
+\emph{Step 3: weak duality.}  Let $(b,\omega)$ be side-$+$ admissible for
+$g$.  Then $b(\chi_c)\le0$, $2b(Uk)=2\ip{P^\perp U^*b}{k}\le q_0h(b)+
+\frac\nu{q_0}\|k\|^2$, and by \eqref{eq:blocksup}
+$2(\omega_m-d_mw_m)(R_m\chi)-\mathcal Q_m(\mathfrak d_m(R_m\chi))\le
+\sigma_mH_m(\omega_m)$.  Adding, $\Phi(k,\chi_c)\le\Gamma_w(b,\omega)$.
+
+\emph{Step 4: strong duality.}  Let $n:=\sum_m(|Q_m|+1)$,
+$\mathfrak d(\chi):=(\mathfrak d_m(R_m\chi))_m\in\R^n$,
+$\mathcal Q(y):=\sum_m\mathcal Q_m(y_m)$ (convex and finite on $\R^n$), and
+\[
+ \Psi(y):=\sup\Big\{2g(Uk+\chi_c)-\frac\nu{q_0}\|k\|^2:\ k\perp e,\ \chi_c\in
+ C_+,\ \mathfrak d(Uk+\chi_c)=y\Big\}
+\]
+($\sup\emptyset:=-\infty$).
+$\Psi$ is concave (the constraint set is convex and the objective jointly
+concave), $\Psi(0)\ge0$, and $\sup\Phi=\sup_y(\Psi(y)-\mathcal Q(y))$.  If
+$\Psi(y_0)=+\infty$ for some $y_0$, then $\sup\Phi=+\infty$, so by Step~3 no
+side-$+$ admissible pair exists, $\gamma^+(g)=+\infty$, and Step~2 gives
+the claim.  Otherwise $\Psi$ is proper, $\operatorname{ri}(\operatorname{dom}
+\mathcal Q)=\R^n$ meets $\operatorname{ri}(\operatorname{dom}\Psi)$, and
+Fenchel's duality theorem \cite[Theorem~31.1]{Rockafellar} gives
+\[
+ \sup_y\big(\Psi(y)-\mathcal Q(y)\big)=\min_{\lambda\in\R^n}\big(\mathcal
+ Q^*(\lambda)-\Psi_*(\lambda)\big),
+\]
+the minimum being attained (both sides may be $+\infty$), where $\mathcal
+Q^*(\lambda)=\sup_y(\ip\lambda y-\mathcal Q(y))$ and $\Psi_*(\lambda)=
+\inf_y(\ip\lambda y-\Psi(y))$.  Write $\ip{\lambda}{\mathfrak d(\chi)}=
+\sum_m\ip{V_m}{R_m\chi}=\varphi_\lambda(\chi)$ with $V_m$ as in Step~2 and
+$\varphi_\lambda:=\sum_mR_m^*V_m\in\ell_1$.  Then, with
+$\beta:=g-\varphi_\lambda/2$,
+\[
+ -\Psi_*(\lambda)=\sup_{k\perp e}\big(2\ip{P^\perp U^*\beta}{k}-\tfrac\nu{q_0}
+ \|k\|^2\big)+\sup_{\chi_c\in C_+}2\beta(\chi_c),
+\]
+the first supremum is $(q_0/\nu)\|P^\perp U^*\beta\|^2=q_0h(\beta)$, and the
+second is $0$ if $\beta_j=0$ on $J$ and $z_j\beta_j\ge0$ on $K$, and
+$+\infty$ otherwise.  By Step~2, $\mathcal Q^*(\lambda)=\sum_m\sigma_m
+H_m(\omega_m)$ if $V_m=2(\omega_m-d_m(\omega_m)w_m)$ with $\omega_m\in
+\R^{Q_m}$ for every $m$, and $+\infty$ otherwise.  In the finite case
+$\varphi_\lambda/2=\sum_mR_m^*(\omega_m-d_m(\omega_m)w_m)$, so
+$\mathcal Q^*(\lambda)-\Psi_*(\lambda)$ is finite iff $(\beta,\omega)$ is a
+side-$+$ admissible pair for $g$, and then equals $\Gamma_w(\beta,\omega)$.
+Conversely every side-$+$ admissible pair arises from some $\lambda$.
+Hence $\sup\Phi=\gamma^+(g)$, and a minimizing $\lambda$ yields a pair
+attaining $\gamma^+(g)$ when it is finite.  With Step~2 this proves (a)
+and (b).
+
+(c) If $g\in\Cset(f)$, then $g(\xi)=0$ and $p^*(f+tg)\le s(t)\le1+t^2/2$, so
+both limits in (a) are at most $1$; the minimizers of (b) are two-piece data
+with $\kappa_w\le1$.
+\end{proof}
+
+\begin{remark}\label{rem:onesided}
+(a) If $K$ is finite, two pairs representing $g$ whose base parts are
+supported in $F\cup K$ coincide (Lemma~\ref{lem:rigidity}(a)); a pair that
+is admissible on both sides has $b=0$ on $K$.  Hence
+$\max(\gamma^+(g),\gamma^-(g))<\infty$ iff $g\in S(f)$, and then
+$\gamma^+(g)=\gamma^-(g)=\Gamma_w(g)$; so at \textup{(BT)} points with $K$ finite,
+Theorem~\ref{thm:onesided} contains Proposition~\ref{prop:lowerbound} and
+gives again $\Cset(f)\subseteq S(f)$.  The
+proof above needs no decoupling, so the cofiniteness of $J$
+(Remark~\ref{rem:kinks}(a)) is not needed.
+(b) When $K$ is infinite, $\gamma^\pm(g)$ can be smaller than $\Gamma_w$ of
+a balanced finite certificate representing $g$: the optimal side
+decompositions re-split through contacts with the cheap sign.  This is the
+phenomenon observed numerically in finite models in
+Remark~\ref{rem:kinks}(a) (numerical evidence only).
+\end{remark}

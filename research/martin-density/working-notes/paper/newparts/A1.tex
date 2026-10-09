@@ -1,0 +1,294 @@
+\section{Engineered approximants}\label{sec:engineered}
+
+Throughout this section the block set $I$ is finite and $T$ is an arbitrary
+admissible operator.  We prove that the switching mates of
+Section~\ref{sec:resonance} are recovered, and much more: every first row
+satisfying a block-tameness condition that allows arbitrary contact sets
+lies in $\Rec$ (Corollary~\ref{cor:BTrecovered}).  The approximants are
+norm attaining and are \emph{engineered}: unlike the canonical truncations
+of Section~\ref{sec:second}, they put base mass on finitely many contacts.
+The mechanism that makes this work is \emph{first-order rebalancing}
+through the transfer peaks of Theorem~\ref{thm:transfer}: a linear
+mismatch between the base part and the block parts of a decomposition is a
+pure shift of levels, and transfer peaks move levels between the base and
+the blocks at a relative cost that can be fixed in advance.
+
+\subsection{Levels, excesses and rebalancing}
+Let $f\in S_{p^*}$ have forced data as in Section~\ref{sec:setting}; the
+results of this subsection apply both to non-attaining $f$ (normer
+$\xi\in S_{p^{**}}$) and to norm-attaining $f'=\nabla p(x')$ (normer
+$x'\in S_p$, forced data at $x'$, with $\zh'=x'/q(x')$).  For $A\in\ell_1$
+and $W_m\in\ell_\infty$ put
+\begin{gather*}
+ \lin_b(A):=(A-a)(\zh),\qquad G_b(A):=q^*(A)-A(\zh)=q^*(A)-1-\lin_b(A),\\
+ \lin_m(W_m):=\frac{\ip{W_m-w_m}{\zeta_m}}{\sigma_m},\\
+ G_m(W_m):=N_m(W_m)-\frac{\ip{W_m}{\zeta_m}}{\sigma_m}
+ =N_m(W_m)-1-\lin_m(W_m).
+\end{gather*}
+The \emph{first-order terms} $\lin$ are linear and the \emph{excesses} $G$
+are nonnegative: $q^{**}(\zh)=1$ and $|\ip{W}{\zeta_m}|\le
+N_m(W)|\zeta_m|_m$.
+
+\begin{lemma}[Bookkeeping and exact base excess]\label{lem:bookkeeping}
+\textup{(a)} If $f+h=A+\sum_mR_m^*W_m$ with $h\in X^*$, then
+$q_0\lin_b(A)+\sum_m\sigma_m\lin_m(W_m)=h(\xi)$.
+
+\textup{(b)} For $B\in\ell_1$,
+$G_b(a+B)=\Exc(B)+\nu\Psi(U^*B/\nu)$, where
+$\Exc(B):=\sum_j\big(|a_j+B_j|-|a_j|-z_jB_j\big)\ge0$ and $\Psi$ is the
+function of Lemma~\ref{lem:base}.  Moreover $\Exc(B+B')\le\Exc(B)+
+2\|B'\|_1$, and if $|B_j|\le|a_j|$ for $j\in F$, then
+$\Exc(B)=\sum_{j\notin F}(|B_j|-z_jB_j)$.
+
+\textup{(c)} For every block, $G_m(W)=\sum_{k\in P_m}|\alpha_m(k)|
+\big(\|W\|_\infty-\sgn(w_m(k))W(k)\big)+\big(\|D_mW\|_2-\ip{D_mW}{D_mw_m}/C_m
+\big)$, and both terms are nonnegative.
+\end{lemma}
+
+\begin{proof}
+(a) $q_0\lin_b(A)=(A-a)(\xi)$ and $\sigma_m\lin_m(W_m)=\ip{W_m-w_m}
+{R_m^{**}\xi}$; their sum is $(A+L^*W-a-L^*w)(\xi)=h(\xi)$.
+(b) This is \eqref{eq:baseidentity} with $t=1$: on $F$, $z_j=\sgn a_j$ and
+$|a_j+B_j|-|a_j|-z_jB_j=2(-\sgn(a_j)B_j-|a_j|)_+$; off $F$ the summand is
+$|B_j|-z_jB_j$.  Each summand is $\ge0$ because $|z_j|\le1$, and it changes
+by at most $2|B'_j|$ when $B_j$ is replaced by $B_j+B'_j$.  If $|B_j|\le|a_j|$
+the summand at $j\in F$ vanishes.
+(c) By Lemma~\ref{lem:threshold}, $\zeta_m/\sigma_m=\alpha_m+D_m^2w_m/C_m$
+with $\|\alpha_m\|_1=1$, $\alpha_m$ supported in $P_m$ with the signs of
+$w_m$; hence $\ip{W}{\zeta_m}/\sigma_m=\sum_{P_m}|\alpha_m(k)|\sgn(w_m(k))
+W(k)+\ip{D_mW}{D_mw_m}/C_m$, and $\|W\|_\infty=\sum_{P_m}|\alpha_m(k)|
+\|W\|_\infty$.  The second term is $\ge0$ by Cauchy--Schwarz.
+\end{proof}
+
+\begin{lemma}[Transfer vectors]\label{lem:TV}
+Fix a block and drop its index.  Let $\gamma\in(0,M)$,
+$L:=\{k:|w(k)|\ge\gamma\}$, let $k_*\in L$ with $w(k_*)=M$, let
+$\Lambda\ge0$, and put
+\[
+ y^{\downarrow}:=\sgn(w)1_L+\Lambda e_{k_*},\qquad
+ y^{\uparrow}:=\sgn(w)1_L-\Lambda e_{k_*}.
+\]
+Let $W\in\ell_\infty$ with $\|W-w\|_\infty\le\eta\le(M-\gamma)/4$.
+\begin{enumerate}
+\item[(a)] If $\varepsilon\ge0$, $\varepsilon(2+\Lambda)\le\gamma-\eta$ and
+$\varepsilon\le(M-\gamma)/4$, then $\|W-\varepsilon y^\downarrow\|_\infty
+\le\|W\|_\infty-\varepsilon$.
+\item[(b)] If $\varepsilon\le0$ and $|\varepsilon|(2+\Lambda)\le\gamma-\eta$,
+then $\|W-\varepsilon y^\uparrow\|_\infty\le\|W\|_\infty-\varepsilon$.
+\item[(c)] If $\|D(W-w)\|_2\le C/2$, then for all $y\in\ell_\infty$ and
+$\varepsilon\in\R$,
+\[
+ \|D(W-\varepsilon y)\|_2\le\|DW\|_2-\varepsilon\frac{\ip{Dw}{Dy}}C
+ +\frac{4|\varepsilon|\,\|D(W-w)\|_2\|Dy\|_2+\varepsilon^2\|Dy\|_2^2}{C}.
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We may assume $\varepsilon\ne0$; then $\eta<\gamma$.  For $k\in L$,
+$|W(k)-w(k)|\le\eta<\gamma\le|w(k)|$, so $\sgn W(k)=\sgn w(k)$ and
+$|W(k)|\ge\gamma-\eta$; also $\|W\|_\infty\ge W(k_*)\ge M-\eta$.
+
+(a) For $k\in L\setminus\{k_*\}$, $|W(k)|\ge\gamma-\eta\ge\varepsilon$, so
+$|W(k)-\varepsilon\sgn w(k)|=|W(k)|-\varepsilon$.  At $k_*$,
+$W(k_*)-\varepsilon(1+\Lambda)\le\|W\|_\infty-\varepsilon$, and
+$W(k_*)-\varepsilon(1+\Lambda)\ge-(\|W\|_\infty-\varepsilon)$ because
+$W(k_*)+\|W\|_\infty\ge2(\gamma-\eta)\ge\varepsilon(2+\Lambda)$.  For $k\notin
+L$, $|W(k)|<\gamma+\eta\le M-\eta-\varepsilon\le\|W\|_\infty-\varepsilon$,
+since $2\eta+\varepsilon\le\frac34(M-\gamma)$.
+
+(b) Put $e:=-\varepsilon>0$.  For $k\in L\setminus\{k_*\}$,
+$|W(k)+e\sgn w(k)|=|W(k)|+e$.  At $k_*$, $W(k_*)+e(1-\Lambda)\le
+\|W\|_\infty+e$, and $W(k_*)+e(1-\Lambda)+\|W\|_\infty+e\ge2(\gamma-\eta)
+-e(\Lambda-2)\ge0$.  For $k\notin L$, $|W(k)|\le\|W\|_\infty+e$.
+
+(c) Put $\mathbf a:=DW$, $\mathbf b:=Dw$ (so $\|\mathbf b\|=C$ and
+$\|\mathbf a\|\ge C/2$).  From $\sqrt{A^2+x}\le A+x/(2A)$,
+$\|\mathbf a-\varepsilon Dy\|\le\|\mathbf a\|-\varepsilon\ip{\mathbf a}{Dy}/
+\|\mathbf a\|+\varepsilon^2\|Dy\|^2/(2\|\mathbf a\|)$, and
+\[
+ \Big|\frac{\ip{\mathbf a}{Dy}}{\|\mathbf a\|}-\frac{\ip{\mathbf b}{Dy}}
+ {\|\mathbf b\|}\Big|\le\frac{\|\mathbf a-\mathbf b\|\|Dy\|}{\|\mathbf a\|}
+ +\frac{\|Dy\|\,\big|\|\mathbf b\|-\|\mathbf a\|\big|}{\|\mathbf a\|}
+ \le\frac{4\|\mathbf a-\mathbf b\|\|Dy\|}{C}.\qedhere
+\]
+\end{proof}
+
+\begin{proposition}[Rebalancing]\label{prop:rebalancing}
+Let $f\in S_{p^*}$, $h\in X^*$ with $h(\xi)=0$, and
+$f+h=A+\sum_{m\in I}R_m^*W_m$ with $A\in\ell_1$, $W_m\in\ell_\infty$.  For
+each $m\in I$ let $y_m\in\ell_\infty$ and $\varepsilon_m\in\R$ satisfy
+\begin{equation}\label{eq:R1}
+ \|W_m-\varepsilon_my_m\|_\infty\le\|W_m\|_\infty-\varepsilon_m,\qquad
+ \|D_m(W_m-w_m)\|_2\le C_m/2 .
+\end{equation}
+Put $Y_m:=\ip{y_m}{\zeta_m}$, $e_{y,m}:=1+\ip{D_mw_m}{D_my_m}/C_m$, the
+\emph{inefficiency}
+\[
+ \iota_m:=\frac{|Y_m-\sigma_me_{y,m}|}{q_0}+q^*\Big(R_m^*y_m-\frac{Y_m}{q_0}a
+ \Big),
+\]
+and $\lambda:=\sum_m\varepsilon_mY_m/q_0$; assume $\lambda\ge-1$.  Let
+$\hat G_b\ge G_b(A)$ and $\hat G_m\ge G_m(W_m)$, put
+$\hat\Gamma:=q_0\hat G_b+\sum_m\sigma_m\hat G_m$, and assume that $e_{y,m}>0$
+and
+\[
+ \varepsilon_m=\big(\lin_m(W_m)+\hat G_m-\hat\Gamma\big)/e_{y,m}\qquad(m\in I).
+\]
+Then $p^*(f+h)\le1+\hat\Gamma+E$, where
+\begin{multline*}
+ E:=\sum_m|\varepsilon_m|\iota_m+|\lambda|\big(|q^*(A)-1|+q^*(A-a)\big)\\
+ +\max_m\frac{4|\varepsilon_m|\,\|D_m(W_m-w_m)\|_2\|D_my_m\|_2
+ +\varepsilon_m^2\|D_my_m\|_2^2}{C_m}.
+\end{multline*}
+\end{proposition}
+
+\begin{proof}
+Put $A':=A+\sum_m\varepsilon_mR_m^*y_m$ and $W'_m:=W_m-\varepsilon_my_m$; then
+$A'+\sum_mR_m^*W'_m=f+h$, and Lemma~\ref{lem:dualball} gives
+$p^*(f+h)\le\max(q^*(A'),\max_mN_m(W'_m))$.
+
+\emph{Blocks.}  By \eqref{eq:R1} and Lemma~\ref{lem:TV}(c),
+$N_m(W'_m)\le N_m(W_m)-\varepsilon_me_{y,m}+E$, and
+$N_m(W_m)=1+\lin_m(W_m)+G_m(W_m)\le1+\lin_m(W_m)+\hat G_m$; by the choice of
+$\varepsilon_m$ the right side is at most $1+\hat\Gamma+E$.
+
+\emph{Base.}  Since $(R_m^*y_m)(\xi)=Y_m$, we have
+$R_m^*y_m=(Y_m/q_0)a+e_m$ with $e_m:=R_m^*y_m-(Y_m/q_0)a$, so
+$A'=(1+\lambda)a+B+\sum_m\varepsilon_me_m$ with $B:=A-a$.  For
+$\lambda\ge0$, $q^*((1+\lambda)a+B)\le q^*(a+B)+\lambda$; for
+$-1\le\lambda<0$, $(1+\lambda)a+B=(1+\lambda)(a+B)-\lambda B$ gives
+$q^*((1+\lambda)a+B)\le q^*(a+B)+\lambda+|\lambda|(|q^*(a+B)-1|+q^*(B))$.
+Writing $\lambda=\sum_m\varepsilon_m\sigma_me_{y,m}/q_0+\sum_m\varepsilon_m
+(Y_m-\sigma_me_{y,m})/q_0$, we get
+\[
+ q^*(A')\le q^*(A)+\sum_m\frac{\varepsilon_m\sigma_me_{y,m}}{q_0}+E .
+\]
+By the choice of $\varepsilon_m$ and Lemma~\ref{lem:bookkeeping}(a) (with
+$h(\xi)=0$),
+\[
+ \sum_m\frac{\varepsilon_m\sigma_me_{y,m}}{q_0}
+ =\frac{-q_0\lin_b(A)+(\hat\Gamma-q_0\hat G_b)-(1-q_0)\hat\Gamma}{q_0}
+ =-\lin_b(A)-\hat G_b+\hat\Gamma,
+\]
+using $\sum_m\sigma_m=1-q_0$.  Since $q^*(A)\le1+\lin_b(A)+\hat G_b$, we
+obtain $q^*(A')\le1+\hat\Gamma+E$.
+\end{proof}
+
+Thus, up to the error $E$, every piece of the rebalanced decomposition sits
+at the \emph{mass-weighted average} $\hat\Gamma$ of the estimated excesses,
+whatever the first-order terms $\lin_m$ are; the price of moving a level
+$\varepsilon_m$ is $|\varepsilon_m|\iota_m$.  The next lemma provides
+transfer vectors of arbitrarily small inefficiency; it is
+Step~2 of the proof of Theorem~\ref{thm:transfer}, for both signs.
+
+\begin{lemma}[Transfer data]\label{lem:transferdata}
+Let $f\in S_{p^*}$, $m\in I$ and $\gamma\in(0,M_m)$ with $|w_m(k)|\ne\gamma$
+for all $k$; put $L:=\{k:|w_m(k)|\ge\gamma\}$.  There is $\Lambda_0<\infty$,
+depending only on $f,m,\gamma$, such that for every $\eta_1\in(0,\frac12]$
+and $k_0\in\N$ there are, for $\varsigma\in\{\downarrow,\uparrow\}$,
+indices $k_*^\varsigma\ge k_0$ and numbers $\Lambda^\varsigma\ge0$ with the
+following properties, where $y^\varsigma$ is the vector of
+Lemma~\ref{lem:TV} built with $(\gamma,k_*^\varsigma,\Lambda^\varsigma)$ and
+$Y^\varsigma,e^\varsigma_y,\iota^\varsigma$ are as in
+Proposition~\ref{prop:rebalancing}:
+\begin{enumerate}
+\item[(a)] $k_*^\varsigma\in P_m$, $w_m(k_*^\varsigma)=M_m$, and its margin
+$\mu^\varsigma_*:=\mu_{k_*^\varsigma,m}$ is positive;
+\item[(b)] $Y^\varsigma=\sigma_me^\varsigma_y\pm\Lambda^\varsigma
+\lambda_{k_*^\varsigma,m}\mu^\varsigma_*$ \textup{(}$+$ for $\downarrow$, $-$
+for $\uparrow$\textup{)}, and $\Lambda^\varsigma\lambda_{k^\varsigma_*,m}\le
+\Lambda_0$;
+\item[(c)] $\iota^\varsigma\le\eta_1$;
+\item[(d)] $|e^\varsigma_y-e^0_y|\le\eta_1$, where
+$e^0_y:=1+\sum_{k\in L}\Phi_m(k)^2|w_m(k)|/C_m\ge1$; and
+$\|D_my^\varsigma\|_2\le\|\Phi_m\|_2+\Lambda_0/m$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Drop $m$.  Put $\hat\pi:=R^*(\sgn(w)1_L)\in\ell_1$ and
+$\tau_*:=(\hat\pi(\xi)/q_0)a-\hat\pi$, so $\tau_*(\xi)=0$, and
+$\Lambda_0:=2(q^*(\tau_*)+1)$.  For $\delta_0\in(0,1]$ put
+$\mathcal T^\downarrow:=\tau_*+\delta_0(q^*(\tau_*)+1)a$ and $\mathcal
+T^\uparrow:=-\tau_*+\delta_0(q^*(\tau_*)+1)a$.  Then $\mathcal
+T^\varsigma(\xi)=\delta_0(q^*(\tau_*)+1)q_0>0$ and $\ell^\varsigma:=q^*(\mathcal
+T^\varsigma)\in(0,\Lambda_0]$.  Recall that $|v(\xi)|=q_0|v(\zh)|\le q_0q^*(v)$
+for $v\in\ell_1$, because $q^{**}(\zh)=1$.
+
+Fix $\varsigma$ and drop it.  Let $\delta_1\in(0,\mathcal
+T(\xi)/(2\ell q_0))$.  By (T-d) the tail $\{u_k:k\ge k_0\}$ is dense in
+$S_{q^*}$, and $\Phi(k)\to0$; choose $k_*\ge k_0$ with $q^*(u_{k_*}-\mathcal
+T/\ell)\le\delta_1$, $\vartheta\Phi(k_*)<\mathcal T(\xi)/(2\ell)$ and
+$\ell\Phi(k_*)M/(mC)\le\eta_1$.  Then $u_{k_*}(\xi)\ge\mathcal
+T(\xi)/\ell-\delta_1q_0\ge\mathcal T(\xi)/(2\ell)>\vartheta\Phi(k_*)$, so
+by Lemma~\ref{lem:threshold} $k_*$ is a peak with $w(k_*)=M$ and positive
+margin $\mu_*$: (a).  Put $\Lambda:=\ell/\lambda_{k_*}$.
+
+(b) By Lemma~\ref{lem:threshold}, $\ip{y}{\zeta}=\sigma(\ip y\alpha+
+\ip{Dy}{Dw}/C)$.  As $P\subseteq L$ and $\alpha$ lives on $P$ with the signs
+of $w$, $\ip{\sgn(w)1_L}{\alpha}=\|\alpha\|_1=1$, and $\alpha(k_*)\ge0$; so
+$Y=\sigma e_y\pm\sigma\Lambda\alpha(k_*)=\sigma e_y\pm\Lambda\lambda_{k_*}\mu_*$
+by \eqref{eq:margin}.  Also $\Lambda\lambda_{k_*}=\ell\le\Lambda_0$.
+
+(c) For $\downarrow$, $R^*y=\hat\pi+\ell u_{k_*}=\hat\pi+\mathcal T+\ell
+(u_{k_*}-\mathcal T/\ell)=\big(\hat\pi(\xi)/q_0+\delta_0(q^*(\tau_*)+1)\big)a+
+\ell(u_{k_*}-\mathcal T/\ell)$; for $\uparrow$, $R^*y=\hat\pi-\ell u_{k_*}$
+and the same computation applies with $-\tau_*$.  In both cases
+$R^*y-(Y/q_0)a=\varrho-(\varrho(\xi)/q_0)a$ with
+$\varrho:=\pm\ell(u_{k_*}-\mathcal T/\ell)$, whose $q^*$-norm is at most
+$2q^*(\varrho)\le2\ell\delta_1$.  Moreover $\ell\mu_*\le\ell u_{k_*}(\xi)\le
+\mathcal T(\xi)+\ell\delta_1q_0$, so
+$\iota\le\delta_0(q^*(\tau_*)+1)+3\Lambda_0\delta_1$.  Choosing first
+$\delta_0$ and then $\delta_1$ small gives $\iota\le\eta_1$.
+
+(d) $e_y-e^0_y=\pm\Lambda\Phi(k_*)^2M/C=\pm\ell\Phi(k_*)M/(mC)$, since
+$\lambda_{k_*}=m\Phi(k_*)$; and $\|Dy\|_2\le\|\Phi\|_2+\Lambda\Phi(k_*)=
+\|\Phi\|_2+\ell/m$.
+\end{proof}
+
+\begin{lemma}[Persistence of transfer data]\label{lem:persistence}
+Let $f_n\to f$ in $S_{p^*}$, and let $(\gamma,k_*^\varsigma,\Lambda^\varsigma)$
+be transfer data of $f$ in block $m$ as in Lemma~\ref{lem:transferdata}.  Put
+$L_n:=\{k:|w_{n,m}(k)|\ge\gamma\}$ and $y_n^\varsigma:=\sgn(w_{n,m})1_{L_n}
+\pm\Lambda^\varsigma e_{k^\varsigma_*}$.  Then for $n$ large: $k_*^\varsigma$
+is a peak of $w_{n,m}$ with $w_{n,m}(k_*^\varsigma)=M_{n,m}$ and positive
+margin, and $P_{n,m}\subseteq L_n$; and, computing the quantities of
+Proposition~\ref{prop:rebalancing} at $f_n$,
+$Y^\varsigma_n/q^{(n)}_0\to Y^\varsigma/q_0$, $e^\varsigma_{y,n}\to
+e^\varsigma_y$, $\iota^\varsigma_n\to\iota^\varsigma$, and
+$D_my^\varsigma_n\to D_my^\varsigma$ in $\ell_2$.
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{prop:continuity}, $\xi_n\to\xi$ weak$^*$, $w_{n,m}\to
+w_m$ coordinatewise, $D_mw_{n,m}\to D_mw_m$, and the scalar data and $a_n$
+converge.  Since $u_{k_*,m}\in\ell_1$, $u_{k_*,m}(\xi_n)\to u_{k_*,m}(\xi)$,
+and $\vartheta_{n,m}\to\vartheta_m$; so the strict threshold inequality of
+Lemma~\ref{lem:threshold} at $k_*$ persists, with the positive sign.  Peaks
+of $w_{n,m}$ have modulus $M_{n,m}\to M_m>\gamma$.  As $|w_m(k)|\ne\gamma$,
+$y^\varsigma_n(k)\to y^\varsigma(k)$ for every $k$, with $|y_n^\varsigma(k)|\le1$
+off $k_*$; dominated convergence with the summable majorants
+$\lambda_{k,m}\|u_{k,m}\|_1$ and $\Phi_m(k)$ gives
+$R_m^*y_n^\varsigma\to R_m^*y^\varsigma$ in $\ell_1$ and
+$D_my^\varsigma_n\to D_my^\varsigma$ in $\ell_2$.  Hence
+$Y_n=(R_m^*y_n)(\xi_n)\to Y$, and all the listed quantities converge.
+\end{proof}
+
+\begin{lemma}[Assembly]\label{lem:assembly}
+Let $f,f'\in S_{p^*}$, $g\in\Cset(f)$, $\rho\in(0,1)$, $g'\in X^*$,
+$0<\delta\le1$ and $0<T_0\le1$ with $T_0^2\le4\delta$.  If
+$p^*(f'+\tau g')\le1+\frac{\tau^2}2(1-\delta)$ for $|\tau|\le T_0$,
+$p^*(f'-f)\le(1-\rho^2)T_0^2/6$ and $p^*(g'-\rho g)\le(1-\rho^2)T_0/6$, then
+$g'\in\Cset(f')$.  If moreover $f'$ attains its norm, then $(f',g')$
+attains its norm and $\|(f',g')-(f,\rho g)\|\le p^*(f'-f)+p^*(g'-\rho g)$.
+\end{lemma}
+
+\begin{proof}
+For $|\tau|\le T_0$: $\frac{\tau^2}2\delta\ge\frac{\tau^4}8$, so the bound is
+at most $1+\frac{\tau^2}2-\frac{\tau^4}8\le s(\tau)$.  For $|\tau|\ge T_0$,
+$p^*(f'+\tau g')\le s(\rho\tau)+(1-\rho^2)(T_0^2+|\tau|T_0)/6$, and the last
+term is at most $(1-\rho^2)\min(\tau^2,|\tau|)/3$; conclude with
+Lemma~\ref{lem:slack}(a).  The last assertions are
+Proposition~\ref{prop:reduction}(d) and $\|(f_1,g_1)\|\le p^*(f_1)+p^*(g_1)$.
+\end{proof}

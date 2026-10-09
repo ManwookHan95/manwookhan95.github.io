@@ -1,0 +1,244 @@
+
+\subsection{Engineering without steering}
+
+\begin{theorem}[Engineered recovery]\label{thm:engineered}
+Let $I$ be finite, let $f\in S_{p^*}$ have finite base support $F$, let
+$g\in\Cset(f)$ carry two-piece data $(b^\pm,\omega^\pm)$, and let
+$\rho\in(0,1)$ with $\rho^2\kappa_w<1$.  Assume that
+$I_-:=\{m:\Delta d_m<0\}$ satisfies the scrambling condition \textup{(SC)}
+\textup{(}no assumption if $I_-=\emptyset$\textup{)}.  Then there are
+norm-attaining $f'_i\to f$ \textup{(}engineered approximants\textup{)} and
+$g'_i\in\Cset(f'_i)$ with $g'_i\to\rho g$; in particular
+$(f,\rho g)\in\cl\NA((c_0,p),\ell_2^2)$.  If moreover $\kappa_w\le1$, this
+holds for every $\rho<1$, and $(f,g)\in\cl\NA((c_0,p),\ell_2^2)$.
+No hypothesis is made on the contact set $K$, on the number of active
+blocks, on the sets $Q_m$ \textup{(}for $m\notin I_-$\textup{)}, or on
+rates of $T$.
+\end{theorem}
+
+\begin{proof}
+We use the notation of Definition~\ref{def:engineered}; data of $f'$ carry
+primes, $\sigma'_m=|R_mx'|_m$, $c'=q(x')$, and $d'_m$ is as in (E4).  Put
+$d^\sigma_m:=d_m(\omega^\sigma_m)$ for $\sigma\in\{+,-,\theta\}$, so
+$d^\theta_m=\frac12(d^+_m+d^-_m)$.
+
+\emph{Step 0: fixed data.}  Let $\delta:=(1-\rho^2\kappa_w)/2$ and
+$\Gamma_\sigma:=\Gamma_w(b^\sigma,\omega^\sigma)$; by convexity
+$\Gamma_\theta\le\kappa_w$, so $\rho^2\Gamma_\sigma\le1-2\delta$ for all
+three $\sigma$.  Let $\gamma_0>0$ be the least gap $\gap_m(k)$, $k\in
+\Omega_m$, $m\in I$, and $a_{\min}:=\min_F|a_j|$.  In every block fix
+$\gamma_m\in(M_m/2,M_m)$ with $|w_m(k)|\ne\gamma_m$ for all $k$.  By
+Lemma~\ref{lem:approxfacts}, Lemma~\ref{lem:F1}, Lemma~\ref{lem:scrambling}
+there are $T_1\in(0,1]$ and $K_0\ge1$, depending only on $f,g,\rho$, such
+that the conditions marked $(T_1)$ below hold for $T_0\le T_1$, and such
+that the quantities of Step~3 satisfy, at late stages and for
+$0<|\tau|\le T_1$, $|\lin'_m|\le K_0|\tau|s_1$ and $\hat G_b,\hat G_m\le
+K_0\tau^2$ (for $\sigma=\pm$ we use $|\tau|>s_1$ to bound the terms
+$|\tau|\,o(s_1)$ by $\tau^2$).  Put
+\[
+ \eta_1:=\min\Big(\frac14,\frac\delta{192|I|K_0}\Big),
+\]
+and choose transfer data $(\gamma_m,k^\varsigma_{*,m},\Lambda^\varsigma_m)$ of
+$f$ in every block by Lemma~\ref{lem:transferdata} with this $\eta_1$.  By
+Lemma~\ref{lem:persistence} the transfer vectors $y'^\varsigma_m$ built at
+$f'$ satisfy, at late stages, $e'^\varsigma_{y,m}\ge\frac12$,
+$\iota'^\varsigma_m\le2\eta_1$, $\|D_my'^\varsigma_m\|_2\le K_y$ and
+$|Y'^\varsigma_m|/c'\le K_Y$, where $K_y,K_Y$ do not depend on $\eta_1$
+(Lemma~\ref{lem:transferdata}(b),(d)).  Finally choose $T_0\in(0,T_1]$ with
+$T_0^2\le4\delta$ and so small that the finitely many conditions marked
+$(T_0)$ below hold; they involve $f,g,\rho$, $\eta_1$ and the transfer
+data.
+
+\emph{Construction.}  If $I_-\ne\emptyset$ let $(s_i)$ be the sequence of
+\textup{(SC)} for $K:=2K_*$ (Lemma~\ref{lem:scrambling}); otherwise let
+$s_i\downarrow0$ be arbitrary.  Consider the engineered approximants with
+$N_i\to\infty$, $s_{1,i}:=s_i$, and $N''_i$ chosen after $s_{1,i}$ so that
+\eqref{eq:N1}, \eqref{eq:N2} and
+\begin{equation}\label{eq:N3}
+ \rho V_{>N''}\le\delta s_1/16,\qquad V_{>N''}:=\sum_{j\in K,\,j>N''}|v_j|,
+\end{equation}
+hold.  All statements below are at late stages.  By
+Lemma~\ref{lem:approxfacts}(b), $w'_m\to w_m$ coordinatewise, $C'_m\to C_m$,
+$M'_m\to M_m$, $\sigma'_m\to\sigma_m$, $c'\to q_0$, $\nu'\to\nu$, $e'\to e$,
+and $R^*_mw'_m\to R_m^*w_m$ in $\ell_1$; in particular every $k\in\Omega_m$
+is a strict non-peak of $w'_m$ with $\gap'_m(k)\ge\gamma_0/2$, the
+coordinatewise radius of $\omega^\sigma_m$ at $f'$ is at least half the one
+at $f$, and $d'_m(\omega)\to d_m(\omega)$, $H'_m(\omega)\to H_m(\omega)$ for
+$\omega\in\{\omega^\sigma_m\}$.
+
+\emph{Step 1: the target.}  Let
+\[
+ g'':=b^\theta1_{[1,N]}+\sum_mR_m^*\big(\omega^\theta_m-d'_m(\omega^\theta_m)
+ w'_m\big),\qquad c:=g''(\hat x'),\qquad g':=\rho(g''-ca').
+\]
+Then $g'(\hat x')=0$.  Since $(b^\theta,\omega^\theta)$ represents $g$,
+$g''-g=-b^\theta1_{(N,\infty)}+\sum_mR_m^*(d^\theta_mw_m-d'_m(\omega^\theta_m)
+w'_m)\to0$, and $c=(g''-g)(\hat x')+g(\hat x')\to g(\zh)=0$ because $\hat
+x'\to\zh$ weak$^*$ boundedly.  So $g'\to\rho g$.
+
+\emph{Step 2: three exact decompositions.}  Let
+$\beta^\theta:=b^\theta1_{[1,N]}$, $\beta^\pm:=b^\pm1_{[1,N]}\pm\frac12v
+1_{(N,\infty)}$, $B^\sigma:=\rho(\beta^\sigma-ca')$, and
+\[
+ \Omega^\theta_m:=\rho\big(\omega^\theta_m-d'_m(\omega^\theta_m)w'_m\big),\qquad
+ \Omega^\pm_m:=\rho\big(\omega^\pm_m-d'_m(\omega^\theta_m)w'_m-(d^\pm_m-
+ d^\theta_m)w_m\big).
+\]
+Since $\beta^\pm-\beta^\theta=\pm\frac12v$, $\omega^\pm-\omega^\theta=
+\mp\frac12(\omega^--\omega^+)$, $d^\pm-d^\theta=\mp\frac12\Delta d$ and
+$v=\sum_mR_m^*\big((\omega^-_m-\omega^+_m)-\Delta d_mw_m\big)$, we get
+$g'=B^\sigma+\sum_mR^*_m\Omega^\sigma_m$ for $\sigma\in\{+,-,\theta\}$, and
+so $f'+\tau g'=(a'+\tau B^\sigma)+\sum_mR^*_m(w'_m+\tau\Omega^\sigma_m)$ for
+every $\tau$.  We use $\sigma=\theta$ for $0<|\tau|\le s_1$ and
+$\sigma=\sgn\tau$ for $s_1<|\tau|\le T_0$.
+
+For $\sigma=\pm$ rewrite, with $\kappa^\sigma_m:=\rho\,(d'_m-d_m)(\omega^\sigma_m
+-\omega^\theta_m)$,
+\[
+ \Omega^\sigma_m=\rho\big(\omega^\sigma_m-d'_m(\omega^\sigma_m)w'_m\big)+
+ \kappa^\sigma_mw'_m+\rho(d^\sigma_m-d^\theta_m)(w'_m-w_m).
+\]
+For $\sigma=\sgn\tau$ we have $\tau\rho(d^\sigma_m-d^\theta_m)=-r_m\sgn
+(\Delta d_m)$ with $r_m:=\frac12|\tau|\rho|\Delta d_m|$.  Put
+$W_{0,m}:=w'_m+\tau\rho(\omega^\sigma_m-d'_m(\omega^\sigma_m)w'_m)+
+\tau\kappa^\sigma_mw'_m$.  If $\Delta d_m\ge0$, let $Y_m:=w_m$ and
+$W^\natural_m:=w'_m+\tau\Omega^\sigma_m=W_{0,m}-r_mw'_m+r_mY_m$.  If
+$\Delta d_m<0$, let $Y_m:=y_{A,m}$ and $Z_{A,m}$ be given by
+Lemma~\ref{lem:anchor} for $(w_m,w'_m)$, and put $W^\natural_m:=w'_m+\tau
+\Omega^\sigma_m-r_mZ_{A,m}=W_{0,m}-r_mw'_m+r_mY_m$; the remainder
+$r_mR^*_mZ_{A,m}$ is moved to the base.  The decomposition
+\[
+ f'+\tau g'=A_\tau+\sum_mR^*_mW^\natural_m,\qquad A_\tau:=a'+\tau B^\sigma
+ +\mathcal Z,\quad\mathcal Z:=\sum_{m\in I_-}r_mR^*_mZ_{A,m},
+\]
+is exact.  For $\sigma=\theta$ put $W^\natural_m:=w'_m+\tau\Omega^\theta_m$,
+$A_\tau:=a'+\tau B^\theta$.  In all cases $\|W^\natural_m-w'_m\|_\infty+
+\|D_m(W^\natural_m-w'_m)\|_2\le K_W|\tau|$ with $K_W$ depending only on
+$f,g,\rho$, because $\|Y_m-w'_m\|_\infty\le3$.
+
+\emph{Step 3: first-order terms and excesses.}
+\emph{Blocks.}  Since $\omega^\sigma_m$ vanishes on $P'_m$,
+$\lin'_m(w'_m+\tau\rho(\omega^\sigma_m-d'_m(\omega^\sigma_m)w'_m))=0$
+(Lemma~\ref{lem:algebra} at $f'$).  Hence $\lin'_m=0$ for $\sigma=\theta$, and
+for $\sigma=\pm$
+\[
+ \lin'_m(W^\natural_m)=\tau\kappa^\sigma_m+r_m\ip{Y_m-w'_m}{R_mx'}/\sigma'_m .
+\]
+By (E4) and \eqref{eq:N1}, $|\kappa^\sigma_m|\le Ks_1$.  For $Y_m=w_m$,
+$\ip{Y_m-w'_m}{R_mx'}=-c'\mathrm{Bx}_m$; for $Y_m=y_{A,m}$ its modulus is at
+most $c'\mathrm{Bx}_m+c'\sum_{A_m}\lambda_{k,m}(|w'_m-w_m|(k)+(C'_m-C_m)_+)$
+(proof of Lemma~\ref{lem:anchor} and $|(R_mx')(k)|\le\lambda_{k,m}c'$).  By
+(E5) and Lemma~\ref{lem:scrambling} both are $o(s_1)$; so
+$|\lin'_m|\le K_0|\tau|s_1$.  For the excess write
+$(1-r_m)V_m:=W_{0,m}-r_mw'_m=(1-r_m+\tau\kappa^\sigma_m)\big(w'_m+t'
+(\omega^\sigma_m-d'_m(\omega^\sigma_m)w'_m)\big)$ with
+$t':=\tau\rho/(1-r_m+\tau\kappa^\sigma_m)$.  By convexity and homogeneity of
+$N_m$ and Lemma~\ref{lem:block}(d) at $f'$ (condition $(T_1)$: $2\rho T_0$ is
+at most half the radius of every $\omega^\sigma_m$ at $f$, and
+$\rho T_0\max_m|\Delta d_m|+2T_0Ks_1\le\frac14$),
+\[
+ N_m(W^\natural_m)\le(1-r_m+\tau\kappa^\sigma_m)+\frac{\rho^2\tau^2}2
+ H'_m(\omega^\sigma_m)(1+K_HT_0)+r_mN_m(Y_m),
+\]
+and therefore, using $\ip{w'_m}{R_mx'}=\sigma'_m$,
+\[
+ G'_m(W^\natural_m)\le\hat G_m:=\frac{\rho^2\tau^2}2H'_m(\omega^\sigma_m)
+ (1+K_HT_0)+r_m\mathfrak g_m,\qquad
+ \mathfrak g_m:=N_m(Y_m)-\frac{\ip{Y_m}{R_mx'}}{\sigma'_m}.
+\]
+For $Y_m=w_m$, $\mathfrak g_m=c'\mathrm{Bx}_m/\sigma'_m=o(s_1)$ by (E5);
+for $Y_m=y_{A,m}$, $\mathfrak g_m\le K\mathfrak S_m=o(s_1)$ by
+Lemmas~\ref{lem:anchor} and~\ref{lem:scrambling}.  For $\sigma=\theta$ the
+same computation with $r_m=\kappa=0$ gives $\hat G_m:=\frac{\rho^2\tau^2}2
+H'_m(\omega^\theta_m)(1+K_HT_0)$.
+
+\emph{Base.}  By Lemma~\ref{lem:bookkeeping}(b) at $f'$,
+$G'_b(A_\tau)=\Exc'(\tau B^\sigma+\mathcal Z)+\nu'\Psi'(U^*(\tau B^\sigma+
+\mathcal Z)/\nu')$ and $\Exc'(\tau B^\sigma+\mathcal Z)\le\Exc'(\tau B^\sigma)
++2\|\mathcal Z\|_1$.  We claim $\Exc'(\tau B^\sigma)\le\frac12\rho|\tau|
+V_{>N''}$, and $=0$ for $\sigma=\theta$.  On $\supp a'$,
+$a'_j+\tau B^\sigma_j=(1-\tau\rho c)a'_j+\tau\rho\beta^\sigma_j$ with
+$|\tau\rho c|\le\frac12$.  On $F$, $|a'_j|\ge a_{\min}/2$ and
+$|\tau\rho\beta^\sigma_j|\le a_{\min}/8$ (condition $(T_1)$: $\rho T_0
+(\|b^+\|_\infty+\|b^-\|_\infty)\le a_{\min}/8$): no flip.  On a window
+contact with mass: for $\sigma=\theta$, $|\tau\rho\beta^\theta_j|\le
+s_1\rho|b^\theta_j|=m_j/4\le|a'_j|/2$; for $\sigma=+$, $\tau>0$ and
+$z_jb^+_j\ge0$, so both terms have the sign $z_j=\sgn a'_j$ or vanish; for
+$\sigma=-$, $\tau<0$ and $z_jb^-_j\le0$, with the same conclusion.  Off
+$\supp a'$, $B^\sigma_j=\rho\beta^\sigma_j$, and the summand of $\Exc'$ is
+$|\tau\rho\beta^\sigma_j|-z'_j\tau\rho\beta^\sigma_j$: it vanishes off
+$F\cup K$ (where $b^\pm$ and $v$ vanish), on window contacts without mass
+(there $\beta^\theta_j=0$ and $\tau\beta^\pm_j=\tau b^\pm_j$ has the sign
+$z_j=z'_j$ on the designated side), and on contacts in $(N,N'']$ (there
+$\tau\beta^\pm_j=\pm\frac12\tau v_j$ has the sign $z_j$ because $z_jv_j\ge0$,
+and $\beta^\theta_j=0$); on contacts $j>N''$, $z'_j=0$ and the summand is at
+most $\frac12\rho|\tau||v_j|$, and it is $0$ for $\sigma=\theta$.  This proves
+the claim.  Further $\|\mathcal Z\|_1\le\sum_{m\in I_-}r_m\sum_{A_m}
+\lambda_{k,m}(|w'_m-w_m|(k)+(C'_m-C_m)_+)=|\tau|o(s_1)$ by
+Lemma~\ref{lem:scrambling}, and $P'^\perp U^*a'=0$, so by
+Lemma~\ref{lem:base}
+\[
+ G'_b(A_\tau)\le\hat G_b:=\frac{\rho^2\tau^2}2h'(\beta^\sigma)(1+K_hT_0)
+ +\tfrac12\rho|\tau|V_{>N''}+|\tau|\,o(s_1),
+\]
+where $h'(\beta):=\|P'^\perp U^*\beta\|^2/\nu'\to h(b^\sigma)$ for
+$\beta=\beta^\sigma$ (as $\beta^\sigma-b^\sigma=-b^\theta1_{(N,\infty)}\to0$
+in $\ell_1$); for $\sigma=\theta$ the last two terms are absent.
+
+\emph{Step 4: rebalancing.}  Apply Proposition~\ref{prop:rebalancing} at
+$f'$ with $h:=\tau g'$ (so $h(x')=0$), the decomposition of Step~2, the
+bounds $\hat G_b,\hat G_m$ of Step~3, and $y_m:=y'^\downarrow_m$ or
+$y'^\uparrow_m$ according to the sign of $\lin'_m+\hat G_m-\hat\Gamma$.
+Then $|\varepsilon_m|\le2(|\lin'_m|+\hat G_m+\hat\Gamma)\le6K_0\tau^2$ when
+$|\tau|>s_1$, and $\le4K_0\tau^2$ for $\sigma=\theta$.  Condition
+\eqref{eq:R1} follows from Lemma~\ref{lem:TV} with $\eta:=K_W|\tau|$
+(condition $(T_0)$: $K_WT_0\le\min_m(M_m-\gamma_m)/8$, $6K_0T_0^2(2+
+\Lambda^\varsigma_m)\le\gamma_m/2$, $6K_0T_0^2\le\min_m(M_m-\gamma_m)/8$ and
+$K_WT_0\le\min_mC_m/4$), and $|\lambda|\le6|I|K_0K_YT_0^2\le1$ by
+condition $(T_0)$.  The error $E$ of Proposition~\ref{prop:rebalancing}
+satisfies
+\[
+ E\le12|I|K_0\eta_1\tau^2+6|I|K_0K_Y|\tau|^3K_A+\frac{(48K_0K_WK_y|\tau|^3
+ +36K_0^2K_y^2\tau^4)}{\min_mC_m/2},
+\]
+where $K_A$ bounds $(|q^*(A_\tau)-1|+q^*(A_\tau-a'))/|\tau|$.  By the choice
+of $\eta_1$ and condition $(T_0)$ on the last two terms, $E\le\delta\tau^2/8$.
+
+\emph{Step 5: the levels.}  By Step~3,
+$\hat\Gamma=c'\hat G_b+\sum_m\sigma'_m\hat G_m\le\frac{\rho^2\tau^2}2
+\big(c'h'(\beta^\sigma)+\sum_m\sigma'_mH'_m(\omega^\sigma_m)\big)(1+K'T_0)
++\frac12\rho|\tau|V_{>N''}+|\tau|o(s_1)$.  At late stages the bracket is at
+most $\Gamma_\sigma+\delta/8$; by \eqref{eq:N3} and $|\tau|>s_1$ the last two
+terms are at most $\delta\tau^2/16$ (and they are absent for
+$\sigma=\theta$).  With condition $(T_0)$: $K'T_0(1+\rho^2\kappa_w)\le\delta/8$,
+\[
+ p^*(f'+\tau g')\le1+\hat\Gamma+E\le1+\frac{\tau^2}2\Big(\rho^2\kappa_w+
+ \frac\delta8+\frac\delta8+\frac\delta8+\frac\delta4\Big)\le1+\frac{\tau^2}2
+ (1-\delta)
+\]
+for $0<|\tau|\le T_0$, since $\rho^2\kappa_w=1-2\delta$.
+
+\emph{Step 6: conclusion.}  At late stages $p^*(f'-f)\le(1-\rho^2)T_0^2/6$
+and $p^*(g'-\rho g)\le(1-\rho^2)T_0/6$.  Lemma~\ref{lem:assembly} gives
+$g'\in\Cset(f')$, and $f'$ attains its norm.  If $\kappa_w\le1$, then
+$\rho^2\kappa_w<1$ for every $\rho<1$, and $(f,g)=\lim_{\rho\to1}(f,\rho g)
+\in\cl\NA$.
+\end{proof}
+
+\begin{remark}[On the proof]\label{rem:engineeredproof}
+(a) Earlier engineered constructions had to make the two side
+decompositions represent the \emph{same} functional at the new normer
+\textup{(}``steering''\textup{)}: far contacts with flipped signs and negative
+masses, a tuning mass fixed by the intermediate value theorem, a spanning
+hypothesis for several blocks.  None of this is needed here.  The linear
+mismatches between the pieces are of order $|\tau|s_1$, and
+Proposition~\ref{prop:rebalancing} removes them at the cost
+$|\tau|s_1\iota$, the inefficiency $\iota$ being fixed before $s_1$; the
+first-order identity of Lemma~\ref{lem:bookkeeping}(a) guarantees that a
+linear mismatch is a pure shift of levels.
+(b) The only genuinely nonlinear first-order costs are the kinks beyond the
+cut-off, the Bregman terms $\mathrm{Bx}_m$ (always $o(s_1)$) and, in blocks
+with $\Delta d_m<0$, the anchor costs controlled by \textup{(SC)}.
+(c) The approximants are not the canonical truncations; this is consistent
+with Proposition~\ref{prop:nonrecovery}.
+\end{remark}

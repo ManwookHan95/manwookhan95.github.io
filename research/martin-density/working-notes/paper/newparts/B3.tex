@@ -1,0 +1,193 @@
+
+\subsection{Signature pinning}
+From now on $T$ is the operator of Definition~\ref{def:SLD}, $f\in
+\mathcal R_0$ with constants $\gamma,\vartheta_0$, $g\in\Cset(f)$,
+$\eta\le\eta_*$ with $\eta_\Gamma(\eta)\le1$, $0<t\le\min(t_\eta,1)$, and
+$(B_\pm,\Theta_\pm)$ is a two-sided decomposition of $g$ at scale $t$.  For
+$l\in\mathcal L_N$ put $c^\pm_l:=\lambda_l\Theta_{\pm,m(l)}(k(l))$ (and
+$c^\pm_l:=0$ for $l\notin\mathcal L_N$), so that $L^*\Theta_\pm=
+\sum_lc^\pm_lu_l$, and
+\[
+ \Delta c_l:=c^+_l-c^-_l,\qquad \Delta B:=B_+-B_-=-\sum_l\Delta c_lu_l .
+\]
+For a \emph{window index} $l_*$ the indices $l\le l_*$ are \emph{coarse}
+and the indices $l>l_*$ are \emph{fine}.
+
+\begin{lemma}[Box bound]\label{lem:box}
+$|c^\pm_l|\le3\lambda_l/t$ for every $l$.
+\end{lemma}
+
+\begin{proof}
+Lemma~\ref{lem:suplevel}(e).
+\end{proof}
+
+\begin{lemma}[Pinning inequality]\label{lem:pinning}
+For every $l\in\mathcal L_N$,
+\[
+ \delta'_l|\Delta c_l|\le E_l+\sum_{l'>l}\kappa_{l',l}|\Delta c_{l'}|,\qquad
+ E_l:=\|\Delta B1_{S_l\cap J_\gamma}\|_1,\quad\kappa_{l',l}:=
+ \|y_{l'}1_{S_l}\|_1/n_{l'},
+\]
+and $\sum_l\kappa_{l',l}\le\frac43$ for every $l'$.
+\end{lemma}
+
+\begin{proof}
+By (P1), for $s\in S_l$,
+$-\Delta B(s)=\Delta c_l\delta_l2^{-s}/n_l+\sum_{l'>l}\Delta c_{l'}y_{l'}(s)/
+n_{l'}$.  Take the $\ell_1$-norm over $s\in S_l\cap J_\gamma$: the first term
+has norm $|\Delta c_l|\delta'_l$.  The sets $S_l$ are disjoint and
+$\|y_{l'}\|_1/n_{l'}\le\frac43$.
+\end{proof}
+
+\begin{lemma}[Triangular solution]\label{lem:triangular}
+For every $l_*$,
+$\displaystyle\sum_{l\le l_*}|\Delta c_l|\le\Lambda_f(l_*)\Big(\sum_{l\le
+l_*}E_l+\frac43\sum_{l>l_*}|\Delta c_l|\Big)$.
+\end{lemma}
+
+\begin{proof}
+For coarse $l\in\mathcal L_N$ put $D_l:=|\Delta c_l|$, $X_l:=E_l+
+\sum_{l'>l_*}\kappa_{l',l}D_{l'}$ and $\Sigma_l:=\sum_{l\le l'\le l_*}D_{l'}$
+($\Sigma_{l_*+1}:=0$; $D_l:=0$ for $l\notin\mathcal L_N$).  By
+Lemma~\ref{lem:pinning}, $D_l\le(X_l+\frac43\Sigma_{l+1})/\delta'_l$, so
+$\Sigma_l\le X_l/\delta'_l+(1+\frac4{3\delta'_l})\Sigma_{l+1}$.  Unrolling
+from $l_*$ downwards, $\Sigma_1\le\sum_{l\le l_*}(X_l/\delta'_l)\prod_{l''<l}
+(1+\frac4{3\delta'_{l''}})\le\Lambda_f(l_*)\sum_{l\le l_*}X_l$ (products over
+$\mathcal L_N$), and $\sum_{l\le l_*}X_l\le\sum_{l\le l_*}E_l+\frac43
+\sum_{l'>l_*}D_{l'}$ by Lemma~\ref{lem:pinning}.
+\end{proof}
+
+\begin{proposition}[Pinning on a window]\label{prop:pinned}
+If $t\in\mathcal W(l_*)$, then with $K:=K_1\Lambda_f(l_*)$,
+$K_1:=1/(\gamma q_0)+14$, and $K_d:=\max_m(1/(mC_m)+2/(\sigma_mM_m))$:
+\begin{enumerate}
+\item[(a)] $\sum_l|\Delta c_l|\le Kt$ and $\|\Delta B\|_1\le Kt$;
+\item[(b)] $\|B_+1_{F^c}\|_1+\|B_-1_{F^c}\|_1\le Kt+t/q_0$; in particular the
+total base mass of both decompositions on contacts and near-contacts is
+$O(Kt)$;
+\item[(c)] $|d_{+,m}-d_{-,m}|\le K_dKt$ for every $m$, with $d_{\pm,m}$ as in
+Lemma~\ref{lem:suplevel}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) By Lemma~\ref{lem:budget}(b) and disjointness of the $S_l$,
+$\sum_lE_l\le\sum_{j\in J_\gamma}(|B_+(j)|+|B_-(j)|)\le t/(\gamma q_0)$.  By
+Lemma~\ref{lem:box} and (P2), $\sum_{l>l_*}|\Delta c_l|\le6\sum_{l>l_*}
+\lambda_l/t\le6T_{\rm lo}(l_*)^3/t\le6t^2$.  By Lemma~\ref{lem:triangular},
+$\sum_l|\Delta c_l|\le\Lambda_f(l_*)(t/(\gamma q_0)+8t^2)+6t^2\le Kt$.  And
+$\|u_l\|_1\le q^*(u_l)=1$.  (b) Lemma~\ref{lem:budget}(b) and (a).
+(c) Drop $m$; put $\Delta\Theta:=\Theta_+-\Theta_-$ and $\Delta d:=d_+-d_-$.
+By Lemma~\ref{lem:suplevel}(d), $\Delta d=d(\omega_+-\omega_-)+r$ with
+$|r|\le2t/\sigma$, and $\omega_+-\omega_-=\Delta\Theta+\Delta d\,w$, so
+$\Delta d\,M=\ip{Dw}{D\Delta\Theta}/C+r$.  Since $\lambda_k=m\Phi_m(k)$,
+$\ip{Dw}{D\Delta\Theta}=\frac1m\sum_k\Phi_m(k)w(k)\Delta c_{\iota(k,m)}$,
+whose modulus is at most $\frac Mm\sum_l|\Delta c_l|$.  Divide by $M$ and
+use (a) and $K\ge1$.
+\end{proof}
+
+Thus every one-sided resource used by the two decompositions (contacts and
+near-contacts on the base side; on the block side peaks, near-threshold
+coordinates and coordinates pushed beyond their gap, as the next proof
+shows) is controlled by the two-sided differences $\Delta c_l$, $\Delta B$,
+which are pinned by the signatures.  At the first row of
+Section~\ref{sec:resonance} this fails: there the signature set of the
+resonant carrier is the contact set.
+
+\subsection{The window certificate}
+
+\begin{definition}[Window certificate]\label{def:windowcert}
+For $t\in\mathcal W(l_*)$ let $\kappa_t:=(B_+1_F)(\zh)$,
+$b_t:=B_+1_F-\kappa_ta$, and in block $m$ let
+\[
+ \omega^c_m(k):=\max\Big\{-\frac{2\gap_m(k)}t,\min\Big\{\omega_{+,m}(k),
+ \frac{2\gap_m(k)}t\Big\}\Big\}
+\]
+if $k\in Q_m$, $\iota(k,m)\le l_*$ and $\gap_m(k)\ge t^2$, and
+$\omega^c_m(k):=0$ otherwise.  Put $c_t:=(b_t,(\omega^c_m)_m)$.
+\end{definition}
+
+\begin{proposition}[Window certificate]\label{prop:windowcert}
+Let $t\in\mathcal W(l_*)$ with $Kt\le1$.  There are constants $K_b,K_2,K_4$,
+depending only on $f$, $\gamma$ and the design, such that:
+\begin{enumerate}
+\item[(a)] $c_t$ is a balanced finite certificate (Definition~\ref{def:tame});
+on $\supp\omega^c_m$, $\gap_m(k)\ge t^2$ and $|\omega^c_m(k)|\le
+2\gap_m(k)/t$; $\|D_m\omega^c_m\|_2\le1/t$ and $|d_m(\omega^c_m)|\le1/t$;
+\item[(b)] $\|b_t\|_1\le K_b$;
+\item[(c)] $\|g-g_{c_t}\|_1\le K_2\Lambda_f(l_*)t$;
+\item[(d)] $\sqrt{\Gamma_w(c_t)}\le\sqrt{1+\eta_\Gamma(\eta)}+K_4\Lambda_f(l_*)t$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) $b_t(\zh)=\kappa_t-\kappa_ta(\zh)=0$; the coarse set is finite; and
+$\|D_m\omega^c_m\|_2\le(2/t)\|\Phi_m\|_2\le1/t$, $|d_m(\omega)|\le
+\|D_m\omega\|_2$.
+
+(b) $|\kappa_t|\le|B_+(\zh)|+\|\zh\|_\infty\|B_+1_{F^c}\|_1\le t/(2q_0)+
+(1+\|U\|)(Kt+t/q_0)$ by Lemma~\ref{lem:budget}(a) and
+Proposition~\ref{prop:pinned}(b).  By Lemma~\ref{lem:finitebase},
+$\|B_+1_F\|_1\le C_F(\|P^\perp U^*B_+\|+\|U\|\|B_+1_{F^c}\|_1+|\kappa_t|)$,
+and $\|P^\perp U^*B_+\|^2=\nu h(B_+)\le2\nu/q_0$ by
+Lemma~\ref{lem:budget}(d).  Use $Kt\le1$ and $t\le1$.
+
+(c) $g-g_{c_t}=(B_+-b_t)+\sum_mR_m^*X_m$ with $X_m:=\Theta_{+,m}-\omega^c_m+
+d_m(\omega^c_m)w_m$, and $\|R^*_mX\|_1\le\sum_k\lambda_{k,m}|X(k)|$.  First,
+$B_+-b_t=B_+1_{F^c}+\kappa_ta$ has norm $\le(2+\|U\|)(K+2/q_0)t$.  Fix $m$
+and drop it; with $\Theta_+=\omega_+-d_+w$,
+\[
+ X=\big[(\omega_+-\omega^c)-(d_+-d(\omega^c))w\big]1_{\rm coarse}+
+ \big[\Theta_++d(\omega^c)w\big]1_{\rm fine}.
+\]
+\emph{Fine part.}  $\sum_{\rm fine}\lambda_k|\Theta_+(k)|=\sum_{l>l_*}
+|c^+_l|\le3t^2$ and $|d(\omega^c)|\sum_{\rm fine}\lambda_k\le t^2$, by
+Lemma~\ref{lem:box}, (P2) and $t\ge T_{\rm lo}(l_*)$.
+
+\emph{Coarse part.}  Let $\rho_k:=|\omega_+(k)-\omega^c(k)|$.  We claim
+$\lambda_k\rho_k\le|\Delta c_k|+\lambda_k|\Delta d|M+2t\lambda_k$, where
+$\Delta c_k:=\lambda_k(\Theta_+(k)-\Theta_-(k))$, so that
+$\lambda_k|\omega_+(k)-\omega_-(k)|\le|\Delta c_k|+\lambda_k|\Delta d|M$.
+At a peak $\omega^c(k)=0$, and $\omega_+(k),\omega_-(k)$ have opposite signs
+in the weak sense (Lemma~\ref{lem:suplevel}(c)), so $\rho_k\le|\omega_+(k)-
+\omega_-(k)|$.  At $k\in Q$ with $|\omega_+(k)|\le2\gap(k)/t$: $\rho_k=0$ if
+$\gap(k)\ge t^2$, and $\rho_k\le2\gap(k)/t<2t$ otherwise.  At $k\in Q$ with
+$|\omega_+(k)|>2\gap(k)/t$: by Lemma~\ref{lem:suplevel}(f) and $|d_\pm t|\le
+\frac12$, $\varsigma_k\omega_+(k)\le\frac32\gap(k)/t$, hence (choosing
+$\varsigma_k:=-\sgn\omega_+(k)$ if $w(k)=0$) $\varsigma_k\omega_+(k)<
+-2\gap(k)/t$, and $e_k:=-\varsigma_k\omega_+(k)-2\gap(k)/t>0$; also
+$\varsigma_k\omega_-(k)\ge-2\gap(k)/t$, so $e_k\le\varsigma_k(\omega_-(k)-
+\omega_+(k))$: the part of $\omega_+(k)$ beyond the clamp is one-sided and
+bounded by the two-sided difference.  Then $\rho_k=e_k$ if $\gap(k)\ge t^2$,
+and $\rho_k=2\gap(k)/t+e_k\le2t+|\omega_+(k)-\omega_-(k)|$ otherwise.  This
+proves the claim.  Summing, with $\sum_k\lambda_k\le1$ and
+Proposition~\ref{prop:pinned}, $\sum_{\rm coarse}\lambda_k\rho_k\le
+(1+K_d)Kt+2t$.  Next, $|d_+-d(\omega^c)|\le|d_+-d(\omega_+)|+\|D(\omega_+-
+\omega^c)\|_2\le t/\sigma+\sum_k\Phi_k|\omega_+(k)-\omega^c(k)|$, and
+\begin{align*}
+ \sum_k\Phi_k|\omega_+(k)-\omega^c(k)|&\le\frac1m\sum_{\rm coarse}
+ \lambda_k\rho_k+\sum_{\rm fine}\Phi_k(|\Theta_+(k)|+|d_+|M)\\
+ &\le\frac1m\sum_{\rm coarse}\lambda_k\rho_k+3t^2+\Big(\frac3t+\frac
+ t\sigma\Big)t^3,
+\end{align*}
+by Lemma~\ref{lem:suplevel}(e) and (P2).  Multiplying by
+$\sum_{\rm coarse}\lambda_k|w(k)|\le1$ and collecting terms (with $t\le1$,
+$K\ge1$, $\Lambda_f\ge1$) gives (c).
+
+(d) The pair of $c_t$ is
+\[
+ \big(b_t,(\omega^c_m-d_m(\omega^c_m)w_m)_m\big)=(B_+,\Theta_+)-\big(B_+-b_t,
+ (X_m)_m\big),
+\]
+and $H_m$ vanishes on multiples of $w_m$.  As $\sqrt{\Gamma_w}$ is a
+seminorm,
+\[
+ \sqrt{\Gamma_w(c_t)}\le\sqrt{\Gamma_w(B_+,\Theta_+)}+\sqrt{\Gamma_w(B_+-
+ b_t,X)}.
+\]  The first term is at most
+$\sqrt{1+\eta_\Gamma(\eta)}$ (Lemma~\ref{lem:budget}(d)).  For the second,
+$q_0h(x)\le\|U\|^2\|x\|_1^2/\nu$ and
+$\sigma_mH_m(X_m)\le\|D_mX_m\|_2^2/C_m\le\big(\sum_k\lambda_{k,m}|X_m(k)|
+\big)^2/C_m$, and both were bounded in (c) by a
+constant times $\Lambda_f(l_*)t$.
+\end{proof}

@@ -1,0 +1,269 @@
+
+\subsection{The engineered approximants}
+Throughout this subsection $f\in S_{p^*}$ has $F$ finite, $g\in\Cset(f)$
+carries two-piece data $(b^\pm,\omega^\pm)$, and $\rho\in(0,1)$.  Put
+\[
+ b^\theta:=\tfrac12(b^++b^-),\quad \omega^\theta:=\tfrac12(\omega^++\omega^-),
+ \quad v:=b^+-b^-,\quad \Omega_m:=\supp\omega^+_m\cup\supp\omega^-_m .
+\]
+Then $(b^\theta,\omega^\theta)$ represents $g$, $v$ is supported in $F\cup
+K$ with $z_jv_j=|v_j|$ on $K$, and $b^\pm=b^\theta\pm v/2$.
+
+\begin{definition}[Engineered approximants]\label{def:engineered}
+For a \emph{window} $N\ge\max F$, a \emph{scale} $s_1\in(0,1]$ and a
+\emph{cut-off} $N''>N$ put $m_j:=4\rho s_1|b^\theta_j|$ for $j\in
+K\cap[1,N]$ and
+\begin{gather*}
+ a'':=a+\sum_{j\in K\cap[1,N]}m_jz_je_j^*,\qquad a':=a''/q^*(a''),\qquad
+ e':=U^*a'/\|U^*a'\|,\\
+ z'_j:=z_j\ (j\le N''),\qquad z'_j:=0\ (j>N''),\qquad \hat x':=z'+Ue',\\
+ x':=\hat x'/p(\hat x'),\qquad f':=\nabla p(x').
+\end{gather*}
+A \emph{construction sequence} is a sequence of parameters
+$(N_i,s_{1,i},N''_i)$ with $N_i\to\infty$ and $s_{1,i}\to0$; a statement
+holds \emph{at late stages} if it holds for all large $i$.  We write
+$t_{k,m}:=\|u_{k,m}1_{(N'',\infty)}\|_1$ and
+$\tau(N''):=\sum_{m\in I}\sum_k\lambda_{k,m}t_{k,m}$; by dominated convergence
+$\tau(N'')\to0$ as $N''\to\infty$.  We shall always assume
+\begin{equation}\label{eq:N1}
+ \tau(N''_i)\le s_{1,i}^2 .
+\end{equation}
+\end{definition}
+
+\begin{lemma}[The approximants]\label{lem:approxfacts}
+\textup{(a)} $f'\in\NA((X,p),\R)\cap S_{p^*}$; its forced data are $a'$,
+$e'$, $z'$, $\zh'=\hat x'$ and $q_0'=c':=q(x')=1/p(\hat x')$;
+$\supp a'=F\cup\{j\in K\cap[1,N]:b^\theta_j\ne0\}$, with $\sgn a'_j=z_j$
+there.  If $4\rho s_1\|b^\theta\|_1(1+\|U\|)\le1$, then $q^*(a'')\le2$, so
+$|a'_j|\ge|a_j|/2$ on $F$ and $|a'_j|\ge m_j/2$ on window contacts.
+
+\textup{(b)} Along every construction sequence $f'\to f$, and all forced data
+of $f'$ converge to those of $f$ as in Proposition~\ref{prop:continuity}.
+
+\textup{(c)} With $K_e:=8\rho\|U\|\|b^\theta\|_1/\nu$, and at late stages
+for the bounds involving $|R_m\hat x'|_m$:
+\begin{enumerate}
+\item[(E1)] $\|a''-a\|_1\le4\rho s_1\|b^\theta\|_1$ and $\|e'-e\|\le K_es_1$;
+\item[(E2)] $|u(\hat x')-u(\zh)|\le K_es_1q^*(u)+\|u1_{(N'',\infty)}\|_1$ for
+$u\in\ell_1$;
+\item[(E3)] $\big||R_m\hat x'|_m-|R_m^{**}\zh|_m\big|\le\sum_k\lambda_{k,m}
+|u_{k,m}(\hat x'-\zh)|\le K_es_1+\tau(N'')$, and
+$|1/c'-1/q_0|\le|I|(K_es_1+\tau(N''))$;
+\item[(E4)] for every $\omega\in c_{00}$ vanishing on $P_m\cup P'_m$ we
+have $|d'_m(\omega)-d_m(\omega)|\le K(\omega)(s_1+\tau(N''))$, where
+$d'_m(\omega):=\ip{D_mw'_m}{D_m\omega}/C'_m$ and the constant $K(\omega)$
+depends only on $f,g,\rho,\omega$;
+\item[(E5)] the \emph{Bregman terms} $\mathrm{Bx}_m:=\ip{w'_m-w_m}{R_m\hat x'}$
+satisfy
+\[
+ 0\le\mathrm{Bx}_m\le K_es_1\sum_k\lambda_{k,m}|w'_m(k)-w_m(k)|+2\tau(N'');
+\]
+hence $\mathrm{Bx}_m/s_1\to0$ along every construction
+sequence satisfying \eqref{eq:N1}.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $a''\in c_{00}$, $z'\in c_{00}$, $\|z'\|_\infty\le1$, and $z'=\sgn a'$ on
+$\supp a'$ (on $F$ because $z=\sgn a$ there, on window contacts because
+$a''_j=m_jz_j$).  By Proposition~\ref{prop:smooth}(c), $q(\hat x')=1$,
+$\nabla q(\hat x')=a'$, and $f'=\nabla p(\hat x')=\nabla p(x')$ attains its
+norm at $x'$, which is its unique normer; Proposition~\ref{prop:forced} at
+$x'$ gives the forced data.  Finally $q^*(a'')\le1+(1+\|U\|)\|a''-a\|_1$.
+(b) $a'\to a$ in $\ell_1$ and $z'\to z$ coordinatewise; apply
+Proposition~\ref{prop:approximants} and Proposition~\ref{prop:continuity}.
+(E1) $\|e'-e\|=\|U^*a''/\|U^*a''\|-U^*a/\|U^*a\|\|\le2\|U^*(a''-a)\|/\nu$.
+(E2) $\hat x'-\zh=-z1_{(N'',\infty)}+U(e'-e)$ and $\|U^*u\|\le q^*(u)$.
+(E3) $w_m$ norms $R_m^{**}\zh$ and $w'_m$ norms $R_m\hat x'$, so
+$\ip{w_m}{R_m(\hat x'-\zh)}\le|R_m\hat x'|_m-|R^{**}_m\zh|_m\le
+\ip{w'_m}{R_m(\hat x'-\zh)}$; both sides are bounded by
+$\sum_k\lambda_{k,m}|u_{k,m}(\hat x'-\zh)|$, and $\sum_k\lambda_{k,m}\le1$.
+Moreover $1/c'=p(\hat x')=1+\sum_m|R_m\hat x'|_m$ and $1/q_0=p^{**}(\zh)=
+1+\sum_m|R^{**}_m\zh|_m$.
+(E4) Off $P'_m$, Lemma~\ref{lem:threshold} at $x'$ gives
+$\Phi_m(k)^2w'_m(k)/C'_m=(R_m\hat x')(k)/|R_m\hat x'|_m$, so
+$d'_m(\omega)=\omega(R_m\hat x')/|R_m\hat x'|_m$, and likewise
+$d_m(\omega)=\omega(R^{**}_m\zh)/|R^{**}_m\zh|_m$; use (E2), (E3).
+(E5) $\ip{w'_m}{R_m\hat x'}=|R_m\hat x'|_m\ge\ip{w_m}{R_m\hat x'}$ and
+$\ip{w'_m-w_m}{R_m^{**}\zh}\le0$; hence $0\le\mathrm{Bx}_m\le
+\ip{w'_m-w_m}{R_m(\hat x'-\zh)}$, which is bounded by (E2).  Since
+$w'_m\to w_m$ coordinatewise and $|w'_m-w_m|\le2$,
+$\sum_k\lambda_{k,m}|w'_m(k)-w_m(k)|\to0$.
+\end{proof}
+
+\begin{lemma}[Lipschitz control of the block data]\label{lem:F1}
+Along a construction sequence satisfying \eqref{eq:N1} there is $K_F$,
+depending only on $f,g,\rho$, such that at late stages, for all $m$ and $k$,
+\[
+ |C'_m-C_m|=|M'_m-M_m|\le K_Fs_1,\qquad
+ \Phi_m(k)|w'_m(k)-w_m(k)|\le K_F(s_1+t_{k,m}),
+\]
+and consequently $\|D_m(w'_m-w_m)\|_2^2\le K_F'(1+\log_2(1/s_1))s_1^2$, with
+$K'_F$ depending only on $K_F$.
+\end{lemma}
+
+\begin{proof}
+Fix $m$ and drop it.  Put $v_k:=m|u_k(\zh)|/|R^{**}\zh|$ and
+$v'_k:=m|u_k(\hat x')|/|R\hat x'|$.  By Lemma~\ref{lem:threshold} (peaks
+are the $k$ with $|\zeta(k)|/|\zeta|\ge\Phi_k^2M/C$, and off $P$,
+$w(k)=C\zeta(k)/(\Phi_k^2|\zeta|)$), we have the \emph{clamp formula}
+$\Phi_kw(k)=\sgn(u_k(\zh))\min(\Phi_kM,Cv_k)$, and the same at $x'$.
+Squaring and summing, and using $M=1-C$, $C$ is a root of
+\[
+ F(c;v):=\sum_k\min\Big(\Phi_k\frac{1-c}c,v_k\Big)^2=1,
+\]
+and $C'$ is a root of $F(\cdot;v')=1$.  Each $F(\cdot;v)$ is nonincreasing on
+$(0,1)$.  Since $\|\alpha\|_1=1$, there is $k_\natural\in P$ with
+$\alpha(k_\natural)\ne0$, i.e.\ $Cv_{k_\natural}>\Phi_{k_\natural}M$; choose
+$r>0$ with $[C-r,C+r]\subseteq(0,1)$ and $v_{k_\natural}\ge
+\Phi_{k_\natural}(1-c)/c+r$ for $c\in[C-r,C+r]$.  At late stages
+$|C'-C|\le r$ and $|v'_{k_\natural}-v_{k_\natural}|\le r$, so on
+$[C-r,C+r]$ the $k_\natural$-term of $F(\cdot;v')$ equals
+$\Phi_{k_\natural}^2((1-c)/c)^2$, whose derivative is at most
+$-c_*:=-2\Phi_{k_\natural}^2(1-C-r)/(C+r)^3$; the other terms are
+nonincreasing.  Hence $c_*|C'-C|\le|F(C;v')-F(C';v')|=|F(C;v')-F(C;v)|$, and
+since $|\min(x,s)^2-\min(x,s')^2|\le2x|s-s'|$,
+\[
+ |C'-C|\le\frac{2(1-C)}{Cc_*}\sum_k\Phi_k|v'_k-v_k| .
+\]
+By (E2), (E3) and $|u_k(\zh)|\le1$, at late stages $|v'_k-v_k|\le
+K(s_1+t_k+\tau(N''))$ with $K$ depending only on $f,g,\rho$; as
+$\sum_k\Phi_k\le1$ and $\sum_k\Phi_kt_k\le\tau(N'')\le s_1^2$, this gives
+$|C'-C|\le K_Fs_1$.  If $\sgn u_k(\hat x')=\sgn u_k(\zh)$ or one of them
+vanishes, the clamp formula gives $|\Phi_kw'(k)-\Phi_kw(k)|\le
+|C'-C|(\Phi_k+v_k)+C'|v'_k-v_k|$, and $v_k\le m/|R^{**}\zh|$.  If the signs
+are opposite, both $|u_k(\hat x')|$ and $|u_k(\zh)|$ are at most
+$|u_k(\hat x')-u_k(\zh)|$, and $|\Phi_kw'(k)|+|\Phi_kw(k)|\le C'v'_k+Cv_k$.
+In both cases the bound follows from (E2).  Finally, using
+$\min(x+y,c)^2\le\min(x,c)^2+2cy$ and $\Phi_k\le2^{-k}$,
+\begin{align*}
+ \|D(w'-w)\|_2^2&\le\sum_k\min(K_Fs_1,2\Phi_k)^2+4K_F\sum_k\Phi_kt_k\\
+ &\le K_F^2s_1^2\lceil\log_2(1/s_1)\rceil+\tfrac43s_1^2+4K_Fs_1^2 .
+ \qedhere
+\end{align*}
+\end{proof}
+
+\begin{lemma}[Anchor]\label{lem:anchor}
+Fix a block and drop its index.  Let $w,w'\in\ell_\infty$ with
+$N(w)=N(w')=1$ be the norming functionals of nonzero block vectors, with
+data $M,C,P$ and $M',C',P'$, and put $\gamma:=C'-C$; assume $C\le\frac12$
+and $|\gamma|\le C/4$.  Let $S_1:=\{k\in P\cap P':\sgn w(k)=\sgn w'(k)\}$,
+$S_2:=\{k\notin P\cup P':|2w'(k)-w(k)|\le M'-|\gamma|\}$,
+$A:=\N\setminus(S_1\cup S_2)$ \textup{(}the \emph{scrambled set}\textup{)},
+and
+\[
+ y(k):=2w'(k)-w(k)\ (k\in S_1\cup S_2),\qquad
+ y(k):=(1-\gamma_+/M')w'(k)\ (k\in A).
+\]
+Then $N(y)\le1+\mathcal X/(2(C+2\gamma))$ with
+$\mathcal X:=4\|D(w'-w)\|_2^2+4\sum_{k\in A}\Phi(k)^2$.  Moreover
+$w'-w=(y-w')+Z_A$ with $Z_A:=(w'-w)1_A+(\gamma_+/M')w'1_A$,
+$\|y-w'\|_\infty\le3$, and if $w'$ norms $R x'$ with $\sigma':=|Rx'|>0$,
+then
+\[
+ N(y)-\frac{\ip{y}{Rx'}}{\sigma'}\le\frac{\mathcal X}{2(C+2\gamma)}+
+ \frac1{\sigma'}\sum_{k\in A}|(Rx')(k)|\big(|w'(k)-w(k)|+\gamma_+\big).
+\]
+\end{lemma}
+
+\begin{proof}
+\emph{Sup norm.}  Note $M'-M=-\gamma$, $M\ge\frac12$ and $|\gamma|\le\frac18$.
+On $S_1$, $|y(k)|=2M'-M=M'-\gamma$; on $S_2$, $|y(k)|\le M'-|\gamma|$; on
+$A$, $|y(k)|\le M'-\gamma_+$.  So $\|y\|_\infty\le M'-\gamma$.
+
+\emph{Hilbert part.}  Put $Y:=y-w'=(w'-w)1_{S_1\cup S_2}-(\gamma_+/M')w'1_A$
+and $R_A:=\ip{Dw'}{D(w'-w)1_A}+(\gamma_+/M')\|Dw'1_A\|^2$.  Then
+$\ip{Dw'}{DY}=\ip{Dw'}{D(w'-w)}-R_A$ and $2\ip{Dw'}{D(w'-w)}=C'^2-C^2+
+\|D(w'-w)\|^2$, so
+\begin{gather*}
+ \|Dy\|^2=C'^2+2\ip{Dw'}{DY}+\|DY\|^2=2C'^2-C^2+\mathcal X_0,\\
+ \mathcal X_0:=\|D(w'-w)\|^2+\|DY\|^2-2R_A .
+\end{gather*}
+Since $1_{S_1\cup S_2}$ and $1_A$ are disjoint and $\gamma_+/M'\le1$,
+$\|DY\|^2\le\|D(w'-w)\|^2+\|Dw'1_A\|^2$ and $-2R_A\le\|Dw'1_A\|^2+
+\|D(w'-w)\|^2$; with $|w'|\le1$ this gives $\mathcal X_0\le\mathcal X$.  As
+$2C'^2-C^2=(C+2\gamma)^2-2\gamma^2$ and $C+2\gamma\ge C/2>0$,
+$\|Dy\|\le C+2\gamma+\mathcal X/(2(C+2\gamma))$.  Adding,
+$N(y)\le M'+C+\gamma+\mathcal X/(2(C+2\gamma))=1+\mathcal X/(2(C+2\gamma))$.
+
+\emph{The rest.}  The identity for $w'-w$ is immediate, and
+$\|y-w'\|_\infty\le\|w'-w\|_\infty+1\le3$.  Finally $\ip{y}{Rx'}=\sigma'+
+\ip{Y}{Rx'}$ and $\ip{Y}{Rx'}=\ip{w'-w}{Rx'}-\ip{(w'-w)1_A}{Rx'}-
+(\gamma_+/M')\ip{w'1_A}{Rx'}$, where the first term is $\ge0$ because $w'$
+norms $Rx'$ and $N(w)=1$.
+\end{proof}
+
+\begin{definition}[Scrambling condition]\label{def:SC}
+For a block $m$ and $s>0$ let
+\[
+ \mathrm{Scr}_m(s):=\sum_{\substack{k\in P_m\\ \mu_{k,m}\le s}}
+ \min(\Phi_m(k),s)+\sum_{\substack{k\in Q_m\\ \Phi_m(k)\gap_m(k)\le s\ \text{or}
+ \ \gap_m(k)\le s}}\min(\Phi_m(k),s).
+\]
+A set $I_-\subseteq I$ of blocks satisfies the \emph{scrambling condition}
+\textup{(SC)} if for every $K\ge1$ there is a sequence $s_i\downarrow0$
+\textup{(}common to all $m\in I_-$\textup{)} with
+$\max_{m\in I_-}\mathrm{Scr}_m(Ks_i)/s_i\to0$.
+\end{definition}
+
+The common sequence matters: each $\mathrm{Scr}_m$ may be $o(s)$ along a
+sequence of scales while the good scales of two blocks are disjoint.
+\textup{(SC)} excludes degenerate peaks in the blocks of $I_-$ (each
+contributes $\min(\Phi_m(k),Ks)=Ks$ for small $s$).  If $f$ satisfies
+\textup{(BT)}, then every block satisfies $\mathrm{Scr}_m(Ks)=o(s)$ as
+$s\to0$ for every $K$: for small $s$ the finitely many strict non-peaks do not
+contribute, and the peak part is at most
+$\sum\{\Phi_m(k):\mu_{k,m}<2Ks\}=o(s)$ by \textup{(MS)}.
+
+\begin{lemma}[Scrambling estimate]\label{lem:scrambling}
+There is $K_*\ge1$, depending only on $f,g,\rho$, with the following
+property.  Let $I_-$ satisfy \textup{(SC)}, let $(s_i)$ be the sequence of
+\textup{(SC)} for $K:=2K_*$, and consider a construction sequence with
+$s_{1,i}=s_i$ and $N''_i$ so large that \eqref{eq:N1} and
+\begin{equation}\label{eq:N2}
+ \sum_{m\in I}\sum_k\Phi_m(k)\,1\big[t_{k,m}>s_{1,i}\big]\le s_{1,i}^2
+\end{equation}
+hold.  Then for $m\in I_-$, with $A_m$ the scrambled set of
+Lemma~\ref{lem:anchor} for $(w_m,w'_m)$,
+\begin{multline*}
+ \mathfrak S_m:=\|D_m(w'_m-w_m)\|_2^2\\
+ +\sum_{k\in A_m}\Big(\Phi_m(k)^2+
+ \lambda_{k,m}\big(|w'_m(k)-w_m(k)|+(C'_m-C_m)_+\big)\Big)=o(s_1).
+\end{multline*}
+\end{lemma}
+
+Condition \eqref{eq:N2} can be met by choosing $N''$ after $s_1$: for fixed
+$s_1$ the left side tends to $0$ as $N''\to\infty$ by dominated convergence.
+
+\begin{proof}
+Fix $m\in I_-$ and drop it.  The first term is $o(s_1)$ by
+Lemma~\ref{lem:F1}.  At late stages $|C'-C|\le C/4$, so
+Lemma~\ref{lem:anchor} applies ($C\le\|\Phi\|_2<\frac12$).
+
+\emph{Peaks.}  Put $\hat\vartheta:=|R^{**}\zh|M/(mC)$ and $\hat\vartheta':=
+|R\hat x'|M'/(mC')$, so that $\mu_k=q_0(|u_k(\zh)|-\hat\vartheta\Phi_k)$, and
+$k$ is a peak of $w'$ of sign $\sgn u_k(\hat x')$ as soon as
+$|u_k(\hat x')|>\hat\vartheta'\Phi_k$ (Lemma~\ref{lem:threshold}).  By (E3)
+and Lemma~\ref{lem:F1}, $|\hat\vartheta'-\hat\vartheta|\le K_\vartheta s_1$
+at late stages.  If $k\in P$ and $\mu_k>K_*(s_1+t_k)$ with $K_*\ge
+K_e+K_\vartheta+1$, then by (E2) $|u_k(\hat x')-u_k(\zh)|<|u_k(\zh)|$ and
+$|u_k(\hat x')|-\hat\vartheta'\Phi_k>0$; so $k\in P'$ with the same sign,
+i.e.\ $k\in S_1$.
+
+\emph{Strict non-peaks.}  If $k\in Q$, $\Phi_k\gap_k>K_*(s_1+t_k)$ and
+$\gap_k>K_*s_1$ with $K_*\ge4K_F$, then by Lemma~\ref{lem:F1}
+$|w'(k)-w(k)|<\gap_k/4$ and $|\gamma|=|M'-M|<\gap_k/4$.  Hence $|w'(k)|<M'$,
+so $k\notin P'$, and $|2w'(k)-w(k)|\le|w(k)|+2|w'(k)-w(k)|<M-\gap_k/2\le
+M'-|\gamma|$; i.e.\ $k\in S_2$.
+
+Put $K_*:=\max(K_e+K_\vartheta+1,4K_F)$.  Let $A^{(1)}:=\{k\in A:t_k\le
+s_1\}$ and $A^{(2)}:=A\setminus A^{(1)}$.  By the two steps, every $k\in
+A^{(1)}$ is a peak with $\mu_k\le2K_*s_1$ or a strict non-peak with
+$\Phi_k\gap_k\le2K_*s_1$ or $\gap_k\le2K_*s_1$; so
+$\sum_{A^{(1)}}\min(\Phi_k,2K_*s_1)\le\mathrm{Scr}(2K_*s_1)=o(s_1)$.  In
+particular, at late stages no $k\in A^{(1)}$ has $\Phi_k\ge2K_*s_1$, and
+$\sum_{A^{(1)}}\Phi_k=o(s_1)$.  By \eqref{eq:N2}, $\sum_{A^{(2)}}\Phi_k\le
+s_1^2$.  Since $\Phi_k\le1$, $|w'-w|\le2$, $\gamma_+\le1$ and
+$\lambda_k=m\Phi_k$, the sum over $A$ in $\mathfrak S$ is at most
+$4m\sum_A\Phi_k=o(s_1)$.
+\end{proof}
