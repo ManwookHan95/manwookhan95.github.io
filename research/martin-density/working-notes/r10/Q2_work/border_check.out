@@ -1,0 +1,7 @@
+(1) min over trials of s_min([N|w]) / bound  (must be >= 1): 1.0274271230256027
+(2) max relative error of the Woodbury determinant formula: 1.0629023867952581e-14
+(3) exact Sherman-Morrison degeneracy h^T g = 1, peak column w = -pi p:
+   h^T p = +1.0e+00:  s_min(N) = 1.82e-02,  s_min([N | -pi p]) = 2.61e-01
+   h^T p = +1.0e-02:  s_min(N) = 1.69e-04,  s_min([N | -pi p]) = 5.72e-04
+   h^T p = +1.0e-04:  s_min(N) = 5.76e-07,  s_min([N | -pi p]) = 2.25e-05
+   h^T p = +1.4e-15:  s_min(N) = 6.22e-16,  s_min([N | -pi p]) = 5.40e-16

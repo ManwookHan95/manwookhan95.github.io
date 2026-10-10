@@ -360,3 +360,37 @@ CONSEQUENCE (to be verified as one combined theorem): X1's Proposition KN^tr sup
   (LSC-trunc): for all f, g in C(f), rho < 1, eps > 0 there is f' with FINITE base support, p*(f' - f) < eps, dist(rho g, C(f')) < eps).
 OPEN after Round 9: (i) the combination (finite-F Lemma Z for every N); (ii) infinite F: (LSC-trunc), or the transport of the finite-F
   master theorems (M-inf), tuning regularity modulus, (W_inf), (SC) along deep raises, status coherence at infinite F; (iii) option (b).
+
+## ADDENDUM 10 (Round 10; Q1 checked by TWO independent referees, Q2 by one): r10/Q1_*, r10/Q2_*
+Q1 = MASTER THEOREM VI (PROVED modulo cited refereed results, several of which had ONE referee pass): one N-independent design T_fin
+  (T_final of U4 + D^{U1'} rounds PRE/MAIN/CLUSTER + generic weights c_l transcendental over k_0(c_1..c_{l-1}) in
+  [(1-2^{-l})c^max_l, c^max_l] + X1 rate objects/(D1),(D2) + X2's (D-lev) with n_l + (W_exp) after main stages only; diagonal mu-base).
+  Option (a): ||T|| = c_1 < 1 (Martin-type norm p_delta, Martin's Remark 2; Martin's proof and the note's prop:reduction, lem:pair,
+  lem:martintail use only Phi_m(k) <= 2^{-m-k}). Theorem A_fin (Martin's Lemma B), Lemma GEN_fin (coincidence sets contain no datum of f, so
+  weights fixed before f avoid them), survival audit I1-I10, route decision (violation-tolerant route V of X2 with (R-abs) for EVERY class,
+  step (1a) := X1's Proposition KN^tr), Lemma CM^tr, Proposition BR, Lemma PM (at a d-consistent approximant the clamp equation
+  sum_k min(Phi_k(1-C)/C, v_k)^2 = 1 fixes C_m up to fine terms <= C_f c_{L+1}^2, so the Puiseux margin survives all lever moves),
+  Lemma S2c^tr (Puiseux exponent costs exp(O(log^2(1/T))), absorbed by (W_exp)), Theorem C^tr. STATEMENT: option (a): for every N >= 1,
+  every f in S_{p_N*} with FINITE base support is in Rec(p_N). Option (b) (norm one): N = 1, and N >= 2 at rows with rho_1(f) != 1.
+  Theorem VI.2: density of NA((c_0,p_N), l_2^2) <=> (LSC-trunc)_N. Cor VI.3: (LSC-trunc)_N for infinitely many N => density for the
+  Martin-type p. Referee fixes to insert: (a) P1 kind [1'], P2 order class -> Step A -> cube -> Step B, P3 (U3) up to V_fine tolerated,
+  P4 lever coordinates, P5 phrasing, P6 E^eng with window-dependent gamma_B, P7 patterns over present blocks, P8 window bookkeeping
+  (support-first pigeonhole, p_max in Design, l^2 in the exponent of Q(w)); (b) P-LIP (Lipschitz constant of F_Phi in delta_0, (D1)),
+  P-R (upper bound on absorber length R), P-HOLD (hold ALL nearly-neutral coarse strict non-peaks of (T)-blocks exactly). Referee (b)
+  alpha-mass identity sum_{k in P}(rho_k - 1)Phi_k^2 = C/M. Escape search found no F-finite row avoiding the case analysis.
+Q2 ((LSC-trunc), refereed: main claims correct): Lemma 1.1 (contact truncations), Lemma LT (lowering transfer, sharp; dual of raise
+  transfer: l_1 mass cancels exactly), Cor 1.2, Lemma M2^inf, Theorem UE^inf (X2's uniform engineered bound at base rows of ARBITRARY support
+  under side cushion domination (U3^inf): anti-sign side data on support coordinate j <= C_+ |a_0(j)|/t; the approximant is NA with finite
+  base support; far support becomes contacts with tolerated violations), Theorem E^{eng,RT,inf} (with window-dependent C_+, c_flat): if
+  cushion-dominated exact window families exist at infinite-support base rows f_j -> f satisfying raise transfer, then (f, rho g) in cl NA
+  along NA rows with finite support, so (LSC-trunc) holds at (f, g, rho). Lemma 3.1 (TR(i) at any F), Lemma 3.4 (exact drift identity when
+  u is proportional to a on F), Proposition 4.1 (block-norm bordering: degenerate set codimension two), Cor 4.2 (Lemma DC^inf), Lemma 4.3.
+  SKETCH: Prop 3.2 (cushion domination at deep-raised companions for Q1's data, C_+ <= C Design/u), Theorem 5.1 (transport at lever-regular
+  rows), Cor 5.2. OPEN: (O-a) Prop 3.2 inside Q1's class/cube pigeonhole; (O-b) line-by-line lever audit of Q1's construction at
+  coordinates in S_l ∩ F (levers inside the support: (L1)-(L3), Lemma DC^inf, bank-with-offset block-norm levers; Step B ownership recursion
+  on J_fine \ F; V1 Lemma ST under new side effects); (O-c) degenerate lever systems (exact (NDN2) with exact full degeneracy: exact
+  d-consistency impossible when tau_W != 0 by the identity h^T F = -(kappa nu/2)||Delta e||^2 + tau_W + tau_z; remedies: data-side bordering
+  (leave a residual orthogonal block by block to the switching vectors) or a tolerance variant of UE^inf with |kappa^+-| <= c delta s_1;
+  near-degenerate quantitative case; KN-1 raw holds in a degenerate raw direction); (O-d) new rate objects in omega(L), Design(L), (LATE).
+STATE: finite-support Lemma Z is proved for every N (modulo single-pass links); density for p_N <=> (LSC-trunc)_N; (LSC-trunc) reduced to
+  (O-a)-(O-d).

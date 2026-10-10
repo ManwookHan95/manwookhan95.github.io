@@ -1,0 +1,6 @@
+C= 3 A0=1e+01 Cf=1e+03 rho/delta=1e+02 : comparison holds for all n >= 16 ; at n=60: log2 s_late = -4.365e+05, log2(64 rho eps/delta) = -1.663e+18
+C= 3 A0=1e+06 Cf=1e+12 rho/delta=1e+06 : comparison holds for all n >= 16 ; at n=60: log2 s_late = -4.367e+05, log2(64 rho eps/delta) = -1.663e+18
+C=10 A0=1e+01 Cf=1e+03 rho/delta=1e+02 : comparison holds for all n >= 20 ; at n=60: log2 s_late = -4.001e+06, log2(64 rho eps/delta) = -1.663e+18
+C=10 A0=1e+06 Cf=1e+12 rho/delta=1e+06 : comparison holds for all n >= 20 ; at n=60: log2 s_late = -4.003e+06, log2(64 rho eps/delta) = -1.663e+18
+C=30 A0=1e+01 Cf=1e+03 rho/delta=1e+02 : comparison holds for all n >= 23 ; at n=60: log2 s_late = -3.383e+07, log2(64 rho eps/delta) = -1.663e+18
+C=30 A0=1e+06 Cf=1e+12 rho/delta=1e+06 : comparison holds for all n >= 23 ; at n=60: log2 s_late = -3.384e+07, log2(64 rho eps/delta) = -1.663e+18

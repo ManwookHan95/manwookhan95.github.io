@@ -1,0 +1,4 @@
+1. (GM): 60 random rational targets: admissible max exists, is rational; max excluded length/delta_max = 0.125 (bound 1/8)
+2. 1 - R^2 = sigma(1+2a+sigma)/(a+sigma)^2: max rel err 7.06e-51 ; hence R^2 <= 1 - sigma when a + sigma <= 1
+3. cluster: min over trials of c_{L+i}/(c^cl 4^{1-i}) = 0.770102 (claim >= 1/2)
+4. absorber: R(lb) - R(c) <=  6 ; min log2(eta_k/(mu^2 c^2)) = -12.546 (claim >= -13)

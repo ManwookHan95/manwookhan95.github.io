@@ -1,0 +1,16 @@
+Referee (a) numerics for Lemma PM (independent solver pm_ref.py: closed-form inner problem at fixed M = ||w||_inf, bisection on the
+envelope derivative A'(M) = sum_clamped(|zeta_k| - Phi_k^2 M/t) - (1-M)/t; 64-90 digits).  Columns: mu, r, W_fine | t - C/A (identity of
+lem:threshold) | |C' - C| after d-consistency on ALL coarse strict non-peaks | ratio to W_fine | Q1's PM bound | residual of
+rho'_k/rho_k = [C'/(1-C')]/[C/(1-C)] on Omega | 1 - rho_d after tuning | number of fine status flips | CONTROL (one Omega carrier untuned).
+
+(1) pm_ref.out — fine values of size lambda_k (nu_k ~ m/Phi_k, clamped at both rows): 4 instances before a solver edge case (mpc from a
+    cancellation in the old inner solver, fixed in the flip runs):
+    mu=1e-6 (3x), mu=1e-9 (1x): identity <= 6.8e-62 (flip runs: <= 1.9e-61); |C'-C| <= 3.1e-56 (working precision: C EXACTLY frozen); rho-identity <= 1.1e-54;
+    1 - rho_d = mu exactly; CONTROL |C'-C| = 7.9e-7 ... 1.2e-5, d becomes a PEAK in 2 of 4, otherwise rho_d moves by 2e-5 ... 3.5e-5 >> mu.
+(2) pm_ref_flip_part1.out + pm_ref_flip2.out — half of the fine carriers near THEIR thresholds and moved across (status flips):
+    mu=1e-6, W=1e-14: |C'-C| = 2.8e-32, 4.0e-31 (1 and 3 flips);  mu=1e-9, W=1e-20: 5.0e-58, 7.4e-44 (0 and 3 flips);
+    mu=1e-12, W=1e-26: 2.0e-56, 9.4e-54 (2 and 5 flips).  All <= C sum_fine Phi_k^2 ~ W^2 (the sharper bound of the notes), far below Q1's
+    bound (~W) and far below mu; rho-identity <= 1.1e-54; 1 - rho_d = mu exactly in all 6; CONTROL |C'-C| = 1.0e-7 ... 6.4e-5, d becomes a
+    PEAK in 4 of 6, otherwise rho_d moves by 7.6e-6 ... 1.4e-4 >> mu.
+Conclusion (sanity only): with d-consistency on all of Omega the near-threshold status 1 - mu (mu down to 1e-12) is preserved to working
+precision under perturbations r >> mu; leaving one coarse strict non-peak untuned destroys it (X2-ref 1.2, Q1 Lemma PM Remark (2)).

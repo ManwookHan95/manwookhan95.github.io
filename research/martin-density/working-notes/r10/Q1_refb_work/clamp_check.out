@@ -1,0 +1,7 @@
+inst 0: mu=1.0e-8 r=0.01 rho_d=0.99999999 | all-tuned: rho'_d=0.99999999 |C'-C|=8.8e-75 (fine lambda sum 7.89e-19) | one untuned: |C'-C|=4.47e-68 rho'_d=0.99999999
+inst 1: mu=1.0e-12 r=0.01 rho_d=0.999999999999 | all-tuned: rho'_d=0.999999999999 |C'-C|=3.24e-73 (fine lambda sum 3.12e-27) | one untuned: |C'-C|=2.0e-68 rho'_d=0.999999999999
+inst 2: mu=1.0e-8 r=0.01 rho_d=0.99999999 | all-tuned: rho'_d=0.99999999 |C'-C|=2.7e-73 (fine lambda sum 5.86e-19) | one untuned: |C'-C|=2.21e-67 rho'_d=0.99999999
+inst 3: mu=1.0e-16 r=0.01 rho_d=0.9999999999999999 | all-tuned: rho'_d=0.9999999999999999 |C'-C|=3.06e-75 (fine lambda sum 5.73e-35) | one untuned: |C'-C|=2.77e-67 rho'_d=1.0
+inst 4: mu=1.0e-12 r=0.01 rho_d=0.999999999999 | all-tuned: rho'_d=0.999999999999 |C'-C|=1.33e-74 (fine lambda sum 8.14e-27) | one untuned: |C'-C|=2.07e-67 rho'_d=0.999999999999
+inst 5: mu=1.0e-12 r=0.01 rho_d=0.999999999999 | all-tuned: rho'_d=0.999999999999 |C'-C|=5.56e-75 (fine lambda sum 2.73e-27) | one untuned: |C'-C|=3.48e-68 rho'_d=0.999999999999
+cvxpy cross-check: A(solver) = 0.0675693372407  A(cvx) = 0.06756933719421812  rel diff 6.877526944835904e-10

@@ -1,0 +1,6 @@
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q2_refa_work/drift_check.py:3: SyntaxWarning: invalid escape sequence '\ '
+  Identity: u(zhat^1) - u(zhat0) = -(kappa nu0/2) ||e^1 - e0||^2 whenever z^1 = z0 on supp u and (supp a^1 \ F) cap supp u = {}.
+max |identity error| over 400 random admissible moves: 2.46e-15;  max gain (kappa > 0): -3.27e-05 (<= 0 predicted)
+mass 1e-06 at s in supp u \ F (z set to its sign): change = +9.229e-02; first-order Hilbert part = +3.082e-05 (+ z-change +9.226e-02)
+mass 1e-05 at s in supp u \ F (z set to its sign): change = +9.257e-02; first-order Hilbert part = +3.082e-04 (+ z-change +9.226e-02)
+mass 1e-04 at s in supp u \ F (z set to its sign): change = +9.534e-02; first-order Hilbert part = +3.082e-03 (+ z-change +9.226e-02)

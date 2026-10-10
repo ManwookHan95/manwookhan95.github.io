@@ -1,0 +1,4 @@
+max |LHS - RHS| over 200 random admissible moves: 1.6653345369377348e-15
+bank mass 1e-04 on supp u: change of u(zhat) = +1.421e-14  (first order, sign of z_30 u(30))
+bank mass 1e-03 on supp u: change of u(zhat) = +1.457e-13  (first order, sign of z_30 u(30))
+bank mass 1e-02 on supp u: change of u(zhat) = +1.450e-12  (first order, sign of z_30 u(30))

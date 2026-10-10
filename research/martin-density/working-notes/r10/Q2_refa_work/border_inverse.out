@@ -1,0 +1,2 @@
+residual max 1.22e-13; max (|P|+|P0|)/(K|b|) 3.67e-05; Woodbury det rel err 4.15e-13; skipped doubly-degenerate 0
+doubly degenerate: c_alpha=4.2e-16, beta_*=-5.2e-17, |y^T L| = 4.8e-16 (left null vector y = D^-T (h + sum theta_m q_m)), rank 9 of 10

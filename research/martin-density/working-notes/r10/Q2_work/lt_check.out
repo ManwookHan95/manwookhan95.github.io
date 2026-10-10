@@ -1,0 +1,75 @@
+trial 0 M=7: p*(f)=1.000000 alpha(M)=2.29e-02 ||U*a_>M||=5.34e-07 p*(L*(w^M-w))=9.00e-14 p*(f^M-f)=4.18e-02
+   r= 0.300: LHS=1.1103041  LT-RHS=1.1119904 (slack 1.69e-03, Lambda=2.33e-03)  naive-RHS=1.1491724
+   r= 0.100: LHS=1.0559580  LT-RHS=1.0647737 (slack 8.82e-03, Lambda=1.01e-02)  naive-RHS=1.0864216
+   r= 0.030: LHS=1.0132829  LT-RHS=1.0188489 (slack 5.57e-03, Lambda=7.87e-03)  naive-RHS=1.0449579
+   r= 0.010: LHS=1.0024031  LT-RHS=1.0028213 (slack 4.18e-04, Lambda=1.34e-03)  naive-RHS=1.0419792
+   r=-0.030: LHS=0.9988928  LT-RHS=1.0081476 (slack 9.25e-03, Lambda=4.93e-03)  naive-RHS=1.0401277
+trial 0 M=9: p*(f)=1.000000 alpha(M)=6.87e-03 ||U*a_>M||=4.95e-09 p*(L*(w^M-w))=3.02e-15 p*(f^M-f)=1.27e-02
+   r= 0.300: LHS=1.0696982  LT-RHS=1.0740366 (slack 4.34e-03, Lambda=2.25e-03)  naive-RHS=1.0822851
+   r= 0.100: LHS=1.0133303  LT-RHS=1.0189045 (slack 5.57e-03, Lambda=4.68e-03)  naive-RHS=1.0222934
+   r= 0.030: LHS=1.0086207  LT-RHS=1.0112674 (slack 2.65e-03, Lambda=5.32e-03)  naive-RHS=1.0133670
+   r= 0.010: LHS=1.0037317  LT-RHS=1.0060342 (slack 2.30e-03, Lambda=1.61e-03)  naive-RHS=1.0155641
+   r=-0.030: LHS=1.0158068  LT-RHS=1.0179083 (slack 2.10e-03, Lambda=3.06e-03)  naive-RHS=1.0245412
+trial 1 M=7: p*(f)=1.000000 alpha(M)=1.94e-02 ||U*a_>M||=4.54e-07 p*(L*(w^M-w))=3.14e-14 p*(f^M-f)=3.59e-02
+   r= 0.300: LHS=1.2210103  LT-RHS=1.2247607 (slack 3.75e-03, Lambda=1.70e-02)  naive-RHS=1.2266136
+   r= 0.100: LHS=1.0153944  LT-RHS=1.0198647 (slack 4.47e-03, Lambda=5.16e-03)  naive-RHS=1.0454066
+   r= 0.030: LHS=1.0094077  LT-RHS=1.0117132 (slack 2.31e-03, Lambda=3.81e-03)  naive-RHS=1.0399428
+   r= 0.010: LHS=1.0002662  LT-RHS=1.0008669 (slack 6.01e-04, Lambda=1.56e-03)  naive-RHS=1.0335909
+   r=-0.030: LHS=1.0105699  LT-RHS=1.0197972 (slack 9.23e-03, Lambda=9.27e-03)  naive-RHS=1.0371064
+trial 1 M=9: p*(f)=1.000000 alpha(M)=5.24e-03 ||U*a_>M||=2.38e-09 p*(L*(w^M-w))=3.17e-14 p*(f^M-f)=9.66e-03
+   r= 0.300: LHS=1.1119923  LT-RHS=1.1123824 (slack 3.90e-04, Lambda=1.28e-03)  naive-RHS=1.1194859
+   r= 0.100: LHS=1.0191453  LT-RHS=1.0230164 (slack 3.87e-03, Lambda=3.96e-03)  naive-RHS=1.0247451
+   r= 0.030: LHS=1.0128877  LT-RHS=1.0128877 (slack 8.00e-09, Lambda=0.00e+00)  naive-RHS=1.0225457
+   r= 0.010: LHS=0.9996043  LT-RHS=1.0004748 (slack 8.70e-04, Lambda=1.39e-03)  naive-RHS=1.0073552
+   r=-0.030: LHS=0.9937801  LT-RHS=0.9945896 (slack 8.09e-04, Lambda=5.94e-04)  naive-RHS=1.0030587
+trial 2 M=7: p*(f)=1.000000 alpha(M)=1.75e-02 ||U*a_>M||=1.96e-07 p*(L*(w^M-w))=1.51e-12 p*(f^M-f)=3.15e-02
+   r= 0.300: LHS=1.1830161  LT-RHS=1.1873614 (slack 4.35e-03, Lambda=1.30e-02)  naive-RHS=1.1927920
+   r= 0.100: LHS=1.0128698  LT-RHS=1.0172801 (slack 4.41e-03, Lambda=4.89e-03)  naive-RHS=1.0389945
+   r= 0.030: LHS=1.0046379  LT-RHS=1.0081651 (slack 3.53e-03, Lambda=2.35e-03)  naive-RHS=1.0349632
+   r= 0.010: LHS=0.9986893  LT-RHS=0.9992295 (slack 5.40e-04, Lambda=4.55e-04)  naive-RHS=1.0298192
+   r=-0.030: LHS=1.0142674  LT-RHS=1.0167637 (slack 2.50e-03, Lambda=2.34e-03)  naive-RHS=1.0435785
+trial 2 M=9: p*(f)=1.000000 alpha(M)=6.07e-03 ||U*a_>M||=6.71e-09 p*(L*(w^M-w))=1.92e-12 p*(f^M-f)=1.08e-02
+   r= 0.300: LHS=1.0722216  LT-RHS=1.0741242 (slack 1.90e-03, Lambda=5.64e-03)  naive-RHS=1.0736708
+   r= 0.100: LHS=1.0217722  LT-RHS=1.0271396 (slack 5.37e-03, Lambda=2.77e-03)  naive-RHS=1.0324302
+   r= 0.030: LHS=0.9946796  LT-RHS=0.9958216 (slack 1.14e-03, Lambda=7.04e-04)  naive-RHS=1.0052484
+   r= 0.010: LHS=1.0021023  LT-RHS=1.0024317 (slack 3.29e-04, Lambda=1.01e-03)  naive-RHS=1.0112541
+   r=-0.030: LHS=1.0090131  LT-RHS=1.0095462 (slack 5.33e-04, Lambda=1.32e-03)  naive-RHS=1.0177485
+trial 3 M=7: p*(f)=1.000000 alpha(M)=2.34e-02 ||U*a_>M||=3.96e-07 p*(L*(w^M-w))=3.11e-14 p*(f^M-f)=3.99e-02
+   r= 0.300: LHS=1.0637456  LT-RHS=1.0717100 (slack 7.96e-03, Lambda=1.18e-02)  naive-RHS=1.0880563
+   r= 0.100: LHS=1.0307881  LT-RHS=1.0370581 (slack 6.27e-03, Lambda=4.06e-03)  naive-RHS=1.0688046
+   r= 0.030: LHS=1.0179350  LT-RHS=1.0330213 (slack 1.51e-02, Lambda=1.00e-02)  naive-RHS=1.0528213
+   r= 0.010: LHS=1.0049765  LT-RHS=1.0117702 (slack 6.79e-03, Lambda=4.51e-03)  naive-RHS=1.0426173
+   r=-0.030: LHS=1.0093481  LT-RHS=1.0140976 (slack 4.75e-03, Lambda=6.43e-03)  naive-RHS=1.0410978
+trial 3 M=9: p*(f)=1.000000 alpha(M)=9.92e-03 ||U*a_>M||=7.16e-09 p*(L*(w^M-w))=3.11e-14 p*(f^M-f)=1.87e-02
+   r= 0.300: LHS=1.2112533  LT-RHS=1.2181145 (slack 6.86e-03, Lambda=6.93e-03)  naive-RHS=1.2229406
+   r= 0.100: LHS=1.0011875  LT-RHS=1.0056107 (slack 4.42e-03, Lambda=4.61e-03)  naive-RHS=1.0150642
+   r= 0.030: LHS=1.0001433  LT-RHS=1.0040663 (slack 3.92e-03, Lambda=3.01e-03)  naive-RHS=1.0167194
+   r= 0.010: LHS=0.9997941  LT-RHS=0.9998107 (slack 1.66e-05, Lambda=4.81e-05)  naive-RHS=1.0183913
+   r=-0.030: LHS=1.0135986  LT-RHS=1.0204213 (slack 6.82e-03, Lambda=5.87e-03)  naive-RHS=1.0273580
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q2_work/lt_check.py:66: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  pr.solve(solver="CLARABEL")
+trial 4 M=7: p*(f)=1.000000 alpha(M)=3.30e-02 ||U*a_>M||=8.92e-07 p*(L*(w^M-w))=2.44e-12 p*(f^M-f)=5.97e-02
+   r= 0.300: LHS=1.0533532  LT-RHS=1.0582696 (slack 4.92e-03, Lambda=8.54e-03)  naive-RHS=1.1008891
+   r= 0.100: LHS=0.9915452  LT-RHS=0.9993389 (slack 7.79e-03, Lambda=6.34e-03)  naive-RHS=1.0463474
+   r= 0.030: LHS=1.0120356  LT-RHS=1.0170733 (slack 5.04e-03, Lambda=2.77e-03)  naive-RHS=1.0712346
+   r= 0.010: LHS=0.9994664  LT-RHS=1.0008540 (slack 1.39e-03, Lambda=8.62e-04)  naive-RHS=1.0588216
+   r=-0.030: LHS=1.0097973  LT-RHS=1.0165312 (slack 6.73e-03, Lambda=4.31e-03)  naive-RHS=1.0676073
+trial 4 M=9: p*(f)=1.000000 alpha(M)=8.54e-03 ||U*a_>M||=5.31e-09 p*(L*(w^M-w))=6.15e-14 p*(f^M-f)=1.55e-02
+   r= 0.300: LHS=1.1227878  LT-RHS=1.1284670 (slack 5.68e-03, Lambda=7.67e-03)  naive-RHS=1.1286000
+   r= 0.100: LHS=1.0383399  LT-RHS=1.0487193 (slack 1.04e-02, Lambda=8.54e-03)  naive-RHS=1.0471275
+   r= 0.030: LHS=1.0056656  LT-RHS=1.0072808 (slack 1.62e-03, Lambda=8.62e-04)  naive-RHS=1.0210372
+   r= 0.010: LHS=0.9977365  LT-RHS=0.9998881 (slack 2.15e-03, Lambda=1.46e-03)  naive-RHS=1.0124407
+   r=-0.030: LHS=1.0026019  LT-RHS=1.0037482 (slack 1.15e-03, Lambda=8.62e-04)  naive-RHS=1.0175046
+trial 5 M=7: p*(f)=1.000000 alpha(M)=2.19e-02 ||U*a_>M||=4.10e-07 p*(L*(w^M-w))=1.32e-13 p*(f^M-f)=3.77e-02
+   r= 0.300: LHS=1.0870421  LT-RHS=1.0937852 (slack 6.74e-03, Lambda=6.66e-03)  naive-RHS=1.1182211
+   r= 0.100: LHS=1.0382280  LT-RHS=1.0538356 (slack 1.56e-02, Lambda=1.01e-02)  naive-RHS=1.0714044
+   r= 0.030: LHS=1.0102040  LT-RHS=1.0194822 (slack 9.28e-03, Lambda=6.34e-03)  naive-RHS=1.0445414
+   r= 0.010: LHS=0.9994917  LT-RHS=1.0017113 (slack 2.22e-03, Lambda=1.89e-03)  naive-RHS=1.0356760
+   r=-0.030: LHS=1.0005588  LT-RHS=1.0108353 (slack 1.03e-02, Lambda=7.63e-03)  naive-RHS=1.0333144
+trial 5 M=9: p*(f)=1.000000 alpha(M)=5.47e-03 ||U*a_>M||=4.26e-09 p*(L*(w^M-w))=3.01e-14 p*(f^M-f)=1.01e-02
+   r= 0.300: LHS=1.0832622  LT-RHS=1.0835551 (slack 2.93e-04, Lambda=1.70e-03)  naive-RHS=1.0902951
+   r= 0.100: LHS=1.0255349  LT-RHS=1.0329053 (slack 7.37e-03, Lambda=4.65e-03)  naive-RHS=1.0337432
+   r= 0.030: LHS=1.0074402  LT-RHS=1.0094737 (slack 2.03e-03, Lambda=1.23e-03)  naive-RHS=1.0171361
+   r= 0.010: LHS=0.9979112  LT-RHS=0.9998061 (slack 1.89e-03, Lambda=1.07e-03)  naive-RHS=1.0077872
+   r=-0.030: LHS=1.0021928  LT-RHS=1.0037669 (slack 1.57e-03, Lambda=1.70e-03)  naive-RHS=1.0105069
+max violation (LHS - LT-RHS) over all tests: -8.003149698510015e-09

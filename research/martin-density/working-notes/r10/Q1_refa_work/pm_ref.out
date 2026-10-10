@@ -1,0 +1,30 @@
+mu, r, W | t-C/A | |C1-C0| | /W_fine | PM bound | identity resid | 1 - rho_d (tuned) | fine flips | CONTROL |C1-C0|, rho_d
+1.0e-6 0.01 1.0e-14 | 6.8e-62 | 3.05e-56 | 0.00 | 8.19e-13 | 1.1e-54 | 1.0e-6 | 0 | 1.19e-05, PEAK +5.75e-5
+1.0e-6 0.01 1.0e-14 | 4.5e-62 | 1.08e-57 | 0.00 | 8.21e-13 | 8.6e-56 | 1.0e-6 | 0 | 7.93e-07, PEAK +2.72e-6
+1.0e-6 0.01 1.0e-14 | 4.8e-62 | 7.66e-58 | 0.00 | 1.10e-12 | 7.9e-56 | 1.0e-6 | 0 | 3.93e-06, 1-2.0e-5
+1.0e-9 0.001 1.0e-20 | 1.5e-62 | 6.08e-57 | 0.00 | 5.68e-19 | 2.6e-55 | 1.0e-9 | 0 | 7.39e-06, 1-3.46e-5
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q1_refa_work/pm_ref.py", line 139, in <module>
+    o = instance(mu, r, W)
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q1_refa_work/pm_ref.py", line 85, in instance
+    S = solve(zeta, Phi); th = S['M']/S['t']
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q1_refa_work/pm_ref.py", line 58, in solve
+    if g(mid) > 0: lo = mid
+       ~^^^^^
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q1_refa_work/pm_ref.py", line 51, in g
+    t = tofM(M, nu, Phi)
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r10/Q1_refa_work/pm_ref.py", line 31, in tofM
+    top_ok = (j == 0) or (t*nu[idx[j-1]] >= M*(1 - mp.mpf(10)**(-58)))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/mpmath/ctx_mp_python.py", line 185, in __le__
+    def __le__(self, other): return self._cmp(other, mpf_le)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/mpmath/ctx_mp_python.py", line 181, in _cmp
+    return func(self._mpf_, other)
+  File "/usr/local/lib/python3.13/dist-packages/mpmath/libmp/libmpf.py", line 543, in mpf_le
+    return mpf_cmp(s, t) <= 0
+           ~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/mpmath/libmp/libmpf.py", line 491, in mpf_cmp
+    tsign, tman, texp, tbc = t
+    ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable mpc object
