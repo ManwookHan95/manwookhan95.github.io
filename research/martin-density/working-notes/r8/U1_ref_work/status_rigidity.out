@@ -1,0 +1,11 @@
+=== with inactive robust Omega carrier d0: False
+ base: theta=3.46260837546 kappa=1.23579206002 rho=['0.999999999', '0.8663988747', '1.443998124', '5.775992498', '5.775992498']
+ (1) donor raise Lam=1.0e-6: dkappa/Lam=1.044849829 (1-X=1.0), dtheta=3.36084e-6, rho_2-1=-9.71609e-7
+ (2) kappa restored by a peak push: theta-theta_base=9.18355e-41 (raise was 3.36084e-6), rho_2-1=-1.0e-9
+ (3) raise + active ratios restored (max ratio err 1.15e-41): rho_2-1=-1.0e-9, rho changes ['-1.552e-22', '-1.345e-22', '-2.242e-22']
+=== with inactive robust Omega carrier d0: True
+ base: theta=3.33364978039 kappa=1.20376317086 rho=['0.999999999', '0.8999145674', '1.499857612', '1.499857612', '5.999430449', '5.999430449']
+ (1) donor raise Lam=1.0e-6: dkappa/Lam=1.125059458 (1-X=1.0), dtheta=3.005e-6, rho_2-1=-9.02415e-7
+ (2) kappa restored by a peak push: theta-theta_base=0.0 (raise was 3.005e-6), rho_2-1=-1.0e-9
+ (3) raise + active ratios restored (max ratio err 5.74e-42): rho_2-1=1.04686e-7, rho changes ['1.057e-7', '9.511e-8', '1.585e-7']
+ (4) kappa-neutral lever: |kappa-kappa_base|=3.0e-5, active values unchanged, theta change=0.0, rho_2-1=-1.0e-9, rho changes ['0.0', '0.0', '0.0']

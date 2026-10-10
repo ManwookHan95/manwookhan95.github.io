@@ -1,0 +1,12 @@
+=== inactive robust Omega carrier d0 present: False
+ base rho (Omega, then peaks 0,1): ['0.999999999', '0.8550024569', '0.5700016379', '5.700016379', '5.700016379']
+ (1) donor raise (peak 0, Lam=1e-6): dkappa/Lam = 1.0 ; dtheta/Lam = 3.6328596 (C/Phi_P^2 = 3.63286) ; rho_2 - 1 = -1.03637e-6
+ (2) kappa restored by an inward push of peak 1: |kappa-kappa0| = 0.0 ; theta-theta0 = 0.0 ; rho_2 - 1 = -1.0e-9
+ (3) raise kept, active ratios u/kappa restored (err 2.87e-42): rho changes of active carriers ['-1.735e-22', '-1.483e-22', '-9.89e-23'] ; rho_2 - 1 = -1.0e-9
+=== inactive robust Omega carrier d0 present: True
+ base rho (Omega, then peaks 0,1): ['0.999999999', '0.8731647492', '0.5821098328', '0.5821098328', '5.821098328', '5.821098328']
+ (1) donor raise (peak 0, Lam=1e-6): dkappa/Lam = 1.0 ; dtheta/Lam = 3.7047788 (C/Phi_P^2 = 3.7047793) ; rho_2 - 1 = -1.07929e-6
+ (2) kappa restored by an inward push of peak 1: |kappa-kappa0| = 4.59e-41 ; theta-theta0 = 2.755e-40 ; rho_2 - 1 = -1.0e-9
+ (3) raise kept, active ratios u/kappa restored (err 2.87e-42): rho changes of active carriers ['-4.033e-8', '-3.521e-8', '-2.348e-8'] ; rho_2 - 1 = -4.13293e-8
+    lever: kappa change from d0 inward push alone = -8.226e-21 ; f4(-1e-4)=-0.0001 f4(1e-4)=0.0001
+ (4) kappa-neutral lever (d0 inward by 1e-4, kappa restored by peak push s=8.226e-21): |kappa-kappa0|=2.3e-41, active ratio err=5.74e-42, theta-theta0=0.0007142, rho changes of active carriers ['-0.0002078', '-0.0001815', '-0.000121'], rho_2 - 1 = -0.000207825

@@ -1,0 +1,2 @@
+{'mixed': 148, 'exists': 115, 'forcedW': 3}
+instances with completions but no GOOD one, by threshold: {0.004: 1, 0.0004: 0, 4e-05: 0}

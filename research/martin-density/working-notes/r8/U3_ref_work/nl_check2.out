@@ -1,0 +1,22 @@
+f : P = [0, 1, 3] Q = [2]  M, C = 0.75965 0.24035  q0 = 0.796345
+f_n: P = [0, 1, 3] Q = [2]
+z*V off F (should be >= 0): [1.16570e-03 1.51500e-04 7.58000e-05 3.79000e-05 4.81800e-04 5.17000e-05
+ 2.58000e-05 8.69543e-02 4.34772e-02 6.00000e-07 3.00000e-07]
+profile pi_g at s1, s2, S_c1: [0.000235 0.       0.000117]
+c = 1.00 : max_t [p*(f + t c g) - s(t)] on grid = -5.077e-07
+
+At f_n: p*(f_n + t c g) - s(t):
+  t = +1e-01 : -4.988e-03    t = -1e-01 : -4.986e-03
+  t = +3e-02 : -4.499e-04    t = -3e-02 : -4.497e-04
+  t = +1e-02 : -5.001e-05    t = -1e-02 : -4.998e-05
+  t = +3e-03 : -4.510e-06    t = -3e-03 : -4.505e-06
+  t = +1e-03 : -5.093e-07    t = -1e-03 : -5.078e-07
+
+One-sided coefficients of c g:
+  f side +1 : gamma = 4.1495878730849285e-09 (optimal)
+  f side -1 : gamma = 0.0008584335496501674 (optimal)
+  f_n side +1 : gamma = inf (infeasible)
+  f_n side -1 : gamma = 0.0008597400933992302 (optimal)
+p*(f_n - f) = 8.29936271365775e-07
+f: max over two-piece data (kappa_w <= 1) of pi_h(s1) - pi_h(s2) = 0.016010813090993014 (optimal)
+f_n: max over two-piece data (kappa_w <= 1) of pi_h(s1) - pi_h(s2) = 2.4111252887630665e-08 (optimal)

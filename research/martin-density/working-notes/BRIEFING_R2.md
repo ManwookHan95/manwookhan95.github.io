@@ -288,3 +288,45 @@ V4 (sound): (B), (C), (D) cannot be designed away (explicit self-aligned rows f_
   lose bounded gaps). Design compatibility of V4's conditions with V1/V2 constants: plausible, not checked line by line.
 CONSENSUS STATE after Round 7 (design D^{V2} on D_Omega with diagonal base, plus D^mu entries; F finite): Lemma Z holds except at (C*) rows.
   Infinite F: (E1)-(E5). Nothing points to a counterexample.
+
+## ADDENDUM 8 (Round 8, all refereed): r8/U1_*, r8/U2_*, r8/U3_*, r8/U4_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+U4 (audit, CORRECT): one operator T_final (recursion with fixed data, stage order: target y_l (allowedness (a),(c)); delta_l by (GM) for
+  l >= 2; c_l = min (W1)-(W7); level data and Design(l) incl. B_mu(l) = 2^{sigma(l)}/mu_{sigma(l)}^2; pigeonhole sub-windows with V2's
+  Lojasiewicz-adjusted b(w)); diagonal base with super-exponentially decaying entries; N-independent; Martin's Lemma B holds; Lemma GW
+  (window theorems use a window only through 4 properties, all valid on every sub-window); every theorem on the dependency trees of Master
+  Theorems II, III' and Theorem RS' holds for T_final with two fixes: C1 (B_mu in Design: the base enters a design constant ONLY through the
+  bank factor mu_{s'}^2 v(s')), C7 ((GM) only for l >= 2, c_1 = 1). Current master theorem for T_final: (i) F finite: f in Rec_N unless (C*)
+  (and not block-tame, not in R_0, R_0^pm, R_S); (ii) F infinite: RS', R1, Y3 Thm 3.5, Thm N, Z5 T6/T7 classes; (iii) residual = (C*) at
+  finite F, (E1)-(E5) at infinite F; (iv) density for p_N <=> Lemma Z <=> Rec_N = S_{p_N*} (OPEN for every N); for p: follows from density for
+  infinitely many p_N (T_final N-free); row-wise statements do NOT transfer to p.
+U2 (infinite F, sound): base mu*_s = 2^{-2^{2^s}} (doubly exponential; B_mu adapts the design); Lemma P (an unraised support coordinate
+  that would be deep for the data pins the switching carrier: |tau_l| <= C_q t/v_l(s)); Theorem RS* ((RR) removed: mu-thin supports
+  recovered); Lemma ND / Theorem ND' ((ND') removed); Lemma W + Theorem RS*_inf (infinitely many bad carriers under a rate condition
+  (W_inf), which must include the bad-peak margin rate 1/mu_B(l)); Lemma DR-inf ((R6) exactly invariant under deep raises); Lemma TR-inf
+  (private two-sided value tuning at infinite F in cases a, a', c, c'); Theorem M-inf (transport of MT III' to infinite F) SKETCH; residual:
+  tuning regularity modulus (strictly contains (NDN)), degenerate swallowing-sign bad peaks with tiny resource moduli, (SC) transfer along
+  the deep raise below eps_e.
+U1 ((C*), PARTLY WRONG): Master Theorem IV and Corollary IV.1 (N = 1) are NOT proved: Theorem 2.3 (exactification, C*-3) fails because the
+  donor raise moves kappa by ~Lam and the kappa push undoes the raise (all peaks act identically on (theta, A, kappa)). Referee Lemma R-kt:
+  the exact shifted system and the relative positions of switching carriers depend on a block only through the ratios u/kappa, so TWO
+  independent levers are needed. Master Theorem IV' PROVED under (KN) (a kappa-neutral lever: an inactive Omega carrier with robust relative
+  position). Correct new tools: exactness certificate (Lemma 1.1: exact data iff ONE vector V(Domega) is z'-admissible off F'); kappa data
+  identity (Delta' kappa' = sum_Omega u gamma); shift bound (Lemma 2.1); normalization of a class's scales onto one shift ray (Prop 2.2);
+  zero-value ABSORBER PAIRS (block-1 carriers tuned to value exactly 0 cancel fine residues on coarse coordinates exactly: C*-1 bookkeeping);
+  self-aligned recursion giving (SC) for negative blocks (C*-2 in configuration (i)); Schauder completion on one ray (C*-5); mixed-class
+  three-state / frustration analysis. Design D^{U1'} (referee-corrected). OPEN: status coherence (sharpened C*-3) without (KN); (C_mix)
+  (mixed activity classes, N >= 2).
+U3 ((C*) adversarial, structural results correct): Lemma S (exact rigidity / sandwich of two-piece data), Cor S1/S2 (F, K finite: no
+  switching, no shift), Prop S3; THEOREM NL: the fibre map is NOT lower semicontinuous at V4's self-aligned (BT) row along (BT) rows (one far
+  anti-type flip) — approximants for oscillating mates must be aligned or banked; Prop FZ / Cor FZ (fixed-z tilts of aligned rows leave
+  (C*)); nested-tuning rows f^infty (non-(BT), non-(SC), (C*); existence SKETCH, properties PROVED; their exact-data mates recovered);
+  Lemma VT (violation tolerance at a single engineered stage: violations of l_1 mass eps cost <= 2 rho |tau| eps, tolerated when
+  2 rho eps <= delta s_1/16); Lemma QB2 (quadratic bank repair, fixed accounting); Lemma R-pin. Referee: U3's (S2a) scaling check is WRONG:
+  window masses create a first-order theta/+- junction mismatch ~ s_1/t^2; remedy: d-CONSISTENT engineered approximants (re-tune coarse
+  omega-carrier values exactly at f' by TU levers so that d' = d on every switching vector) (SKETCH). OPEN: (S1) general exact coupling
+  (>= 2 shifted blocks or no free-ray q<0 carrier); (S2) uniform composition ((S2a') d-consistent approximants, (S2b), (S2c)); RT*(c).
+CONSENSUS OPEN CORE after Round 8 (T_final; finite I):
+ F finite: (C*) rows; sub-problems: status coherence without (KN) (second, kappa-neutral lever), (C_mix) for N >= 2, (S1) multi-block exact
+   coupling, (S2) uniform composition with d-consistent engineered approximants.
+ F infinite: transport of MT III' (M-inf SKETCH), tuning regularity modulus, (W_inf) rate for infinitely many bad carriers, (SC) along
+   deep raises, plus (C*) at infinite F.

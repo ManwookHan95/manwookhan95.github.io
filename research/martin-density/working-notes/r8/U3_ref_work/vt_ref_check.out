@@ -1,0 +1,13 @@
+representation residual: 3.015067606801543e-08   g(zhat) = 1.4571613670734136e-18
+
+eps = 2.0e-03 : kappa_w = 0.0483, delta = 0.4804, viol(j0) = 2.00e-03, (VT) threshold 32 rho eps/delta = 1.20e-01
+  s_1 = 1.20e-01 (mass at j0 = 8.63e-04): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = -8.643e-09 at tau = 1.00e-05 ; failing taus in [none]
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r8/U3_ref_work/vt_ref_check.py:21: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  pr.solve(solver='CLARABEL', tol_gap_abs=1e-12, tol_gap_rel=1e-12, tol_feas=1e-12)
+  s_1 = 1.50e-02 (mass at j0 = 1.08e-04): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = -2.145e-08 at tau = -1.00e-05 ; failing taus in [none]
+  s_1 = 1.00e-04 (mass at j0 = 7.20e-07): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = 7.751e-06 at tau = 5.62e-03 ; failing taus in [5.6e-04 .. 1.0e-02]
+
+eps = 5.0e-04 : kappa_w = 0.0483, delta = 0.4804, viol(j0) = 5.00e-04, (VT) threshold 32 rho eps/delta = 3.00e-02
+  s_1 = 3.00e-02 (mass at j0 = 5.40e-05): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = -1.684e-08 at tau = 1.00e-05 ; failing taus in [none]
+  s_1 = 3.75e-03 (mass at j0 = 6.74e-06): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = -4.009e-08 at tau = 1.78e-05 ; failing taus in [none]
+  s_1 = 2.50e-05 (mass at j0 = 4.50e-08): max_tau [p*(f + tau g) - 1 - tau^2(1-delta)/2] = 4.068e-07 at tau = 1.33e-03 ; failing taus in [1.8e-04 .. 2.4e-03]

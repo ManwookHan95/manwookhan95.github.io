@@ -1,0 +1,5 @@
+tests 587 skipped(no pull coord in range) 613 failures(diverge or mass<=0 or Delta<eta/2) 0
+max |val^# - val^(2) - x|/eta = 3.8060120661071455e-07  absolute: 9.278856302015123e-16
+max other change/eta^2 overall = 1597.1743386959545   per factor: {0.1: 1600.0, 0.01: 1270.0, 0.001: 1410.0, 0.0001: 1320.0}
+min bank mass = 7.002853854877586e-09   max |Phi'| at fixed point = 0.0025642441821512683
+bank mass x min(s'^2 v')/eta: median 3.89, max 13.6 (O(1): masses scale like eta/(s'^2 v'), i.e. like B_mu)

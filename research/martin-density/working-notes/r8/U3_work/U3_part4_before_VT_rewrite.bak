@@ -1,0 +1,133 @@
+# U3 part 4 — Recovery of (C*) rows: quadratic banks, violation tolerance, and the precise remaining steps
+
+Setting: D^{V2} on D_Omega with diagonal U (+ V4's (SF*), (SF_tau), (b'), (Z0) where cited), finite I, F finite, g in C(f), rho < 1.
+"Exact data" = two-piece data of Definition def:twopiece.  A VIOLATION of a pair (b, omega) at a coordinate j notin F is the amount
+by which side admissibility fails there: viol^+(j) := |b(j)| if j is free, := (z_j b(j))_- if j is a contact (side +; symmetric for
+side -).  ||viol|| := sum_j (viol^+(j) + viol^-(j)).
+
+## 4.1 Lemma QB2 (a bank turns a linear violation into a quadratic cost).  PROVED (any admissible T).
+Let f have F finite, let E be a finite set of contacts, and let f^b be the row with forced data (a^b, z) where
+a^b := (a + sum_{j in E} m_j z_j e_j^*)/q*(a + sum_{j in E} m_j z_j e_j^*), m_j > 0 (z unchanged; z_j = sgn a^b_j on E, so the data
+(a^b, z) are admissible, Remark rem:lemmaZ(c)).  Then F^b = F ∪ E and, for every B in l_1 and t in R,
+     Exc^b(t B) <= Exc^{b,0}(t B) + sum_{j in E} t^2 B_j^2 / (2 |a^b_j|),
+where Exc^{b,0} is the excess functional of Lemma lem:bookkeeping(b) with the summands at j in E omitted (they are the flip terms).
+Pairs (b, omega) that are side-admissible off E and ARBITRARY on E are two-piece data at f^b (E ⊂ F^b), so Proposition
+prop:onesidedupper applies at f^b as stated (as t -> 0 no flip occurs).  The point of the lemma is UNIFORMITY in the bank masses: in
+the proofs of Proposition prop:onesidedupper, Lemma U (Z3) and Theorem thm:engineered, the condition "no flip on F" (e.g. (T_1):
+rho T_0 (||b^+||_inf + ||b^-||_inf) <= a_min/8) may be imposed on F only, the flip part on E being bounded instead by
+(t^2/2) sum_E B_j^2/|a^b_j|; the scale range T_0 is then independent of the masses, and Gamma_w is replaced by
+     Gamma^E_w(b, omega) := Gamma_w(b, omega) + q^b_0 sum_{j in E} b_j^2 / |a^b_j| .
+Proof.  On F^b the excess summand is 2(-sgn(a^b_j) t B_j - |a^b_j|)_+ (Lemma lem:base); for x >= 0 and m > 0, 2(x - m)_+ <= x^2/(2m)
+(the parabola x^2/(2m) - 2(x - m) = (x - 2m)^2/(2m) >= 0), and the summand is 0 when -sgn(a^b_j) t B_j <= 0.  In each of the cited
+proofs the flip part of Exc enters only through an upper bound hat G_b for the base excess, and the rebalancing step (Proposition
+prop:rebalancing) accepts any upper bound hat G_b.  QED
+Quantitative consequence (choice of masses).  Given violations e_j := b(j) (j in E) of total mass epsilon := sum_E |e_j| and a budget
+beta > 0 in Gamma, the masses m_j := (q_0 epsilon/beta) |e_j| (times the normalising factor) give q^b_0 sum_E e_j^2/|a^b_j| <= beta(1 + o(1)),
+and the companion moves by p*(f^b - f) <= C_f sum_E m_j = C_f q_0 epsilon^2/beta: QUADRATIC in the violation.  Numerical check
+(U3_work/vt_check.py, finite N = 1 model, dead-zone contact touched by no carrier, rho = 0.9): the least bank mass that makes
+rho g_e a mate is m_min = 1.33e-5, 3.16e-6, 7.50e-7, 1.78e-7 for epsilon = 4e-3, 2e-3, 1e-3, 5e-4, i.e. m_min/epsilon^2 = 0.83, 0.79,
+0.75, 0.71 (prediction for kappa_w ~ 0: m_min ~ rho^2 epsilon^2 = 0.81 epsilon^2), and p*(f^b - f) ~ 2 m.
+
+## 4.2 Lemma VT (violation tolerance of the engineered approximants).  SKETCH (by inspection of the proof of thm:engineered).
+In Theorem thm:engineered, let the two-piece data be exact except for violations of total mass epsilon located (i) at FREE
+coordinates (anywhere), where the data are split symmetrically (b^+(j) = -b^-(j) = v(j)/2, so b^theta(j) = 0), and (ii) at contacts
+beyond the window [1, N_w] (violated contacts inside the window are banked first, Lemma QB2).  Then the conclusion of Steps 3-5 holds at
+a SINGLE stage (N_w, s_1, N'') of a construction sequence provided, besides the late-stage conditions of that proof at this stage,
+2 rho epsilon <= delta s_1/16.
+Reason.  Step 3 (Base) already contains exactly such a term: on contacts j > N'' the summand of Exc'(tau B^diamond) is at most
+(1/2) rho |tau| |v_j|, and (N3) (rho V_{>N''} <= delta s_1/16) together with |tau| > s_1 makes it <= delta tau^2/32 in the +- regimes;
+in the theta-regime |tau| <= s_1 the base part beta^theta = b^theta 1_{[1,N_w]} carries no tail at all.  Violations of type (ii) enter the
++- decompositions in the same way; at a free violated coordinate j, beta^+-_j = +-v_j/2 costs at most rho |tau| |v_j| in the +- regimes and
+beta^theta_j = 0 costs nothing in the theta-regime; total cost <= 2 rho |tau| epsilon.  Violations enter nowhere else: block parts,
+first-order terms, the anchor and the rebalancing do not involve b at these coordinates.
+What is NOT automatic: the late-stage conditions are asymptotic in s_1 -> 0 at a FIXED row; here s_1 is bounded below by
+32 rho epsilon/delta, so epsilon must be small compared with the late-stage threshold s_late(f) of the row (or of a sequence of rows
+with uniform thresholds, Z3 Lemma U-type uniformity).
+
+## 4.3 Proposition RT* (structure of the shifted transplant in case (II)).  PROVED parts and SKETCH parts as marked.
+Let w be a clean sub-window of level l in case (II) (rho^sh(kappa, f) <= b(w), c_pi(w) <= b(w)), I_sh the source-deficient blocks.
+ (a) (PROVED, V2 Corollary C1.1(a)) The COMBINATORIAL coherent resonance is EXACT: c^comb_*(kappa) = 0, i.e. there are delta on the sign
+     sphere of I_sh and x >= 0 on the class-G strict non-peaks with sum_m delta_m Pi_m + sum x eps u zero-cost on the coarse target
+     coordinates T(l) and without sign defect on the natural signature sets.  (If c^comb_* > 0 it is >= delta_sh(l) > C Design(l) b(w)
+     and case (I) holds.)
+ (b) (PROVED, Lemma A of Part 2 and its multi-block form Lemma S) Exact shifted data exist at a row f' iff, outside the supports of
+     the omega-carriers, W_Delta = sum_m Delta_m psi'_m vanishes at the free coordinates and is (-z')-signed at the contacts; the
+     functional (split chi, omega^+, base part on F) is otherwise free.
+ (c) (SKETCH) At V1's companion f^# of w (exactifications (C1)-(C4), donor raise Lambda = T_lo^3, aligned fine re-alignment beyond a
+     level L' >> l, Proposition 5.3 of V4), the conditions of (b) hold on all COARSE coordinates for every shift delta in the exact
+     combinatorial cone of (a) (owners of coarse coordinates are coarse; peaks of shifted blocks carry the coefficients of (a); coarse
+     strict non-peaks are omega-carriers and are bumped where their coefficient vanishes, Lemma 3.5 of Part 3), EXCEPT for: (i) the
+     coupling rows Delta_m = d_m(omega^-_m) - d_m(omega^+_m) (V2's (C*-3)), and (ii) contributions of carriers > l at coarse coordinates
+     ("medium" carriers l < c <= L' and "fine" carriers c > L'), whose total l_1-mass is at most C |Delta| sum_{c > l} lambda_c <= C |Delta|
+     T_lo(w)^3.
+ (d) (PROVED given (c)) All violations caused by carriers c > l (medium carriers touch coarse coordinates only through their finitely
+     supported targets — allowedness (a) keeps coarse targets off S_c — but an anti-aligned medium carrier also violates on its own
+     infinite signature set S_c; fine carriers c > L' violate anywhere) have total l_1-mass epsilon <= C |Delta| sum_{c > l} lambda_c <=
+     C |Delta| T_lo(w)^3 and are summable over coordinates.  Hence for every epsilon' > 0 all but epsilon' of this mass lies on a finite set
+     E of contacts (heads of the signature sets carry almost all of their mass: v_c(s) = delta_c 2^{-s}/n_c).  Banks of Lemma QB2 on E with
+     total mass <= C epsilon^2/beta <= C (|Delta| T_lo^3)^2/beta = o(T_lo(w)^2) absorb these violations into Gamma^E at an extra cost beta;
+     the tail epsilon' is left to Lemma VT.  (Free coordinates cannot be banked; violations at FREE coordinates are of fine origin only —
+     coarse free rows are exact by (c) — and go to the tail, where Lemma VT treats them with the symmetric split.)
+ (e) (SKETCH) With Lemma VT at the banked companion (s_1 chosen in a scrambling gap below Lambda, with 32 rho epsilon'/delta <= s_1 <=
+     theta T_lo^2) and the averaging of Z3 Theorem E (pieces at the scales of w; bound (A) via the engineered transfer of each piece up
+     to its own radius, bound (B') via closeness), one obtains NA pairs converging to (f, rho g).  Mixed signs of Delta_m across blocks
+     are allowed by Theorem thm:engineered ((SC) is needed only for blocks with Delta_m < 0 and holds at the companion along gap scales).
+ (f) (Scale bookkeeping; PROVED arithmetic, assuming the design strengthening (W10): c_{l+1} <= T_lo(l)^{10}, an upper bound on
+     weights that every SLD-type design admits by V4 Lemma 2.1's argument — window theorems use weights only through upper bounds.)
+     Violations at FREE coordinates cannot be banked; they have total mass <= C |Delta| sum_{c > l} lambda_c <= C |Delta| T_lo(l)^{10}.
+     Lemma VT needs s_1 >= 32 rho (that mass)/delta, while the scrambling estimate at the companion needs s_1 below the donor raise
+     Lambda = T_lo^3 times the least coarse weight and inside a gap of the weight sequence; both hold for s_1 := T_lo(l)^{8} c_l (say),
+     since T_lo(l) <= 2^{-n^w_l} T_hi(l) is super-exponentially smaller than c_l >= T_lo(l-1)^{10}.  Without (W10) (c_{l+1} ~ T_lo^3) the
+     two requirements collide (free-coordinate violations ~ Lambda): this is the precise reason why V2's (C*-1) looked like an exactness
+     problem; with (W10) it becomes a bookkeeping problem.
+Consequently (C*) reduces to two precise steps, both finite-dimensional or local:
+ (S1) [coupling exactness] at the companion, the coupling rows Delta_m = d^#_m(omega^-) - d^#_m(omega^+) can be satisfied EXACTLY
+      inside the exact combinatorial cone of (a) with a design x u^{-O(1)} Hoffman constant.  For N = 1 (or a single shifted block)
+      this holds whenever some class-G strict non-peak k with q_k < 0 of the shifted block has its column x_k eps_k u_k as a free ray of
+      the zero-cost cone (its target coordinates in T(l) are contacts dominated by their owners or lie in F) — e.g. V4's l_- with
+      target y* on F — because increasing x_k changes sum q x without changing delta (PROVED).  In general it is a single equation per
+      shifted block whose coefficients are values; per-carrier exact tuning (Y4-ref Prop. P4 / V1 Lemma TU) of one value per block
+      solves it as soon as its derivative is bounded below, a quantity that can be made a rate object of the design (SKETCH).
+ (S2) [Lemma VT + composition] Lemma VT and the composition (e) written out line by line.
+Neither step involves an f-dependent rate beyond those already absorbed by the window recursion, and nothing in (C*) obstructs them.
+
+## 4.4 What is (and is not) obtained.  Labels.
+ (1) PROVED: Lemma S, Corollaries S1, S2, Proposition S3, Theorem NL, Proposition FZ (Parts 1-2); Lemma A; properties (b)-(e) of
+     Theorem NT, Proposition NT-M, the dead-zone bump (Part 3); Lemma QB2 (this part); Proposition RT*(a),(b),(d).
+ (2) PROVED modulo refereed results: Corollary FZ (Master Theorem III'), Corollary NT-R (V4 Theorem 5.6; design compatibility of V4's
+     conditions with D^{V2} assumed, V4-ref F6).
+ (3) SKETCH: existence part of Theorem NT; recovery of all mates of f^infty (Part 3.4); Lemma VT; Proposition RT*(c),(e); the general
+     form of (S1).
+ (4) OPEN (precise): (S1) in general (multi-block coupling with value-dependent coefficients, V2's (C*-3)), and (S2).  Assuming them,
+     every F-finite (C*) row is in Rec for D^{V2} (with V4's design conditions), i.e. Lemma Z holds for F finite.
+ (5) NOT a gap any more (relative to V2-ref's list): (C*-1) exact absorption of fine-peak residues — replaced by quadratic banks (finitely
+     many coordinates) + violation tolerance (tail), no Slater condition needed; (C*-2) (SC) at companions — holds along gap scales below
+     the donor raise for aligned re-alignments; (C*-4) scale-dependent shift directions — the exact combinatorial cone of (a) contains
+     every direction used at the scales of w up to O(K t) (Hoffman projection inside a FIXED cone at the companion), and fine-level
+     incoherence for a direction different from the completed ray is a fine-origin violation; (C*-5) joint completion/absorption —
+     no completion (Lemma C5) is needed once fine violations are tolerated.  These claims are SKETCH-level (they rest on (S2)).
+
+## 4.4' Lemma R-pin (pinned strict non-peaks bound the shift from above).  PROVED (any admissible T, any f, scale t <= min(t_eta, 1)).
+For every block m and every strict non-peak k in Q_m with w_m(k) != 0, the decompositions of Lemma lem:twosided satisfy
+     Delta d_m |w_m(k)| <= 3 gap_m(k)/t + |Delta Theta_m(k)|      (decomposition convention Delta d = d_+ - d_-).
+Proof.  Lemma lem:suplevel(f) with varsigma := sgn w_m(k): varsigma omega_+(k) <= (1 - d_+ t) gap/t and varsigma omega_-(k) >= -(1 + d_- t)
+gap/t; with |d_+- t| <= 1/2 this gives varsigma (omega_+ - omega_-)(k) <= 3 gap/t.  Since Theta_+- = omega_+- - d_+- w,
+omega_+ - omega_- = Delta Theta + Delta d w, so varsigma(omega_+ - omega_-)(k) = varsigma Delta Theta(k) + Delta d |w(k)|.  QED
+Consequences.  (i) A class-R strict non-peak (|Delta theta_k| = lambda_k |Delta Theta(k)| <= K_g t, Y1 Lemma 3.1) with gap <= t^2 pins the
+upward shift: Delta d |w(k)| <= 3 t + K_g t/lambda_k — it is an UPPER source not listed among Y1's (U1)-(U3) (adding it only enlarges case
+(I)).  (ii) [configuration (i), upward shift Delta d^{dec} > 0] In the transplant of 4.3(c), a coarse class-R strict non-peak k of a
+shifted block is an omega-carrier with net coefficient 0 (Dom(k) = Delta^{data} w(k)); by the lemma either the shift is O(K t) at the scale
+t (then the d-neutral machinery of V1/V2 applies) or |Dom(k)| ~ |Delta d^{dec}||w(k)| <= 3 gap/t + K_g t/lambda_k, which is within the
+size conditions of Z3 Lemma U up to a constant factor.  [Configuration (ii) (downward shift): the lemma gives no bound; there the
+neutralizing moves are inward (away from the peak level) and are covered by Z3 Lemma 5.1 / Y2 Lemma U'(ii) — SKETCH.]
+
+## 4.5 Remarks on scepticism.
+ (a) Lemma QB2's quadratic cost is the key quantitative fact: a violation of mass epsilon costs a companion move of order
+     epsilon^2/beta, so fine-origin violations of mass <= T_lo^3 cost o(T_lo^6) — far below the o(T_lo^2) allowed by Theorem E.  Coarse
+     violations of size O(K t) (budget errors) would cost K^2 T_hi^2 >> T_lo^2 and are NOT tolerable: coarse exactness (Proposition
+     RT*(a) and (S1)) is indispensable.  This matches the structure of all previous rounds (exact data on coarse coordinates).
+ (b) Theorem NL shows that the choice of approximants is essential; every approximant used above is ALIGNED (V4's hysteretic
+     re-alignment, banks of the contact's own sign), as Proposition S3 requires.
+ (c) Finite SOCP models cannot exhibit failure of recovery (finite truncations are block-tame); they confirm Proposition S3 / Theorem NL
+     (collapse of the oscillating part of the fibre under a far anti-type flip: max oscillation 0.0160 -> 2.4e-8 while p*(f_n - f) = 8.3e-7)
+     and the quadratic bank law of Lemma QB2.

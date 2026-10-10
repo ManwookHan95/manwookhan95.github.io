@@ -1,0 +1,7 @@
+tests 163
+max |N(w)-1| 2.6728e-51
+max rel (E1) 5.4136e-51  max rel (E2) 1.5567e-49
+max rel kappa forms 5.0657e-51  max rel identity (1.3) 2.5606e-50
+Lemma 1.4(a): n=163 max rel err 1.7029e-27
+Lemma 1.4(b): n=27 max rel err 3.3209e-27
+Lemma 1.4(c): n=27 max rel err 1.8753e-21
