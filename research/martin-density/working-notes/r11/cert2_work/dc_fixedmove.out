@@ -1,0 +1,4 @@
+instances 144; |F(0)| / (2v/(mu v_bank))^2 : min 0.000 median 0.005 max 61.582
+fitted exponent of |F(0)| in v(j_p): 1.83  (2 = second order, as claimed in (DC-b))
+per-instance exponents: [2.01 1.61 2.   2.   1.98 1.75 1.96 1.46 2.01 1.86 1.8  1.8  1.75 1.76
+ 1.96 1.83 1.65 2.  ]

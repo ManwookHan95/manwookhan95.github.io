@@ -1,0 +1,7 @@
+s=1.0e-06: max K=8.4721 (formula 4(1+sqrt(5/4-s/4))=8.4721), max dK/dx=3.2100e+07, s*max dK/dx=32.100, min(a-kx)/s=1.1180, fd rel err=1.7e-04
+s=1.0e-04: max K=8.4721 (formula 4(1+sqrt(5/4-s/4))=8.4721), max dK/dx=3.2100e+05, s*max dK/dx=32.100, min(a-kx)/s=1.1180, fd rel err=3.3e-05
+s=1.0e-02: max K=8.4677 (formula 4(1+sqrt(5/4-s/4))=8.4677), max dK/dx=3.2098e+03, s*max dK/dx=32.098, min(a-kx)/s=1.1169, fd rel err=6.0e-07
+s=8.3e-02: max K=8.4347 (formula 4(1+sqrt(5/4-s/4))=8.4347), max dK/dx=3.8502e+02, s*max dK/dx=32.085, min(a-kx)/s=1.1087, fd rel err=4.8e-07
+m=1: ||Phi||_2 + ||Phi||_2^2 <= 0.3720
+m=2: ||Phi||_2 + ||Phi||_2^2 <= 0.1652
+m=3: ||Phi||_2 + ||Phi||_2^2 <= 0.0774

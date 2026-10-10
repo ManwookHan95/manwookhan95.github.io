@@ -1,0 +1,11 @@
+rho 0.9 delta 0.0545
+c_flat 1e-01: least |S| = None, |S| c_flat / K = nan
+c_flat 1e-02: least |S| = None, |S| c_flat / K = nan
+c_flat 1e-03: least |S| = None, |S| c_flat / K = nan
+c_flat 1e-04: least |S| = None, |S| c_flat / K = nan
+c_flat 1e-05: least |S| = None, |S| c_flat / K = nan
+theta'/c^2 = 1e-04: holds = False
+theta'/c^2 = 1e-03: holds = False
+theta'/c^2 = 1e-02: holds = False
+theta'/c^2 = 1e-01: holds = False
+theta'/c^2 = 1e+00: holds = False

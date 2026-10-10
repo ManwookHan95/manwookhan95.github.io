@@ -1,0 +1,8 @@
+f0: C 0.2430 M 0.7570 gap(k0) 0.0100 peaks [ True  True False False False]
+dC = +0.00046 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? False  gap' (solver) +0.00813  identity +0.00813
+dC = +0.00092 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? False  gap' (solver) +0.00625  identity +0.00625
+dC = +0.00139 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? False  gap' (solver) +0.00434  identity +0.00434
+dC = +0.00186 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? False  gap' (solver) +0.00242  identity +0.00242
+dC = +0.00234 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? False  gap' (solver) +0.00048  identity +0.00048
+dC = +0.00249 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? True  gap' (solver) -0.00000  identity -0.00013
+dC = +0.00255 (gap0/4 = 0.00250; C gap0/2 = 0.00122)  k0 peak? True  gap' (solver) -0.00000  identity -0.00040

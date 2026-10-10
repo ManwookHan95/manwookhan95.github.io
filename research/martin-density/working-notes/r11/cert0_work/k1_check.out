@@ -1,0 +1,8 @@
+K1/Lemma K identities: 59 blocks (45 with Omega ∩ P nonempty): max error 5.24e-61
+
+KN-1 sensitivity (fixed active ratios; carrier 2 floor status = 1 - 1e-6):
+  inactive value    0.0: rho_2 = 1 -   9.91785e-7  (floor 1 - 1.0e-6), rho_2 - floor = 8.215e-9, peaks = [0]
+  inactive value 1.0e-9: rho_2 = 1 -   9.91785e-7  (floor 1 - 1.0e-6), rho_2 - floor = 8.215e-9, peaks = [0]
+  inactive value 1.0e-7: rho_2 = 1 -   9.91767e-7  (floor 1 - 1.0e-6), rho_2 - floor = 8.233e-9, peaks = [0]
+  inactive value 1.0e-5: rho_2 = 1 -   8.02522e-7  (floor 1 - 1.0e-6), rho_2 - floor = 1.975e-7, peaks = [0]
+  inactive value 0.0001: rho_2 = 1 -  -1.25586e-5  (floor 1 - 1.0e-6), rho_2 - floor = 1.356e-5, peaks = [0, 2]

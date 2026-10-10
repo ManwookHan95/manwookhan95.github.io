@@ -1,0 +1,14 @@
+# constants C=3 C_*=3 C_K=3
+N=1: fix A with omega>=2^L-1 works for all L >= 6 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 8
+N=3: fix A with omega>=2^L-1 works for all L >= 7 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 11
+N=10: fix A with omega>=2^L-1 works for all L >= 10 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 17
+  original count, p=10: cube part alone needs exponent 142 = 14.2 p; omega >= p gives only p
+  original count, p=100: cube part alone needs exponent 1402 = 14.0 p; omega >= p gives only p
+  original count, p=1000: cube part alone needs exponent 14002 = 14.0 p; omega >= p gives only p
+# constants C=10 C_*=10 C_K=10
+N=1: fix A with omega>=2^L-1 works for all L >= 8 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 23
+N=3: fix A with omega>=2^L-1 works for all L >= 9 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 26
+N=10: fix A with omega>=2^L-1 works for all L >= 10 (exponent E_A(L) = O(L)); with +L^2 in the exponent: 35
+  original count, p=10: cube part alone needs exponent 422 = 42.2 p; omega >= p gives only p
+  original count, p=100: cube part alone needs exponent 4202 = 42.0 p; omega >= p gives only p
+  original count, p=1000: cube part alone needs exponent 42002 = 42.0 p; omega >= p gives only p

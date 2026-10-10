@@ -1,0 +1,17 @@
+columns: eta, c=c_{L+1}, rule, Delta_hold, threshold -beta_h(N-nu_p)/N, N-nu_p, hold bank m_h, residual of exact equations
+eta=1.0e-6 c=1.0e-18 A max(|x_h|,c)  Delta_h=  2.1e-18 thr=   6.0e-8 N-nu_p=   2.0e-7 m_h=  -6.003e-5 res=1.5e-53  NEGATIVE bank
+eta=1.0e-6 c=1.0e-18 B common eta_*  Delta_h=   2.0e-6 thr=  7.12e-8 N-nu_p=  2.37e-7 m_h=   0.001929 res=4.0e-52  ok
+eta=1.0e-8 c=1.0e-24 A max(|x_h|,c)  Delta_h=  2.1e-24 thr=  6.0e-12 N-nu_p=  2.0e-11 m_h=    -6.0e-9 res=4.9e-52  NEGATIVE bank
+eta=1.0e-8 c=1.0e-24 B common eta_*  Delta_h=   2.0e-8 thr=  7.2e-12 N-nu_p=  2.4e-11 m_h=   1.999e-5 res=4.3e-52  ok
+eta=1.0e-10 c=1.0e-30 A max(|x_h|,c)  Delta_h=  2.1e-30 thr=  6.0e-16 N-nu_p=  2.0e-15 m_h=   -6.0e-13 res=5.3e-52  NEGATIVE bank
+eta=1.0e-10 c=1.0e-30 B common eta_*  Delta_h=  2.0e-10 thr=  7.2e-16 N-nu_p=  2.4e-15 m_h=     2.0e-7 res=2.8e-53  ok
+
+same with beta_hold = +0.15 (rule A):
+eta=1.0e-6 m_h=6.003e-5 (ok)
+eta=1.0e-8 m_h=6.0e-9 (ok)
+
+scaling of the threshold: thr/eta^2 (should be ~ const = |beta| * sum_k (2..3)^2 * s'^2 nu_p/(s'^2 v')^2 / (2 nu_p^2))
+eta=1.0e-6  thr/eta^2=71188.0   m_h/eta=1928.81
+eta=1.0e-8  thr/eta^2=71991.4   m_h/eta=1999.28
+eta=1.0e-10  thr/eta^2=71999.9   m_h/eta=1999.99
+eta=1.0e-12  thr/eta^2=72000.0   m_h/eta=2000.0

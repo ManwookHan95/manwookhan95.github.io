@@ -1,0 +1,10 @@
+blocks 40
+thr 7.1785e-30
+E2 1.3246e-30
+alpha 6.3384e-32
+K 1.5782e-30
+K1 8.0048e-60
+rho 1.2045e-61
+min (1-R^2) - sigma  (E5, must be >= 0): 0.467394
+E5 closed-form residual: 4.3012e-32
+monotonicity ok: True  Lemma F floor ok: True

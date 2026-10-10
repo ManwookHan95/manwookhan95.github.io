@@ -394,3 +394,16 @@ Q2 ((LSC-trunc), refereed: main claims correct): Lemma 1.1 (contact truncations)
   near-degenerate quantitative case; KN-1 raw holds in a degenerate raw direction); (O-d) new rate objects in omega(L), Design(L), (LATE).
 STATE: finite-support Lemma Z is proved for every N (modulo single-pass links); density for p_N <=> (LSC-trunc)_N; (LSC-trunc) reduced to
   (O-a)-(O-d).
+
+## CERTIFICATION of Master Theorem VI (second independent pass on every once-refereed link): r11/MTVI_graph.md, r11/cert0..3_report.md
+Dependency graph built; four clusters re-derived from scratch: A (route-V companion: KN^tr joint fixed point, KN-1 holds, CM' at the KN^tr
+companion, (U3), reduction claim, P1/P2/P4/P-HOLD/P-R), B (generic-weight chain: Lemma K, weight-freeness, NLM, GEN, QC, (D1)/(D2)),
+C (Theorem UE, Lemma UE-1 with ABSOLUTE exponents in K_w, Theorem E^eng, Lemma DC, Lemma LV, Lemma M1/M2), D (transfer to T_fin,
+window bookkeeping, Part I under option (a)). NO RESULT WRONG. Fixes required (none changes a conclusion): F1 (all pulls of the joint
+fixed point in one common window [eta_*, 2^G eta_*], eta_* = max(|x|_inf, c_{L+1}); otherwise a hold bank can be negative), P-LIP and
+P-LIP+, P-SFAR (use s-free aggregated row coefficients; s_far depends on c_{L+1} chosen later), P-CY, C2-1/C2-2 (Lemma M2 ball
+statement), C2-4 (|F(0)| bound in p-DC1 incomplete; two extra smallness conditions), C2-5 (correct status criterion
+|C' - C| <= C gap/(2(1 - gap))), C2-9 (|c_i| via the Bregman identity), C2-12, and the WINDOW COUNT: Q1's class/cube count is wrong as
+written (data constant exponent grows with L, cube exponent up to 2^{R_Gamma(L)}); Fix A (support-first pigeonhole via Caratheodory,
+D_cls <= B^{1+N(2C+3)}, exponent omega + l^2 + 20) or Fix B (Dbar_fin(w)^3 in Q(w) at main stages). Route-X absorbers do not transfer to
+T_fin (off the MT VI tree). With these fixes, Master Theorem VI has two independent passes on every link.

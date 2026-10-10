@@ -1,0 +1,14 @@
+Z: line (Lemma EC: 2x2 minor affine in r); |Z cap K| = 1.738; min F = 0.253869
+(A) generic weights Phi=[0.079969 0.066641]: min F=0.952381; mu(h) for h=[0.01, 0.003, 0.001, 0.0003]: ['1.336e-02', '4.019e-03', '1.341e-03', '4.026e-04']
+    fitted exponent beta ~ 0.999 (expected 1: boundary points of Y_1 are regular)
+(A) coincidence Phi=[0.07616069 0.06346724]: min F = 1.000000000000 at t=-0.1583, psi1/Phi1=1.000000 psi2/Phi2=0.999998
+    mu(h) at coincidence: ['0.00e+00', '0.00e+00', '0.00e+00', '0.00e+00']  (should be ~0)
+    weights x(1+0.001): mu(h=1e-3) = 9.990e-04
+    weights x(1+0.01): mu(h=1e-3) = 1.375e-03
+    tangential slopes at the minimizer: -2.3900, 1.3708 (opposite signs => critical for Psi_D, D={1,2})
+(C) P(|min_Z F - 1| < 0.1) = 0.3402
+(C) P(|min_Z F - 1| < 0.01) = 0.0317
+(C) P(|min_Z F - 1| < 0.001) = 0.0032
+(B) cusp, weight x1.000: min F=1.000000, mu(h=1e-2,3e-3,1e-3) = ['0.000e+00', '0.000e+00', '0.000e+00']
+(B) cusp, weight x1.001: min F=0.999001, mu(h=1e-2,3e-3,1e-3) = ['9.990e-04', '9.990e-04', '9.990e-04']
+(B) cusp, weight x1.010: min F=0.990099, mu(h=1e-2,3e-3,1e-3) = ['9.901e-03', '9.901e-03', '3.676e-03']
