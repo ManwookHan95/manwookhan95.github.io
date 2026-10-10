@@ -1,0 +1,4 @@
+(a) tests 400: every active rho >= floor: True; equality case (no inactive mass, P = P_rob) max rel err 8.52e-41
+(b) nearly neutral inactive carriers at rho ~ b: max (rho - floor)/floor: {0.0001: '8.92e-11', 0.001: '8.92e-09', 0.01: '8.92e-07'} (ratio to b^2: {0.0001: '0.01', 0.001: '0.01', 0.01: '0.01'})
+(c) weak peak at rho = 1 + b counted as peak vs Omega member: max rel floor change by b: {0.001: '2.23e-05', 0.01: '2.07e-05'}
+(d) (U)-rescaling r -> 0.99 r lowers every active rho by a factor <= 0.99: True

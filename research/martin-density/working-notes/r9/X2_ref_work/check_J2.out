@@ -1,0 +1,2 @@
+Prop J with |Q| >= 2: 20 instances, max ratio - 1 = -6.76e-03 (<= 0 predicted), median ratio 0.486, |Q| in [2, 2]
+exact nv-restoration, Omega = Q: 25 instances, max |C1 - C0| = 1.1e-16 ; Omega = Q minus one carrier: 25 instances, median |C1 - C0| = 5.0e-11

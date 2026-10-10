@@ -330,3 +330,33 @@ CONSENSUS OPEN CORE after Round 8 (T_final; finite I):
    coupling, (S2) uniform composition with d-consistent engineered approximants.
  F infinite: transport of MT III' (M-inf SKETCH), tuning regularity modulus, (W_inf) rate for infinitely many bad carriers, (SC) along
    deep raises, plus (C*) at infinite F.
+
+## ADDENDUM 9 (Round 9, refereed): r9/X1_*, r9/X2_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+X1 (core correct; fixes KN-1, W-fix, D2, S-0, K1, W3, W1, new W2): Lemma K (closed form of k = kappa/theta; increasing in sigma and R^2),
+  Lemma F (floor lemma: (KN) is a property of f — designed levers cannot create it), Lemma EC (effective columns u_l - r_l tau_m are
+  weight-free), floor-form inward row (X4^0) makes the exact zero set Z of tiny minors and the floor functions psi_d WEIGHT-FREE, Lemma NLM
+  (semialgebraic Sard: coincidence set of dimension < |N|), Lemma GEN (ladder weights algebraically independent over the countable field
+  k_0 of non-weight design data => no coincidence at any level), Lemma QC (quantitative coherence via compactness, Lojasiewicz, Puiseux;
+  non-explicit exponent => KN-1: inactive Omega values of (T)-blocks must be held EXACTLY at 0 in the joint fixed point), Proposition KN^tr
+  (exactification with threshold protection WITHOUT (KN)), design T^tr (T_final + D^{U1'} with generic transcendental weights; option (a):
+  ||T|| <= 1, a Martin-type norm p_delta as in Martin's Remark 2; fix W2: norm-one carrier in block 2 gives (T-a) with equality for N = 1),
+  Theorem S1 ((S1) in general and RT*(c)), Master Theorem IV^tr, COROLLARY IV^tr.1: for T^tr every first row of p_1 with FINITE base support
+  is recoverable (finite-F Lemma Z for p_1), modulo U1-ref's once-refereed MT IV' assembly. Corollary IV^tr.2 (every N) SKETCH pending X2.
+  Option (b) exception (c_1 = 1 algebraic): carrier 1 active near-threshold in a (T)-block, N >= m(1).
+X2 (mostly sound; mixed part needs referee repair R-abs; precisions p-J, p-DC1/2, p-UE1/2, p-E1, p-W, n_l in (D-lev)): Proposition J
+  (junction mismatch for valid data is O(s_1 (n|Omega|)^{1/2}), corrects U3-ref F6a), Lemma DC (exact d-consistency by levers: I - pq^T,
+  Sherman-Morrison, Poincare-Miranda), Lemma LV (levers; part (d) for absorbers FALSE), Theorem UE (uniform violation-tolerant per-piece
+  bounds |tau| <= c_flat t, (S2a')), Theorem E^eng (averaging at the norm-attaining approximant, (S2b)), (S2c) with (W_exp)
+  c_{L+1} <= exp(-1/T_lo) imposed only after MAIN stages, Theorem C_mix (mixed classes under (KN): negative fine carriers self-aligned,
+  positive anti-aligned, frustration = tolerated violations) — PROVED after referee repair (R-abs): in the violation-tolerant route the
+  zero-value absorbers carry NO switching (fine residues and trace corrections become tolerated violations of mass O(Design c_{L+1})).
+  MASTER THEOREM V (design D^{X2} with repairs): F finite: f in Rec(p_N) if at infinitely many main stages some clean sub-window has
+  >= n/D_cls scales in classes (one-signed or mixed) satisfying (KN). Referee addition: with Omega = all coarse strict non-peaks,
+  d-consistency freezes C_m (all switching statuses) up to fine terms.
+CONSEQUENCE (to be verified as one combined theorem): X1's Proposition KN^tr supplies (KN) at clean sub-windows for a generic-weight
+  design; X2's Master Theorem V needs only (KN). Combined (compatibility NOT yet checked: X1's S1/RT*(c) uses absorbers for exact cancellation,
+  X2's repaired mixed route drops absorbers; KN-1 holds inactive Omega values at 0 while X2 uses d-consistent levers): finite-F Lemma Z for
+  EVERY N for one N-independent design. Then density for p_N <=> (LSC-trunc) (Z5 Prop 5.4 / T13a: density <=> Lemma Z at finite-F rows AND
+  (LSC-trunc): for all f, g in C(f), rho < 1, eps > 0 there is f' with FINITE base support, p*(f' - f) < eps, dist(rho g, C(f')) < eps).
+OPEN after Round 9: (i) the combination (finite-F Lemma Z for every N); (ii) infinite F: (LSC-trunc), or the transport of the finite-F
+  master theorems (M-inf), tuning regularity modulus, (W_inf), (SC) along deep raises, status coherence at infinite F; (iii) option (b).

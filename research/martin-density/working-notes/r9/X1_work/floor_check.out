@@ -1,0 +1,4 @@
+tests 11 all active rho decreased at fixed ratios: True  min decrease 3.305e-7
+max rel. error |rho_after - floor|/floor = 1.55e-34
+
+[exited with code 0]

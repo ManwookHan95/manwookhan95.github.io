@@ -1,0 +1,6 @@
+(a) block norming vs CLARABEL: max rel err 7.4e-04
+(b) Prop J inequality on 121 block-instances: max |(d1-d0)(Dom)|/bound = 1.0000 (<= 1 predicted), median 1.000
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r9/X2_ref_work/check_J.py:99: RuntimeWarning: The iteration is not making good progress, as measured by the 
+ improvement from the last ten iterations.
+  P = fsolve(Fz, np.zeros(len(Om)), xtol=1e-14)
+(c) 1 instances with exact nv-restoration on Omega = Q (residual <= 1e-13): max |gap1 - ((C1/C0)gap0 + 1 - C1/C0)| = 1.1e-16, max |H1 - (C0/C1)H0| = 1.1e-19, max |C1 - C0| = 2.8e-17  (referee: C1 = C0 when Omega = Q and P unchanged)

@@ -1,0 +1,5 @@
+b = 1e-04: max |rho - floor|/floor (formula-1 convention) = 5.41e-05 ; relative kappa change between conventions: min 7.34e-03 max 7.20e-02
+b = 1e-03: max |rho - floor|/floor (formula-1 convention) = 5.42e-04 ; relative kappa change between conventions: min 7.35e-03 max 7.20e-02
+b = 1e-02: max |rho - floor|/floor (formula-1 convention) = 5.44e-03 ; relative kappa change between conventions: min 7.41e-03 max 7.27e-02
+
+[exited with code 0]

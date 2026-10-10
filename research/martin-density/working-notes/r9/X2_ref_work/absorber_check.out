@@ -1,0 +1,4 @@
+beta=+1  P=1e-03: m0=1.624e-02  room theta*Phi_a=8.31e-08  |u_a| after the lever move=7.37e-03 (ratio 8.9e+04) -> PEAK ; S-mass restoring u_a=0: none in [0, 1e14*m0] (masses must stay >= 0)
+beta=+1  P=1e-06: m0=1.624e-02  room theta*Phi_a=8.31e-08  |u_a| after the lever move=7.37e-06 (ratio 8.9e+01) -> PEAK ; S-mass restoring u_a=0: 1.694e+01 (= 1.0e+03 x m0)
+beta=-1  P=1e-03: m0=1.624e-02  room theta*Phi_a=8.31e-08  |u_a| after the lever move=1.39e-02 (ratio 1.7e+05) -> PEAK ; S-mass restoring u_a=0: none in [0, 1e14*m0] (masses must stay >= 0)
+beta=-1  P=1e-06: m0=1.624e-02  room theta*Phi_a=8.31e-08  |u_a| after the lever move=1.39e-05 (ratio 1.7e+02) -> PEAK ; S-mass restoring u_a=0: none in [0, 1e14*m0] (masses must stay >= 0)

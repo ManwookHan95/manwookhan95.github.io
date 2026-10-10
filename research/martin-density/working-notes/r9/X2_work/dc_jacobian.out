@@ -1,0 +1,1 @@
+6 trials with |Omega| >= 2; max |J_fd - (I - p q^T)| = 2.13e-10 ; min over trials of (1 - q.p) - (1 - C) = 1.528e-01 (>= 0 predicted)

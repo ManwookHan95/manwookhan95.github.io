@@ -1,0 +1,11 @@
+(1) coincidence set in the (Phi1, Phi2) plane: for fixed Phi1, the Phi2 with min local-min value of F = 1
+  Phi1=0.03: Phi2 roots [0.12922872] ; local-min value ranges over [0.312, 2.786] on the grid
+  Phi1=0.05: Phi2 roots [0.10853665] ; local-min value ranges over [0.297, 1.919] on the grid
+  Phi1=0.08: Phi2 roots [0.08576966] ; local-min value ranges over [0.277, 1.247] on the grid
+  Phi1=0.12: Phi2 roots [] ; local-min value ranges over [0.257, 0.831] on the grid
+(2) at a coincidence point, the minimizer is a critical point of Psi_D (D = carriers attaining the max):
+   Phi=(0.05000, 0.10853665), r1=0.24372512, statuses [0.99999999 1.        ], D=[0, 1], tangential derivatives dpsi/ds = [ 0.192711 -0.175834] (opposite signs <=> critical for the max)
+(3) quantitative coherence mu(h) = 1 - max_{Y1} G_h:
+   weights scaled by 1.000: |Y1| grid points 0, mu(0.003) = 7.772e-16
+   weights scaled by 1.001: |Y1| grid points 9, mu(0.003) = 9.976e-04
+   weights scaled by 1.010: |Y1| grid points 87, mu(0.003) = 4.030e-03

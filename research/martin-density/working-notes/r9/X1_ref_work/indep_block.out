@@ -1,0 +1,9 @@
+(1) cvxpy cross-check of the block threshold structure
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r9/X1_ref_work/indep_block.py:50: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  prob.solve(solver='CLARABEL', tol_gap_abs=1e-12, tol_gap_rel=1e-12, tol_feas=1e-12)
+   12 random blocks: max discrepancy (A rel., M, C, w entries) = 1.99e-04
+(2) Lemma K: closed form, root selection, monotonicity, uniform form
+   blocks 99: max rel err (k = K(sigma,R^2), rho = m|r|k/Phi) = 3.02e-61; a^2 = E rel err = 5.54e-61
+   minus root always <= sigma (so a <= 0 excluded): True ; K increasing in sigma and R^2: True
+(3) inward identity lambda_l vs_l Domega(l) = vs_l gamma_l + Delta'_m m^2 |r_l| k  (w from the duality map)
+   max rel err: 7.53e-62
