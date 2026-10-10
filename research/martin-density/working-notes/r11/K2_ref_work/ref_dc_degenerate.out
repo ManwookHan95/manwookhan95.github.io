@@ -1,0 +1,54 @@
+--- model 1: square det = 5.1e-11, s_min(square) = 4.88e-11, |Psi(zhat_0)| = 1.8e-17, gamma = 0.086, max D_Psi at levers = 2.6e-10, identity err = 2.0e-16, off-F sum Psi z = -0.729 (= -kappa(1-alpha)-... , kappa = 0.729)
+    K2.5(b) on elementary columns: max rel err 1.3e-08
+    prepared theta0=1e-02: s_min(square) = 1.75e-02, s_min(enlarged two-sided) = 1.040e-01, proof bound eps_DC = 7.4e-08
+    prepared theta0=1e-04: s_min(square) = 1.53e-04, s_min(enlarged two-sided) = 8.635e-02, proof bound eps_DC = 7.4e-08
+    nonlinear solve, perturbation sign +1 along y: residual 1.9e-16 after 2 its; min banked mass (signed) = 8.175e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 1.4e-16 after 2 its; min banked mass (signed) = 9.766e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.53e-06, s_min(enlarged two-sided) = 8.620e-02, proof bound eps_DC = 7.4e-08
+    unprepared: bank y-actions signs --+--------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs --+--------------; correction of -1 y: NNLS residual 0.0e+00
+--- model 2: square det = -1.7e-11, s_min(square) = 1.66e-11, |Psi(zhat_0)| = 7.5e-17, gamma = 0.086, max D_Psi at levers = 2.1e-10, identity err = 7.5e-17, off-F sum Psi z = -0.705 (= -kappa(1-alpha)-... , kappa = 0.705)
+    K2.5(b) on elementary columns: max rel err 5.0e-08
+    prepared theta0=1e-02: s_min(square) = 1.59e-02, s_min(enlarged two-sided) = 1.303e-01, proof bound eps_DC = 6.9e-08
+    prepared theta0=1e-04: s_min(square) = 1.40e-04, s_min(enlarged two-sided) = 1.191e-01, proof bound eps_DC = 6.9e-08
+    nonlinear solve, perturbation sign +1 along y: residual 6.7e-17 after 2 its; min banked mass (signed) = 9.983e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 7.8e-17 after 2 its; min banked mass (signed) = 9.075e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.40e-06, s_min(enlarged two-sided) = 1.191e-01, proof bound eps_DC = 6.9e-08
+    unprepared: bank y-actions signs +---------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs +---------------; correction of -1 y: NNLS residual 0.0e+00
+--- model 3: square det = 1.0e-10, s_min(square) = 1.02e-10, |Psi(zhat_0)| = 1.0e-16, gamma = 0.088, max D_Psi at levers = 2.3e-10, identity err = 1.0e-16, off-F sum Psi z = -0.656 (= -kappa(1-alpha)-... , kappa = 0.656)
+    K2.5(b) on elementary columns: max rel err 2.1e-08
+    prepared theta0=1e-02: s_min(square) = 1.31e-02, s_min(enlarged two-sided) = 8.748e-02, proof bound eps_DC = 7.0e-08
+    prepared theta0=1e-04: s_min(square) = 1.13e-04, s_min(enlarged two-sided) = 7.223e-02, proof bound eps_DC = 7.0e-08
+    nonlinear solve, perturbation sign +1 along y: residual 9.8e-17 after 2 its; min banked mass (signed) = 9.733e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 2.0e-16 after 2 its; min banked mass (signed) = 7.616e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.13e-06, s_min(enlarged two-sided) = 7.210e-02, proof bound eps_DC = 7.0e-08
+    unprepared: bank y-actions signs +++---------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs +++---------------; correction of -1 y: NNLS residual 0.0e+00
+--- model 4: square det = 5.1e-12, s_min(square) = 5.14e-12, |Psi(zhat_0)| = 1.9e-16, gamma = 0.085, max D_Psi at levers = 7.5e-11, identity err = 3.0e-16, off-F sum Psi z = -0.671 (= -kappa(1-alpha)-... , kappa = 0.671)
+    K2.5(b) on elementary columns: max rel err 5.7e-09
+    prepared theta0=1e-02: s_min(square) = 1.42e-02, s_min(enlarged two-sided) = 1.270e-01, proof bound eps_DC = 6.6e-08
+    prepared theta0=1e-04: s_min(square) = 1.24e-04, s_min(enlarged two-sided) = 1.158e-01, proof bound eps_DC = 6.6e-08
+    nonlinear solve, perturbation sign +1 along y: residual 1.3e-16 after 2 its; min banked mass (signed) = 9.676e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 7.2e-17 after 2 its; min banked mass (signed) = 9.065e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.24e-06, s_min(enlarged two-sided) = 1.157e-01, proof bound eps_DC = 6.6e-08
+    unprepared: bank y-actions signs +----------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs +----------------; correction of -1 y: NNLS residual 0.0e+00
+--- model 5: square det = 3.6e-11, s_min(square) = 3.58e-11, |Psi(zhat_0)| = 4.7e-17, gamma = 0.081, max D_Psi at levers = 2.1e-10, identity err = 4.7e-17, off-F sum Psi z = -0.610 (= -kappa(1-alpha)-... , kappa = 0.610)
+    K2.5(b) on elementary columns: max rel err 3.8e-08
+    prepared theta0=1e-02: s_min(square) = 1.23e-02, s_min(enlarged two-sided) = 1.169e-01, proof bound eps_DC = 6.1e-08
+    prepared theta0=1e-04: s_min(square) = 1.07e-04, s_min(enlarged two-sided) = 1.088e-01, proof bound eps_DC = 6.1e-08
+    nonlinear solve, perturbation sign +1 along y: residual 7.3e-17 after 2 its; min banked mass (signed) = 9.031e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 1.3e-16 after 2 its; min banked mass (signed) = 9.949e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.07e-06, s_min(enlarged two-sided) = 1.087e-01, proof bound eps_DC = 6.1e-08
+    unprepared: bank y-actions signs -++------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs -++------------; correction of -1 y: NNLS residual 0.0e+00
+--- model 6: square det = 3.2e-11, s_min(square) = 3.28e-11, |Psi(zhat_0)| = 3.8e-17, gamma = 0.086, max D_Psi at levers = 1.1e-10, identity err = 3.8e-17, off-F sum Psi z = -0.667 (= -kappa(1-alpha)-... , kappa = 0.667)
+    K2.5(b) on elementary columns: max rel err 4.4e-08
+    prepared theta0=1e-02: s_min(square) = 1.56e-02, s_min(enlarged two-sided) = 1.266e-01, proof bound eps_DC = 6.5e-08
+    prepared theta0=1e-04: s_min(square) = 1.39e-04, s_min(enlarged two-sided) = 1.150e-01, proof bound eps_DC = 6.5e-08
+    nonlinear solve, perturbation sign +1 along y: residual 1.2e-16 after 2 its; min banked mass (signed) = 9.948e-05 (theta0 = 1e-04)
+    nonlinear solve, perturbation sign -1 along y: residual 8.6e-17 after 2 its; min banked mass (signed) = 9.053e-05 (theta0 = 1e-04)
+    prepared theta0=1e-06: s_min(square) = 1.39e-06, s_min(enlarged two-sided) = 1.149e-01, proof bound eps_DC = 6.5e-08
+    unprepared: bank y-actions signs --+--------------; correction of +1 y: NNLS residual 0.0e+00
+    unprepared: bank y-actions signs --+--------------; correction of -1 y: NNLS residual 0.0e+00

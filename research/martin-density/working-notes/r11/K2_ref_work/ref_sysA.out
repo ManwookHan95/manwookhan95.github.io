@@ -1,0 +1,4 @@
+K2.8(a) Euler: max |K(xhat) - kappa|/kappa = 4.0e-10;  (c) |Psi(xhat) - y^T Ft| = 2.1e-11;  (b) generator actions rel err = 3.2e-04
+non-peak Euler share |Xt|: route-V regime (Q minus Omega fine) max = 3.43e-06;  one coarse non-peak left out of Omega: max = 2.96e-02
+configurations: 15; with an exact certificate: 0; certificates violating K2.16 structure (gamma<0, Psi=kappa a at TS, Psi=0 at FR, c>=0 at S_th): 0
+configurations satisfying K2.17(c) or (d): 15; of these with a certificate (should be 0): 0

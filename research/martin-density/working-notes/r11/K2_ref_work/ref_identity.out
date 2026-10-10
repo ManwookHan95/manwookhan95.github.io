@@ -1,0 +1,4 @@
+K2.2 identity: max |u(zhat) - rhs| = 2.6645352591003757e-15
+K2.2 split form (2.1): max error = 5.218048215738236e-15
+K2.3 signed form: tests 63548  violations (kappa>=0, negative parts): 0  (kappa<=0, positive parts): 0
+K2.4 first-order actions (incl. composite with corrected sign), max relative error: 1.1742870594145452e-12

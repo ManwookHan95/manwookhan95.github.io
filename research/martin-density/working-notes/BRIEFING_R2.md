@@ -407,3 +407,30 @@ statement), C2-4 (|F(0)| bound in p-DC1 incomplete; two extra smallness conditio
 written (data constant exponent grows with L, cube exponent up to 2^{R_Gamma(L)}); Fix A (support-first pigeonhole via Caratheodory,
 D_cls <= B^{1+N(2C+3)}, exponent omega + l^2 + 20) or Fix B (Dbar_fin(w)^3 in Q(w) at main stages). Route-X absorbers do not transfer to
 T_fin (off the MT VI tree). With these fixes, Master Theorem VI has two independent passes on every link.
+
+## ADDENDUM 11 (Round 11, refereed): r11/K1_*, r11/K2_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+K1 ((O-a), (O-b); referee: correct with fixable gaps R-1..R-14): Lemma K1.1 (route V needs NO cube pigeonhole / normalization increment;
+  class count (J_Om+1)3^{J_Om}); deep raise with 2^{J(w)} <= Design(L) + 2 log2(C n(w)); Lemma K1.2 (class thresholds dominating the Lemma-P
+  pinning constant: pinned carriers are inactive in the class); Lemma K1.3 (no deep anti-sign set at the raised row); PROPOSITION K1.A
+  (Q2 Prop 3.2 corrected): side cushion domination (U3^inf) with ABSOLUTE C_+ = 5, closeness K_data t; Cor K1.B; Lemma K1.4 (six lever
+  resources P1-P6 at infinite F); Q2-refa C.3 (bank with offset is two-sided) is FALSE (repair: TU on the peak, Hilbert pair, S-mass);
+  lever audit; (LR) definition; Lemma K1.5-K1.7; LEMMA K1.S: Step B is DISPENSABLE in route V (finite and infinite F) — under (W_exp) fine
+  carriers enter only through total weight c_{L+1} << s_1; Lemma K1.ST; Theorem 5.1 (transport at lever-regular rows) PROVED after fixes
+  R-6 (cost: use x'_max = u^2 T^3/(Design^2 |Lambda|) so theta'/c_flat^2 -> 0), R-7 (new bordered scalars for (P4)-type block-norm levers),
+  R-8 (Step-0 weak-peak pushes need a push condition; (D1) enlarged by Design^C/u(w)). Non-(LR) class: (U) unpulled, (S') = (S) ∪ (M).
+K2 ((O-c), (O-d); referee: correct, fixes W-1, K-1..K-8): Lemma K2.1 (tolerance variant of UE^inf: |d-mismatch| <= s_1 suffices);
+  Lemmas K2.2-K2.4 (exact identity u(zhat) = kappa_u(1 - alpha(D)) + sum_{s<=D} c_s(u) + sum_{s>D} u(s) z_s; resource dichotomy; first-order
+  actions); Lemma K2.5; PREPARATION (P): bank every design-depth contact with theta_0 = b/Design^{C_P}, raise thin coordinates, close tiny
+  rooms — offsets go into the BASE row; THEOREM K2.6: Sys-DC uniformly solvable after preparation (s_min >= eps_DC, design constants; no
+  bordering, no Sherman-Morrison scalars, no anchors): (NDN2), C.5 degeneracy, exceptional case, R-7 scalars are BYPASSED; Lemma K2.8
+  (Euler combination of Sys-A); Lemma K2.9 (cone realization of Step A: A-regular if B(b, rho_0) in (W/2) conv(G ∪ {0}); fix K-8: freeze
+  coarse statuses in the Brouwer domain because d kappa/d zeta jumps at threshold crossings); THEOREM K2.16 (structure of Step-A
+  obstructions: robustly negative common mode gamma <= -c_*, thick design-depth support proportional to Psi_y = sum coef_k u_k, no anchor,
+  one-sided mass >= c_*/2); Cor K2.17 (sufficient conditions (a)-(f)); Lemmas K2.12-K2.14 (design T_fin^{K2}: D(L), Design(L) enlargement,
+  2D(L) rate objects, theta_0; N-free, well-founded); THEOREM K2.15 (transport at A-regular rows): (H1*) joint Step-0 weak-peak push problem
+  solvable (fix W-1) and (H2) Step A A-regular after preparation at infinitely many main stages => (LSC-trunc)_N at (f, g, rho).
+REMAINING (Round 11): (A*)/(U*) sign-class obstruction of Step A (near-certificate with robustly negative common mode and thick design-depth
+  support a ≈ Psi/kappa, no anchor, none of K2.17(a)-(e)); (W*) failure of the joint Step-0 push problem (no push resource, or
+  Sherman-Morrison-type degeneracy among (P4)/shared pushes); inherited once-refereed links (Q2 UE^inf, E^{eng,RT,inf}, K1, K2).
+  Suggested: target freedom in Z_kappa (orient the Lojasiewicz correction against the finitely many certificates); a push lemma (mirror of
+  V1's in-F pull) with overshoot/degree argument; private push resources by design; cushion bypass for certificate carriers (U2 Lemma ND).

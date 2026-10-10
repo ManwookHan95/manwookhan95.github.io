@@ -1,0 +1,3 @@
+explicit right inverse with (c'_alpha, beta'_*): 3000 instances, max relative residual 2.96e-15
+instances where beta'_* = 0 forces c'_alpha = 0 (N degenerate, one-block-like): 0; among them L still onto: 0
+Q2 doubly degenerate case: 1577 instances; pure column fails and (P4)-type column succeeds in 1577

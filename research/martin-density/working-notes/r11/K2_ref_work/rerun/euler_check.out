@@ -1,0 +1,3 @@
+homogeneity: max |kappa(c zeta) - c kappa(zeta)|/|c kappa| = 4.570497989632405e-16
+Euler: max |sum zeta_k dkappa/dzeta_k - kappa|/kappa = 5.235614547579218e-09
+non-peak Euler share X: min 0.0000 max 0.5356 (n=205)

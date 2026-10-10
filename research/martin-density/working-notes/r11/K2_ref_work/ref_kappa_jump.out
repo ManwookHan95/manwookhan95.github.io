@@ -1,0 +1,6 @@
+trial 0: d kappa/d zeta_d below threshold = -0.6476, above = -0.7122;  dA/dzeta_d below = +0.6973, above = +0.6973;  frozen-status d kappa/d zeta_d at threshold = -0.6476
+trial 1: d kappa/d zeta_d below threshold = -0.0000, above = -0.8509;  dA/dzeta_d below = +0.7070, above = +0.7070;  frozen-status d kappa/d zeta_d at threshold = -0.0000
+trial 2: d kappa/d zeta_d below threshold = -0.0000, above = -0.8933;  dA/dzeta_d below = +0.6882, above = +0.6882;  frozen-status d kappa/d zeta_d at threshold = +0.0000
+trial 3: d kappa/d zeta_d below threshold = -0.0000, above = -0.9515;  dA/dzeta_d below = +0.7469, above = +0.7469;  frozen-status d kappa/d zeta_d at threshold = +0.0000
+trial 4: d kappa/d zeta_d below threshold = -0.0000, above = -0.9640;  dA/dzeta_d below = +0.7384, above = +0.7384;  frozen-status d kappa/d zeta_d at threshold = +0.0000
+trial 5: d kappa/d zeta_d below threshold = +0.0000, above = -0.8926;  dA/dzeta_d below = +0.7022, above = +0.7022;  frozen-status d kappa/d zeta_d at threshold = +0.0000

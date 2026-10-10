@@ -1,0 +1,3 @@
+(a) max |Psi_y(zhat_0)| over random y: 2.787483785460232e-16
+(b) elementary columns: max |y^T c - l(Psi_y)| / scale over 3468 moves: 2.941513524463197e-05  (finite differences, step 1e-7)
+(c) violations of the resource bound: 0

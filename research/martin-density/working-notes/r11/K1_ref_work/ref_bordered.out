@@ -1,0 +1,4 @@
+Part A: max |h^T col - (-(1-X)lam h^T rt - h_c)| = 4.00e-14 ; max residual of explicit right inverse = 1.84e-12 ; max (|P|+|P0|)/(2*bound) = 0.907
+Part B: 2797 exactly degenerate one-block systems with robust y^T p; in 2797 of them the (P4)-type column -pi p - h0 gt with h0 = -pi y^T p / y^T gt makes [N | column] NOT onto (s_min < 1e-10) although [N | -pi p] has s_min >= 1e-3.
+   median |h0*| = 0.660, 10%-quantile |h0*| = 0.144, 90%-quantile |h0*| = 2.168;  min s_min of the pure bordering = 1.410e-02
+   (|h0*| is O(1): within the range Design/u of thick S-mass common modes, so no smallness condition excludes it.)
