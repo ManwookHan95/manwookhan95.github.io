@@ -249,3 +249,42 @@ CONSENSUS OPEN CORE after Round 6 (diagonal base U allowed: U is any compact den
  (C) coherent shift resonance (h'): c_*(l) = 0; exact data with Delta d != 0 need sum_m' Delta d_m' R*_m' w_m' z-signed on K.
  (D) aligned corner (d'): no signature donor and no target donor (Lemma R-T); far pulls on the peak itself (SKETCH).
  (E) infinite F: (O4-crit), (O4-nd), (O4-box), plus the finite-F core at infinite F.
+
+## ADDENDUM 7 (Round 7, all refereed): r7/V1_*, r7/V2_*, r7/V3_*, r7/V4_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+V1 (all PROVED claims correct, precisions p0-p5): ONE N-free design D_Omega (SLD with bounded-gap S_l = {2^l(2i+1)}, Y3 allowedness (c),
+  DIAGONAL base U^*e_j^* = 2^{-j}k_j, Design(l) dominating all earlier design factors, rate scheme (R1)-(R7), M(l) = omega(l)+1 sub-windows,
+  Q(w) = (4 Design/u)^{omega+20}). Lemma D: at every clean sub-window every block has a coarse peak with ROBUST margin (alpha-mass counting).
+  Lemma DR: a BANK at that peak's own-sign far contact raises its value at first order, all other coarse values only at second order
+  (diagonal base essential) -> threshold buffer Lam = T_lo^3 >> drifts T_lo^4/l -> status stability automatic. Lemma TU: exact two-sided
+  tuning (pulls + private banks, explicit scalar fixed point). Companion carrying (C1)-(C4) at cost o(T_lo^2); Prop TR (transplant);
+  Theorem E'' (banked and pulled supports; banks need not be contacts of f). MASTER THEOREM II: F finite, f in Rec if at infinitely many
+  levels a clean sub-window has (SH_w) and (VR_w). Cor AC: the aligned corner (D) is EMPTY for D_Omega.
+V2 (all PROVED claims correct, precisions P1-P7): Lemma H (Hoffman constant <= max(1,||A||)^{n-1}/least NONZERO minor), Lemma L
+  (Lojasiewicz simultaneous exactification), design D^{V2} (all minors as rate objects, b(w) a design power of T_lo), Theorem B: at every
+  clean sub-window all tiny minors are made exactly zero at a companion (pulls + banks), Hoffman constant of the whole exact system
+  <= C_f^l Design^2/u: (B) multi-block rays, mixed blocks, K_F^rel, (VR_w), (Cmp_w), (NN_w) are NOT residuals. Theorem C1 (shift dichotomy):
+  shift-pinning rate rho^sh is a pigeonhole rate; robust => shift pinned with design u^{-3} constants. Theorems E^>= and E^SC (Theorem E with
+  Delta d >= 0 data, or Delta d < 0 with (SC) at companions). Prop C3, C4 (oscillating profiles force shifts), Lemma C5 (fine-tail
+  completion, one shift ray). MASTER THEOREM III / III' (D^{V2} on D_Omega, diagonal U, F finite): f in Rec unless at all large levels EVERY
+  clean sub-window has rho^sh <= b(w) AND c_pi(w) <= b(w): residual (C*) = near-exact coherent shift resonance. (C*) cannot occur at
+  constant-sign maximal contact. Theorem C6 (stable shifted resonance) SKETCH with gaps (C*-1) exact absorption of fine-peak residues on
+  finitely many coarse free coordinates, (C*-2) (SC) at companions, (C*-3) exactification of block scalars theta_m, A_m (Jacobian
+  rho M/Phi_P^2 > 0 confirmed), (C*-4) shift direction constant along a window's scales with >= 2 shifted blocks, (C*-5) joint fixed point.
+V3 (strong; fixes: (ND_B) -> (ND'): a|_F not in span{u_k|_F : k in L_0}): RAISE-TRANSFER Lemma 2.3: a same-sign raise Delta a of a on F
+  (lam = q*(a + Delta a)) gives p*(f^# + r h) <= 1 + (p*(f + lam r h) - 1 + 2||U* Delta a||)/lam + p*(L*(w^# - w)); the l_1 raise mass
+  cancels against normalisation. Theorem 2.5 (E_RT): windowed recovery through companions with transfer error eps' = o(c_flat^2 (T 2^{-n})^2),
+  any F, any admissible T. Design D^mu (diagonal base U k_s = mu_s e_s, mu_s = 2^{-s^2-1}). Theorem RS: support swallowing of ANY profile
+  (critical, super-critical, mixed; non-d-neutral carriers, off-F targets) with finitely many bad carriers is recovered under (W*), (H2),
+  (H3-inf), (B_fin), (RR) and (ND') for bad strict non-peaks: (O4-crit) settled for D^mu. Theorem A (fixed d-neutral data without cushion
+  sparsity). Theorem M_inf (reduction PROVED; transport of Y1/Y2 master theorems to infinite F SKETCH, new rate: VP constants for carrier sets
+  growing with the window level). OPEN at infinite F: (E1) mu-thin supports ((RR) fails; exist for every mu), (E2) (O4-box) infinitely many
+  bad carriers (scale-free raise), (E3) non-d-neutral fixed data at raised rows ((SC) at f_y), (E4) failure of (ND') and degenerate
+  swallowing-sign bad peaks, (E5) transport of the finite-F master theorems (needs VP rates).
+V4 (sound): (B), (C), (D) cannot be designed away (explicit self-aligned rows f_SA for every design with (SF*), (Z0)), BUT such rows are
+  (BT) and recovered (Cor 3.1, Prop 3.2, Cor 5.7). Prop 5.1: near-threshold carriers are Baire-generic in every fixed-z fibre ((BT) meagre).
+  Prop 5.3: (BT) rows dense among F-finite rows (peak-ification PROVED). Theorem 5.6: exact all-negative-Delta d data recovered at F-finite
+  rows without dead zones (forces maximal contact). Prop R5 (referee): exact all-negative data exist only on a meagre set, so the exact-data
+  route cannot reach generic rows; the decisive F-finite problem is (C*). Lemma 2.6: lacunary profiles exclude critical flip profiles (but
+  lose bounded gaps). Design compatibility of V4's conditions with V1/V2 constants: plausible, not checked line by line.
+CONSENSUS STATE after Round 7 (design D^{V2} on D_Omega with diagonal base, plus D^mu entries; F finite): Lemma Z holds except at (C*) rows.
+  Infinite F: (E1)-(E5). Nothing points to a counterexample.
