@@ -1,0 +1,6 @@
+initial statuses rho: [5.7798 0.289  0.2312 0.3468 0.1734 0.1156]
+identity |zeta|^2 = theta^2 a^2: max error 5.55e-17
+near crossing rho_d = 1.0001: theta=1.723775e+00 |zeta|=3.737570e-01
+max step of kappa along the scan: Omega fixed 5.989e-06 ; Omega switched at crossing 8.018e-04
+predicted jump theta*Phi_d^2 at crossing: 8.016e-04
+max step of theta 1.496e-05, of another status rho_1 2.518e-06 (intrinsic, continuous)

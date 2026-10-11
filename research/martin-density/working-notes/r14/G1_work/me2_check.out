@@ -1,0 +1,3 @@
+ME2: max |M(x#, y#)| = 1.42e-14 ; max displacement / b = 1.26 ; contrast (constant g' = b, not design): min distance to zero set / b = 315.9
+strict Ex.4.3-type residual instances (own FR generator at j only): 972 ; destroyed by one extra generic FR generator: 972
+EXIT 0

@@ -1,0 +1,4 @@
+b=1e-04 |M1|=3.3e-05 |M1'|=3.3e-05 |M|=1.33e-04 first cofactors=[ 0.507 -0.493  0.507 -0.493]  Lemma5.1(i) leaves |M1|=2.30e-04  joint dist=9.976e-03 (=1.00 sqrt(b), =1.0e+02 b)
+b=1e-06 |M1|=3.3e-07 |M1'|=3.3e-07 |M|=1.33e-06 first cofactors=[ 0.501 -0.499  0.501 -0.499]  Lemma5.1(i) leaves |M1|=2.33e-06  joint dist=9.998e-04 (=1.00 sqrt(b), =1.0e+03 b)
+b=1e-08 |M1|=3.3e-09 |M1'|=3.3e-09 |M|=1.33e-08 first cofactors=[ 0.5 -0.5  0.5 -0.5]  Lemma5.1(i) leaves |M1|=2.33e-08  joint dist=1.000e-04 (=1.00 sqrt(b), =1.0e+04 b)
+b=1e-10 |M1|=3.3e-11 |M1'|=3.3e-11 |M|=1.33e-10 first cofactors=[ 0.5 -0.5  0.5 -0.5]  Lemma5.1(i) leaves |M1|=2.33e-10  joint dist=1.000e-05 (=1.00 sqrt(b), =1.0e+05 b)

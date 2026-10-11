@@ -492,3 +492,25 @@ CORE OBSTACLE after Round 13: "exactness versus one-sidedness": pinned ratios mu
   realization exists. Persistent residual rows need fresh such resonances at every main stage (both (R0) and (R1)). Suggested new tools:
   a face-wise Hoffman bound insensitive to tiny minors not met by the data (avoid exactifying them); a preparation that does not move values
   at target coordinates; minimax version of SLP over the certificate hull; explicit construction of a persistent residual row to test.
+
+## ADDENDUM 14a (Round 14, G1 and G2, refereed): r14/G1_*, r14/G2_*
+G1 (correct after fixes G-T2, G-S2, P-W, P-A1, P-44, P-52', P-L1): LEMMA CH (cushioned face-wise Hoffman lemma): exactness is needed only
+  on STRICT tiny minors (rows (X3), FR equality rows at free target coordinates, single-variable rows); rows at banked/raised S_th target
+  coordinates and inward rows carry cushions (theta/t, lambda gap/t), so tiny minors through them only need |M| <= mu_tol (Lemma 2.3).
+  Theorem G1.A (soft transplant), Cor G1.B (only strictly pinned ratios exact, on Z^str; cofactor polynomials need not be exact), Lemma LE
+  (single-(X3) strict minors affine with design coefficients), Theorem G1.C (Step A at the LINEAR scale x^nat = Des^C b: no Lojasiewicz/
+  Puiseux exponent), split preparation P^nat (bank bias b T_hi (Des/u)^C), Lemma 4.4, Lemma 5.1 (isolated), Prop 5.2/Cor 5.3 (strict Farkas
+  alternative, restricted model), COR 5.4: contact-row resonances (H2 Example 4.3, behind the persistent-(R1) candidates) are REALIZED;
+  Lemma 5.5/(NT_0). Theorem G1.D residual: (R-S1) one-signed strict linear resonances at FREE shared target coordinates with robust room,
+  (R-S2) multi-(X3) strict systems, (R-S3) one-sided blocking of linear near-threshold descent, (R-L) locked K^+ rows; thick-type part SKETCH.
+G2 (Lemma MS correct; Theorem ML WRONG as stated): LEMMA MS (minimax over the convex hull of near-certificates and status-safe admissible
+  displacements; Sion), Theorem JF (joint Farkas form), Lemma NP', Remark 1.8, Lemma 3.2 (= H2 Lemma 3.4(c) via coupled directions),
+  Theorem H2.A', Lemma 4.1 ((W4'') re-check: (D-abs) admissible), Lemmas 4.2-4.5 (capped generators; fix G-CAP: simplex budget),
+  Prop 4.7 + COR 4.8: the counting/pigeonhole route CANNOT exclude persistence (exact one-signed resonances obstruct A-regularity at every
+  sub-window; memory makes only carriers fresh, supply unbounded), Lemma 5.3 (Newton tangent levers for robust-Jacobian groups), Prop 5.4.
+  Theorem ML wrong (multipliers governed by the uncontrolled Jacobian singular value). REFEREE THEOREM ML': any pullable coordinate at
+  depth [Des^{C_m} max(x, ||b||), x''_max] makes a pinned or locked kind-(iv) row harmless (uses only |phi_{z*}(rt_0)| <= ||b||).
+RESIDUAL after Round 14 (G1, G2): (R1) persistent only under (P-res'): at every clean sub-window and class of all large stages a block
+  with pinned/locked kind-(iv) rows ANTI-SIGN-SWALLOWED over the whole certified depth range, with FRESH carriers (memory), plus the
+  Aobs(4) normal form; (R0): coincidence classes of Theorem 5.2, non-affine pinned groups without robust Jacobian, (H-7), peak conversion
+  gaps. Exactness vs one-sidedness has become a pure DEPTH-SWALLOWING condition on fresh carriers.

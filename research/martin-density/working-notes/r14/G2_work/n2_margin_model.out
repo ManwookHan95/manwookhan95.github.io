@@ -1,0 +1,4 @@
+trials 300
+(A) restricted model, exact one-signed resonance, no capped resource: NOT A-regular in 300 / 300
+(B) + margin levers of capacity 4(rho0 + max|b_P|): A-regular in 300 / 300
+(C) + two random shared two-sided generators (hypothesis of Prop. EX violated): A-regular in 299 / 300

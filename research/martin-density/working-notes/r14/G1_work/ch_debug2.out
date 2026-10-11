@@ -1,0 +1,3 @@
+n = 80  right-signed: 38  wrong-signed: 42
+right-signed defect: max dist(x, EXACT cone) = 1.02e-08 ; max |x'-x| (Lemma CH point) = 6.51e-14
+wrong-signed defect: min dist(x, EXACT cone) = 0.0146 (|x| = 1) ; max |x'-x| = 5.94e-14 ; min c1.x' = -7.92e-09 >= -eta|x'| with eta = 4 mu/u (max mu = 8.4e-09)

@@ -1,0 +1,3 @@
+n = 60  right-signed: 28  wrong-signed: 32
+right-signed: max dist to exact cone = 2.33e-08, max |x'-x| = 6.51e-14
+wrong-signed: min dist to exact cone = 6.53e-10 (data |x|=1), max |x'-x| = 5.94e-14, min c1.x' = -7.92e-09, max mu = 8.38e-09

@@ -1,0 +1,3 @@
+instances: 600  tries: 1244
+strict exact: 600  cushioned >= -eta|x'|: 600  |x'-x|<=HV: 600  sharper k^{k/2} rho/u bound: 600  |B|<=n: 600
+|x'-x|/V: median 1.81  max 1.01e+06

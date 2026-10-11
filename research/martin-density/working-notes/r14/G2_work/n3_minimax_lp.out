@@ -1,0 +1,2 @@
+minimax identity  max-min vs min-max over the hull: max |difference| = 9.06e-14 over 400 instances
+LP duality (1.3): max |primal - dual| = 4.11e-14 over 400 instances

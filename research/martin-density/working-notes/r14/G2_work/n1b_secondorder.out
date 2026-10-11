@@ -1,0 +1,4 @@
+slack in [0.00,0.01): n=   64  max second-order ratio 2.130e+00   max kappa' 9.835e+00
+slack in [0.01,0.05): n=  364  max second-order ratio 3.537e+00   max kappa' 9.652e+00
+slack in [0.05,0.20): n= 1916  max second-order ratio 3.617e+00   max kappa' 9.009e+00
+slack in [0.20,1.00): n=16042  max second-order ratio 1.236e+00   max kappa' 3.499e+00
