@@ -1,0 +1,16 @@
+var A seed 1: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=3.21e-02 | pred(s=-3.000): phi=-3.0e-03 move=1.64e-02; opp(s=5.000): phi=+5.0e-03 move=3.21e-02
+var A seed 2: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=1.02e-01 | pred(s=-3.000): phi=-3.0e-03 move=4.50e-02; opp(s=5.000): phi=+5.0e-03 move=1.02e-01
+var A seed 3: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=2.00e-02 | pred(s=-3.000): phi=-3.0e-03 move=1.33e-02; opp(s=5.000): phi=+5.0e-03 move=2.00e-02
+var A seed 4: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=7.07e-02 | pred(s=-3.000): phi=-3.0e-03 move=3.13e-02; opp(s=5.000): phi=+5.0e-03 move=7.08e-02
+var B seed 1: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=2.93e+01 | pred(s=-3.000): phi=-3.0e-03 move=2.67e-02; opp(s=5.000): phi=+5.0e-03 move=1.46e+02
+var B seed 2: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=1.75e+02 | pred(s=-3.000): phi=-3.0e-03 move=6.73e-02; opp(s=5.000): phi=+5.0e-03 move=7.41e+02
+var B seed 3: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=3.41e+01 | pred(s=-3.000): phi=-3.0e-03 move=2.67e-02; opp(s=5.000): phi=+5.0e-03 move=1.71e+02
+var B seed 4: peak dkappa/dzeta = +1.0000, sgn zeta(c) = +1 | after flipping the peak's value: dkappa/dzeta = -1.0000, sgn zeta(c) = -1
+   zeta=-3.88e-03 phi=1.0e-03 move0=5.89e+01 | pred(s=-3.000): phi=-3.0e-03 move=4.69e-02; opp(s=5.000): phi=+5.0e-03 move=2.89e+02

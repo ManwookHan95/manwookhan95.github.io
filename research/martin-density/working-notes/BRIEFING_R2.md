@@ -462,3 +462,33 @@ RESIDUAL (necessary condition) at all but finitely many main stages, at the unpu
  (R1) no thick-type carrier: a is b(w)-thin on F ∩ (s_max(L), D(L)], pure (U*) certificates on unpulled kind-(iv) carriers.
 Suggested: J1.11 (would empty (R-T)); constrained Lojasiewicz step for pinned ratios; uniform-sign object for pure (U*) on thin rows;
   exploit the stable-exact structure (flat block-represented Phi_0) of residual rows.
+
+## ADDENDUM 13 (Round 13, refereed): r13/H1_*, r13/H2_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+H1 ((R0); positive results correct): Lemma 2.2 (stratified projected flow on Whitney (a) stratified compact semialgebraic sets) and
+  PROPOSITION J1.11 PROVED (first-order Puiseux margin mu_kappa(h) >= c_kappa h for the generic-weight design) => (R-T) EMPTY and KN-1
+  exactness relaxable to bands (Cor 2.4). Lemma TF' (target freedom as a lever), Lemma NP (peak-resource dichotomy in unshifted blocks),
+  Theorem RL + Lemma KC (block-rescaling lever), LEMMA AL (alignment calculus: an aligned thick row needs its target moved INWARD, an
+  anti-aligned one OUTWARD, same sign for all certificates, fixed by rho_l u_l(zhat)), Theorems IN/OUT, unit calculus (GS, DS, UC, TG),
+  Prop MA. Referee: Lemma PC (pieces of any pinned group in an unshifted block scale exactly), P-KC, Prop MA' (frozen value vanishes in
+  every unshifted block at near-certificate stages), LEMMA SLP (all levers are feasible points of ONE status-constrained LP; its LP dual is
+  the exact residual: an R^2-proportional anti-aligned resonance Xi_E = -(lambda_E + 2 kappa'_m Lambda R_E^2)). Section 4.7 HEURISTIC; peak
+  conversion SKETCH. Refined (R0) residual (necessary condition): (H-2) no movable aligned thick row; (H-3') every object balanced in
+  unshifted blocks with a peak resource; (H-4') unshifted blocks without one: aligned peaks, protected, vanishing frozen value, exact
+  R^2-proportional resonance; (H-5') shifted blocks: LP dual, common rho/u for robust anti-aligned movable rows; (H-6') nonlinear pinned
+  groups / thick peaks of shifted blocks; (H-7) frozen far windows, no private two-sided resource.
+H2 ((R1); reduced, not excluded): Facts 1.1/1.2 (only kinds (i)/(iv), h = 0, pure (U*); every unshifted block has a two-sided peak
+  resource), Lemma 2.1, Lemmas 2.2/2.3 (cluster sweep: super-thick pull ranges never occur; uses harmless (D-enum)), Lemmas 2.4/2.5, idea
+  "lower opposite-sign support then pull" FALSE (capacity 0), LEMMAS 2.6/2.7 (cross-stage memory: kind-(iv) carriers deactivate at the
+  next (R1) main stage, switching signs never flip, (up)/(down) blocks become unshifted), Prop 3.1 (all-at-once positivity of kind-(iv)
+  weights), Lemmas 3.2-3.4 (one-sided bands; 3.4(c) SKETCH), THEOREM H2.A (one-sided overshoot bands on all movable kind-(iv) rows realize
+  Step A unless some block is residual: (two)/(up)/(down) with pinned or locked rows; fix G-CPL), Prop 3.5, Prop 4.1 (Farkas alternative in
+  a restricted single-block model), Cor 4.2 FALSE as stated (full-row-rank repair proved), Lemma 5.2 (preparation bias: (P2) banks push
+  kind-(iv) values up by >= eff v theta_0 >> s_1), Prop NE + bias-free preparation conclusion WRONG (F-NE: b >> s_1/T >> delta_Z, so
+  wrong-sided resonances of size in (delta_Z, Cb] remain), design variant (D-abs) long memory SKETCH. Theorem H2.B (necessary condition):
+  persistent (R1) needs a FRESH pinned wrong-signed resonance at every main stage.
+CORE OBSTACLE after Round 13: "exactness versus one-sidedness": pinned ratios must land EXACTLY on Z_kappa (V2 Theorem B's Lojasiewicz
+  exactification of tiny minors, needed for design-controlled Hoffman constants), while the available resources at the relevant rows are
+  one-sided; when the normal cone of Z_kappa is one-signed on the oriented rows and the start row lies on the wrong side, no admissible
+  realization exists. Persistent residual rows need fresh such resonances at every main stage (both (R0) and (R1)). Suggested new tools:
+  a face-wise Hoffman bound insensitive to tiny minors not met by the data (avoid exactifying them); a preparation that does not move values
+  at target coordinates; minimax version of SLP over the certificate hull; explicit construction of a persistent residual row to test.

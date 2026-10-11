@@ -1,0 +1,10 @@
+aligned seed 1: root of extended frozen value t*=0.70133, argmin sv_min t=0.70137 (sv=3.4e-04); at argmin: rows-only Phi0=-0.6180, extended (rows+peak)=-1.94e-04; kappa=4.9427 vs Phi_c|u_c|=4.9427
+aligned seed 2: root of extended frozen value t*=0.79540, argmin sv_min t=0.79540 (sv=1.1e-03); at argmin: rows-only Phi0=-0.6400, extended (rows+peak)=+3.24e-05; kappa=5.1206 vs Phi_c|u_c|=5.1206
+aligned seed 3: root of extended frozen value t*=0.70424, argmin sv_min t=0.70422 (sv=3.7e-04); at argmin: rows-only Phi0=-0.6568, extended (rows+peak)=+1.31e-04; kappa=5.2551 vs Phi_c|u_c|=5.2551
+aligned seed 4: root of extended frozen value t*=0.67760, argmin sv_min t=0.67764 (sv=3.5e-03); at argmin: rows-only Phi0=-0.7012, extended (rows+peak)=-2.16e-04; kappa=5.6081 vs Phi_c|u_c|=5.6081
+aligned seed 5: root of extended frozen value t*=0.75799, argmin sv_min t=0.75794 (sv=1.0e-03); at argmin: rows-only Phi0=-0.7047, extended (rows+peak)=+2.21e-04; kappa=5.6394 vs Phi_c|u_c|=5.6394
+anti    seed 1: root of extended frozen value t*=0.46851, argmin sv_min t=0.46851 (sv=9.8e-04); at argmin: rows-only Phi0=+0.5380, extended (rows+peak)=-3.45e-05; kappa=4.3040 vs Phi_c|u_c|=4.3040
+anti    seed 2: root of extended frozen value t*=0.52371, argmin sv_min t=0.52376 (sv=3.2e-04); at argmin: rows-only Phi0=+0.5341, extended (rows+peak)=-2.25e-04; kappa=4.2750 vs Phi_c|u_c|=4.2750
+anti    seed 3: root of extended frozen value t*=0.44041, argmin sv_min t=0.44039 (sv=6.2e-04); at argmin: rows-only Phi0=+0.5592, extended (rows+peak)=+1.05e-04; kappa=4.4725 vs Phi_c|u_c|=4.4725
+anti    seed 4: root of extended frozen value t*=0.43240, argmin sv_min t=0.43237 (sv=2.5e-04); at argmin: rows-only Phi0=+0.5958, extended (rows+peak)=+1.69e-04; kappa=4.7650 vs Phi_c|u_c|=4.7650
+anti    seed 5: root of extended frozen value t*=0.47127, argmin sv_min t=0.47119 (sv=2.9e-04); at argmin: rows-only Phi0=+0.6107, extended (rows+peak)=+3.82e-04; kappa=4.8824 vs Phi_c|u_c|=4.8824

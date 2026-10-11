@@ -1,0 +1,49 @@
+--- Toy A cone, generic weights (vertex F = 1 - 3e-3): 2000000 samples, min F on Z = 0.499761
+   m = 2.00e-04   D(m) = 3.732e-04   m/D(m) = 0.5359
+   m = 3.56e-04   D(m) = 3.732e-04   m/D(m) = 0.9530
+   m = 6.32e-04   D(m) = 3.732e-04   m/D(m) = 1.6946
+   m = 1.12e-03   D(m) = 4.019e-04   m/D(m) = 2.7983
+   m = 2.00e-03   D(m) = 6.920e-04   m/D(m) = 2.8900
+   m = 3.56e-03   D(m) = 9.610e-04   m/D(m) = 3.7010
+   m = 6.32e-03   D(m) = 1.493e-03   m/D(m) = 4.2366
+   m = 1.12e-02   D(m) = 2.887e-03   m/D(m) = 3.8961
+   m = 2.00e-02   D(m) = 5.529e-03   m/D(m) = 3.6172
+   fitted exponent beta (mu ~ h^beta): 1.488
+--- Toy A cone, coincidence weights (vertex on Lambda, both active): 2000000 samples, min F on Z = 0.501265
+   m = 2.00e-04   D(m) = 3.740e-04   m/D(m) = 0.5348
+   m = 3.56e-04   D(m) = 3.740e-04   m/D(m) = 0.9510
+   m = 6.32e-04   D(m) = 3.740e-04   m/D(m) = 1.6912
+   m = 1.12e-03   D(m) = 6.802e-04   m/D(m) = 1.6535
+   m = 2.00e-03   D(m) = 7.132e-04   m/D(m) = 2.8043
+   m = 3.56e-03   D(m) = 1.360e-03   m/D(m) = 2.6144
+   m = 6.32e-03   D(m) = 2.098e-03   m/D(m) = 3.0148
+   m = 1.12e-02   D(m) = 3.741e-03   m/D(m) = 3.0064
+   m = 2.00e-02   D(m) = 6.530e-03   m/D(m) = 3.0629
+   fitted exponent beta (mu ~ h^beta): 1.433
+--- Toy B cusp, coincidence (tip on Lambda, critical): 800000 samples, min F on Z = 0.778720
+   m = 1.00e-05   D(m) = 1.518e-04   m/D(m) = 0.0659
+   m = 3.16e-05   D(m) = 3.273e-04   m/D(m) = 0.0966
+   m = 1.00e-04   D(m) = 7.060e-04   m/D(m) = 0.1417
+   m = 3.16e-04   D(m) = 1.523e-03   m/D(m) = 0.2076
+   m = 1.00e-03   D(m) = 3.291e-03   m/D(m) = 0.3039
+   m = 3.16e-03   D(m) = 7.121e-03   m/D(m) = 0.4441
+   m = 1.00e-02   D(m) = 1.546e-02   m/D(m) = 0.6469
+   fitted exponent beta (mu ~ h^beta): 1.495
+--- Toy B cusp, generic (Phi * (1 + 1e-3)): 800000 samples, min F on Z = 0.777942
+   m = 1.00e-05   D(m) = 2.167e-05   m/D(m) = 0.4615
+   m = 3.16e-05   D(m) = 6.875e-05   m/D(m) = 0.4600
+   m = 1.00e-04   D(m) = 2.202e-04   m/D(m) = 0.4542
+   m = 3.16e-04   D(m) = 3.681e-04   m/D(m) = 0.8590
+   m = 1.00e-03   D(m) = 3.681e-04   m/D(m) = 2.7164
+   m = 3.16e-03   D(m) = 5.523e-03   m/D(m) = 0.5726
+   m = 1.00e-02   D(m) = 1.441e-02   m/D(m) = 0.6941
+   fitted exponent beta (mu ~ h^beta): 1.048
+--- Toy B cusp, generic (Phi * (1 - 1e-3)): 800000 samples, min F on Z = 0.779500
+   m = 1.00e-05   D(m) = 2.198e-05   m/D(m) = 0.4549
+   m = 3.16e-05   D(m) = 6.923e-05   m/D(m) = 0.4568
+   m = 1.00e-04   D(m) = 2.167e-04   m/D(m) = 0.4614
+   m = 3.16e-04   D(m) = 6.646e-04   m/D(m) = 0.4758
+   m = 1.00e-03   D(m) = 1.945e-03   m/D(m) = 0.5142
+   m = 3.16e-03   D(m) = 5.273e-03   m/D(m) = 0.5997
+   m = 1.00e-02   D(m) = 1.319e-02   m/D(m) = 0.7579
+   fitted exponent beta (mu ~ h^beta): 1.071

@@ -1,0 +1,5 @@
+trials 3000 Farkas alternative holds in 3000 infeasible cases 911
+M(rc) = -1.0e-03  feasible: True
+M(rc) = -1.0e-06  feasible: True
+M(rc) = +1.0e-06  feasible: False
+M(rc) = +1.0e-03  feasible: False

@@ -1,0 +1,5 @@
+(A) lambda^T M(rc) = -1.0e-04  feasible: True  every minor has a two-sided cofactor: True
+(A) lambda^T M(rc) = +1.0e-04  feasible: False  every minor has a two-sided cofactor: True
+(B) lambda^T M(rc) = -1.0e-04  feasible: True  each minor mixed-sign: [True, True]
+(B) lambda^T M(rc) = +1.0e-04  feasible: False  each minor mixed-sign: [True, True]
+full-row-rank C'_Q: infeasible instances = 0 of 2000
