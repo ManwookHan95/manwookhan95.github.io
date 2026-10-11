@@ -1,0 +1,6 @@
+(A) frozen d theta_f/d|zeta_j|: rel err                                               max = 7.583e-07
+(A') threshold raise dZ / first-order prediction - 1 (eps=1e-6)                       max = 8.432e-07
+(C) d kappa_f/d|zeta_j| abs err                                                       max = 1.217e-06
+(B) |jump of d kappa_true/d|zeta_2|| across the true threshold (expected O(1))        max = 9.521e-01
+(B) |jump of d kappa_frozen/d|zeta_2||  (expected ~ h * C)                            max = 6.193e-08
+(B) consistent side: |theta_f - theta| / theta                                        max = 8.731e-16

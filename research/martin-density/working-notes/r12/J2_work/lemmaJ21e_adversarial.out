@@ -1,0 +1,2 @@
+tested 16834 admissible blocks; violations of Lemma J2.1(e): 0
+max (theta - theta_f)/(theta b Phi_W^2/Phi_Pf^2) = 1.0613  (bound 3);  max |A_f - A|/(theta b Phi_W^2/Phi_Pf^2) = 0.0040  (bound 4)

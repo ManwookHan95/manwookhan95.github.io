@@ -1,0 +1,6 @@
+seed 0: t0=0.5499 Phi0(zhat)=1.4e-17 | resonant: None | off-resonance (t*1.05): certs=None
+seed 1: t0=0.6228 Phi0(zhat)=-2.8e-17 | resonant: {'ncert': 0, 'kneg': 0, 'signok': 0, 'jumpok': 0, 'jumps': 0, 'minsv': np.float64(0.0002171959151710225)} | off-resonance (t*1.05): certs=0
+seed 2: t0=0.5777 Phi0(zhat)=-2.8e-16 | resonant: {'ncert': 0, 'kneg': 0, 'signok': 0, 'jumpok': 0, 'jumps': 0, 'minsv': np.float64(0.00023605250084410439)} | off-resonance (t*1.05): certs=0
+seed 3: t0=0.6048 Phi0(zhat)=-1.1e-16 | resonant: {'ncert': 0, 'kneg': 0, 'signok': 0, 'jumpok': 0, 'jumps': 0, 'minsv': np.float64(0.00020610923408922443)} | off-resonance (t*1.05): certs=0
+seed 4: t0=0.5079 Phi0(zhat)=-2.8e-17 | resonant: {'ncert': 0, 'kneg': 0, 'signok': 0, 'jumpok': 0, 'jumps': 0, 'minsv': np.float64(0.00021232005561221665)} | off-resonance (t*1.05): certs=0
+seed 5: t0=0.5224 Phi0(zhat)=1.7e-16 | resonant: None | off-resonance (t*1.05): certs=None

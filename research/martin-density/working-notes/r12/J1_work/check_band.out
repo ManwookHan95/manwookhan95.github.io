@@ -1,0 +1,4 @@
+seed 1: near-cert size 1.6e-05, phi_y=1.00e-03, |y_0|=0.63, |y_3|=3.4e-08 | min ||t||: no band 2.93e+01; band on thick-type row 0: 1.35e-04; band (same width rule) on carrier 3: 2.93e+01
+seed 2: near-cert size 3.1e-06, phi_y=1.00e-03, |y_0|=0.63, |y_3|=3.1e-08 | min ||t||: no band 1.43e+02; band on thick-type row 0: 1.35e-04; band (same width rule) on carrier 3: 1.43e+02
+seed 3: near-cert size 1.5e-05, phi_y=1.00e-03, |y_0|=0.63, |y_3|=2.8e-08 | min ||t||: no band 3.38e+01; band on thick-type row 0: 1.53e-04; band (same width rule) on carrier 3: 3.38e+01
+seed 4: near-cert size 9.3e-06, phi_y=1.00e-03, |y_0|=0.63, |y_3|=1.0e-07 | min ||t||: no band 5.14e+01; band on thick-type row 0: 1.35e-04; band (same width rule) on carrier 3: 5.14e+01

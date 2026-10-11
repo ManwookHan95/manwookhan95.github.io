@@ -1,0 +1,6 @@
+(U)-block realization from the UNPUSHED row, 60 random blocks:
+  true status of the former weak peak at the (FC)-realized point: max = 0.995198 (must be < 1)
+  true coarse peak set at the (FC)-realized point is {p} in 60/60 cases
+  K8 error / (eta Phi_k^2): min = 5.334, max = 30.070
+  FC : max relative error |true ratio - target| = 8.065e-40, min = 0.000e+00
+  K8 : max relative error |true ratio - target| = 4.390e-03, min = 1.073e-04

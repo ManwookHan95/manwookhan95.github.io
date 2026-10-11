@@ -1,0 +1,15 @@
+admissible blocks tested: 389
+true: |A_threshold - A_convex|/A                                                 max = 9.339e-16
+true: |theta_threshold - theta_convex|/theta                                     max = 7.06e-08
+(e) theta_f - theta (must be <= 0)                                               max = -1.188e-07
+(e) (theta - theta_f)/(3 b theta PhiW2/PhiPf2) (<= 1)                            max = 0.3472
+(e) |A_f - A|/(4 b theta PhiW2/PhiPf2) (<= 1)                                    max = 0.0004573
+(e) rho^f_k/(rho_k (1+6x)) (<= 1)                                                max = 1
+(e) |kappa_f - kappa(Omega)|/(b theta PhiW2/PhiPf2) (constant C)                 max = 0.1661
+(d) |a^2 - sigma - k^2R^2|                                                       max = 1.148e-41
+(d) |k - K(sigma,R^2)|                                                           max = 5.969e-40
+(d) R^2 - 1 (must be < 0)                                                        max = -0.007345
+(d) sigma_rob/2 - (1 - R^2) (must be <= 0: W-fix region)                         max = -0.007052
+Step(i): psi_d(r_0)/Phi_d - rho^f_d (must be <= 0)                               max = 2.985e-40
+Step(i): (rho^f_d - 1)/((1+b)(1+6x) - 1) (<= 1)                                  max = 0.9269
+(d) |d kappa_f/d|zeta_j| fd - formula|                                           max = 2.893e-22

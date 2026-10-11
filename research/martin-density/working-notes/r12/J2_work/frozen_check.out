@@ -1,0 +1,13 @@
+true theta - 1 (construction)                                          max = 5.3455e-51
+(theta - theta_f)/(theta b Phi_W^2/Phi_Pf^2)                           max = 0.86519
+frozen Lemma K: a^2 - sigma - k^2 R^2                                  max = 6.6819e-52
+frozen Lemma K: k - a - sigma                                          max = 8.3524e-52
+frozen Lemma K: k - K(sigma,R^2)                                       max = 3.341e-51
+frozen rho_l - m|r_l| K/Phi_l                                          max = 2.6728e-51
+max frozen rho of weak peaks - 1 (should be <= ~b(1+C))                max = 0.0064622
+direct push: |theta_f - theta_true| (consistent frozen point)          max = 0.0
+direct push: |A_f - A_true|                                            max = 0.0
+threshold raise: |theta_f - theta_true| at the end                     max = 0.0
+threshold raise: dZ/predicted - 1 (first order, O(mu))                 max = 0.83365
+Lemma J2.0: d theta/d|zeta_j| fd - formula (rel)                       max = 5.432e-17
+Lemma J2.0: Euler sum_j (d theta/d|zeta_j|)|zeta_j| - theta            max = 8.0183e-51

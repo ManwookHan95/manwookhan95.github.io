@@ -434,3 +434,31 @@ REMAINING (Round 11): (A*)/(U*) sign-class obstruction of Step A (near-certifica
   Sherman-Morrison-type degeneracy among (P4)/shared pushes); inherited once-refereed links (Q2 UE^inf, E^{eng,RT,inf}, K1, K2).
   Suggested: target freedom in Z_kappa (orient the Lojasiewicz correction against the finitely many certificates); a push lemma (mirror of
   V1's in-F pull) with overshoot/degree argument; private push resources by design; cushion bypass for certificate carriers (U2 Lemma ND).
+
+## ADDENDUM 12 (Round 12, refereed): r12/J1_*, r12/J2_* (read *_referee.md first; *_ref_notes.md prove the fixes)
+J2 (main result correct): THEOREM J2.1 (bypass of Step 0): freeze the block scalars of Step A with the TARGET pattern (FC) (only robust
+  peaks frozen as peaks; every other coarse carrier as a non-peak); the frozen system is C^{1,1} across threshold crossings, satisfies
+  Lemma K exactly, and coincides with the true one at the realized point. So Step 0's weak-peak pushes are dispensable and (W*) is empty as
+  a separate class: (LSC-trunc)_N holds at every (f, g, rho) satisfying (H2^flat) (Step A A-regular at the UNPUSHED prepared row with (FC),
+  K-7 scaling) at infinitely many main stages. Literal K2-ref K-8 is DEFECTIVE in (U)-blocks (freezes active weak peaks as peaks); (FC)
+  repairs it (also needed for K2.15 itself). Data sign of an active weak peak: eps_k = vs_k sgn(e_k - Delta'_m) (corrects K1-ref R-8,
+  K2-ref W-1). Lemma J2.0 (first-order action on relative positions), Lemma J2.1 (frozen block system), Prop J2.4, Lemma J2.5, Remark J2.6.
+J1 (positive core correct after repairs F-1, F-2, P-TU, P-D2, P-1, P-2, P-MT, P-G, P-S; Corollary J1.5 is FALSE as stated): Lemmas
+  J1.1-J1.4 (deviation identity; target-displacement form; normal form Psi_y = kappa_y(a + Theta_y) + E_y; global rigidity inequality),
+  LEMMA J1.6 (ONE-OUT-OF-MANY: every near-certificate has the same robust fixed-sign coefficient coef_k ~ kappa_y a_p/v_k(p) on EVERY
+  thick-type carrier), Theorem J1.7 (one helpful far coordinate of one thick-type carrier => A-regular; settles K2.11), Lemma J1.8 (band
+  version of K2.9), Theorem J1.9 (a band on ONE thick-type carrier's row realizes Step A), Prop J1.10 (legitimate bands), Prop J1.12
+  (mismatch tolerance, conditional), Lemma J1.13 (only PINNED active ratios need exact realization on Z_kappa), Lemma J1.14 (rescaling
+  coupling: rescale ALL targets of the block uniformly, fix F-2), Theorem J1.15 (Step A realized if one thick-type carrier satisfies
+  (J-a)-(J-g)), referee Lemma R-PK (private peak resource pins |zeta_m(y;rt)| <= (4/3) eps Design) and Lemma R-PB (per-block target
+  hyperplane; residual stages force the per-block frozen value Phi_0^{(m)}(zhat_1) to nearly vanish), Observation R-G ((R1) forces a to be
+  b(w)-thin beyond the coarse targets), stable exact case 7.4(c) (a = sum rho_k u_k on the thick support, Phi_0 a flat block-represented
+  direction: p*(f + t Phi_0) <= 1 + C t^2; needs (H-pure), (H-pk)). SKETCH: J1.11 (first-order Puiseux margin mu_kappa(h) >= c h; missing
+  semialgebraic uniformity lemma), gauge bypass (7.3), (KN)-lever coupling.
+RESIDUAL (necessary condition) at all but finitely many main stages, at the unpushed row with (FC):
+ (R0) every thick-type carrier is rigid at once: frozen far window, no private two-sided design-depth resource, tiny spreads, of type
+      (R-pin) pinned active ratio / (R-T) KN-1 in a (T)-block without first-order Puiseux margin / (R-Ts) / (R-KN) / (R-D2) / (R-np) robust-
+      status zero-data or free-active / (R-pk); and |S_m| <= tau_* in every block satisfying R-PB (i)-(ii);
+ (R1) no thick-type carrier: a is b(w)-thin on F ∩ (s_max(L), D(L)], pure (U*) certificates on unpulled kind-(iv) carriers.
+Suggested: J1.11 (would empty (R-T)); constrained Lojasiewicz step for pinned ratios; uniform-sign object for pure (U*) on thin rows;
+  exploit the stable-exact structure (flat block-represented Phi_0) of residual rows.

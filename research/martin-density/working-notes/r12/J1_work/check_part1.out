@@ -1,0 +1,2 @@
+J1.1: max |<U*Dev,e>|, |u(zhat)-(kappa+Dev(z))| = 1.67e-14
+J1.4: 20000 random rows, max Phi(zhat')-bound = -1.479e-04, violations = 0

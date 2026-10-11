@@ -1,0 +1,18 @@
+sigma=0.02 R2=0.05 Phi_k=0.30 rho_k=0.50: K=0.166 dK/dR2=0.100 (num 0.100) ratio=1.963 (coupling term EXCEEDS band gain)
+sigma=0.02 R2=0.05 Phi_k=0.45 rho_k=0.90: K=0.166 dK/dR2=0.100 (num 0.100) ratio=14.310 (coupling term EXCEEDS band gain)
+sigma=0.02 R2=0.05 Phi_k=0.10 rho_k=0.50: K=0.166 dK/dR2=0.100 (num 0.100) ratio=0.218 
+sigma=0.02 R2=0.30 Phi_k=0.30 rho_k=0.50: K=0.198 dK/dR2=0.166 (num 0.166) ratio=1.909 (coupling term EXCEEDS band gain)
+sigma=0.02 R2=0.30 Phi_k=0.45 rho_k=0.90: K=0.198 dK/dR2=0.166 (num 0.166) ratio=13.920 (coupling term EXCEEDS band gain)
+sigma=0.02 R2=0.30 Phi_k=0.10 rho_k=0.50: K=0.198 dK/dR2=0.166 (num 0.166) ratio=0.212 
+sigma=0.09 R2=0.05 Phi_k=0.30 rho_k=0.50: K=0.403 dK/dR2=0.277 (num 0.277) ratio=0.381 
+sigma=0.09 R2=0.05 Phi_k=0.45 rho_k=0.90: K=0.403 dK/dR2=0.277 (num 0.277) ratio=2.776 (coupling term EXCEEDS band gain)
+sigma=0.09 R2=0.05 Phi_k=0.10 rho_k=0.50: K=0.403 dK/dR2=0.277 (num 0.277) ratio=0.042 
+sigma=0.09 R2=0.30 Phi_k=0.30 rho_k=0.50: K=0.494 dK/dR2=0.477 (num 0.477) ratio=0.356 
+sigma=0.09 R2=0.30 Phi_k=0.45 rho_k=0.90: K=0.494 dK/dR2=0.477 (num 0.477) ratio=2.596 (coupling term EXCEEDS band gain)
+sigma=0.09 R2=0.30 Phi_k=0.10 rho_k=0.50: K=0.494 dK/dR2=0.477 (num 0.477) ratio=0.040 
+sigma=0.25 R2=0.05 Phi_k=0.30 rho_k=0.50: K=0.780 dK/dR2=0.619 (num 0.619) ratio=0.118 
+sigma=0.25 R2=0.05 Phi_k=0.45 rho_k=0.90: K=0.780 dK/dR2=0.619 (num 0.619) ratio=0.858 
+sigma=0.25 R2=0.05 Phi_k=0.10 rho_k=0.50: K=0.780 dK/dR2=0.619 (num 0.619) ratio=0.013 
+sigma=0.25 R2=0.30 Phi_k=0.30 rho_k=0.50: K=0.986 dK/dR2=1.104 (num 1.104) ratio=0.104 
+sigma=0.25 R2=0.30 Phi_k=0.45 rho_k=0.90: K=0.986 dK/dR2=1.104 (num 1.104) ratio=0.756 
+sigma=0.25 R2=0.30 Phi_k=0.10 rho_k=0.50: K=0.986 dK/dR2=1.104 (num 1.104) ratio=0.012 

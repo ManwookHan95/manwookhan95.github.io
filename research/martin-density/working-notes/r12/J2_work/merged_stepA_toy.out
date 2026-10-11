@@ -1,0 +1,10 @@
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r12/J2_work/merged_stepA_toy.py:56: RuntimeWarning: The iteration is not making good progress, as measured by the 
+ improvement from the last ten iterations.
+  x = fsolve(F, [zeta0[1], zeta0[2]], xtol=1e-14)
+/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r12/J2_work/merged_stepA_toy.py:56: RuntimeWarning: xtol=0.000000 is too small, no further improvement in the approximate
+ solution is possible.
+  x = fsolve(F, [zeta0[1], zeta0[2]], xtol=1e-14)
+trials consistent at the realized point: 300/300
+max |theta_frozen - theta_true|/theta at the realized point: 1.10e-15
+max relative peak raise s* - 1 used (threshold/kappa lever): 1.045e-02  (compare mu/2 + b = 1.100e-02)
+true status of the former weak peak at the realized point = 1 - mu/2 (asserted to 1e-6)

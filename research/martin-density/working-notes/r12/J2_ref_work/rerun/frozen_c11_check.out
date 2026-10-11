@@ -1,0 +1,2 @@
+frozen kappa_f: max |g(t) - g(0) - t g'(0)|/t^2 over t in [3e-4, 1e-2] = 1.209e-05  (bounded: C^(1,1))
+true formula-1 kappa at 506 crossing points: max |k(t) - k(0) - t k'(0+)|/t^2 = 1.159e+02  (large: first-order kink)
