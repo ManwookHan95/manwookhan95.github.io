@@ -1,0 +1,12 @@
+
+== variant (vi)  peaks=[2, 3, 4]  val(oriented)=[0.0444 0.0446]  w=[ 0.0972 -0.0976  0.7272  0.7272  0.7272]  q0=0.762  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.2238 (/t     2.24) [optimal]   max -gamma'_+ =   0.2238 (/t     2.24) [optimal]
+   t= 0.030  max gamma'_+ =   0.0674 (/t     2.25) [optimal]   max -gamma'_+ =   0.0674 (/t     2.25) [optimal]
+   t= 0.010  max gamma'_+ =   0.0225 (/t     2.25) [optimal]   max -gamma'_+ =   0.0225 (/t     2.25) [optimal]
+   t= 0.003  max gamma'_+ =   0.0067 (/t     2.25) [optimal]   max -gamma'_+ =   0.0067 (/t     2.25) [optimal]
+
+== variant (v)  peaks=[2, 3, 4]  val(oriented)=[0.0451 0.0448]  w=[ 0.0987 -0.098   0.7271  0.7271  0.7271]  q0=0.762  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.3685 (/t     3.68) [optimal]   max -gamma'_+ =   0.3693 (/t     3.69) [optimal]
+   t= 0.030  max gamma'_+ =   0.5517 (/t    18.39) [optimal]   max -gamma'_+ =   0.5530 (/t    18.43) [optimal]
+   t= 0.010  max gamma'_+ =   1.3366 (/t   133.66) [optimal_inaccurate]   max -gamma'_+ =   1.3065 (/t   130.65) [optimal_inaccurate]
+   t= 0.003  max gamma'_+ =      nan (/t      nan) [solver-fail]   max -gamma'_+ =   1.4720 (/t   490.65) [optimal_inaccurate]

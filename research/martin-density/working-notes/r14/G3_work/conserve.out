@@ -1,0 +1,30 @@
+
+== D=0, r CONTACT  q0=0.7924  a=[ 0.      0.      0.      0.      0.      0.      0.566  -0.4043  0.
+  0.      0.      0.      0.      0.    ]
+  t= 1e-01 [optimal] gamma'_+max=1.8541  |V(zhat)|=9.93e-02 <= 1.26e-01   LHS=0.0908 <= RHS=0.1344 (crude 0.2609; thick part 0.0085)   |V - L*dTheta|=9.1e-09
+  t= 3e-02 [optimal] gamma'_+max=0.6175  |V(zhat)|=3.00e-02 <= 3.78e-02   LHS=0.0284 <= RHS=0.0394 (crude 0.0773; thick part 0.0015)   |V - L*dTheta|=4.0e-12
+  t= 1e-02 [optimal] gamma'_+max=0.2059  |V(zhat)|=1.00e-02 <= 1.26e-02   LHS=0.0095 <= RHS=0.0131 (crude 0.0258; thick part 0.0005)   |V - L*dTheta|=2.4e-08
+
+== D=0, r THIN 1e-3  q0=0.7905  a=[ 0.      0.      0.      0.0016  0.      0.      0.565  -0.4036  0.
+  0.      0.      0.      0.      0.    ]
+  t= 1e-01 [optimal] gamma'_+max=2.0280  |V(zhat)|=9.83e-02 <= 1.26e-01   LHS=0.1443 <= RHS=0.2094 (crude 0.3362; thick part 0.0186)   |V - L*dTheta|=4.4e-12
+  t= 3e-02 [optimal] gamma'_+max=1.8674  |V(zhat)|=2.98e-02 <= 3.79e-02   LHS=0.1622 <= RHS=0.2620 (crude 0.3000; thick part 0.0088)   |V - L*dTheta|=2.7e-09
+  t= 1e-02 [optimal] gamma'_+max=1.7627  |V(zhat)|=9.96e-03 <= 1.26e-02   LHS=0.1619 <= RHS=0.6643 (crude 0.6769; thick part 0.0058)   |V - L*dTheta|=6.0e-09
+
+== D=0, r THICK 0.15  q0=0.7911  a=[ 0.      0.      0.      0.1929  0.      0.      0.4501 -0.3215  0.
+  0.      0.      0.      0.      0.    ]
+  t= 1e-01 [optimal] gamma'_+max=2.1418  |V(zhat)|=9.82e-02 <= 1.26e-01   LHS=0.1184 <= RHS=0.1463 (crude 0.2730; thick part 0.0202)   |V - L*dTheta|=4.1e-09
+  t= 3e-02 [optimal] gamma'_+max=1.8707  |V(zhat)|=2.98e-02 <= 3.79e-02   LHS=0.0922 <= RHS=0.1002 (crude 0.1382; thick part 0.0623)   |V - L*dTheta|=1.4e-08
+  t= 1e-02 [optimal_inaccurate] gamma'_+max=1.7626  |V(zhat)|=9.96e-03 <= 1.26e-02   LHS=0.0832 <= RHS=0.0859 (crude 0.0985; thick part 0.0732)   |V - L*dTheta|=1.8e-05
+
+== D=-0.001, r THICK 0.15  q0=0.7895  a=[ 0.      0.      0.      0.1929  0.      0.      0.4501 -0.3215  0.
+  0.      0.      0.      0.      0.    ]
+  t= 1e-01 [optimal] gamma'_+max=2.2080  |V(zhat)|=9.78e-02 <= 1.26e-01   LHS=0.1242 <= RHS=0.1527 (crude 0.2797; thick part 0.0264)   |V - L*dTheta|=5.7e-10
+  t= 3e-02 [optimal] gamma'_+max=2.0322  |V(zhat)|=2.97e-02 <= 3.80e-02   LHS=0.1055 <= RHS=0.1138 (crude 0.1518; thick part 0.0758)   |V - L*dTheta|=1.9e-09
+  t= 1e-02 [optimal_inaccurate] gamma'_+max=1.9593  |V(zhat)|=9.93e-03 <= 1.27e-02   LHS=0.0990 <= RHS=0.1018 (crude 0.1144; thick part 0.0891)   |V - L*dTheta|=5.4e-09
+
+== D=-0.004, r THICK 0.15 (l- is a peak here)  q0=0.7812  a=[ 0.      0.      0.      0.1929  0.      0.      0.4501 -0.3215  0.
+  0.      0.      0.      0.      0.    ]
+  t= 1e-01 [optimal] gamma'_+max=1.6840  |V(zhat)|=9.82e-02 <= 1.28e-01   LHS=0.0993 <= RHS=0.1288 (crude 0.2572; thick part 0.0011)   |V - L*dTheta|=2.0e-11
+  t= 3e-02 [optimal] gamma'_+max=0.5667  |V(zhat)|=2.99e-02 <= 3.84e-02   LHS=0.0332 <= RHS=0.0416 (crude 0.0801; thick part 0.0032)   |V - L*dTheta|=4.7e-11
+  t= 1e-02 [optimal_inaccurate] gamma'_+max=0.1939  |V(zhat)|=9.99e-03 <= 1.28e-02   LHS=0.0111 <= RHS=0.0140 (crude 0.0268; thick part 0.0012)   |V - L*dTheta|=2.3e-04

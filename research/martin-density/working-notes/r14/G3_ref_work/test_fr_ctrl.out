@@ -1,0 +1,3 @@
+[shared CONTACT s (control)] M=-6.73e-16 u(zhat)=[0.209 0.169] peaks=[2, 3, 4]  max gamma'_+: t= 0.10:  0.1132 (opti)  t= 0.03:  0.0341 (opti)  t= 0.01:  0.0114 (opti)
+[shared CONTACT s (control)] M= 1.00e-03 u(zhat)=[0.209 0.171] peaks=[2, 3, 4]  max gamma'_+: t= 0.10:  0.1132 (opti)  t= 0.03:  0.0341 (opti)  t= 0.01:  0.0114 (opti)
+[shared CONTACT s (control)] M= 1.00e-02 u(zhat)=[0.209 0.193] peaks=[2, 3, 4]  max gamma'_+: t= 0.10:  0.1132 (opti)  t= 0.03:  0.0341 (opti)  t= 0.01:  0.0114 (opti)

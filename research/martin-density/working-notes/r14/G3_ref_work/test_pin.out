@@ -1,0 +1,24 @@
+
+== variant (ii)  peaks=[2, 3, 4]  val(oriented)=[ 0.0957 -0.0789]  w=[0.2154 0.1775 0.7147 0.7147 0.7147]  q0=0.759  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.1155 (/t     1.16) [optimal]   max -gamma'_+ =   0.1155 (/t     1.16) [optimal]
+   t= 0.030  max gamma'_+ =   0.0348 (/t     1.16) [optimal]   max -gamma'_+ =   0.0348 (/t     1.16) [optimal]
+   t= 0.010  max gamma'_+ =   0.0116 (/t     1.16) [optimal]   max -gamma'_+ =   0.0116 (/t     1.16) [optimal]
+   t= 0.003  max gamma'_+ =   0.0035 (/t     1.16) [optimal]   max -gamma'_+ =   0.0035 (/t     1.16) [optimal]
+
+== variant (i)  peaks=[2, 3, 4]  val(oriented)=[ 0.0971 -0.0786]  w=[0.2187 0.177  0.7144 0.7144 0.7144]  q0=0.759  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.1879 (/t     1.88) [optimal]   max -gamma'_+ =   0.1906 (/t     1.91) [optimal]
+   t= 0.030  max gamma'_+ =   0.1054 (/t     3.51) [optimal]   max -gamma'_+ =   0.2651 (/t     8.84) [optimal]
+   t= 0.010  max gamma'_+ =   0.0352 (/t     3.52) [optimal]   max -gamma'_+ =   0.6838 (/t    68.38) [optimal]
+   t= 0.003  max gamma'_+ =   0.0106 (/t     3.52) [optimal]   max -gamma'_+ =   0.9344 (/t   311.46) [optimal]
+
+== variant (iii)  peaks=[2, 3, 4]  val(oriented)=[ 0.0937 -0.0814]  w=[0.2111 0.1833 0.7146 0.7146 0.7146]  q0=0.759  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.1909 (/t     1.91) [optimal]   max -gamma'_+ =   0.1153 (/t     1.15) [optimal]
+   t= 0.030  max gamma'_+ =   0.1350 (/t     4.50) [optimal]   max -gamma'_+ =   0.0348 (/t     1.16) [optimal]
+   t= 0.010  max gamma'_+ =   0.0452 (/t     4.52) [optimal]   max -gamma'_+ =   0.0116 (/t     1.16) [optimal]
+   t= 0.003  max gamma'_+ =   0.0167 (/t     5.55) [optimal_inaccurate]   max -gamma'_+ =   0.0035 (/t     1.16) [optimal]
+
+== variant (iv)  peaks=[0, 2, 3, 4]  val(oriented)=[0.3203 0.2158]  w=[ 0.6028 -0.562   0.6028  0.6028  0.6028]  q0=0.724  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.1879 (/t     1.88) [optimal]   max -gamma'_+ =   0.0620 (/t     0.62) [optimal]
+   t= 0.030  max gamma'_+ =   0.1054 (/t     3.51) [optimal]   max -gamma'_+ =   0.0188 (/t     0.63) [optimal]
+   t= 0.010  max gamma'_+ =   0.0352 (/t     3.52) [optimal]   max -gamma'_+ =   0.0063 (/t     0.63) [optimal]
+   t= 0.003  max gamma'_+ =   0.0108 (/t     3.61) [optimal_inaccurate]   max -gamma'_+ =   0.0019 (/t     0.63) [optimal]

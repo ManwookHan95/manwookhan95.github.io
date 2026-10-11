@@ -1,0 +1,10 @@
+ii done
+i done
+iii done
+iv done
+v done
+vi done
+worst normalized slack (must be <= ~1e-6):
+  R-ESC (1)    -5.795e-04  OK
+  R-ESC (2)    -1.294e-02  OK
+  R-ESC (3)    -8.296e-03  OK

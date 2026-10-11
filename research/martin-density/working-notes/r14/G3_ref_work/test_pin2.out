@@ -1,0 +1,30 @@
+
+== variant (iv)  peaks=[2, 3, 4]  val(oriented)=[ 0.0451 -0.0322]  w=[0.0984 0.0702 0.7281 0.7281 0.7281]  q0=0.763  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.4417 (/t     4.42) [optimal]   max -gamma'_+ =   0.4119 (/t     4.12) [optimal]
+   t= 0.030  max gamma'_+ =   0.3991 (/t    13.30) [optimal]   max -gamma'_+ =   0.5321 (/t    17.74) [optimal]
+   t= 0.010  max gamma'_+ =   0.1338 (/t    13.38) [optimal_inaccurate]   max -gamma'_+ =   0.4304 (/t    43.04) [optimal_inaccurate]
+   t= 0.003  max gamma'_+ =   0.0401 (/t    13.38) [optimal]   max -gamma'_+ =   0.1567 (/t    52.25) [optimal_inaccurate]
+
+== variant (v)  peaks=[2, 3, 4]  val(oriented)=[0.0451 0.0448]  w=[ 0.0987 -0.098   0.7271  0.7271  0.7271]  q0=0.762  p*(f)=1.0000000
+   t= 0.100  max gamma'_+ =   0.3685 (/t     3.68) [optimal]   max -gamma'_+ =   0.3693 (/t     3.69) [optimal]
+   t= 0.030  max gamma'_+ =   0.5517 (/t    18.39) [optimal]   max -gamma'_+ =   0.5530 (/t    18.43) [optimal]
+   t= 0.010  max gamma'_+ =   1.3366 (/t   133.66) [optimal_inaccurate]   max -gamma'_+ =   1.3065 (/t   130.65) [optimal_inaccurate]
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r14/G3_ref_work/test_pin2.py", line 81, in <module>
+    gp, s1 = maxgam(row, t, 0, +1)
+             ~~~~~~^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r14/G3_ref_work/test_pin2.py", line 69, in maxgam
+    d = row.decomp(t, obj)
+  File "/tmp/claude-0/-home-user-manwookhan95-github-io/ec871029-cb65-5b86-9917-5095aaba7b7b/scratchpad/ctx/r14/G3_ref_work/refmodel.py", line 91, in decomp
+    pr.solve(**SOLVER)
+    ~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/cvxpy/problems/problem.py", line 687, in solve
+    return solve_func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/cvxpy/problems/problem.py", line 1148, in _solve
+    self.unpack_results(solution, solving_chain, inverse_data)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/cvxpy/problems/problem.py", line 1453, in unpack_results
+    raise error.SolverError(
+    ...<2 lines>...
+            "information.")
+cvxpy.error.SolverError: Solver 'CLARABEL' failed. Try another solver, or solve with verbose=True for more information.

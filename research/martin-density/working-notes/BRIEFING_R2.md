@@ -514,3 +514,18 @@ RESIDUAL after Round 14 (G1, G2): (R1) persistent only under (P-res'): at every 
   with pinned/locked kind-(iv) rows ANTI-SIGN-SWALLOWED over the whole certified depth range, with FRESH carriers (memory), plus the
   Aobs(4) normal form; (R0): coincidence classes of Theorem 5.2, non-affine pinned groups without robust Jacobian, (H-7), peak conversion
   gaps. Exactness vs one-sidedness has become a pure DEPTH-SWALLOWING condition on fresh carriers.
+
+## ADDENDUM 14b (Round 14, G3 adversarial construction, refereed): r14/G3_*
+No persistent residual row was constructed; no counterexample suggested. METHOD-INDEPENDENT universal lemmas (valid for EVERY admissible T,
+row, mate and scale; re-derived by the referee, 160 numerical decompositions): Lemma 1.1-1.3 (weighted excess budget; E_b(A_+) + E_b(A_-)
+<= t^2/q_0), Lemma 1.4 (pointwise switching constraints at contacts, free coordinates and support), THEOREM CL (conservation law:
+switching on contacts, free coordinates and thin support must be paid for by thick switching; |V(zhat)| <= t/q_0), Cor CL.1, Lemma 1.5/
+Cor 1.6 (private pinning), Lemma 1.7 (pair pinning by a wrong-signed contact minor), Cor CL.2 (strict FR minors pin with either sign),
+Cor 1.8, THEOREM 2.10 (switching inequality in an unshifted block, no minor appears), Cor 2.11, Lemma 2.8/Cor 2.9 (single-contact pair
+resonances self-pin), Lemma 2.6/Cor 2.7 (fibre map usc), Lemma 3.1/Cor 3.2 (non-recoverability is open on the graph). Referee LEMMA R-ESC:
+in an unshifted block only cushions of shared coordinates and of anti-aligned private coordinates (and switching of outside carriers)
+enter the pinning; an exact resonance WITHOUT an escape is pinned at every scale. RC_L (G3's adversarial configuration) is obsolete
+(contact-row resonance, soft by G1 Cor 5.4). G-THIN: shared tiny support is an escape at window bottoms.
+SHARPENED RESIDUAL: (R-S1) groups having BOTH a tiny wrong-signed strict minor ((X3) + FR rows at free shared targets with robust room) AND
+an escape (shared support target of mass >~ K_* t^2/H(L), outside switching at a shared coordinate, or other active strict non-peaks) at
+every clean sub-window and class of all large stages; plus (R-S2), (R-S3), (R-L), (R0^str).

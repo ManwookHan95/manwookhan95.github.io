@@ -1,0 +1,28 @@
+
+== THICK r, D=1.00e-03  val=[ 0.068  -0.0527]  peaks=[2, 3, 4]  j-bound slope |val_-|/(2 q0 D)=33.3
+   t=3.0e-02  max gamma'_+ = 1.2328e+00  /t =      41.09  [optimal]
+   t=1.0e-02  max gamma'_+ = 4.1143e-01  /t =      41.14  [optimal]
+   t=3.0e-03  max gamma'_+ = 2.1384e-01  /t =      71.28  [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.3940e-01  /t =     139.40  [optimal_inaccurate]
+   t=3.0e-04  max gamma'_+ = 6.1303e-02  /t =     204.34  [optimal_inaccurate]
+
+== THICK r, D=1.00e-04  val=[ 0.068  -0.0771]  peaks=[2, 3, 4]  j-bound slope |val_-|/(2 q0 D)=487.4
+   t=3.0e-02  max gamma'_+ = 1.8506e+00  /t =      61.69  [optimal]
+   t=1.0e-02  max gamma'_+ = 1.7368e+00  /t =     173.68  [optimal]
+   t=3.0e-03  max gamma'_+ = 1.6701e+00  /t =     556.69  [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.4898e+00  /t =    1489.75  [optimal_inaccurate]
+   t=3.0e-04  max gamma'_+ = 1.0635e+00  /t =    3544.96  [optimal_inaccurate]
+
+== THICK r, D=-1.95e-16  val=[ 0.068  -0.0798]  peaks=[2, 3, 4]  j-bound slope |val_-|/(2 q0 D)=inf
+   t=3.0e-02  max gamma'_+ = 1.8707e+00  /t =      62.36  [optimal]
+   t=1.0e-02  max gamma'_+ = 1.7626e+00  /t =     176.26  [optimal_inaccurate]
+   t=3.0e-03  max gamma'_+ = 1.7580e+00  /t =     586.01  [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.7665e+00  /t =    1766.53  [optimal_inaccurate]
+   t=3.0e-04  max gamma'_+ = 1.8387e+00  /t =    6128.96  [optimal_inaccurate]
+
+== THICK r, D=-1.00e-04  val=[ 0.068  -0.0826]  peaks=[2, 3, 4]  j-bound slope |val_-|/(2 q0 D)=inf
+   t=3.0e-02  max gamma'_+ = 1.8899e+00  /t =      63.00  [optimal]
+   t=1.0e-02  max gamma'_+ = 1.7854e+00  /t =     178.54  [optimal]
+   t=3.0e-03  max gamma'_+ = 1.8319e+00  /t =     610.62  [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.9759e+00  /t =    1975.88  [optimal_inaccurate]
+   t=3.0e-04  max gamma'_+ = 3.9321e+00  /t =   13106.86  [optimal_inaccurate]

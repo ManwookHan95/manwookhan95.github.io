@@ -1,0 +1,49 @@
+
+== D>0 robust, r contact (mass 0): r_mass=0.0000  D=2.051e-03  val=[ 0.0722 -0.0292]  w=[0.038 0.013]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 1.8541e+00   /t =    18.541   [optimal]
+   t=3.0e-02  max gamma'_+ = 6.1754e-01   /t =    20.585   [optimal]
+   t=1.0e-02  max gamma'_+ = 2.0594e-01   /t =    20.594   [optimal]
+   t=3.0e-03  max gamma'_+ = 1.0055e-01   /t =    33.517   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 2.9048e-02   /t =    29.048   [optimal_inaccurate]
+
+== D=0, r CONTACT: r_mass=0.7115  D=-4.814e-16  val=[ 0.0722 -0.0842]  w=[ 0.038  -0.0444]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 1.3662e+00   /t =    13.662   [optimal]
+   t=3.0e-02  max gamma'_+ = 4.1518e-01   /t =    13.839   [optimal]
+   t=1.0e-02  max gamma'_+ = 1.3857e-01   /t =    13.857   [optimal]
+   t=3.0e-03  max gamma'_+ = 4.8035e-02   /t =    16.012   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.9273e-02   /t =    19.273   [optimal_inaccurate]
+
+== D=0, r THIN support a=1e-4: r_mass=0.7114  D=-4.844e-16  val=[ 0.0722 -0.0842]  w=[ 0.038  -0.0444]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 1.4324e+00   /t =    14.324   [optimal]
+   t=3.0e-02  max gamma'_+ = 6.3706e-01   /t =    21.235   [optimal]
+   t=1.0e-02  max gamma'_+ = 8.0447e-01   /t =    80.447   [optimal]
+   t=3.0e-03  max gamma'_+ = 1.8885e+00   /t =   629.511   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.8705e+00   /t =  1870.463   [optimal_inaccurate]
+
+== D=0, r THIN support a=1e-3: r_mass=0.7108  D=-4.775e-16  val=[ 0.0722 -0.0842]  w=[ 0.038  -0.0444]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 2.0280e+00   /t =    20.280   [optimal]
+   t=3.0e-02  max gamma'_+ = 1.8674e+00   /t =    62.246   [optimal]
+   t=1.0e-02  max gamma'_+ = 1.7627e+00   /t =   176.270   [optimal]
+   t=3.0e-03  max gamma'_+ = 1.7701e+00   /t =   590.033   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.7839e+00   /t =  1783.898   [optimal_inaccurate]
+
+== D=0, r THICK support a=0.15: r_mass=0.6345  D=-1.947e-16  val=[ 0.068  -0.0798]  w=[ 0.0339 -0.0398]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 2.1418e+00   /t =    21.418   [optimal]
+   t=3.0e-02  max gamma'_+ = 1.8707e+00   /t =    62.357   [optimal]
+   t=1.0e-02  max gamma'_+ = 1.7626e+00   /t =   176.256   [optimal_inaccurate]
+   t=3.0e-03  max gamma'_+ = 1.7580e+00   /t =   586.006   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 1.7665e+00   /t =  1766.531   [optimal_inaccurate]
+
+== D=-0.001 (right sign), r THICK a=0.15: r_mass=0.9757  D=-1.000e-03  val=[ 0.068  -0.1069]  w=[ 0.0339 -0.068 ]  peaks=[2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 2.2080e+00   /t =    22.080   [optimal]
+   t=3.0e-02  max gamma'_+ = 2.0322e+00   /t =    67.739   [optimal]
+   t=1.0e-02  max gamma'_+ = 1.9593e+00   /t =   195.933   [optimal_inaccurate]
+   t=3.0e-03  max gamma'_+ = 1.9323e+00   /t =   644.090   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 2.0256e+00   /t =  2025.587   [optimal_inaccurate]
+
+== D=-0.004 (right sign; l- becomes a PEAK), r THICK a=0.15: r_mass=2.1307  D=-4.000e-03  val=[ 0.068  -0.1881]  w=[ 0.0339 -0.1525]  peaks=[1, 2, 3, 4]  p*(f)=1.00000000
+   t=1.0e-01  max gamma'_+ = 1.6840e+00   /t =    16.840   [optimal]
+   t=3.0e-02  max gamma'_+ = 5.6671e-01   /t =    18.890   [optimal]
+   t=1.0e-02  max gamma'_+ = 1.9393e-01   /t =    19.393   [optimal_inaccurate]
+   t=3.0e-03  max gamma'_+ = 5.8794e-02   /t =    19.598   [optimal_inaccurate]
+   t=1.0e-03  max gamma'_+ = 2.3922e-02   /t =    23.922   [optimal_inaccurate]
