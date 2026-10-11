@@ -529,3 +529,33 @@ enter the pinning; an exact resonance WITHOUT an escape is pinned at every scale
 SHARPENED RESIDUAL: (R-S1) groups having BOTH a tiny wrong-signed strict minor ((X3) + FR rows at free shared targets with robust room) AND
 an escape (shared support target of mass >~ K_* t^2/H(L), outside switching at a shared coordinate, or other active strict non-peaks) at
 every clean sub-window and class of all large stages; plus (R-S2), (R-S3), (R-L), (R0^str).
+
+## ADDENDUM NEG (negative track, refereed): neg/N1_*, neg/N2_*, neg/N3_*
+N1 (Section 1 exact reformulations correct): Rec(f) := outer limit of C(f') along NA rows f' -> f (compact, balanced); Ob(f,h) :=
+  liminf dist(h, C(f')) = dist(h, Rec(f)); (f, rho g) in cl NA iff rho g in Rec(f); density iff Rec(f) = C(f) for all f (Prop 1.2,
+  Thm 1.3). Lemma 1.4/1.4' (far freedom, uniform, both directions), Prop 1.5 (local structure of NA near (f, rho g)), Prop 1.5bis
+  (Hahn-Banach: separation from the fattened local NA set iff a type (I) obstruction), Thm 1.6 (dual formula; r_{f'}(y)^2 =
+  beta(y)(2p(y) - beta(y)), Bregman form; primal certificate), Cor 1.7, Prop 1.8 (only scales below max(eps^{1/2}, eta)/(1-rho^2)
+  decide), THM 1.9: non-density <=> (I) a SCALAR RIDGE (for one x in c_00, limsup_{NA f'->f} r~_{f'}(x) < r~_f(x); an unrecovered
+  X-exposed mate) or (II) non-convex Rec(f) (failure of merging; referee Lemma R-M: finite merging <=> Rec(f) in A(f)). Lemma 2.1 (graph
+  of Rec = closure of the NA part of the mate graph; Rec = outer limit along ANY recoverable class). Necessary conditions F1-F7, M1-M8
+  (E-1 correction: scale-dependent switching is NOT proved necessary; exact Delta d < 0 data without (SC) remain possible = candidate C1).
+  E-2: the R3 capacity route (R6) is NOT removed by compact errors. Verdict: no wholesale switch; evidence weakly favours density.
+N2 (correct after F1-F3): adversarial T_PB built from Lemma B ONLY (no private banks/levers, no generic weights, far rigidity), row f with
+  F = {1}, no contacts, no strict non-peaks, K(f) = {0} (every intrinsic mechanism fails), mates gamma h switching through one-sided peak
+  staircases at all scales — yet every canonical truncation f_N is NA and contains gamma h in its own fibre: recovered with no
+  engineering (Thm 2.4; N >= 2 version PROVED with block-private signatures). Witness calculus (Lemmas 1.1, 1.4', 1.4'', 1.5), push
+  calculus (referee), Lemma R2 (at NA rows, finitely supported mates off F' ∪ K' need unbounded scale-dependent block parts).
+  Surviving negative target: cancellation staircases with non-restorable far parts, (LIN), E's rigid design (A1)-(A5); recommended cheap
+  falsification test: the finite transition-cell excess.
+N3 (core tools correct; Cor 2.4 vacuous): Lemma 1.2, THEOREM 1.4 (de-switching: at every NA row switching through bounded block
+  coefficients dies out as the scale -> 0), Cor 1.5 (migration to deep carriers), Prop 1.7, 1.8, Lemma 2.2, Thm 2.3/2.3' (positive-scale
+  profile bound, margin form), referee Lemma R-V (exact visibility impossible for every admissible T), Lemma R-F (Fatou: missed-weight
+  floors are lsc along convergent rows, so EVERY fixed-threshold profile obstruction is inherited from f and can never certify
+  non-density), Thm 2.7/Cor 2.8' (bank vs de-switching, band version), Prop 2.9, Lemma 2.10, Prop 3.2. Uniform NL-type certificate on
+  contacts: FALSE (defeated by aligned/banked approximants). SHARPENED NEGATIVE TARGET = PROBLEM R: free coordinates j, j' of f with
+  pi_g(j) != pi_g(j') whose oscillation is carried only by SMALL-MARGIN PEAKS of f (free coordinates of f cannot be banked or made contacts
+  by nearby rows); needs a uniform margin-sparsity rate near {j, j'} that no approximant can break, and control of non-C-tame NA rows.
+JOINT CONCLUSION: both directions converge on the same core ("exactness versus one-sidedness" at the hand-over/de-switching scale; Problem
+  R at free coordinates; (R-S1) with escape). No counterexample mechanism exists; no step of a negative proof exists; evidence weakly favours
+  density.
