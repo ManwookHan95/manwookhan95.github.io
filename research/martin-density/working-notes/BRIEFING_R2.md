@@ -559,3 +559,40 @@ N3 (core tools correct; Cor 2.4 vacuous): Lemma 1.2, THEOREM 1.4 (de-switching: 
 JOINT CONCLUSION: both directions converge on the same core ("exactness versus one-sidedness" at the hand-over/de-switching scale; Problem
   R at free coordinates; (R-S1) with escape). No counterexample mechanism exists; no step of a negative proof exists; evidence weakly favours
   density.
+
+## ADDENDUM 15 (Round 15, both directions, refereed; P1 twice): r15/P1_*, r15/P2_*, r15/P3_* (read *_referee.md first)
+P1 (Problem R, negative attempt; FAILED as negative, leaning positive): PROVED at every row (NA or not) Lemma SYM (no same-sign base usage
+  off supp a'; Cor SYM'), Lemma P (two-scale agreement on free coordinates), THEOREM C2 / Cor C3 (strict non-peaks give Z-oscillation
+  capacity by their l_2 COUNT, not their weight), Prop N (recovering margin-sparse approximants need deep carriers seeing Z, depth -> oo).
+  KSB (keep-shift-bank) family: keep f's staircase to depth L, common shift of z' on Z converts one near-threshold carrier at depth ~L
+  into a clean banked deep strict non-peak; models: dist(rho g, C(f')) -> 0 with L, truncations stay >= 0.2 (HEURISTIC). The uniform
+  sqrt-weight capacity law of N3-ref Sec 7 is expected to FAIL along KSB (HEURISTIC). Two-scale cleanliness inequality: SKETCH.
+P2 (positive side; referee: almost all PROVED claims correct): exact COMMON-MODE IDENTITY (Thm 2.3(A)); Thm 2.3(B) every (R-S1) Farkas
+  obstruction at a large (R1) stage has kappa_V <= -(3/4)||C~||_1/H(L) (G1 restricted model; G1 Prop 5.2 needs 1/kappa_m, PR-1);
+  Cor 2.4-2.5 (V = kappa_V a on thick design-depth support; Cor 2.5(iii) smallness holds for T_fin^{K2} via absorbers, PR-3);
+  Prop 2.6' (free-target pairs need an ANTI-ALIGNED coordinate; no-thick hypothesis superfluous). SLOPE RIGIDITY: f's thick ratios
+  must equal countably many DESIGN slopes; (D-sep) (generic pool target values; T_fin^{K2} VIOLATES it as stated since targets repeat,
+  so it is a design MODIFICATION preserving Lemma B) + memory lemma => Thm 2.10 no single-minor (R-S1) at two consecutive large (R1)
+  stages; for f off a countable union of hyperplanes no single-minor (R-S1) stage at all (exact model). Consequence 2.8(ii) corrects
+  R-ESC.2 (Hilbert terms can be ~ mu*_{s_0}; the mate's common mode is an extra escape); 2.8(iii) "escape = common mode" NOT PROVED
+  (Farkas cofactor vs mate switching vector conflated). Part 1: Lemma 1.1 (two-signed requirement; either oriented class suffices),
+  Prop 1.3/Cor 1.4 NESTED TUNING (Schauder-Tychonoff; attaining rows with exactly tuned deep carriers near every f for EVERY admissible
+  T; general U fix PR-7), conversion lemma, Prop 1.5/Cor 1.6 (one strict non-peak: oscillation >= 0.49 (gamma lambda)^{1/2}),
+  Prop 1.7 (certificate recovery needs p*(f'-f) <~ (sum of converted weights)^2, via the scale criterion). Part 3: Prop 3.1 forms of
+  merging, Prop 3.2-3.3 fan structure (last sentence of 3.2 overstated; correct: failure needs a FINITE set of >= 2 mates outside U_NA
+  in no single member), Prop 3.4 (under (P-I) merging => density at f), Thm 3.6 placement criterion.
+P3 (falsification tests; referee upgraded and repaired): Lemma B0 (real-norm coupling q_0 E_A + (1-q_0) E_W <= t^2/2; peak/Hilbert
+  cost ratio fixed by the norm; E's Model N and R3-ref scripts were NOT real-norm). Model N_RN: Lemma W' (window = conversion band),
+  Thm W*', Prop FO, Lemma L, Prop W (sup P_f = 1/(4 min psi)), THEOREM EC1 (exact identities), COR EC2: one-type conversion at
+  V = W_c = argmin psi gives R = 1 EXACTLY for every lattice (inf psi attained). Referee: one-type conversion = TRANSLATION IN
+  CAPACITY SPACE (profile of f = A(t)/t^2, of f' = Bregman divergence D_A(Y +- t, Y)/t^2; EC2 in one line); restoration depth
+  R = 1 + O(2^-L) PROVED (model). Prop SR false for discrete lattices (harmless). Lemma BAL's (Bal) is NOT the defining property of
+  cancellation staircases: pure V-shift FAILS for asymmetric layouts (R >= 1.0743 half-octave; unbounded sparse antiphase); referee
+  THEOREM KKT repairs it: class shifts = KKT multipliers (V, eta) of f's balancing problem give R = 1 exactly. So at A = 0 (no
+  persistent first-order base cost) BOTH tests (transition-cell excess, capacity route R6) are DEFEATED at model level; R6** model
+  content false at A = 0; earlier 0.2% excesses were grid artefacts. NEW residual (R6-A): persistent EC-proof first-order base costs
+  + Gordan structure + no two-type conversion => uniform first-order excess FO-A for every one-type/KKT strategy (model). Also (R6-tie)
+  and the real-norm transfer (T) of Model N_RN (realise (V, eta) and restored groups by NA rows with finite base support) remain OPEN.
+JOINT STATUS: no counterexample mechanism; every model-level obstruction tested is defeated at A = 0; open core = junction / (T) /
+  (R6-A) / multi-minor (R-S1) stages, (R-S2), (R-S3), (R-L), (R0^str), shifted blocks / Problem R positive (KSB proof) / merging (P-II).
+  Density remains OPEN; evidence favours density more than after NEG.
