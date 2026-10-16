@@ -567,6 +567,13 @@ P1 (Problem R, negative attempt; FAILED as negative, leaning positive): PROVED a
   KSB (keep-shift-bank) family: keep f's staircase to depth L, common shift of z' on Z converts one near-threshold carrier at depth ~L
   into a clean banked deep strict non-peak; models: dist(rho g, C(f')) -> 0 with L, truncations stay >= 0.2 (HEURISTIC). The uniform
   sqrt-weight capacity law of N3-ref Sec 7 is expected to FAIL along KSB (HEURISTIC). Two-scale cleanliness inequality: SKETCH.
+  P1 SECOND REFEREE PASS: all PROVED claims correct; C3 Remark (i) SKETCH WRONG ("E° bounded" is Z-blind and can fail along every
+  t -> 0; use first pass's hypothesis-free C3'); Prop N hypothesis misnamed. NEW (PROVED from Part I thm:tamefibre, prop:lowerbound):
+  THEOREM C2-T / COR CL-T: at C-tame NA rows every mate is an exact finite certificate, Z-oscillation = sum_{Q'} Phi_k omega'(k) ell_k
+  with ||D omega'||^2 <= C'/(sigma'(1-a')); cleanliness is an exact identity off F'. Hence PROBLEM R IS A JUNCTION PROBLEM, NOT A
+  CAPACITY PROBLEM; rigorous junction precision O(Phi^{1/2}). KSB sound at model level once the whole converted band is banked
+  (one-bank failure located in the junction window); small-scale model mates are switching-free. D_anch admissibility routine but
+  unwritten; g in C(f) model-only.
 P2 (positive side; referee: almost all PROVED claims correct): exact COMMON-MODE IDENTITY (Thm 2.3(A)); Thm 2.3(B) every (R-S1) Farkas
   obstruction at a large (R1) stage has kappa_V <= -(3/4)||C~||_1/H(L) (G1 restricted model; G1 Prop 5.2 needs 1/kappa_m, PR-1);
   Cor 2.4-2.5 (V = kappa_V a on thick design-depth support; Cor 2.5(iii) smallness holds for T_fin^{K2} via absorbers, PR-3);
